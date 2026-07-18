@@ -30,12 +30,8 @@ CONSUMER = [
 
 PRUDENTIAL = [
     ("A",  "Discount window lending", "12 CFR 201", ""),
-    ("D",  "Reserve requirements", "12 CFR 204",
-     "Name collision: in a securities context &quot;Reg D&quot; is the SEC "
-     "private-placement exemption, unrelated to this."),
-    ("H",  "State member bank membership", "12 CFR 208",
-     "The BSA compliance-program requirement for state member banks sits here, "
-     "at 208.63."),
+    ("D",  "Reserve requirements", "12 CFR 204", ""),
+    ("H",  "State member bank membership", "12 CFR 208", ""),
     ("I",  "Reserve Bank capital stock", "12 CFR 209", ""),
     ("J",  "Check collection and Fedwire", "12 CFR 210", ""),
     ("K",  "International banking operations", "12 CFR 211", ""),
@@ -71,15 +67,11 @@ POST_DODD_FRANK = [
     ("YY", "Enhanced prudential standards", "12 CFR 252", ""),
 ]
 
-# JJ, SS, UU and ZZ were removed rather than published with an UNVERIFIED flag.
-# Their status could not be confirmed against the Fed's own listing, and a
-# reference table on a public page under a named practitioner's credentials
-# should not carry entries the author has not verified. An absent row sends the
-# reader to the primary source; a wrong row sends them somewhere worse.
-REPEALED = [
-    ("AA", "Formerly the Fed's UDAP rule — REPEALED by Dodd-Frank", "—",
-     "If it appears in an old workpaper it is dead. Do not cite as current."),
-]
+# Removed rather than published: AA (repealed) and JJ, SS, UU, ZZ (reserved,
+# renumbered or never finalised). A reference table on a public page under a
+# named practitioner's credentials should carry only entries the author has
+# verified. An absent row sends the reader to the primary source; an unverified
+# or obsolete row sends them somewhere worse.
 
 GROUPS = [
     ("Consumer compliance",
@@ -92,24 +84,12 @@ GROUPS = [
     ("Post-Dodd-Frank prudential",
      "Mostly large-bank and systemic-risk rules.",
      POST_DODD_FRANK),
-    ("Repealed",
-     "Included so a stale citation can be recognised as stale.",
-     REPEALED),
 ]
 
-# Shown under the table. The BSA point catches people out in audit documentation,
-# so it is stated rather than left implicit.
-FOOTNOTES = [
-    "<strong>The BSA is not an alphabet regulation.</strong> The compliance-program "
-    "requirement for state member banks sits inside Regulation H at 12 CFR 208.63, "
-    "but the substantive BSA/AML rules live at 31 CFR Chapter X (FinCEN) and the "
-    "sanctions rules at 31 CFR 500s (OFAC). There is no clean letter answer to "
-    "&quot;which reg is BSA&quot;, which trips people up in audit documentation.",
-    "<strong>Regulation D is a name collision.</strong> In a banking context it is "
-    "Federal Reserve reserve requirements. In a securities context it is the SEC "
-    "private-placement exemption. If it turns up in a fintech partner's paperwork, "
-    "check which one they mean.",
-]
+# Deliberately empty. The table is a plain Reg / Subject / CFR lookup; commentary
+# and interpretation belong in the practitioner's own words, not baked into a
+# generated reference.
+FOOTNOTES = []
 
 
 def rows():

@@ -570,7 +570,12 @@ def regref_panel():
             f'<th>CFR</th></tr></thead><tbody>{rows}</tbody></table></div>'
         )
 
-    notes = "".join(f"<li>{n}</li>" for n in regref.FOOTNOTES)
+    # Omit the list entirely when there are no footnotes, rather than emitting an
+    # empty <ul> that renders as stray padding.
+    notes = (
+        f'<ul class="rr-foot">{"".join(f"<li>{n}</li>" for n in regref.FOOTNOTES)}</ul>'
+        if regref.FOOTNOTES else ""
+    )
     return (
         '<details class="coverage" id="regref"><summary>'
         'Federal Reserve regulation reference (A&ndash;YY)</summary>'
@@ -582,7 +587,7 @@ def regref_panel():
         'target="_blank" rel="noopener">Federal Reserve\'s own regulation listing</a>. '
         'Reserved and never-finalised letters are omitted.</p>'
         f'{"".join(blocks)}'
-        f'<ul class="rr-foot">{notes}</ul>'
+        f"{notes}"
         "</div></details>"
     )
 
