@@ -104,6 +104,54 @@ the dashboard is federal.
 
 ---
 
+## Planned: historical backfill (not done yet)
+
+History is currently uneven. The Federal Register sources go back years; the RSS
+ones only carry recent items, which is a limit of the format:
+
+| Source | Reaches back to |
+|---|---|
+| FinCEN Advisories (scraped) | 2018 |
+| FinCEN, NCUA (Federal Register) | 2021 / 2024 |
+| FDIC, CFPB (RSS) | months |
+| OCC, Federal Reserve (RSS) | weeks |
+
+**The fix:** FDIC, OCC, the Federal Reserve and CFPB all publish in the Federal
+Register, but `fetcher.py` only queries it for FinCEN and NCUA. Adding the other
+four gives deep history for every major agency.
+
+**Do it filtered by document type.** Counts measured against the API, back to
+2018:
+
+| Scope | Documents | Approx. cost |
+|---|---|---|
+| All document types | 6,450 | $71 |
+| **Rules + proposed rules only** | **1,453** | **$16** |
+
+The 5,000-document difference is almost entirely Notices — bank holding company
+applications, meeting notices, routine filings. The Federal Reserve alone drops
+from 3,193 to 362. Paying to classify those so the relevance filter can discard
+them is waste.
+
+Add `"conditions[type][]": ["RULE", "PRORULE"]` and
+`"conditions[publication_date][gte]": "2018-01-01"` to the Federal Register query,
+and add the four agencies to `FEDREG_AGENCIES`. Agency slugs:
+
+    federal-deposit-insurance-corporation
+    comptroller-of-the-currency
+    federal-reserve-system
+    consumer-financial-protection-bureau
+
+Expect roughly 90 minutes to two hours of continuous running. Run it locally, not
+through the GitHub Action — the store saves every 10 items, so an interruption
+loses nothing.
+
+**What this will not fix:** the Federal Register carries rules and notices only.
+Historical OCC Bulletins, FDIC Financial Institution Letters and press releases
+live in agency archives and would need separate scraping.
+
+---
+
 ## What it costs
 
 Analysis is charged per update by Anthropic, separately from any Claude
