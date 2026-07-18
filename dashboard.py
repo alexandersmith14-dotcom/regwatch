@@ -22,6 +22,8 @@ import webbrowser
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 
+import regref
+
 STORE_PATH = "store.json"
 OUT_PATH = "dashboard.html"
 
@@ -112,6 +114,20 @@ header button:hover{filter:brightness(1.06)}
 .coverage .body{padding-top:10px;line-height:1.6}
 .coverage .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:6px 22px;margin-top:8px}
+.rr-group{margin-top:16px}
+.rr-group h3{font-size:13px;margin:0 0 2px;color:var(--ink)}
+.rr-table{width:100%;border-collapse:collapse;margin-top:7px}
+.rr-table th{text-align:left;font-size:11px;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--ink-muted);padding:5px 8px;
+  border-bottom:1px solid var(--rule)}
+.rr-table td{padding:6px 8px;border-bottom:1px solid var(--rule);
+  font-size:12.5px;vertical-align:top}
+.rr-letter{font-weight:700;color:var(--brand);white-space:nowrap;width:64px}
+.rr-cfr{color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.rr-note{color:var(--ink-muted);font-size:11.5px;margin-top:3px}
+.rr-foot{margin-top:14px;padding-left:18px}
+.rr-foot li{margin-bottom:8px;font-size:12.5px}
+.rr.hidden,.rr-group.hidden{display:none}
 .coverage code{background:var(--chip);padding:1px 5px;border-radius:3px;font-size:11.5px}
 
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
@@ -305,6 +321,25 @@ function rows() {
 // the Tennessee disaster-relief notice even though it is not a broad regulatory
 // change. Without this, search silently misses 280 items and looks like proof
 // that nothing exists.
+// The reg reference filters with the same search box, so "Regulation B" or
+// "1002" surfaces the lookup row as well as the tracked items.
+function renderRegRef() {
+  const rows = document.querySelectorAll('#regref tr.rr');
+  if (!rows.length) return;
+  let shown = 0;
+  rows.forEach(tr => {
+    const hit = !query || query.split(/\s+/).every(t => termRx(t).test(tr.dataset.rr));
+    tr.classList.toggle('hidden', !hit);
+    if (hit) shown++;
+  });
+  document.querySelectorAll('#regref .rr-group').forEach(g => {
+    g.classList.toggle('hidden', !g.querySelectorAll('tr.rr:not(.hidden)').length);
+  });
+  // Open the panel automatically when a search matches a regulation.
+  const det = document.getElementById('regref');
+  if (query && shown && shown < rows.length) det.open = true;
+}
+
 function renderFilteredOut() {
   const box = $('#alsofound');
   // Redundant when the full set is already on screen.
@@ -386,7 +421,7 @@ function renderAgencies(rs) {
 
 function render() {
   const rs = rows();
-  renderCards(rs); renderDeadlines(rs); renderAgencies(rs); renderFilteredOut();
+  renderCards(rs); renderDeadlines(rs); renderAgencies(rs); renderFilteredOut(); renderRegRef();
 }
 
 function setView(all) {
@@ -508,6 +543,49 @@ def kpis(rows, today):
     ]
 
 
+def regref_panel():
+    """Federal Reserve regulation letter lookup, collapsed by default.
+
+    Sits beside the tracker so a reader who hits "Regulation B" in an item can
+    see what it covers without leaving the page. Rendered as static HTML and
+    filtered client-side by the same search box as everything else.
+    """
+    blocks = []
+    for group, desc, entries in regref.GROUPS:
+        rows = "".join(
+            # Searchable text includes the spoken forms — "regulation d" and
+            # "reg d" — not just the bare letter, so the way people actually
+            # type it finds the row.
+            f'<tr class="rr" data-rr="{html.escape(" ".join([letter, "regulation " + letter, "reg " + letter, subject, cfr]).lower(), quote=True)}">'
+            f'<td class="rr-letter">{html.escape(letter)}</td>'
+            f'<td>{subject}'
+            + (f'<div class="rr-note">{note}</div>' if note else "")
+            + f'</td><td class="rr-cfr">{html.escape(cfr)}</td></tr>'
+            for letter, subject, cfr, note in entries
+        )
+        blocks.append(
+            f'<div class="rr-group"><h3>{html.escape(group)}</h3>'
+            f'<p class="note">{html.escape(desc)}</p>'
+            f'<table class="rr-table"><thead><tr><th>Reg</th><th>Subject</th>'
+            f'<th>CFR</th></tr></thead><tbody>{rows}</tbody></table></div>'
+        )
+
+    notes = "".join(f"<li>{n}</li>" for n in regref.FOOTNOTES)
+    return (
+        '<details class="coverage" id="regref"><summary>'
+        'Federal Reserve regulation reference (A&ndash;YY)</summary>'
+        '<div class="body">'
+        '<p>What each regulation letter covers, and where it now lives in the CFR. '
+        'Entries marked UNVERIFIED should be confirmed against the '
+        '<a href="https://www.federalreserve.gov/supervisionreg/reglisting.htm" '
+        'target="_blank" rel="noopener">Federal Reserve\'s own regulation listing</a> '
+        'before being relied on.</p>'
+        f'{"".join(blocks)}'
+        f'<ul class="rr-foot">{notes}</ul>'
+        "</div></details>"
+    )
+
+
 def coverage_panel(store):
     """Build the 'what this covers' panel from the store itself.
 
@@ -579,6 +657,7 @@ def main():
     )
 
     coverage_html = coverage_panel(store)
+    regref_html = regref_panel()
 
     kpi_html = "".join(
         f'<div class="kpi"><div class="l">{lbl}</div><div class="v">{val}</div>'
@@ -611,6 +690,7 @@ def main():
   taken from matched Federal Register records; items without a match show none,
   which does not mean none exists.
   <div style="margin-top:9px">{coverage_html}</div>
+  <div style="margin-top:6px">{regref_html}</div>
 </div>
 
 <div class="kpis">{kpi_html}</div>
