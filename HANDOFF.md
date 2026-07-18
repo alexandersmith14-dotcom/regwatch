@@ -48,6 +48,7 @@ gitignored.
 | `pipeline.py` | Dedupe + classify only what's new. `--dry-run`, `--backfill FIELD` |
 | `deadlines.py` | Matches Federal Register records for comment/effective dates |
 | `dashboard.py` | Builds `dashboard.html` |
+| `health.py` | Per-source health check. `--report-only` to never exit non-zero |
 | `regref.py` | Fed regulation A–YY lookup table (47 entries) |
 | `make_og_image.py` | Regenerates the LinkedIn preview card |
 | `store.json` | **The memory — 508 analysed events. Do not delete.** |
@@ -72,6 +73,18 @@ gitignored.
   because one profile can't serve a public audience.
 - **The reg reference table carries no commentary**, and unverified entries (AA,
   JJ, SS, UU, ZZ) were removed rather than published with a caveat.
+- **Source health is judged from `fetch_report.json`, not from `store.json`.**
+  The obvious approach — per-source `last_seen` in the store — is wrong. A
+  record's `sources` list is cumulative and never pruned, so an interagency item
+  that FDIC keeps republishing keeps a dead FDIC FILs scraper looking alive
+  forever. Fault-injection caught this; it silently defeated the whole check.
+- **Quiet thresholds are per-source, derived from each source's own history**
+  (2 × its 90th-percentile publication gap, floored at 21 days). Measured across
+  all 14: OFAC's median gap is 2 days, Fed SR/CA Letters' is 38 with a 387-day
+  maximum. Any fixed threshold nags or misses. Verified to flag nothing on a
+  healthy day.
+- **Only BROKEN fails the run; QUIET does not.** A daily automated check that
+  cries wolf is one you learn to ignore.
 
 ---
 
@@ -104,7 +117,9 @@ documents and $71, and the extra 5,000 are routine notices. Full detail in
 
 He is letting it run for some days before tuning. Likely topics:
 
-1. Whether any source silently broke (a partial failure still reports success)
+1. ~~Whether any source silently broke~~ — done. `health.py` runs after each
+   deploy and turns the run red (which emails him) if a source stops delivering.
+   All 14 verified healthy on 2026-07-18.
 2. Whether the relevance judgment matches his — currently 228 of 508
 3. The historical backfill
 4. The LinkedIn launch post (a draft exists; update the deadlines in it before

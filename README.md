@@ -72,6 +72,7 @@ internet when you open it.
 | `pipeline.py` | Runs dedupe + classifier together, skipping anything seen before |
 | `deadlines.py` | Looks up comment deadlines and effective dates |
 | `dashboard.py` | Builds the web page |
+| `health.py` | Checks that all 14 sources are still working, and complains if not |
 | `dashboard.html` | The web page itself — this is what you open |
 | `store.json` | The memory. Everything it has ever seen and analysed. **Don't delete this** |
 | `updates.json` | Working file, rewritten every run — doesn't matter |
@@ -101,6 +102,37 @@ subscribed to by email through their own alert services:
 
 Those arrive in your work inbox and are not part of the dashboard. Everything in
 the dashboard is federal.
+
+---
+
+## How you find out when a source breaks
+
+A government website can change its page layout at any time. When that happens
+the scraper for it quietly stops finding anything — the daily run still succeeds,
+the page still builds, and that agency simply stops appearing. Nothing looks
+wrong. That is the failure this guards against.
+
+After each daily run, `health.py` checks all 14 sources and asks two questions:
+
+1. **Did it deliver anything at all this run?** If not, that source is *broken*.
+2. **Has the agency published nothing for an unusually long time?** If so, it is
+   *quiet* — possibly fine, possibly a sign the listing has frozen.
+
+"Unusually long" is worked out separately for every source from its own track
+record, because they run at completely different speeds — OFAC typically posts
+something every 2 days, while Fed SR/CA Letters can legitimately go 6 months in
+silence. A single shared cut-off would either nag constantly about the slow ones
+or never notice the fast ones going dark.
+
+**What you will see:** if a source breaks, the daily run on GitHub goes red and
+GitHub emails you. The dashboard still publishes normally first — a broken source
+never takes the site down, it just means that agency is missing from it until
+fixed. A *quiet* source only shows as a note on the run; it does not email you,
+because an alert that fires on nothing teaches you to ignore it.
+
+To check by hand at any time:
+
+    python health.py
 
 ---
 

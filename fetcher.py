@@ -3,7 +3,7 @@ import json
 import re
 import urllib.parse
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from html import unescape
 from html.parser import HTMLParser
 
@@ -440,11 +440,13 @@ SOURCES = (
 
 def main():
     results, failures = [], []
+    counts = {}
 
     for source, fetch in SOURCES:
         try:
             items = fetch(source)
             results.extend(items)
+            counts[source["agency"]] = counts.get(source["agency"], 0) + len(items)
             print(f"  OK    {source['agency']:20} {len(items)} items")
         except Exception as e:
             failures.append((source["agency"], str(e)))
@@ -452,6 +454,20 @@ def main():
 
     with open("updates.json", "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
+
+    # Record what happened for health.py. Without this the failures below are
+    # printed into a log nobody reads and then lost — the run still exits 0, so
+    # a source can 403 every day for a month and the Action stays green.
+    with open("fetch_report.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                "counts": counts,
+                "failures": [{"agency": a, "error": e} for a, e in failures],
+            },
+            f,
+            indent=2,
+        )
 
     print(
         f"\n{len(results)} updates from {len(SOURCES) - len(failures)} of "

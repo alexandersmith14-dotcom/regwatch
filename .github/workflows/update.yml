@@ -56,6 +56,28 @@ jobs:
       - name: Build dashboard
         run: python dashboard.py
 
+      # Report only — never fails this job. Publishing must not be blocked by a
+      # single flaky agency site, so the gate runs as a separate job after the
+      # deploy has already happened.
+      - name: Check source health
+        run: |
+          python health.py --report-only | tee health.txt
+          {
+            echo "## Source health"
+            echo '```'
+            cat health.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-report
+          path: |
+            health.json
+            fetch_report.json
+          retention-days: 90
+
       - name: Commit refreshed data
         run: |
           git config user.name "regwatch-bot"
@@ -97,3 +119,36 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Runs last, on purpose. The dashboard is already built, committed and
+  # published by this point, so a broken source never blocks the site — it just
+  # turns this run red, which is what sends the notification email.
+  #
+  # Only BROKEN sources fail it. A source that has merely gone quiet is reported
+  # but does not fail: a daily check that cries wolf is a daily check you learn
+  # to ignore.
+  health-gate:
+    needs: [update, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: health-report
+
+      - name: Fail if any source is broken
+        run: |
+          python - <<'PY'
+          import json, sys
+          h = json.load(open("health.json"))
+          broken = [s for s in h["sources"] if s["status"] == "BROKEN"]
+          quiet = [s for s in h["sources"] if s["status"] == "QUIET"]
+          for s in quiet:
+              print(f"::warning title=Source quiet::{s['source']}: {s['detail']}")
+          for s in broken:
+              print(f"::error title=Source broken::{s['source']}: {s['detail']}")
+          if broken:
+              names = ", ".join(s["source"] for s in broken)
+              sys.exit(f"\n{len(broken)} source(s) broken: {names}\n"
+                       "The site published normally; these sources are missing from it.")
+          print(f"All sources healthy ({len(quiet)} quiet).")
+          PY

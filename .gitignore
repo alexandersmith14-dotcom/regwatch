@@ -18,3 +18,10 @@ updates.json
 browser_updates.json
 *.tmp
 store.json.bak
+
+# Health check output. Not committed on purpose: both carry a timestamp that
+# changes every run, so committing them would produce a daily commit even on
+# days with no new agency items — and the workflow's "nothing to publish" check
+# would never be true again. In CI these are kept as run artifacts instead.
+fetch_report.json
+health.json
