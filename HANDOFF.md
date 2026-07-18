@@ -86,6 +86,15 @@ gitignored.
   healthy day.
 - **Only BROKEN fails the run; QUIET does not.** A daily automated check that
   cries wolf is one you learn to ignore.
+- **"Phone" is not a width.** A phone in landscape is ~800px wide, so the
+  original `max-width:640px` rule handed it the full desktop layout on a 375px
+  tall screen — updates above deadlines, filter block expanded, nothing
+  foldable, small tap targets. The query is now
+  `(max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px)`.
+  It lives in two places — the stylesheet and the `MOBILE` matchMedia — and they
+  must stay identical. Alexander found this by rotating his phone; no amount of
+  resizing a desktop browser reproduces it, because a desktop reports
+  `pointer:fine` and never takes the branch.
 - **Month-only dates stay month-only.** FinCEN dates its reference material
   "09/2007". That is stored as `2007-09`, not `2007-09-01` — the day is unknown
   and inventing one asserts precision the source never gave. `YYYY-MM` still
