@@ -238,6 +238,22 @@ header button:hover{filter:brightness(1.06)}
   #showmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
     color:var(--brand);background:var(--surface)}
 
+  /* Foldable panels. Only here, and only as an affordance the reader can use --
+     both stay open on arrival. Collapsing the update list by default would show
+     a visitor from LinkedIn a page of headings and nothing else. */
+  .foldable>summary{cursor:pointer;list-style:none;display:block}
+  .foldable>summary::-webkit-details-marker{display:none}
+  /* Flex so the disclosure arrow can sit hard right. The card-count span floats
+     right on desktop; inside a flex row that float is ignored and it simply
+     lands between the title and the arrow, which reads correctly on a phone. */
+  .foldable>summary h2{display:flex;align-items:center;gap:8px}
+  .foldable>summary h2::after{content:"▸";margin-left:auto;font-size:13px;
+    line-height:1;color:var(--brand)}
+  .foldable[open]>summary h2::after{content:"▾"}
+  /* The heading's bottom margin is the gap to the content; with the panel shut
+     that becomes dead space under the bar. */
+  .foldable:not([open])>summary h2{margin-bottom:0}
+
   /* Collapse the filter block. 327px of pills sat above the first update on a
      phone; search stays out here because it is the control people reach for. */
   #filters summary{display:block;cursor:pointer;list-style:none;
@@ -254,6 +270,12 @@ header button:hover{filter:brightness(1.06)}
 .panel h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
   color:var(--brand);margin:0 0 12px;font-weight:700;
   border-bottom:2px solid var(--accent);padding-bottom:7px}
+/* Two panels are <details> so they can fold on a phone. Suppress the native
+   disclosure triangle at every width — on desktop they are plain panels with no
+   affordance, and script blocks the click that would otherwise collapse them. */
+.foldable>summary{list-style:none;display:block}
+.foldable>summary::-webkit-details-marker{display:none}
+.foldable>summary h2{cursor:default}
 .panel .note{font-size:12px;color:var(--ink-2);margin:-6px 0 12px}
 
 .card{padding:14px 0;border-bottom:1px solid var(--rule)}
@@ -318,7 +340,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks &amp; fintechs &middot; last updated
-      July 18, 2026 22:08 UTC</p>
+      July 18, 2026 22:59 UTC</p>
     <p class="bmk" id="bmk">
       <span>Press <kbd id="bmkkey">Ctrl</kbd> + <kbd>D</kbd> to bookmark this page</span>
       <button id="bmkx" type="button" aria-label="Dismiss bookmark tip"
@@ -374,19 +396,22 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
 
 <div class="cols">
   <div class="colmain">
-    <div class="panel p-updates">
-      <h2>Latest updates <span style="float:right;text-transform:none;letter-spacing:0"
-          id="cardcount"></span></h2>
+    <!-- <details> rather than <div> so these fold on a phone, same mechanism as
+         the filter block. Left open in the markup: a script failure must leave
+         the content readable, never collapse the page to a row of headings. -->
+    <details class="panel p-updates foldable" open>
+      <summary><h2>Latest updates <span style="float:right;text-transform:none;letter-spacing:0"
+          id="cardcount"></span></h2></summary>
       <div id="cards"></div>
       <button id="showmore" type="button" hidden>Show more updates</button>
-    </div>
+    </details>
     <div id="alsofound"></div>
   </div>
   <div class="colside">
-    <div class="panel p-deadlines">
-      <h2>Upcoming deadlines</h2>
+    <details class="panel p-deadlines foldable" open>
+      <summary><h2>Upcoming deadlines</h2></summary>
       <div id="deadlines"></div>
-    </div>
+    </details>
     <div class="panel p-agencies">
       <h2>Updates by agency</h2>
       <div class="agrow" id="agencies"></div>
@@ -696,8 +721,20 @@ if (showMoreBtn) showMoreBtn.addEventListener('click', () => {
 const filtersEl = document.getElementById('filters');
 if (filtersEl) filtersEl.addEventListener('toggle', () => { userToggledFilters = true; });
 
+// Foldable panels collapse on a phone only. On desktop the heading is still a
+// <summary>, so a click would fold the main update list -- block it there rather
+// than leave a control that does something the desktop layout never intends.
+const foldables = Array.from(document.querySelectorAll('.foldable'));
+foldables.forEach(el => {
+  const sum = el.querySelector('summary');
+  if (sum) sum.addEventListener('click', e => { if (!MOBILE.matches) e.preventDefault(); });
+});
+
 function applyViewport() {
   if (!userChoseLimit) cardLimit = MOBILE.matches ? 8 : 25;
+  // Re-open anything the reader folded on a phone before turning to landscape or
+  // widening the window; a collapsed panel on desktop has no visible way back.
+  if (!MOBILE.matches) foldables.forEach(el => { el.open = true; });
   if (filtersEl && !userToggledFilters) {
     // Assigning .open fires 'toggle', which would set the user flag — suppress it.
     const wanted = !MOBILE.matches;
