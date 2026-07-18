@@ -533,8 +533,8 @@ def main():
 </header>
 
 <div class="notice">
-  <strong>Read this first.</strong> The plain-English summaries below are generated
-  by AI from agency listings. They are a starting point for triage, not legal or
+  <strong>Read this first.</strong> The summaries are based on agency listings.
+  They are a starting point for triage, not legal or
   compliance advice, and they can be wrong or incomplete. Always open the source
   document before acting on anything here. Deadlines shown are structured fields
   taken from matched Federal Register records; items without a match show none,
