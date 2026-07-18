@@ -64,6 +64,33 @@ FEDREG_AGENCIES = [
     {"agency": "NCUA", "slug": "national-credit-union-administration"},
 ]
 
+# Ready to switch on, currently off to hold spend at zero. Adding these four
+# gives their actual rulemaking (~1 year each) instead of the few weeks their RSS
+# feeds carry — about $3.72 of one-off classification, then pennies a day.
+FEDREG_AGENCIES_PENDING = [
+    {"agency": "FDIC", "slug": "federal-deposit-insurance-corporation"},
+    {"agency": "OCC", "slug": "comptroller-of-the-currency"},
+    {"agency": "Federal Reserve", "slug": "federal-reserve-system"},
+    {"agency": "CFPB", "slug": "consumer-financial-protection-bureau"},
+]
+
+# Historical depth, queried separately from the recent window.
+#
+# Restricted to rules and proposed rules on purpose. Across these six agencies
+# since 2018 that is ~1,450 documents; without the type filter it is ~6,450, and
+# the extra 5,000 are Notices — bank holding company applications, meeting
+# notices, routine filings. The Federal Reserve alone drops from 3,193 to 362.
+# Paying to classify those so the relevance filter can discard them is waste.
+# Off by default. The backfill is a deliberate, one-off ~$15 spend, so it should
+# never start because a scheduled job happened to run — flip this when you mean
+# to do it.
+ARCHIVE_ENABLED = False
+
+ARCHIVE_SINCE = "2018-01-01"
+ARCHIVE_TYPES = ["RULE", "PRORULE"]
+ARCHIVE_PAGE_SIZE = 1000        # Federal Register API maximum
+ARCHIVE_MAX_PAGES = 5           # guard against an unbounded crawl
+
 # ------------------------------------------------------ Scraped HTML <table>s
 
 HTML_TABLES = [
@@ -236,19 +263,11 @@ def fetch_rss(source):
     ]
 
 
-def fetch_fedreg(source):
-    query = {
-        "conditions[agencies][]": source["slug"],
-        "order": "newest",
-        "per_page": str(FEDREG_PER_PAGE),
-        "fields[]": ["title", "publication_date", "type", "html_url", "abstract"],
-    }
-    url = "https://www.federalregister.gov/api/v1/documents.json?" + urllib.parse.urlencode(
-        query, doseq=True
-    )
-    data = json.loads(get(url, timeout=45))
-    if not data.get("results"):
-        raise RuntimeError("API returned 0 results")
+FEDREG_FIELDS = ["title", "publication_date", "type", "html_url", "abstract"]
+FEDREG_API = "https://www.federalregister.gov/api/v1/documents.json"
+
+
+def _fedreg_items(source, results):
     return [
         {
             "agency": source["agency"],
@@ -259,8 +278,59 @@ def fetch_fedreg(source):
             "doc_type": d.get("type", ""),
             "source_type": "federal_register",
         }
-        for d in data["results"]
+        for d in results
     ]
+
+
+def fetch_fedreg(source):
+    """Recent window: every document type, newest first.
+
+    Keeps notices, information-collection renewals and geographic targeting
+    orders in view for current activity — those matter day to day even though
+    they are not worth buying eight years of.
+    """
+    query = {
+        "conditions[agencies][]": source["slug"],
+        "order": "newest",
+        "per_page": str(FEDREG_PER_PAGE),
+        "fields[]": FEDREG_FIELDS,
+    }
+    url = FEDREG_API + "?" + urllib.parse.urlencode(query, doseq=True)
+    data = json.loads(get(url, timeout=45))
+    if not data.get("results"):
+        raise RuntimeError("API returned 0 results")
+    return _fedreg_items(source, data["results"])
+
+
+def fetch_fedreg_archive(source):
+    """Historical depth: rules and proposed rules back to ARCHIVE_SINCE.
+
+    Paginated — a single request caps out well below the eight-year volume for
+    the larger agencies, and silently taking only the first page would look like
+    success while quietly truncating the record.
+    """
+    results, page = [], 1
+    while page <= ARCHIVE_MAX_PAGES:
+        query = {
+            "conditions[agencies][]": source["slug"],
+            "conditions[publication_date][gte]": ARCHIVE_SINCE,
+            "conditions[type][]": ARCHIVE_TYPES,
+            "order": "newest",
+            "per_page": str(ARCHIVE_PAGE_SIZE),
+            "page": str(page),
+            "fields[]": FEDREG_FIELDS,
+        }
+        url = FEDREG_API + "?" + urllib.parse.urlencode(query, doseq=True)
+        data = json.loads(get(url, timeout=90))
+        batch = data.get("results") or []
+        results.extend(batch)
+        if len(batch) < ARCHIVE_PAGE_SIZE:
+            break
+        page += 1
+
+    if not results:
+        raise RuntimeError("archive query returned 0 results")
+    return _fedreg_items(source, results)
 
 
 def fetch_table(source):
@@ -359,6 +429,11 @@ def fetch_views_rows(source):
 SOURCES = (
     [(s, fetch_rss) for s in RSS_FEEDS]
     + [(s, fetch_fedreg) for s in FEDREG_AGENCIES]
+    # Historical backfill — DISABLED. Set ARCHIVE_ENABLED = True to turn on.
+    # Adds ~1,450 rules and proposed rules back to 2018 across the six agencies,
+    # which is ~1,400 new events and roughly $15 of one-off classification.
+    # Everything after that stays a few cents a day, as now.
+    + ([({**s}, fetch_fedreg_archive) for s in FEDREG_AGENCIES] if ARCHIVE_ENABLED else [])
     + [(s, fetch_table) for s in HTML_TABLES]
     + [(s, fetch_views_rows) for s in VIEWS_ROW_PAGES]
 )
