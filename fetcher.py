@@ -214,6 +214,18 @@ def parse_table_date(row, date_col):
         dt = datetime.strptime(text, "%m/%d/%Y")
         return dt, dt.strftime("%Y-%m-%d")
     except ValueError:
+        pass
+    # FinCEN dates its evergreen reference material — fact sheets, infographics,
+    # the SAR Bulletins — to the month only ("09/2007"). Without this they fell
+    # through as the literal string "12/2020", which is not a date any consumer
+    # of this field can sort, and earlier still as "unknown", which sorted ABOVE
+    # 2026 items and put 1990s fact sheets at the top of the dashboard.
+    # Reported as YYYY-MM, not YYYY-MM-01: we know the month, not the day, and
+    # inventing a day would be asserting precision the source never gave.
+    try:
+        dt = datetime.strptime(text, "%m/%Y")
+        return dt, dt.strftime("%Y-%m")
+    except ValueError:
         return datetime.min, text or "unknown"
 
 

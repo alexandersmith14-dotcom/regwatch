@@ -9374,388 +9374,6 @@
     "last_seen": "2026-07-18",
     "fr_checked": true
   },
-  "5a61e3fcc3245397": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "FinCEN issued a fact sheet clarifying Section 314(b), the voluntary information-sharing safe harbor that lets financial institutions share information with one another to identify and report money laundering and terrorist financing. It reaffirms the scope of the safe harbor and permissible sharing practices for BSA/AML programs.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "314(b)",
-      "information sharing",
-      "FinCEN"
-    ],
-    "key": "5a61e3fcc3245397",
-    "title": "FINCEN's 314(b) Fact Sheet",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/314bfactsheet.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "dda69ec1d00b2032": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "FinCEN's 314(a) fact sheet outlines how law enforcement uses the information-sharing process to query financial institutions about suspected money launderers and terrorists. This is a reference document for BSA/AML compliance staff and does not impose new obligations.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "314(a)",
-      "FinCEN",
-      "information sharing"
-    ],
-    "key": "dda69ec1d00b2032",
-    "title": "FinCEN`s 314(a) Fact Sheet",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/314afactsheet.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": true
-  },
-  "5645a282c056618e": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "FinCEN issued an infographic explaining how institutions can reference 314(b) information sharing in their SARs. This is educational material clarifying voluntary information-sharing under Section 314(b) of the USA PATRIOT Act, relevant to any BSA-obligated institution's AML program.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "314(b)",
-      "SAR",
-      "information sharing",
-      "FinCEN"
-    ],
-    "key": "5645a282c056618e",
-    "title": "FinCEN`s 314(b) Infographic",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/314bInfographic.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "c5a3aee33c8e0222": {
-    "relevant": false,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "FinCEN announced a new mailing address for filing Currency and Monetary Instrument Reports (CMIR/Form 105). This is a purely administrative address change with no substantive compliance impact.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "FinCEN",
-      "CMIR",
-      "administrative"
-    ],
-    "key": "c5a3aee33c8e0222",
-    "title": "CMIR Mailing address change",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/CMIR_Notice.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "41aa655c204f4f56": {
-    "relevant": true,
-    "fintech_specific": true,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "A dated (2007) FinCEN guide covering money laundering prevention for money services businesses. It outlines BSA/AML expectations for MSBs, relevant to payments and money transmission players. Largely reference material rather than a new requirement.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "MSB",
-      "FinCEN",
-      "money transmission"
-    ],
-    "key": "41aa655c204f4f56",
-    "title": "Money Laundering Prevention",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/prevention_guide.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "09454609fbdd9ebb": {
-    "relevant": true,
-    "fintech_specific": true,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "FinCEN's quick reference guide summarizes BSA/AML obligations for money services businesses. It matters to MSBs and money transmitters, including fintechs operating in that space, though it is a dated (2007) summary rather than a new requirement.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "MSB",
-      "money transmission",
-      "FinCEN"
-    ],
-    "key": "09454609fbdd9ebb",
-    "title": "Bank Secrecy Act Requirements",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/bsa_quickrefguide.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "03ff9499ab9ae2ca": {
-    "relevant": true,
-    "fintech_specific": true,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "A FinCEN quick-reference guide for money services businesses on how to file suspicious activity reports. It's an educational aid for MSBs meeting BSA/AML SAR obligations, relevant to money transmitters and payments firms.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "MSB",
-      "SAR",
-      "FinCEN",
-      "money transmission"
-    ],
-    "key": "03ff9499ab9ae2ca",
-    "title": "Reporting Suspicious Activity",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/report_reference.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "8f42f6ef6bdf9a7a": {
-    "relevant": false,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "A 2007 fact sheet summarizing Secretary Paulson's remarks on making the BSA more effective and efficient. This is a historical informational document with no new requirements.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "FinCEN",
-      "historical"
-    ],
-    "key": "8f42f6ef6bdf9a7a",
-    "title": "Bank Secrecy Act Effectiveness and Efficiency Fact SheetHTML | PDF",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/fact-sheet-bank-secrecy-act-effectiveness-and-efficiency",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "11296cdbe325aa21": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "A FinCEN fact sheet explaining Section 312 of the USA PATRIOT Act, which requires enhanced due diligence for correspondent and private banking accounts involving foreign persons. This is longstanding BSA/AML guidance affecting institutions that maintain such accounts.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "Section 312",
-      "correspondent banking",
-      "due diligence",
-      "USA PATRIOT Act"
-    ],
-    "key": "11296cdbe325aa21",
-    "title": "Section 312 Fact SheetHTML | PDF",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/fact-sheet-section-312-usa-patriot-act-final-regulation-and-notice-proposed-rulemaking",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "d08a01d18627cf9b": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "FinCEN published a fact sheet explaining electronic filing of BSA forms via BSA Direct E-Filing. It's an administrative/informational item about the mechanics of submitting BSA reports, not a substantive change to filing obligations.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "E-Filing",
-      "FinCEN"
-    ],
-    "key": "d08a01d18627cf9b",
-    "title": "BSA Direct E-Filing Fact Sheet",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/bsadirectefilingfactsheet.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": true
-  },
-  "5a234dce88e3fb35": {
-    "relevant": false,
-    "fintech_specific": false,
-    "update_type": "Other",
-    "urgency": "Low",
-    "plain_english": "This is a FinCEN reference list of commonly used acronyms, not a substantive regulatory change. It imposes no new obligations.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "FinCEN",
-      "reference",
-      "administrative"
-    ],
-    "key": "5a234dce88e3fb35",
-    "title": "AcronymsHTML | PDF",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/acronyms",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "5da054d1570c8ec2": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "An old (2002) FinCEN SAR Bulletin highlighting transaction patterns indicative of terrorist financing to help institutions file more useful SARs. It's general BSA/AML detection guidance relevant to any institution's SAR program but offers no new obligations and is dated.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "SAR",
-      "terrorist financing",
-      "FinCEN"
-    ],
-    "key": "5da054d1570c8ec2",
-    "title": "SAR Bulletin - Issue 4",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/sarbul0201-f.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "b9bc57378ccd1849": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "An archival FinCEN SAR Bulletin flagging suspicious activity patterns tied to phone card businesses to help institutions with SAR filing. It informs BSA/AML monitoring but is dated 2001 and not tied to any specific fintech product regime.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "SAR",
-      "FinCEN",
-      "prepaid-adjacent"
-    ],
-    "key": "b9bc57378ccd1849",
-    "title": "SAR Bulletin - Issue 3",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/sarbul6-01.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "0e4a531d452e0cb0": {
-    "relevant": false,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "A FinCEN SAR bulletin from 2000 discussing suspicious activity patterns reported by casinos. This concerns casino BSA reporting, not community banks, fintechs, or any of our focus areas.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "SAR",
-      "casinos"
-    ],
-    "key": "0e4a531d452e0cb0",
-    "title": "SAR Bulletin - Issue 2",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/sarbul8-00.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "680954e3b9497b87": {
-    "relevant": false,
-    "fintech_specific": false,
-    "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "A 1999 FinCEN SAR Bulletin addressing suspicious activity reporting related to ATMs. This is a dated BSA/AML informational bulletin with no current actionable requirements.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "SAR",
-      "FinCEN",
-      "historical"
-    ],
-    "key": "680954e3b9497b87",
-    "title": "SAR Bulletin - Issue 1",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/system/files/shared/sarbul1.pdf",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": false
-  },
-  "2b133ba637e89dbb": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "A 1997 FinCEN notice clarifying timing rules for designating exempt persons under the CTR exemption provisions at 31 CFR 103.22(h). This is dated BSA/CTR administrative guidance affecting all banks' currency transaction reporting obligations, with no fintech-specific angle.",
-    "effective_or_comment_date": "Not stated",
-    "tags": [
-      "BSA/AML",
-      "CTR",
-      "exempt persons",
-      "FinCEN"
-    ],
-    "key": "2b133ba637e89dbb",
-    "title": "FinCEN NoticeHTML | PDF",
-    "date": "unknown",
-    "sources": [
-      "FinCEN Advisories"
-    ],
-    "url": "https://www.fincen.gov/fincen-notice-97-1-clarification-time-designation-exempt-persons-purposes-31-cfr-10322h",
-    "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
-    "fr_checked": true
-  },
   "38f0f5303fb5d8be": {
     "relevant": false,
     "fintech_specific": false,
@@ -12978,5 +12596,387 @@
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-18",
     "fr_checked": false
+  },
+  "98118ff5eead35c8": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FinCEN issued a fact sheet clarifying Section 314(b), the voluntary information-sharing safe harbor that lets financial institutions share information with one another to identify and report money laundering and terrorist financing. It reaffirms the scope of the safe harbor and permissible sharing practices for BSA/AML programs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "314(b)",
+      "information sharing",
+      "FinCEN"
+    ],
+    "key": "98118ff5eead35c8",
+    "title": "FINCEN's 314(b) Fact Sheet",
+    "date": "2020-12",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/314bfactsheet.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "a6b5000aab3072d2": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "FinCEN's 314(a) fact sheet outlines how law enforcement uses the information-sharing process to query financial institutions about suspected money launderers and terrorists. This is a reference document for BSA/AML compliance staff and does not impose new obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "314(a)",
+      "FinCEN",
+      "information sharing"
+    ],
+    "key": "a6b5000aab3072d2",
+    "title": "FinCEN`s 314(a) Fact Sheet",
+    "date": "2018-02",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/314afactsheet.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": true
+  },
+  "f913b2d7aadedbe1": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FinCEN issued an infographic explaining how institutions can reference 314(b) information sharing in their SARs. This is educational material clarifying voluntary information-sharing under Section 314(b) of the USA PATRIOT Act, relevant to any BSA-obligated institution's AML program.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "314(b)",
+      "SAR",
+      "information sharing",
+      "FinCEN"
+    ],
+    "key": "f913b2d7aadedbe1",
+    "title": "FinCEN`s 314(b) Infographic",
+    "date": "2017-09",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/314bInfographic.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "4b6c21ba2a0ebbcf": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "FinCEN announced a new mailing address for filing Currency and Monetary Instrument Reports (CMIR/Form 105). This is a purely administrative address change with no substantive compliance impact.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "FinCEN",
+      "CMIR",
+      "administrative"
+    ],
+    "key": "4b6c21ba2a0ebbcf",
+    "title": "CMIR Mailing address change",
+    "date": "2017-07",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/CMIR_Notice.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "8ae8da1e11dddb30": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "A dated (2007) FinCEN guide covering money laundering prevention for money services businesses. It outlines BSA/AML expectations for MSBs, relevant to payments and money transmission players. Largely reference material rather than a new requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "MSB",
+      "FinCEN",
+      "money transmission"
+    ],
+    "key": "8ae8da1e11dddb30",
+    "title": "Money Laundering Prevention",
+    "date": "2007-09",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/prevention_guide.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "63fb255252edcc2c": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FinCEN's quick reference guide summarizes BSA/AML obligations for money services businesses. It matters to MSBs and money transmitters, including fintechs operating in that space, though it is a dated (2007) summary rather than a new requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "MSB",
+      "money transmission",
+      "FinCEN"
+    ],
+    "key": "63fb255252edcc2c",
+    "title": "Bank Secrecy Act Requirements",
+    "date": "2007-09",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/bsa_quickrefguide.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "ae5c422a4bbcc2ac": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "A FinCEN quick-reference guide for money services businesses on how to file suspicious activity reports. It's an educational aid for MSBs meeting BSA/AML SAR obligations, relevant to money transmitters and payments firms.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "MSB",
+      "SAR",
+      "FinCEN",
+      "money transmission"
+    ],
+    "key": "ae5c422a4bbcc2ac",
+    "title": "Reporting Suspicious Activity",
+    "date": "2007-09",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/report_reference.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "119f0a833594fde1": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A 2007 fact sheet summarizing Secretary Paulson's remarks on making the BSA more effective and efficient. This is a historical informational document with no new requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "FinCEN",
+      "historical"
+    ],
+    "key": "119f0a833594fde1",
+    "title": "Bank Secrecy Act Effectiveness and Efficiency Fact SheetHTML | PDF",
+    "date": "2007-06",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/fact-sheet-bank-secrecy-act-effectiveness-and-efficiency",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "f1edb381117656bf": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "A FinCEN fact sheet explaining Section 312 of the USA PATRIOT Act, which requires enhanced due diligence for correspondent and private banking accounts involving foreign persons. This is longstanding BSA/AML guidance affecting institutions that maintain such accounts.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "Section 312",
+      "correspondent banking",
+      "due diligence",
+      "USA PATRIOT Act"
+    ],
+    "key": "f1edb381117656bf",
+    "title": "Section 312 Fact SheetHTML | PDF",
+    "date": "2005-12",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/fact-sheet-section-312-usa-patriot-act-final-regulation-and-notice-proposed-rulemaking",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "9882ab814468ab66": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "FinCEN published a fact sheet explaining electronic filing of BSA forms via BSA Direct E-Filing. It's an administrative/informational item about the mechanics of submitting BSA reports, not a substantive change to filing obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "E-Filing",
+      "FinCEN"
+    ],
+    "key": "9882ab814468ab66",
+    "title": "BSA Direct E-Filing Fact Sheet",
+    "date": "2005-05",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/bsadirectefilingfactsheet.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": true
+  },
+  "feec128b1c4370e5": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "This is a FinCEN reference list of commonly used acronyms, not a substantive regulatory change. It imposes no new obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "FinCEN",
+      "reference",
+      "administrative"
+    ],
+    "key": "feec128b1c4370e5",
+    "title": "AcronymsHTML | PDF",
+    "date": "2003-11",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/acronyms",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "bbc838537f2a8848": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "An old (2002) FinCEN SAR Bulletin highlighting transaction patterns indicative of terrorist financing to help institutions file more useful SARs. It's general BSA/AML detection guidance relevant to any institution's SAR program but offers no new obligations and is dated.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "SAR",
+      "terrorist financing",
+      "FinCEN"
+    ],
+    "key": "bbc838537f2a8848",
+    "title": "SAR Bulletin - Issue 4",
+    "date": "2002-01",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/sarbul0201-f.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "e2a72d4dcc6a588a": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "An archival FinCEN SAR Bulletin flagging suspicious activity patterns tied to phone card businesses to help institutions with SAR filing. It informs BSA/AML monitoring but is dated 2001 and not tied to any specific fintech product regime.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "SAR",
+      "FinCEN",
+      "prepaid-adjacent"
+    ],
+    "key": "e2a72d4dcc6a588a",
+    "title": "SAR Bulletin - Issue 3",
+    "date": "2001-06",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/sarbul6-01.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "a1e3bb3a951050ca": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A FinCEN SAR bulletin from 2000 discussing suspicious activity patterns reported by casinos. This concerns casino BSA reporting, not community banks, fintechs, or any of our focus areas.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "SAR",
+      "casinos"
+    ],
+    "key": "a1e3bb3a951050ca",
+    "title": "SAR Bulletin - Issue 2",
+    "date": "2000-08",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/sarbul8-00.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "51cf717b04643966": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "A 1999 FinCEN SAR Bulletin addressing suspicious activity reporting related to ATMs. This is a dated BSA/AML informational bulletin with no current actionable requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "SAR",
+      "FinCEN",
+      "historical"
+    ],
+    "key": "51cf717b04643966",
+    "title": "SAR Bulletin - Issue 1",
+    "date": "1999-06",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/system/files/shared/sarbul1.pdf",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": false
+  },
+  "fe0dc10ae9d05cb3": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A 1997 FinCEN notice clarifying timing rules for designating exempt persons under the CTR exemption provisions at 31 CFR 103.22(h). This is dated BSA/CTR administrative guidance affecting all banks' currency transaction reporting obligations, with no fintech-specific angle.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "CTR",
+      "exempt persons",
+      "FinCEN"
+    ],
+    "key": "fe0dc10ae9d05cb3",
+    "title": "FinCEN NoticeHTML | PDF",
+    "date": "1997-02",
+    "sources": [
+      "FinCEN Advisories"
+    ],
+    "url": "https://www.fincen.gov/fincen-notice-97-1-clarification-time-designation-exempt-persons-purposes-31-cfr-10322h",
+    "first_seen": "2026-07-18",
+    "last_seen": "2026-07-18",
+    "fr_checked": true
   }
 }

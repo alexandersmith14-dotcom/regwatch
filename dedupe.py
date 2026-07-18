@@ -37,12 +37,18 @@ def tokens(title):
     return {w for w in normalize(title).split() if w not in STOP and len(w) > 2}
 
 
+MONTH_ONLY = re.compile(r"^\d{4}-\d{2}$")
+
+
 def parse_any_date(value):
     """Best-effort date parse across the formats our sources emit."""
     if not value or value == "unknown":
         return None
     value = value.strip()
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%B %d, %Y", "%b %d, %Y"):
+    # "%Y-%m" is month-only, emitted by fetcher.py for sources that date material
+    # to the month. It must come after "%Y-%m-%d" so a full date is never
+    # truncated to its month by an earlier partial match.
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%B %d, %Y", "%b %d, %Y", "%Y-%m"):
         try:
             return datetime.strptime(value[:len(fmt) + 6].strip(), fmt)
         except ValueError:
@@ -119,6 +125,9 @@ def cluster(items, threshold=0.5, max_days_apart=14, min_shared=4):
                     "key": event_key(item["title"], item.get("date", "")),
                     "title": PREFIX.sub("", item["title"]).strip(),
                     "_date": item_date,
+                    # Whether the date we parsed was month-only, so the display
+                    # form can say so instead of inventing a day.
+                    "_month_only": bool(MONTH_ONLY.match(str(item.get("date", "")))),
                     "sources": [item["agency"]],
                     "items": [item],
                 }
@@ -128,9 +137,15 @@ def cluster(items, threshold=0.5, max_days_apart=14, min_shared=4):
     # expose a display date.
     for c in clusters:
         # Date string must be resolved before the key, which now depends on it.
-        c["date"] = c["_date"].strftime("%Y-%m-%d") if c["_date"] else "unknown"
+        if not c["_date"]:
+            c["date"] = "unknown"
+        elif c["_month_only"]:
+            c["date"] = c["_date"].strftime("%Y-%m")
+        else:
+            c["date"] = c["_date"].strftime("%Y-%m-%d")
         c["key"] = event_key(c["title"], c["date"])
         del c["_date"]
+        del c["_month_only"]
     return clusters
 
 

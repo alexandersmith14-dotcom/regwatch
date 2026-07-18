@@ -45,7 +45,7 @@ gitignored.
 | `fetcher.py` | 14 sources: RSS, Federal Register API, scraped tables, scraped Drupal lists |
 | `dedupe.py` | Cross-agency clustering; key is sha1(normalized title + date) |
 | `classifier.py` | Relevance + fintech judgment + summaries. `classify()` is importable |
-| `pipeline.py` | Dedupe + classify only what's new. `--dry-run`, `--backfill FIELD` |
+| `pipeline.py` | Dedupe + classify only what's new. `--dry-run`, `--backfill FIELD`, `--refresh-dates` |
 | `deadlines.py` | Matches Federal Register records for comment/effective dates |
 | `dashboard.py` | Builds `dashboard.html` |
 | `health.py` | Per-source health check. `--report-only` to never exit non-zero |
@@ -85,6 +85,17 @@ gitignored.
   healthy day.
 - **Only BROKEN fails the run; QUIET does not.** A daily automated check that
   cries wolf is one you learn to ignore.
+- **Month-only dates stay month-only.** FinCEN dates its reference material
+  "09/2007". That is stored as `2007-09`, not `2007-09-01` — the day is unknown
+  and inventing one asserts precision the source never gave. `YYYY-MM` still
+  sorts correctly against `YYYY-MM-DD` as a string.
+- **`--refresh-dates` matches on title, so it only touches titles that appear
+  exactly once in the current fetch, and only records whose date is unparseable.**
+  Without both limits it re-dates recurring notices to a single shared date and,
+  because the key contains the date, re-keys them all onto one key and destroys
+  every occurrence but one. The first draft did exactly that: 88 records instead
+  of 16, including the Sunshine Act series. The dry run caught it. Always
+  `--dry-run` this first and read the list.
 
 ---
 
