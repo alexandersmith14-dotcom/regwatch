@@ -93,6 +93,16 @@ header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
 header .t{flex:1}
 h1{font-size:21px;margin:0 0 3px;color:#fff;font-weight:700;letter-spacing:-.01em}
 .sub{color:rgba(255,255,255,.82);font-size:13px;margin:0}
+/* Bookmark hint. Starts hidden and is revealed by script only on a device with
+   a keyboard, since Ctrl+D means nothing on a phone. */
+.bmk{display:none;align-items:center;gap:8px;margin:7px 0 0;
+  font-size:12px;color:rgba(255,255,255,.62)}
+.bmk kbd{font:inherit;font-size:11px;padding:2px 6px;border-radius:4px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  color:rgba(255,255,255,.92)}
+.bmk button{background:none;border:0;padding:0 2px;cursor:pointer;font-size:15px;
+  line-height:1;color:rgba(255,255,255,.45)}
+.bmk button:hover{background:none;color:rgba(255,255,255,.85)}
 button{font:inherit;font-size:13px;padding:8px 14px;color:var(--ink);
   background:var(--surface);border:1px solid var(--border);border-radius:6px;cursor:pointer}
 button:hover{background:var(--raised)}
@@ -547,6 +557,28 @@ document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () =
   render();
 }));
 
+// Bookmark tip. There is no way to bookmark a page from script -- every browser
+// removed that years ago -- so the most any page can honestly do is name the
+// shortcut. Shown only where the shortcut exists, and only until dismissed.
+(() => {
+  const tip = $('#bmk');
+  if (!tip) return;
+  // A coarse pointer with no hover is a touch device: no Ctrl, no Cmd, and the
+  // browser's own "add to home screen" already covers saving the page there.
+  const touch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  let dismissed = false;
+  try { dismissed = localStorage.getItem('bmk') === 'off'; } catch (e) {}
+  if (touch || dismissed) return;
+  const mac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
+  $('#bmkkey').textContent = mac ? '⌘' : 'Ctrl';
+  tip.style.display = 'flex';
+  $('#bmkx').addEventListener('click', () => {
+    tip.style.display = 'none';
+    // Private-mode browsers throw on write; the tip simply returns next visit.
+    try { localStorage.setItem('bmk', 'off'); } catch (e) {}
+  });
+})();
+
 $('#export').addEventListener('click', () => {
   const rs = rows();
   const head = ['date','title','sources','type','urgency','comments_close_on','effective_on','url','summary'];
@@ -835,6 +867,11 @@ def main():
     <p class="sub">Community banks &amp; fintechs &middot; last updated
       {datetime.now(timezone.utc).strftime('%B %-d, %Y %H:%M UTC') if os.name != 'nt'
        else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</p>
+    <p class="bmk" id="bmk">
+      <span>Press <kbd id="bmkkey">Ctrl</kbd> + <kbd>D</kbd> to bookmark this page</span>
+      <button id="bmkx" type="button" aria-label="Dismiss bookmark tip"
+              title="Dismiss">&times;</button>
+    </p>
   </div>
   <button id="export">Export CSV</button>
 </header>
