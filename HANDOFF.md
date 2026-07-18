@@ -51,6 +51,7 @@ gitignored.
 | `health.py` | Per-source health check. `--report-only` to never exit non-zero |
 | `regref.py` | Fed regulation A–YY lookup table (47 entries) |
 | `make_og_image.py` | Regenerates the LinkedIn preview card |
+| `make_icons.py` | Regenerates favicon, home-screen icons and `site.webmanifest` |
 | `store.json` | **The memory — 508 analysed events. Do not delete.** |
 
 ---

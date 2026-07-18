@@ -101,6 +101,17 @@ jobs:
           # The social preview card must be published too — og:image points at an
           # absolute URL on this site, and a 404 there means no LinkedIn preview.
           cp og-image.png site/og-image.png
+          # Icons and manifest, referenced from <head>. Listed explicitly rather
+          # than globbed so a missing one fails the build loudly instead of
+          # publishing a page with a silently broken icon.
+          cp favicon.ico site/favicon.ico
+          cp icon-16.png site/icon-16.png
+          cp icon-32.png site/icon-32.png
+          cp icon-192.png site/icon-192.png
+          cp icon-512.png site/icon-512.png
+          cp icon-maskable-512.png site/icon-maskable-512.png
+          cp apple-touch-icon.png site/apple-touch-icon.png
+          cp site.webmanifest site/site.webmanifest
 
       - name: Publish to Pages
         uses: actions/upload-pages-artifact@v3

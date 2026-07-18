@@ -73,6 +73,7 @@ internet when you open it.
 | `deadlines.py` | Looks up comment deadlines and effective dates |
 | `dashboard.py` | Builds the web page |
 | `health.py` | Checks that all 14 sources are still working, and complains if not |
+| `make_icons.py` | Makes the tab/bookmark icon and the phone home-screen icons |
 | `dashboard.html` | The web page itself — this is what you open |
 | `store.json` | The memory. Everything it has ever seen and analysed. **Don't delete this** |
 | `updates.json` | Working file, rewritten every run — doesn't matter |
@@ -124,6 +125,25 @@ Financial Assets Law, Crypto Kiosk Operators, CCFPL, Debt Collection Licensing,
 Administrative Orders, Important Notices, Monthly Bulletins, Legislation, and
 the Regulations and Rulemaking category. Trim via "Manage Subscriptions" in any
 DFPI email.
+
+---
+
+## Bookmarking and saving to a phone
+
+The page has a proper tab icon, so a bookmark shows the RegWatch mark rather
+than a blank square, and it can be saved to a phone home screen where it opens
+full screen like an app.
+
+One thing that is **not** possible: a button on the page that bookmarks it for
+the visitor. Every browser removed that ability years ago because it was abused.
+Any site offering one is either showing a keyboard-shortcut hint or relying on a
+dead API. If you want a prompt, the honest version is a line saying "press Ctrl+D
+to save this page" — say the word and it can be added.
+
+Run `python make_icons.py` after changing the branding. It regenerates every
+icon size plus `site.webmanifest`. The icons must also be copied in the
+workflow's "Assemble the published site" step, or they 404 on the live site
+while working perfectly on your machine.
 
 ---
 
