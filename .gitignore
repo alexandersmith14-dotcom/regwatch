@@ -1,0 +1,20 @@
+# NEVER commit — contains the Anthropic API key.
+.env
+.env.*
+!.env.example
+
+# Local Python artefacts
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Playwright browsers, if they ever land back in this folder
+.browsers/
+
+# Working files, regenerated on every run. store.json IS committed on purpose —
+# it's the accumulated analysis and re-creating it costs real money.
+updates.json
+browser_updates.json
+*.tmp
+store.json.bak

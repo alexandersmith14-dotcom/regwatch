@@ -1,0 +1,619 @@
+"""Generate a self-contained HTML dashboard from store.json.
+
+    python dashboard.py            # writes dashboard.html
+    python dashboard.py --open     # ...and opens it
+
+No server, no dependencies, no network calls. Regenerate after each pipeline run.
+
+Design notes:
+  * Urgency and deadline proximity are shown as colour + text label. The status
+    yellow sits below 3:1 contrast on a light surface, so colour alone would not
+    be readable for everyone; the label is the mitigation, not decoration.
+  * "Updates by agency" is one hue against a muted track (magnitude comparison),
+    not a multi-colour categorical set — the agencies aren't competing series.
+  * Dark mode is declared under both the OS media query and the data-theme
+    scope, so a manual toggle wins in both directions.
+"""
+import argparse
+import html
+import json
+import os
+import webbrowser
+from collections import Counter
+from datetime import date, datetime, timedelta, timezone
+
+STORE_PATH = "store.json"
+OUT_PATH = "dashboard.html"
+
+# Kaufman Rossin brand.
+# Navy #003B6A and green #AED136 are taken from kaufmanrossin.com, along with
+# its heading grey #3C3C3C and body ink #212529.
+#
+# The green is used ONLY as a solid accent block (the header bar, panel rules)
+# with dark text on top - never for text, thin marks, or anything that carries
+# meaning by colour. It measures 1.75:1 against white, well under the 3:1 floor,
+# so as a data colour it would be invisible to a lot of readers. That is how the
+# firm's own site uses it too.
+#
+# Navy is too dark to sit on a dark background, so dark mode uses a lighter step
+# of the same hue (#4E9BD8), checked against the dark surface.
+CSS = """
+:root{
+  color-scheme:light;
+  --page:#f4f4f4; --surface:#ffffff; --raised:#fafafa;
+  --ink:#212529; --ink-2:#3c3c3c; --ink-muted:#6c757d;
+  --rule:#e3e3e3; --border:rgba(0,0,0,.12);
+  --brand:#003b6a; --brand-bg:#003b6a; --accent:#aed136;
+  --bar:#003b6a; --track:#e3e3e3;
+  --crit:#c0392b; --warn:#9a6400; --ok:#2f7d32; --neutral:#3c3c3c;
+  --chip:#f0f0f0;
+  --on-accent:#212529;
+}
+@media (prefers-color-scheme:dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#101418; --surface:#161a1d; --raised:#1d2226;
+    --ink:#f5f5f5; --ink-2:#c9cdd1; --ink-muted:#8b9298;
+    --rule:#2a3035; --border:rgba(255,255,255,.12);
+    --brand:#4e9bd8; --brand-bg:#00294a; --accent:#aed136;
+    --bar:#4e9bd8; --track:#2a3035;
+    --crit:#e66767; --warn:#eda100; --ok:#4caf50; --neutral:#c9cdd1;
+    --chip:#232a2f;
+    --on-accent:#101418;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#101418; --surface:#161a1d; --raised:#1d2226;
+  --ink:#f5f5f5; --ink-2:#c9cdd1; --ink-muted:#8b9298;
+  --rule:#2a3035; --border:rgba(255,255,255,.12);
+  --brand:#4e9bd8; --brand-bg:#00294a; --accent:#aed136;
+  --bar:#4e9bd8; --track:#2a3035;
+  --crit:#e66767; --warn:#eda100; --ok:#4caf50; --neutral:#c9cdd1;
+  --chip:#232a2f;
+  --on-accent:#101418;
+}
+*{box-sizing:border-box}
+/* museo-sans is the firm's typeface but it's licensed through Adobe Fonts and
+   can't be embedded in a self-contained file. This is the exact fallback chain
+   kaufmanrossin.com declares after it, so the dashboard matches what the site
+   shows on any machine without a Typekit licence. Calibri ships with Windows. */
+body{margin:0;padding:22px;background:var(--page);color:var(--ink);
+  font:14px/1.55 museo-sans,Calibri,Georgia,Verdana,sans-serif}
+.wrap{max-width:1240px;margin:0 auto}
+header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
+  background:var(--brand-bg);color:#fff;padding:18px 22px;border-radius:8px;
+  border-bottom:4px solid var(--accent)}
+header .t{flex:1}
+h1{font-size:21px;margin:0 0 3px;color:#fff;font-weight:700;letter-spacing:-.01em}
+.sub{color:rgba(255,255,255,.82);font-size:13px;margin:0}
+button{font:inherit;font-size:13px;padding:8px 14px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--border);border-radius:6px;cursor:pointer}
+button:hover{background:var(--raised)}
+header button{background:var(--accent);border-color:var(--accent);
+  color:var(--on-accent);font-weight:700}
+header button:hover{filter:brightness(1.06)}
+
+/* Public-facing notice. Deliberately at the top and in normal body size: a
+   personal triage tool can put its caveats in the footer, a public one can't.
+   Anyone landing here needs to know the summaries are generated before they
+   read any of them. */
+.notice{background:var(--surface);border:1px solid var(--border);
+  border-left:4px solid var(--warn);border-radius:8px;padding:13px 16px;
+  margin-bottom:18px;font-size:13px;color:var(--ink-2)}
+.notice strong{color:var(--ink)}
+
+.coverage{font-size:12.5px;color:var(--ink-2)}
+.coverage summary{cursor:pointer;font-size:12.5px;color:var(--brand);
+  font-weight:600;list-style:none}
+.coverage summary::-webkit-details-marker{display:none}
+.coverage summary::before{content:"▸ ";}
+.coverage[open] summary::before{content:"▾ ";}
+.coverage .body{padding-top:10px;line-height:1.6}
+.coverage .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:6px 22px;margin-top:8px}
+.coverage code{background:var(--chip);padding:1px 5px;border-radius:3px;font-size:11.5px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;margin-bottom:18px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:14px 16px}
+.kpi .l{font-size:12px;color:var(--ink-2)}
+.kpi .v{font-size:32px;line-height:1.15;letter-spacing:-.02em;margin:6px 0 2px}
+.kpi .n{font-size:12px;color:var(--ink-muted)}
+.kpi .n.up{color:var(--crit)} .kpi .n.down{color:var(--ok)}
+
+/* Two labelled groups. The pills used to be one undifferentiated row, which hid
+   the fact that they answer different questions: agency pills filter by WHO
+   published an item, topic pills by WHAT it is about. Same look, different
+   mechanism, no way for a reader to tell. */
+.pillgroup{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:9px}
+.pillgroup:last-of-type{margin-bottom:18px}
+.grouplabel{font-size:11px;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-muted);width:104px;flex:none}
+.grouplabel small{display:block;font-weight:400;letter-spacing:0;
+  text-transform:none;font-size:11px;line-height:1.3;margin-top:1px}
+.searchwrap{position:relative;flex:1 1 340px;max-width:520px}
+.searchwrap input{width:100%;font:inherit;font-size:13px;padding:8px 30px 8px 12px;
+  color:var(--ink);background:var(--surface);border:1px solid var(--border);
+  border-radius:999px}
+.searchwrap input:focus{outline:2px solid var(--brand);outline-offset:1px;
+  border-color:var(--brand)}
+.searchwrap input::-webkit-search-cancel-button{display:none}
+#clearq{position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  border:none;background:transparent;color:var(--ink-muted);font-size:17px;
+  line-height:1;padding:2px 8px;cursor:pointer;border-radius:50%}
+#clearq:hover{color:var(--ink);background:var(--chip)}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.pill{font-size:12.5px;padding:6px 13px;border-radius:999px;cursor:pointer;
+  background:var(--surface);border:1px solid var(--border);color:var(--ink-2)}
+/* Selected pill uses navy, not the brand green: the green is a background
+   accent and white text on it fails contrast badly. */
+.pill[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);
+  color:#fff;font-weight:700}
+
+.cols{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:16px 18px}
+.panel+.panel{margin-top:18px}
+.panel h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--brand);margin:0 0 12px;font-weight:700;
+  border-bottom:2px solid var(--accent);padding-bottom:7px}
+.panel .note{font-size:12px;color:var(--ink-2);margin:-6px 0 12px}
+
+.card{padding:14px 0;border-bottom:1px solid var(--rule)}
+.card:first-of-type{padding-top:0}
+.card:last-child{border-bottom:none;padding-bottom:0}
+.card .top{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--chip);color:var(--ink-2)}
+.badge.t-Final{color:#fff;background:var(--crit)}
+.badge.t-Proposed{color:#fff;background:var(--warn)}
+.badge.t-Guidance{color:#fff;background:var(--brand)}
+.badge.t-Enforcement{color:#fff;background:var(--neutral)}
+.card .agency{font-size:12px;color:var(--ink-muted)}
+.card h3{font-size:14.5px;margin:0 0 5px;font-weight:600;line-height:1.35}
+.card h3 a{color:var(--brand);text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.card p{margin:0;font-size:13px;color:var(--ink-2)}
+.card .meta{margin-top:7px;font-size:12px;color:var(--ink-muted);
+  font-variant-numeric:tabular-nums}
+.u{font-weight:600}
+.u::before{content:"● "}
+.u-High{color:var(--crit)} .u-Medium{color:var(--warn)} .u-Low{color:var(--ink-muted)}
+
+.dl{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.dl:last-child{border-bottom:none}
+.dl .dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:6px}
+.dl .body{flex:1}
+.dl .ttl{font-size:13.5px;font-weight:600;line-height:1.35}
+.dl .ttl a{color:var(--ink);text-decoration:none}
+.dl .ttl a:hover{text-decoration:underline}
+.dl .when{font-size:12px;margin-top:3px;font-variant-numeric:tabular-nums}
+.soon{color:var(--crit)} .mid{color:var(--warn)} .far{color:var(--ok)}
+
+.agrow{display:grid;grid-template-columns:120px 1fr 74px;gap:7px 10px;align-items:center}
+.agrow .n{font-size:12.5px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meter{position:relative;height:11px;background:var(--track);border-radius:4px;overflow:hidden}
+.meter>span{position:absolute;inset:0 auto 0 0;background:var(--bar);border-radius:4px}
+.agrow .c{font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.empty{color:var(--ink-2);font-size:13px;padding:8px 0}
+
+/* Contact card. This is the point of publishing the tool, so it gets real
+   estate at the bottom of the page — where someone lands after they have
+   found it useful — rather than a link buried in the footer text. */
+.contact{margin-top:22px;background:var(--surface);border:1px solid var(--border);
+  border-top:4px solid var(--accent);border-radius:9px;padding:18px 20px;
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.contact .who{flex:1 1 340px;min-width:280px}
+.contact .name{font-size:15px;font-weight:700;color:var(--ink)}
+.contact .role{font-size:13px;color:var(--ink-2);margin-top:2px}
+.contact .pitch{font-size:13px;color:var(--ink-2);margin-top:9px;line-height:1.55}
+.contact .acts{display:flex;flex-wrap:wrap;gap:9px}
+.contact a.btn{font-size:13px;font-weight:600;padding:9px 16px;border-radius:6px;
+  text-decoration:none;border:1px solid var(--border);color:var(--ink);
+  background:var(--raised)}
+.contact a.btn:hover{border-color:var(--brand)}
+.contact a.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.contact a.btn.primary:hover{filter:brightness(1.12)}
+footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
+"""
+
+JS = r"""
+const DATA = JSON.parse(document.getElementById('data').textContent);
+const TODAY = document.body.dataset.today;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const days = d => Math.round((new Date(d) - new Date(TODAY)) / 86400000);
+
+let filter = {kind: 'all', value: ''};
+let query = '';
+
+// Search runs IN ADDITION to whichever pill is active, so "FinCEN" + "stablecoin"
+// narrows rather than replacing the pill selection.
+// Terms match at the START of a word, not anywhere inside one. Plain substring
+// matching produced false hits that were hard to spot: searching "regulation gg"
+// returned an item about Regulation O, because "gg" sits inside "trigger".
+// Anchoring to a word boundary still allows prefixes, so "stablecoin" finds
+// "stablecoins" and "reg" finds "regulation".
+const rxCache = new Map();
+function termRx(t) {
+  if (!rxCache.has(t)) {
+    rxCache.set(t, new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
+  }
+  return rxCache.get(t);
+}
+
+function matchesQuery(d) {
+  if (!query) return true;
+  const hay = (d.title + ' ' + d.why + ' ' + d.sources.join(' ') + ' ' +
+               (d.tags || []).join(' ') + ' ' + (d.type || '')).toLowerCase();
+  // Every whitespace-separated term must appear, so extra words narrow the
+  // result instead of widening it the way an OR match would.
+  return query.split(/\s+/).every(t => termRx(t).test(hay));
+}
+
+function rows() {
+  return DATA.filter(d => {
+    if (!d.relevant) return false;
+    if (!matchesQuery(d)) return false;
+    if (filter.kind === 'agency') return d.sources.includes(filter.value);
+    // Fintech uses the classifier's explicit judgment, not a word match. Matching
+    // the text found ~55 items because the model padded most summaries with the
+    // phrase "community banks and fintechs"; the real count is 14.
+    if (filter.kind === 'fintech') return d.fintech === true;
+    // Topics match any term in a list, not one literal word. A single keyword
+    // silently under-reports: "Lending" missed "loan" and "credit", and
+    // "Prepaid / FBO" would have missed an FBO item written as
+    // "for-benefit-of accounts".
+    if (filter.kind === 'tag') {
+      const hay = ((d.tags || []).join(' ') + ' ' + d.title + ' ' + d.why).toLowerCase();
+      return filter.value.split('|').some(t => hay.includes(t));
+    }
+    return true;
+  });
+}
+
+function renderCards(rs) {
+  const list = rs.slice(0, 25);
+  $('#cards').innerHTML = list.length ? list.map(d => {
+    const short = (d.type || '').split(' ')[0];
+    return `<div class="card">
+      <div class="top">
+        <span class="badge t-${esc(short)}">${esc(d.type || '—')}</span>
+        <span class="agency">${esc(d.sources.join(' · '))}</span>
+      </div>
+      <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></h3>
+      <p>${esc(d.why)}</p>
+      <div class="meta">${esc(d.date)} · <span class="u u-${esc(d.urgency)}">${esc(d.urgency)}</span></div>
+    </div>`;
+  }).join('') : '<div class="empty">No updates match this filter.</div>';
+  $('#cardcount').textContent = `${rs.length} update${rs.length === 1 ? '' : 's'}`;
+}
+
+function renderDeadlines(rs) {
+  const items = [];
+  rs.forEach(d => {
+    if (d.comments_close_on && d.comments_close_on >= TODAY)
+      items.push({d, when: d.comments_close_on, what: 'Comments close'});
+    if (d.effective_on && d.effective_on >= TODAY)
+      items.push({d, when: d.effective_on, what: 'Takes effect'});
+  });
+  items.sort((a, b) => a.when.localeCompare(b.when));
+  $('#deadlines').innerHTML = items.length ? items.map(({d, when, what}) => {
+    const n = days(when);
+    const cls = n <= 14 ? 'soon' : n <= 45 ? 'mid' : 'far';
+    const col = cls === 'soon' ? 'var(--crit)' : cls === 'mid' ? 'var(--warn)' : 'var(--ok)';
+    return `<div class="dl">
+      <div class="dot" style="background:${col}"></div>
+      <div class="body">
+        <div class="ttl"><a href="${esc(d.fr_url || d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></div>
+        <div class="when ${cls}">${esc(what)} ${esc(when)} · ${n} day${n === 1 ? '' : 's'}</div>
+      </div></div>`;
+  }).join('')
+  : '<div class="empty">No dated deadlines in this view. Dates come from matched Federal Register documents; items without a match show none.</div>';
+}
+
+function renderAgencies(rs) {
+  const c = {};
+  rs.forEach(d => d.sources.forEach(s => c[s] = (c[s] || 0) + 1));
+  const e = Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, 10);
+  const max = e.length ? e[0][1] : 1;
+  $('#agencies').innerHTML = e.length ? e.map(([n, v]) =>
+    `<div class="n" title="${esc(n)}">${esc(n)}</div>
+     <div class="meter"><span style="width:${Math.round(v / max * 100)}%"></span></div>
+     <div class="c">${v} update${v === 1 ? '' : 's'}</div>`).join('')
+    : '<div class="empty">—</div>';
+}
+
+function render() {
+  const rs = rows();
+  renderCards(rs); renderDeadlines(rs); renderAgencies(rs);
+}
+
+const searchBox = $('#q');
+searchBox.addEventListener('input', () => {
+  query = searchBox.value.trim().toLowerCase();
+  $('#clearq').hidden = !query;
+  render();
+});
+$('#clearq').addEventListener('click', () => {
+  searchBox.value = ''; query = ''; $('#clearq').hidden = true;
+  searchBox.focus(); render();
+});
+// Escape clears the box — expected in a search field, and quicker than
+// selecting the text to delete it.
+searchBox.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && searchBox.value) { $('#clearq').click(); }
+});
+
+document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => {
+  document.querySelectorAll('.pill').forEach(x => x.setAttribute('aria-pressed', 'false'));
+  p.setAttribute('aria-pressed', 'true');
+  filter = {kind: p.dataset.kind, value: p.dataset.value || ''};
+  render();
+}));
+
+$('#export').addEventListener('click', () => {
+  const rs = rows();
+  const head = ['date','title','sources','type','urgency','comments_close_on','effective_on','url','summary'];
+  const cell = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
+  const csv = [head.join(',')].concat(rs.map(d => [
+    d.date, d.title, d.sources.join('; '), d.type, d.urgency,
+    d.comments_close_on || '', d.effective_on || '', d.url, d.why
+  ].map(cell).join(','))).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], {type: 'text/csv'}));
+  a.download = `regwatch-${TODAY}.csv`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+render();
+"""
+
+# Each topic is a set of terms matched against tags + title + summary. Pipe
+# separated because the value rides in a data- attribute.
+TOPIC_PILLS = [
+    ("BSA / AML",
+     "aml|bsa|money laundering|sanction|ofac|suspicious activity|"
+     "beneficial owner|know your customer|customer identification|314(b)"),
+    ("Lending",
+     "lending|loan|credit|underwriting|mortgage|ecoa|regulation b|"
+     "fair lending|hmda|truth in lending"),
+    ("Enforcement",
+     "enforcement|consent order|civil money penalty|cease and desist|"
+     "settlement|charges|restitution"),
+]
+
+
+def build_rows(store):
+    rows = []
+    for r in store.values():
+        rows.append({
+            "title": r.get("title", ""), "url": r.get("url", ""),
+            "fr_url": r.get("fr_url"), "date": r.get("date", ""),
+            "sources": r.get("sources", []), "type": r.get("update_type", ""),
+            "urgency": r.get("urgency", "Low"), "relevant": bool(r.get("relevant")),
+            "why": r.get("plain_english", ""), "tags": r.get("tags", []),
+            "fintech": bool(r.get("fintech_specific")),
+            "comments_close_on": r.get("comments_close_on"),
+            "effective_on": r.get("effective_on"),
+        })
+    rows.sort(key=lambda d: (d["date"] or "0000"), reverse=True)
+    return rows
+
+
+def kpis(rows, today):
+    """Headline numbers. Only counts we can actually substantiate."""
+    def within(d, lo, hi):
+        return bool(d) and str(lo) <= d <= str(hi)
+
+    wk_start = today - timedelta(days=7)
+    prev_start = today - timedelta(days=14)
+    rel = [r for r in rows if r["relevant"]]
+
+    this_wk = sum(1 for r in rel if within(r["date"], wk_start, today))
+    last_wk = sum(1 for r in rel if within(r["date"], prev_start, wk_start))
+    delta = this_wk - last_wk
+
+    open_c = [r for r in rel if r["comments_close_on"] and r["comments_close_on"] >= str(today)]
+    soon = sum(1 for r in open_c if r["comments_close_on"] <= str(today + timedelta(days=30)))
+
+    month_start = today.replace(day=1)
+    enf = sum(1 for r in rel if r["type"] == "Enforcement Action"
+              and within(r["date"], month_start, today))
+
+    q_start = date(today.year, 3 * ((today.month - 1) // 3) + 1, 1)
+    q_end = date(today.year + (q_start.month + 3 > 12), ((q_start.month + 2) % 12) + 1, 28)
+    eff = sum(1 for r in rel if r["effective_on"] and str(q_start) <= r["effective_on"] <= str(q_end))
+
+    dn = "up" if delta > 0 else "down" if delta < 0 else ""
+    dtxt = f"{'+' if delta > 0 else ''}{delta} vs last week" if delta else "same as last week"
+    return [
+        ("Updates this week", this_wk, dtxt, dn),
+        ("Open comment periods", len(open_c), f"{soon} closing within 30 days", ""),
+        ("Enforcement actions", enf, "This month", ""),
+        ("Effective this quarter", eff, f"Rules taking effect by {q_end.strftime('%b %Y')}", ""),
+    ]
+
+
+def coverage_panel(store):
+    """Build the 'what this covers' panel from the store itself.
+
+    Generated rather than written by hand so it can't drift from reality — if a
+    source breaks or is dropped, the panel stops claiming we track it. A public
+    tool that silently under-reports is worse than no tool, because absence reads
+    as "nothing happened".
+    """
+    per = {}
+    for r in store.values():
+        for a in r.get("sources", []):
+            if str(r.get("date", "")).startswith("20"):
+                per.setdefault(a, []).append(r["date"])
+
+    rows = []
+    for agency in sorted(per):
+        d = sorted(per[agency])
+        rows.append(
+            f'<div><strong>{html.escape(agency)}</strong> — '
+            f'{len(d)} items, {d[0]} to {d[-1]}</div>'
+        )
+
+    return (
+        '<details class="coverage"><summary>What this covers, and what it does not'
+        '</summary><div class="body">'
+        '<p><strong>Tracked:</strong> the US federal banking and financial-crime '
+        'agencies listed below. History depth varies by source — some publish '
+        'archives going back years, others only their most recent items.</p>'
+        f'<div class="grid">{"".join(rows)}</div>'
+        '<p style="margin-top:12px"><strong>Not tracked:</strong> state regulators '
+        '(including NYDFS and California DFPI, which block automated access), '
+        'FFIEC, SEC, FTC and CFTC. Congressional activity and court decisions are '
+        'not covered. Anything an agency published but did not list on the pages '
+        'above will be missing.</p>'
+        '<p><strong>Relevance:</strong> items are screened against a profile of US '
+        'community banks (under ~$10B assets) and fintechs — BaaS and sponsor-bank '
+        'arrangements, prepaid and FBO accounts, consumer lending and credit risk, '
+        'BSA/AML, and internal audit. Items outside that scope are collected but '
+        'filtered out, so this is not a complete record of everything these '
+        'agencies publish.</p>'
+        "</div></details>"
+    )
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--open", action="store_true")
+    args = ap.parse_args()
+
+    with open(STORE_PATH, encoding="utf-8") as f:
+        store = json.load(f)
+
+    rows = build_rows(store)
+    today = datetime.now(timezone.utc).date()
+    agencies = [a for a, _ in Counter(
+        s for d in rows if d["relevant"] for s in d["sources"]).most_common(9)]
+
+    # Grouped so it's obvious that one row filters by publisher and the other by
+    # subject — they look identical otherwise and read as one arbitrary list.
+    source_pills = (
+        '<button class="pill" data-kind="all" aria-pressed="true">All</button>'
+        + "".join(f'<button class="pill" data-kind="agency" data-value="{a}" '
+                  f'aria-pressed="false">{a}</button>' for a in agencies)
+    )
+    topic_pills = (
+        '<button class="pill" data-kind="fintech" aria-pressed="false">Fintech</button>'
+        + "".join(f'<button class="pill" data-kind="tag" data-value="{v}" '
+                  f'aria-pressed="false">{lbl}</button>' for lbl, v in TOPIC_PILLS)
+    )
+
+    coverage_html = coverage_panel(store)
+
+    kpi_html = "".join(
+        f'<div class="kpi"><div class="l">{lbl}</div><div class="v">{val}</div>'
+        f'<div class="n {cls}">{note}</div></div>'
+        for lbl, val, note, cls in kpis(rows, today)
+    )
+
+    html = f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RegWatch — regulatory update tracker</title>
+<style>{CSS}</style></head>
+<body data-today="{today}"><div class="wrap">
+
+<header>
+  <div class="t">
+    <h1>Regulatory update tracker</h1>
+    <p class="sub">Community banks &amp; fintechs &middot; last updated
+      {datetime.now(timezone.utc).strftime('%B %-d, %Y %H:%M UTC') if os.name != 'nt'
+       else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</p>
+  </div>
+  <button id="export">Export CSV</button>
+</header>
+
+<div class="notice">
+  <strong>Read this first.</strong> The plain-English summaries below are generated
+  by AI from agency listings. They are a starting point for triage, not legal or
+  compliance advice, and they can be wrong or incomplete. Always open the source
+  document before acting on anything here. Deadlines shown are structured fields
+  taken from matched Federal Register records; items without a match show none,
+  which does not mean none exists.
+  <div style="margin-top:9px">{coverage_html}</div>
+</div>
+
+<div class="kpis">{kpi_html}</div>
+<div class="pillgroup">
+  <div class="grouplabel">Search<small>any word</small></div>
+  <div class="searchwrap">
+    <input id="q" type="search" autocomplete="off"
+           placeholder="e.g. stablecoin, Regulation B, comment period…"
+           aria-label="Search updates">
+    <button id="clearq" type="button" hidden aria-label="Clear search">&times;</button>
+  </div>
+</div>
+<div class="pillgroup">
+  <div class="grouplabel">Source<small>who published it</small></div>
+  {source_pills}
+</div>
+<div class="pillgroup">
+  <div class="grouplabel">Topic<small>what it's about</small></div>
+  {topic_pills}
+</div>
+
+<div class="cols">
+  <div>
+    <div class="panel">
+      <h2>Latest updates <span style="float:right;text-transform:none;letter-spacing:0"
+          id="cardcount"></span></h2>
+      <div id="cards"></div>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <h2>Upcoming deadlines</h2>
+      <div id="deadlines"></div>
+    </div>
+    <div class="panel">
+      <h2>Updates by agency</h2>
+      <div class="agrow" id="agencies"></div>
+    </div>
+  </div>
+</div>
+
+<div class="contact">
+  <div class="who">
+    <div class="name">Built by Alexander Smith, CRCM, CFE</div>
+    <div class="role">Risk Advisory Services &middot; Kaufman Rossin</div>
+    <div class="pitch">I built this to keep track of federal regulatory activity
+      affecting community banks and fintechs. If your institution is tracking this
+      manually — or wants monitoring shaped around its own risk profile — I'm happy
+      to talk it through.</div>
+  </div>
+  <div class="acts">
+    <a class="btn primary" href="https://www.linkedin.com/in/alexandersmith14/"
+       target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <a class="btn" href="mailto:asmith@kaufmanrossin.com?subject=RegWatch%20regulatory%20tracker">Email me</a>
+    <a class="btn" href="https://kaufmanrossin.com/professionals/alexander-smith/"
+       target="_blank" rel="noopener">Full bio</a>
+  </div>
+</div>
+
+<footer>Deadlines are structured fields from matched Federal Register documents.
+Summaries are model-generated from agency listings and are not a substitute for
+reading the source document. Not legal or compliance advice.</footer>
+</div>
+<script type="application/json" id="data">{json.dumps(rows)}</script>
+<script>{JS}</script>
+</body></html>"""
+
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
+        f.write(html)
+    print(f"Wrote {OUT_PATH} ({os.path.getsize(OUT_PATH)/1024:.0f} KB) — "
+          f"{sum(1 for r in rows if r['relevant'])} relevant of {len(rows)} events")
+    if args.open:
+        webbrowser.open("file://" + os.path.abspath(OUT_PATH))
+
+
+if __name__ == "__main__":
+    main()
