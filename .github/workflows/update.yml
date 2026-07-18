@@ -10,6 +10,14 @@ on:
   schedule:
     - cron: "30 6 * * *"
   workflow_dispatch: {}      # lets you trigger a run by hand from the Actions tab
+  # Deploy on push as well. Without this, code changes sat in the repo while the
+  # published site stayed on whatever the last scheduled run produced — including
+  # a search bug that had already been fixed in the repo. Classification is
+  # incremental, so a push with no new agency items costs nothing.
+  push:
+    branches: [main]
+    paths-ignore:
+      - "README.md"          # docs-only edits don't need a redeploy
 
 permissions:
   contents: write            # needed to commit the refreshed store and dashboard
