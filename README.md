@@ -98,10 +98,32 @@ automated access, including real browsers. Rather than work around it, both are
 subscribed to by email through their own alert services:
 
 - NYDFS Industry Letters: public.govdelivery.com/accounts/NYDFS/subscriber/new?topic_id=NYDFS_162
-- California DFPI: dfpi.ca.gov/news-and-updates/subscribe/
+  — subscribed 2026-07-18, confirmed by GovDelivery
+- California DFPI (industry list): public.govdelivery.com/accounts/CADFI/subscriber/new
+  — subscribed and confirmed 2026-07-18, immediate delivery, broad topic
+    selection (43 topics + 7 categories)
 
-Those arrive in your work inbox and are not part of the dashboard. Everything in
-the dashboard is federal.
+These arrive in the personal inbox, not the work one, and are not part of the
+dashboard. Everything in the dashboard is federal.
+
+Two traps, both hit on the first attempt at DFPI:
+
+- **DFPI's own subscribe page offers two different signups through two different
+  systems** — a consumer newsletter via HubSpot, and the industry alerts via
+  GovDelivery. The consumer one is the wrong list. Link straight to the
+  GovDelivery form above to avoid the choice.
+- **DFPI requires clicking a confirmation link in the email; NYDFS does not.**
+  Until that link is clicked the web page still says "Subscriptions updated" and
+  nothing is ever delivered. Silence from an unconfirmed subscription is
+  indistinguishable from silence because there is no news.
+
+The DFPI selection is deliberately broad, which means volume. If it becomes
+noisy, the subset that actually matches this project's focus is roughly: Bank
+Regulations, Credit Union Regulations, Money Transmitter Regulations, Digital
+Financial Assets Law, Crypto Kiosk Operators, CCFPL, Debt Collection Licensing,
+Administrative Orders, Important Notices, Monthly Bulletins, Legislation, and
+the Regulations and Rulemaking category. Trim via "Manage Subscriptions" in any
+DFPI email.
 
 ---
 
