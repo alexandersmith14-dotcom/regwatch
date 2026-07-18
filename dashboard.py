@@ -203,8 +203,17 @@ header button:hover{filter:brightness(1.06)}
 /* Phone layout. The desktop proportions put 1,434px of header, counts and
    filters above the first actual update — nearly two full screens of scrolling
    before any content, on the device most LinkedIn traffic arrives from.
-   Everything here buys that height back. */
-@media (max-width:640px){
+   Everything here buys that height back.
+
+   Not width alone. A phone in landscape is around 800px wide, so a plain
+   max-width:640px rule handed it the full desktop layout on a 375px-tall
+   screen: updates above deadlines, the filter block fully expanded, nothing
+   foldable, small tap targets. The pointer test catches a phone in either
+   orientation; the width bound keeps large tablets and touch-capable laptops on
+   the desktop layout, which is what suits them.
+
+   MUST stay in sync with the MOBILE matchMedia in the script below. */
+@media (max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px){
   body{padding:12px}
   header{padding:14px 16px;gap:12px;margin-bottom:14px}
   h1{font-size:18px}
@@ -473,7 +482,12 @@ function renderFilteredOut() {
 // Driven by a matchMedia listener rather than a one-off check at load: a
 // load-time read is unreliable and would also strand a phone that rotates into
 // landscape with the narrow layout.
-const MOBILE = window.matchMedia('(max-width:640px)');
+// MUST match the phone media query in the stylesheet above. A phone in
+// landscape is ~800px wide, so testing width alone treated it as a desktop and
+// switched off the folding, the deadlines-first ordering and the collapsed
+// filter block exactly when the 375px-tall screen needed them most.
+const MOBILE = window.matchMedia(
+  '(max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px)');
 let cardLimit = MOBILE.matches ? 8 : 25;
 let userChoseLimit = false;      // never override an explicit "show more"
 let userToggledFilters = false;  // or an explicit open/close
