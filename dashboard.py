@@ -151,6 +151,20 @@ header button:hover{filter:brightness(1.06)}
 .pill[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);
   color:#fff;font-weight:700}
 
+/* Relevance is a lens, not a gate — this switches between the filtered default
+   and everything collected. */
+.viewtoggle{display:inline-flex;border:1px solid var(--border);border-radius:999px;
+  overflow:hidden}
+.viewtoggle button{border:none;border-radius:0;padding:6px 15px;font-size:12.5px;
+  background:var(--surface);color:var(--ink-2);cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{background:var(--brand);color:#fff;font-weight:700}
+/* Set-aside items are dimmed AND labelled — dimming alone is not a readable
+   signal, and in the everything view the reader must be able to tell which
+   items met the criteria. */
+.dropped{opacity:.78}
+.badge.setaside{background:transparent;border:1px solid var(--border);
+  color:var(--ink-muted);font-weight:400}
+
 .cols{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
 @media (max-width:900px){.cols{grid-template-columns:1fr}}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:16px 18px}
@@ -227,6 +241,11 @@ const days = d => Math.round((new Date(d) - new Date(TODAY)) / 86400000);
 
 let filter = {kind: 'all', value: ''};
 let query = '';
+// Relevance is a lens, not a gate. The profile it screens against is one
+// person's view of what matters; a public audience does not share it. Default to
+// the filtered view because that is the useful default, but everything the
+// agencies published stays one click away.
+let showAll = false;
 
 // Search runs IN ADDITION to whichever pill is active, so "FinCEN" + "stablecoin"
 // narrows rather than replacing the pill selection.
@@ -254,7 +273,7 @@ function matchesQuery(d) {
 
 function rows() {
   return DATA.filter(d => {
-    if (!d.relevant) return false;
+    if (!showAll && !d.relevant) return false;
     if (!matchesQuery(d)) return false;
     if (filter.kind === 'agency') return d.sources.includes(filter.value);
     // Fintech uses the classifier's explicit judgment, not a word match. Matching
@@ -280,7 +299,8 @@ function rows() {
 // that nothing exists.
 function renderFilteredOut() {
   const box = $('#alsofound');
-  if (!query) { box.innerHTML = ''; return; }
+  // Redundant when the full set is already on screen.
+  if (!query || showAll) { box.innerHTML = ''; return; }
   const hits = DATA.filter(d => !d.relevant && matchesQuery(d)).slice(0, 15);
   if (!hits.length) { box.innerHTML = ''; return; }
   box.innerHTML = `
@@ -305,10 +325,13 @@ function renderCards(rs) {
   const list = rs.slice(0, 25);
   $('#cards').innerHTML = list.length ? list.map(d => {
     const short = (d.type || '').split(' ')[0];
-    return `<div class="card">
+    // In the "everything" view a set-aside item must be visibly marked, or the
+    // reader cannot tell which items met the criteria and which did not.
+    return `<div class="card${d.relevant ? '' : ' dropped'}">
       <div class="top">
         <span class="badge t-${esc(short)}">${esc(d.type || '—')}</span>
         <span class="agency">${esc(d.sources.join(' · '))}</span>
+        ${d.relevant ? '' : '<span class="badge setaside">set aside by filter</span>'}
       </div>
       <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></h3>
       <p>${esc(d.why)}</p>
@@ -358,6 +381,18 @@ function render() {
   renderCards(rs); renderDeadlines(rs); renderAgencies(rs); renderFilteredOut();
 }
 
+function setView(all) {
+  showAll = all;
+  $('#viewAll').setAttribute('aria-pressed', String(all));
+  $('#viewRelevant').setAttribute('aria-pressed', String(!all));
+  $('#viewnote').textContent = all
+    ? 'Showing everything collected, including items the filter set aside'
+    : 'Showing items that met the community bank / fintech criteria';
+  render();
+}
+$('#viewAll').addEventListener('click', () => setView(true));
+$('#viewRelevant').addEventListener('click', () => setView(false));
+
 const searchBox = $('#q');
 searchBox.addEventListener('input', () => {
   query = searchBox.value.trim().toLowerCase();
@@ -396,7 +431,7 @@ $('#export').addEventListener('click', () => {
   URL.revokeObjectURL(a.href);
 });
 
-render();
+setView(false);
 """
 
 # Each topic is a set of terms matched against tags + title + summary. Pipe
@@ -579,6 +614,14 @@ def main():
            aria-label="Search updates">
     <button id="clearq" type="button" hidden aria-label="Clear search">&times;</button>
   </div>
+</div>
+<div class="pillgroup">
+  <div class="grouplabel">View<small>how much to show</small></div>
+  <div class="viewtoggle">
+    <button id="viewRelevant" aria-pressed="true">Relevant only</button>
+    <button id="viewAll" aria-pressed="false">Everything</button>
+  </div>
+  <span class="count" id="viewnote"></span>
 </div>
 <div class="pillgroup">
   <div class="grouplabel">Source<small>who published it</small></div>
