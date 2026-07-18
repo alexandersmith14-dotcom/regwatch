@@ -201,6 +201,24 @@ header button:hover{filter:brightness(1.06)}
   .rr-letter{width:46px}
   .contact{padding:15px 16px;gap:14px}
 
+  /* Stacked columns put deadlines eight screens down, below every update card,
+     even though they are the most actionable thing on the page. display:contents
+     lifts the panels out of their column wrappers so they can be ordered. */
+  .cols{display:flex;flex-direction:column;gap:14px}
+  .colmain,.colside{display:contents}
+  .p-deadlines{order:1}
+  .p-updates{order:2}
+  #alsofound{order:3}
+  .p-agencies{order:4}
+
+  /* Bigger touch targets. */
+  .pill{padding:8px 13px}
+  .viewtoggle button{padding:9px 15px}
+  .card h3{line-height:1.45}
+  .card h3 a{display:inline-block;padding:2px 0}
+  #showmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
+    color:var(--brand);background:var(--surface)}
+
   /* Collapse the filter block. 327px of pills sat above the first update on a
      phone; search stays out here because it is the control people reach for. */
   #filters summary{display:block;cursor:pointer;list-style:none;
@@ -281,7 +299,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks &amp; fintechs &middot; last updated
-      July 18, 2026 17:07 UTC</p>
+      July 18, 2026 17:13 UTC</p>
   </div>
   <button id="export">Export CSV</button>
 </header>
@@ -331,20 +349,21 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
 </details>
 
 <div class="cols">
-  <div>
-    <div class="panel">
+  <div class="colmain">
+    <div class="panel p-updates">
       <h2>Latest updates <span style="float:right;text-transform:none;letter-spacing:0"
           id="cardcount"></span></h2>
       <div id="cards"></div>
+      <button id="showmore" type="button" hidden>Show more updates</button>
     </div>
     <div id="alsofound"></div>
   </div>
-  <div>
-    <div class="panel">
+  <div class="colside">
+    <div class="panel p-deadlines">
       <h2>Upcoming deadlines</h2>
       <div id="deadlines"></div>
     </div>
-    <div class="panel">
+    <div class="panel p-agencies">
       <h2>Updates by agency</h2>
       <div class="agrow" id="agencies"></div>
     </div>
@@ -491,8 +510,19 @@ function renderFilteredOut() {
     </div>`;
 }
 
+// Fewer cards on a phone. At 25 the page ran ten screens deep, which put the
+// contact card past the point anyone scrolls. The rest are one tap away.
+//
+// Driven by a matchMedia listener rather than a one-off check at load: a
+// load-time read is unreliable and would also strand a phone that rotates into
+// landscape with the narrow layout.
+const MOBILE = window.matchMedia('(max-width:640px)');
+let cardLimit = MOBILE.matches ? 8 : 25;
+let userChoseLimit = false;      // never override an explicit "show more"
+let userToggledFilters = false;  // or an explicit open/close
+
 function renderCards(rs) {
-  const list = rs.slice(0, 25);
+  const list = rs.slice(0, cardLimit);
   $('#cards').innerHTML = list.length ? list.map(d => {
     const short = (d.type || '').split(' ')[0];
     // In the "everything" view a set-aside item must be visibly marked, or the
@@ -509,6 +539,12 @@ function renderCards(rs) {
     </div>`;
   }).join('') : '<div class="empty">No updates match this filter.</div>';
   $('#cardcount').textContent = `${rs.length} update${rs.length === 1 ? '' : 's'}`;
+  const more = $('#showmore');
+  if (more) {
+    const hidden = rs.length - list.length;
+    more.hidden = hidden <= 0;
+    more.textContent = `Show ${hidden} more update${hidden === 1 ? '' : 's'}`;
+  }
 }
 
 function renderDeadlines(rs) {
@@ -603,8 +639,31 @@ $('#export').addEventListener('click', () => {
 
 // Open in the markup, collapsed here only on a phone. Written this way round so
 // a script failure leaves the filters visible rather than hiding them entirely.
+const showMoreBtn = document.getElementById('showmore');
+if (showMoreBtn) showMoreBtn.addEventListener('click', () => {
+  cardLimit = Infinity;
+  userChoseLimit = true;
+  render();
+  showMoreBtn.hidden = true;
+});
+
 const filtersEl = document.getElementById('filters');
-if (filtersEl && window.matchMedia('(max-width:640px)').matches) filtersEl.open = false;
+if (filtersEl) filtersEl.addEventListener('toggle', () => { userToggledFilters = true; });
+
+function applyViewport() {
+  if (!userChoseLimit) cardLimit = MOBILE.matches ? 8 : 25;
+  if (filtersEl && !userToggledFilters) {
+    // Assigning .open fires 'toggle', which would set the user flag — suppress it.
+    const wanted = !MOBILE.matches;
+    if (filtersEl.open !== wanted) {
+      filtersEl.open = wanted;
+      userToggledFilters = false;
+    }
+  }
+  render();
+}
+MOBILE.addEventListener('change', applyViewport);
+applyViewport();
 
 setView(false);
 </script>
