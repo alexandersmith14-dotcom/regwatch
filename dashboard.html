@@ -161,8 +161,57 @@ header button:hover{filter:brightness(1.06)}
 .badge.setaside{background:transparent;border:1px solid var(--border);
   color:var(--ink-muted);font-weight:400}
 
+#filters summary{display:none}          /* desktop: always expanded, no control */
+#filters>.pillgroup:last-of-type{margin-bottom:18px}
 .cols{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
 @media (max-width:900px){.cols{grid-template-columns:1fr}}
+
+/* Phone layout. The desktop proportions put 1,434px of header, counts and
+   filters above the first actual update — nearly two full screens of scrolling
+   before any content, on the device most LinkedIn traffic arrives from.
+   Everything here buys that height back. */
+@media (max-width:640px){
+  body{padding:12px}
+  header{padding:14px 16px;gap:12px;margin-bottom:14px}
+  h1{font-size:18px}
+  .sub{font-size:12px}
+  .notice{padding:11px 13px;font-size:12.5px;margin-bottom:14px}
+
+  /* Two-up instead of stacked: four numbers in half the height. */
+  .kpis{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .kpi{padding:10px 12px;border-radius:8px}
+  .kpi .v{font-size:23px;margin:3px 0 1px}
+  .kpi .l,.kpi .n{font-size:11px;line-height:1.3}
+
+  /* Label above the controls rather than beside them — the fixed 104px column
+     was taking 31% of a 331px content width and pushing the source pills onto
+     five rows. */
+  .grouplabel{width:100%;flex:0 0 100%;margin-bottom:1px}
+  .grouplabel small{display:inline;margin-left:6px}
+  .pillgroup{gap:6px;margin-bottom:11px}
+  .pill{padding:5px 11px;font-size:12px}
+  .searchwrap{flex:1 1 100%;max-width:none}
+
+  .panel{padding:13px 14px}
+  .cols{gap:14px}
+  .card h3{font-size:14px}
+  .card p{font-size:12.5px}
+
+  .rr-table td,.rr-table th{padding:4px 5px;font-size:11.5px}
+  .rr-letter{width:46px}
+  .contact{padding:15px 16px;gap:14px}
+
+  /* Collapse the filter block. 327px of pills sat above the first update on a
+     phone; search stays out here because it is the control people reach for. */
+  #filters summary{display:block;cursor:pointer;list-style:none;
+    font-size:12.5px;font-weight:700;color:var(--brand);padding:9px 13px;
+    background:var(--surface);border:1px solid var(--border);border-radius:8px;
+    margin-bottom:12px}
+  #filters summary::-webkit-details-marker{display:none}
+  #filters summary::after{content:" ▸";}
+  #filters[open] summary::after{content:" ▾";}
+  #filters[open] summary{margin-bottom:10px}
+}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:16px 18px}
 .panel+.panel{margin-top:18px}
 .panel h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
@@ -232,7 +281,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks &amp; fintechs &middot; last updated
-      July 18, 2026 16:03 UTC</p>
+      July 18, 2026 17:07 UTC</p>
   </div>
   <button id="export">Export CSV</button>
 </header>
@@ -258,22 +307,28 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
     <button id="clearq" type="button" hidden aria-label="Clear search">&times;</button>
   </div>
 </div>
-<div class="pillgroup">
-  <div class="grouplabel">View<small>how much to show</small></div>
-  <div class="viewtoggle">
-    <button id="viewRelevant" aria-pressed="true">Relevant only</button>
-    <button id="viewAll" aria-pressed="false">Everything</button>
+<!-- Search stays visible; the rest collapses on a phone. Kept as one <details>
+     that JS opens on wide screens, so desktop is unchanged and mobile gets ~330px
+     of pills back above the first update. -->
+<details id="filters" open>
+  <summary>Filters &amp; view</summary>
+  <div class="pillgroup">
+    <div class="grouplabel">View<small>how much to show</small></div>
+    <div class="viewtoggle">
+      <button id="viewRelevant" aria-pressed="true">Relevant only</button>
+      <button id="viewAll" aria-pressed="false">Everything</button>
+    </div>
+    <span class="count" id="viewnote"></span>
   </div>
-  <span class="count" id="viewnote"></span>
-</div>
-<div class="pillgroup">
-  <div class="grouplabel">Source<small>who published it</small></div>
-  <button class="pill" data-kind="all" aria-pressed="true">All</button><button class="pill" data-kind="agency" data-value="FinCEN Advisories" aria-pressed="false">FinCEN Advisories</button><button class="pill" data-kind="agency" data-value="FinCEN" aria-pressed="false">FinCEN</button><button class="pill" data-kind="agency" data-value="CFPB Rules" aria-pressed="false">CFPB Rules</button><button class="pill" data-kind="agency" data-value="FDIC FILs" aria-pressed="false">FDIC FILs</button><button class="pill" data-kind="agency" data-value="CFPB" aria-pressed="false">CFPB</button><button class="pill" data-kind="agency" data-value="Fed SR/CA Letters" aria-pressed="false">Fed SR/CA Letters</button><button class="pill" data-kind="agency" data-value="FDIC" aria-pressed="false">FDIC</button><button class="pill" data-kind="agency" data-value="OFAC" aria-pressed="false">OFAC</button><button class="pill" data-kind="agency" data-value="OCC Bulletins" aria-pressed="false">OCC Bulletins</button>
-</div>
-<div class="pillgroup">
-  <div class="grouplabel">Topic<small>what it's about</small></div>
-  <button class="pill" data-kind="fintech" aria-pressed="false">Fintech</button><button class="pill" data-kind="tag" data-value="aml|bsa|money laundering|sanction|ofac|suspicious activity|beneficial owner|know your customer|customer identification|314(b)" aria-pressed="false">BSA / AML</button><button class="pill" data-kind="tag" data-value="lending|loan|credit|underwriting|mortgage|ecoa|regulation b|fair lending|hmda|truth in lending" aria-pressed="false">Lending</button><button class="pill" data-kind="tag" data-value="enforcement|consent order|civil money penalty|cease and desist|settlement|charges|restitution" aria-pressed="false">Enforcement</button>
-</div>
+  <div class="pillgroup">
+    <div class="grouplabel">Source<small>who published it</small></div>
+    <button class="pill" data-kind="all" aria-pressed="true">All</button><button class="pill" data-kind="agency" data-value="FinCEN Advisories" aria-pressed="false">FinCEN Advisories</button><button class="pill" data-kind="agency" data-value="FinCEN" aria-pressed="false">FinCEN</button><button class="pill" data-kind="agency" data-value="CFPB Rules" aria-pressed="false">CFPB Rules</button><button class="pill" data-kind="agency" data-value="FDIC FILs" aria-pressed="false">FDIC FILs</button><button class="pill" data-kind="agency" data-value="CFPB" aria-pressed="false">CFPB</button><button class="pill" data-kind="agency" data-value="Fed SR/CA Letters" aria-pressed="false">Fed SR/CA Letters</button><button class="pill" data-kind="agency" data-value="FDIC" aria-pressed="false">FDIC</button><button class="pill" data-kind="agency" data-value="OFAC" aria-pressed="false">OFAC</button><button class="pill" data-kind="agency" data-value="OCC Bulletins" aria-pressed="false">OCC Bulletins</button>
+  </div>
+  <div class="pillgroup">
+    <div class="grouplabel">Topic<small>what it's about</small></div>
+    <button class="pill" data-kind="fintech" aria-pressed="false">Fintech</button><button class="pill" data-kind="tag" data-value="aml|bsa|money laundering|sanction|ofac|suspicious activity|beneficial owner|know your customer|customer identification|314(b)" aria-pressed="false">BSA / AML</button><button class="pill" data-kind="tag" data-value="lending|loan|credit|underwriting|mortgage|ecoa|regulation b|fair lending|hmda|truth in lending" aria-pressed="false">Lending</button><button class="pill" data-kind="tag" data-value="enforcement|consent order|civil money penalty|cease and desist|settlement|charges|restitution" aria-pressed="false">Enforcement</button>
+  </div>
+</details>
 
 <div class="cols">
   <div>
@@ -545,6 +600,11 @@ $('#export').addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(a.href);
 });
+
+// Open in the markup, collapsed here only on a phone. Written this way round so
+// a script failure leaves the filters visible rather than hiding them entirely.
+const filtersEl = document.getElementById('filters');
+if (filtersEl && window.matchMedia('(max-width:640px)').matches) filtersEl.open = false;
 
 setView(false);
 </script>
