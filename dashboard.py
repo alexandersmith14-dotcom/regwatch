@@ -27,6 +27,10 @@ import regref
 STORE_PATH = "store.json"
 OUT_PATH = "dashboard.html"
 
+# Absolute URL of the published site. Social scrapers require absolute URLs for
+# og:image and og:url — a relative path silently produces no preview.
+SITE_URL = "https://alexandersmith14-dotcom.github.io/regwatch/"
+
 # Kaufman Rossin brand.
 # Navy #003B6A and green #AED136 are taken from kaufmanrossin.com, along with
 # its heading grey #3C3C3C and body ink #212529.
@@ -662,6 +666,15 @@ def main():
                   f'aria-pressed="false">{lbl}</button>' for lbl, v in TOPIC_PILLS)
     )
 
+    # Live counts in the share description, so the preview reflects reality
+    # rather than a number that quietly goes stale.
+    share_desc = (
+        f"{sum(1 for d in rows if d['relevant'])} regulatory updates affecting "
+        f"community banks and fintechs, "
+        f"tracked across 14 federal agencies. Plain-English summaries, comment "
+        f"deadlines and effective dates. Updated daily."
+    )
+
     coverage_html = coverage_panel(store)
     regref_html = regref_panel()
 
@@ -674,7 +687,24 @@ def main():
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RegWatch — regulatory update tracker</title>
+<title>Regulatory update tracker — community banks &amp; fintechs</title>
+<meta name="description" content="{share_desc}">
+<!-- Open Graph / Twitter card. Social scrapers cannot render the page, so the
+     preview is driven entirely by these tags plus a real image file. Without
+     them LinkedIn shows a bare URL with no title, description or image. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RegWatch">
+<meta property="og:title" content="Regulatory update tracker — community banks &amp; fintechs">
+<meta property="og:description" content="{share_desc}">
+<meta property="og:url" content="{SITE_URL}">
+<meta property="og:image" content="{SITE_URL}og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Regulatory update tracker for community banks and fintechs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Regulatory update tracker — community banks &amp; fintechs">
+<meta name="twitter:description" content="{share_desc}">
+<meta name="twitter:image" content="{SITE_URL}og-image.png">
 <style>{CSS}</style></head>
 <body data-today="{today}"><div class="wrap">
 

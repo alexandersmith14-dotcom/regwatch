@@ -76,6 +76,9 @@ jobs:
         run: |
           mkdir -p site
           cp dashboard.html site/index.html
+          # The social preview card must be published too — og:image points at an
+          # absolute URL on this site, and a 404 there means no LinkedIn preview.
+          cp og-image.png site/og-image.png
 
       - name: Publish to Pages
         uses: actions/upload-pages-artifact@v3
