@@ -71,15 +71,14 @@ POST_DODD_FRANK = [
     ("YY", "Enhanced prudential standards", "12 CFR 252", ""),
 ]
 
-REPEALED_OR_UNCERTAIN = [
+# JJ, SS, UU and ZZ were removed rather than published with an UNVERIFIED flag.
+# Their status could not be confirmed against the Fed's own listing, and a
+# reference table on a public page under a named practitioner's credentials
+# should not carry entries the author has not verified. An absent row sends the
+# reader to the primary source; a wrong row sends them somewhere worse.
+REPEALED = [
     ("AA", "Formerly the Fed's UDAP rule — REPEALED by Dodd-Frank", "—",
      "If it appears in an old workpaper it is dead. Do not cite as current."),
-    ("JJ", "Incentive compensation — proposed, never finalised", "—",
-     "UNVERIFIED. Repeatedly re-proposed; confirm status against the Fed's "
-     "regulation listing before relying on it."),
-    ("SS / UU / ZZ", "Reserved, renumbered, or never finalised", "—",
-     "UNVERIFIED. Confirm directly against the Fed's regulation listing before "
-     "citing any of these."),
 ]
 
 GROUPS = [
@@ -93,9 +92,9 @@ GROUPS = [
     ("Post-Dodd-Frank prudential",
      "Mostly large-bank and systemic-risk rules.",
      POST_DODD_FRANK),
-    ("Repealed or unconfirmed",
+    ("Repealed",
      "Included so a stale citation can be recognised as stale.",
-     REPEALED_OR_UNCERTAIN),
+     REPEALED),
 ]
 
 # Shown under the table. The BSA point catches people out in audit documentation,
