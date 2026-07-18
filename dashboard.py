@@ -257,7 +257,15 @@ let showAll = false;
 const rxCache = new Map();
 function termRx(t) {
   if (!rxCache.has(t)) {
-    rxCache.set(t, new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
+    const lit = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Short terms must match a WHOLE word; longer ones may match a prefix.
+    //
+    // Regulation designators are single letters, and a prefix match on "d" hits
+    // data, disparate, directors, delay — so "Regulation D" returned Reg B and
+    // Reg O items. Prefix matching is still wanted for real words ("stablecoin"
+    // should find "stablecoins"), so the rule is length-based rather than global.
+    const rx = t.length <= 2 ? `\\b${lit}\\b` : `\\b${lit}`;
+    rxCache.set(t, new RegExp(rx, 'i'));
   }
   return rxCache.get(t);
 }
