@@ -273,6 +273,34 @@ function rows() {
   });
 }
 
+// Items the relevance filter dropped, shown ONLY when searching. The filter is a
+// judgment and it can be wrong for a specific reader — a bank in Tennessee wants
+// the Tennessee disaster-relief notice even though it is not a broad regulatory
+// change. Without this, search silently misses 280 items and looks like proof
+// that nothing exists.
+function renderFilteredOut() {
+  const box = $('#alsofound');
+  if (!query) { box.innerHTML = ''; return; }
+  const hits = DATA.filter(d => !d.relevant && matchesQuery(d)).slice(0, 15);
+  if (!hits.length) { box.innerHTML = ''; return; }
+  box.innerHTML = `
+    <div class="panel" style="margin-top:18px">
+      <h2>Also found — items the relevance filter set aside (${hits.length})</h2>
+      <p class="note">These did not meet the community bank / fintech criteria, so
+      they are not in the counts above. Shown because they match your search.</p>
+      ${hits.map(d => `
+        <div class="card dropped">
+          <div class="top">
+            <span class="badge">${esc(d.type || '—')}</span>
+            <span class="agency">${esc(d.sources.join(' · '))}</span>
+          </div>
+          <h3><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></h3>
+          <p>${esc(d.why)}</p>
+          <div class="meta">${esc(d.date)}</div>
+        </div>`).join('')}
+    </div>`;
+}
+
 function renderCards(rs) {
   const list = rs.slice(0, 25);
   $('#cards').innerHTML = list.length ? list.map(d => {
@@ -327,7 +355,7 @@ function renderAgencies(rs) {
 
 function render() {
   const rs = rows();
-  renderCards(rs); renderDeadlines(rs); renderAgencies(rs);
+  renderCards(rs); renderDeadlines(rs); renderAgencies(rs); renderFilteredOut();
 }
 
 const searchBox = $('#q');
@@ -568,6 +596,7 @@ def main():
           id="cardcount"></span></h2>
       <div id="cards"></div>
     </div>
+    <div id="alsofound"></div>
   </div>
   <div>
     <div class="panel">
