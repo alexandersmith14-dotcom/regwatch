@@ -1,0 +1,88 @@
+name: Update tracker
+
+# Runs the full pipeline and publishes the refreshed dashboard.
+#
+# 06:30 UTC daily — early enough that the page is current before the US working
+# day, late enough to pick up anything agencies posted the previous afternoon.
+# GitHub schedules are best-effort and can lag by several minutes under load;
+# that is fine for a daily regulatory tracker.
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch: {}      # lets you trigger a run by hand from the Actions tab
+
+permissions:
+  contents: write            # needed to commit the refreshed store and dashboard
+
+concurrency:
+  group: update-tracker      # never let two runs fight over store.json
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch from agency sources
+        run: python fetcher.py
+
+      - name: Classify new items
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline.py
+
+      - name: Match Federal Register deadlines
+        run: python deadlines.py
+
+      - name: Build dashboard
+        run: python dashboard.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "regwatch-bot"
+          git config user.email "actions@github.com"
+          git add store.json dashboard.html
+          # Nothing to do when no new items were published that day.
+          if git diff --staged --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Update tracker data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: Assemble the published site
+        # Pages serves index.html at the root, so the dashboard is copied to that
+        # name. Keeping the build output as dashboard.html locally means the
+        # local workflow is unchanged.
+        run: |
+          mkdir -p site
+          cp dashboard.html site/index.html
+
+      - name: Publish to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
