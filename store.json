@@ -21,7 +21,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -51,7 +51,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -82,7 +82,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -108,7 +108,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4e6a9a03b4deb7b3": {
@@ -132,7 +132,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c0fe8d91e631d113": {
@@ -158,7 +158,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -186,7 +186,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -213,7 +213,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -238,7 +238,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5d8399828f3ca070": {
@@ -263,7 +263,7 @@
       "FDIC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "119e7229a449e25f": {
@@ -287,7 +287,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -312,7 +312,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7f846e6f32a71e4c": {
@@ -337,7 +337,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "37737b8e84027d77": {
@@ -361,7 +361,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "58f98bd53abba88c": {
@@ -385,7 +385,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3f95f17c20cb7eeb": {
@@ -409,7 +409,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e0ee9c16c9569cc7": {
@@ -434,7 +434,7 @@
       "OCC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3c69ae5bba5437e2": {
@@ -460,7 +460,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -487,7 +487,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -514,7 +514,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -543,7 +543,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": true
   },
@@ -569,7 +569,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": true
   },
@@ -596,7 +596,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "32ba9717ab6c6b72": {
@@ -656,7 +656,7 @@
       "OCC Bulletins"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/12/2026-11856/agency-information-collection-activities-proposed-information-collection-reporting-forms-and",
     "fr_title": "Agency Information Collection Activities: Proposed Information Collection; Reporting Forms and Instructions for Permitted Payment Stablecoin Issuers Subject to the Jurisdiction of the Office of the Comptroller of the Currency; Comment Request",
@@ -689,7 +689,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -715,7 +715,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1a39c3d66d42f19e": {
@@ -739,7 +739,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d4d6c518afcd8f09": {
@@ -764,7 +764,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -789,7 +789,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "437d451dd51bd6d0": {
@@ -814,7 +814,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -839,7 +839,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -865,7 +865,7 @@
       "Federal Reserve"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fd8bbcbd2abe91e6": {
@@ -892,7 +892,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": true
   },
@@ -919,7 +919,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -946,7 +946,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -971,7 +971,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "11f72428ff5b2033": {
@@ -995,7 +995,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1022,7 +1022,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1048,7 +1048,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1074,7 +1074,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1101,7 +1101,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1128,7 +1128,7 @@
       "Fed SR/CA Letters"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1154,7 +1154,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1180,7 +1180,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1208,7 +1208,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": true
   },
@@ -1234,7 +1234,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1259,7 +1259,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1318f7bfc0ad2270": {
@@ -1285,7 +1285,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1312,7 +1312,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1339,7 +1339,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1365,7 +1365,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -1392,7 +1392,7 @@
       "CFPB"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -1420,7 +1420,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards",
     "fr_title": "Financial Data Transparency Act Joint Data Standards",
@@ -1454,7 +1454,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/05/01/2026-08494/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b",
     "fr_title": "Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)",
@@ -1488,7 +1488,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/22/2026-07804/equal-credit-opportunity-act-regulation-b",
     "fr_title": "Equal Credit Opportunity Act (Regulation B)",
@@ -1519,7 +1519,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "695faca6670287ba": {
@@ -1543,7 +1543,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "75a88dd058fca3e5": {
@@ -1567,7 +1567,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "57a8e39c7cbcb263": {
@@ -1594,7 +1594,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/16/2025-22875/appraisals-for-higher-priced-mortgage-loans-exemption-threshold",
     "fr_title": "Appraisals for Higher-Priced Mortgage Loans Exemption Threshold",
@@ -1627,7 +1627,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/15/2025-22814/truth-in-lending-regulation-z",
     "fr_title": "Truth in Lending (Regulation Z)",
@@ -1658,7 +1658,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "6e9553b3fd728740": {
@@ -1684,7 +1684,7 @@
       "CFPB Rules"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/15/2025-22813/consumer-leasing-regulation-m",
     "fr_title": "Consumer Leasing (Regulation M)",
@@ -1717,7 +1717,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12794/definition-of-huione-group-a-financial-institution-operating-outside-the-united-states-of-primary",
     "fr_title": "Definition of Huione Group, a Financial Institution Operating Outside the United States of Primary Money Laundering Concern",
@@ -1752,7 +1752,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program",
     "fr_title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
@@ -1785,7 +1785,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1972acaa6a3f04f2": {
@@ -1811,7 +1811,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/16/2026-07416/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "fr_title": "Imposition of Special Measure Prohibiting Certain Transmittals of Funds Involving CIBanco S.A., Instituci\u00f3n de Banca Multiple; Amendment",
@@ -1873,7 +1873,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06963/permitted-payment-stablecoin-issuer-anti-money-launderingcountering-the-financing-of-terrorism",
     "fr_title": "Permitted Payment Stablecoin Issuer Anti-Money Laundering/Countering the Financing of Terrorism Program and Sanctions Compliance Program Requirements",
@@ -1906,7 +1906,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06271/whistleblower-incentives-and-protections",
     "fr_title": "Whistleblower Incentives and Protections",
@@ -1941,7 +1941,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": true
   },
@@ -1968,7 +1968,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/03/02/2026-04033/proposal-of-special-measure-regarding-mbaer-merchant-bank-ag-as-a-financial-institution-operating",
     "fr_title": "Proposal of Special Measure Regarding MBaer Merchant Bank AG as a Financial Institution Operating Outside of the United States of Primary Money Laundering Concern",
@@ -1999,7 +1999,7 @@
       "FinCEN"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ffb5aa020f180538": {
@@ -2024,7 +2024,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d6840359e8948f3b": {
@@ -2049,7 +2049,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "205aea27fe58e56f": {
@@ -2074,7 +2074,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e2b31fadda63d0e9": {
@@ -2099,7 +2099,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "040b3416ee11195e": {
@@ -2124,7 +2124,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "23e3636a6d8952e5": {
@@ -2149,7 +2149,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f5433772722174d2": {
@@ -2174,7 +2174,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "38d620fcc8da5e4d": {
@@ -2198,7 +2198,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2b2a24b70db8fc75": {
@@ -2224,7 +2224,7 @@
       "NCUA"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "bb5299cb9533b625": {
@@ -2250,7 +2250,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2278,7 +2278,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": true
   },
@@ -2305,7 +2305,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -2333,7 +2333,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": true
   },
@@ -2360,7 +2360,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2386,7 +2386,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2414,7 +2414,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": true
   },
@@ -2441,7 +2441,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2468,7 +2468,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -2495,7 +2495,7 @@
       "FinCEN Advisories"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2522,7 +2522,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -2548,7 +2548,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b430065c7d9b0fbb": {
@@ -2572,7 +2572,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b839885ec3df30ce": {
@@ -2597,7 +2597,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a15502079697297c": {
@@ -2620,7 +2620,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "86425d18da48b5df": {
@@ -2645,7 +2645,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "250773ec6b1d9bc4": {
@@ -2669,7 +2669,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b9860a9720fbdfb4": {
@@ -2693,7 +2693,7 @@
       "NCUA Press"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e09132251528cfc0": {
@@ -2717,7 +2717,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d72589f8ba89f06e": {
@@ -2744,7 +2744,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/07/20/2026-14589/reporting-forms-and-instructions-associated-with-requirements-and-standards-for-fdic-supervised",
     "fr_title": "Reporting Forms and Instructions Associated With Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers",
@@ -2775,7 +2775,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "457b77e1c48f95d5": {
@@ -2801,7 +2801,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -2828,7 +2828,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2853,7 +2853,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "32b7592643d53117": {
@@ -2878,7 +2878,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/30/2026-13192/assessments-thresholds-rate-schedules-and-adjustments",
     "fr_title": "Assessments Thresholds, Rate Schedules, and Adjustments",
@@ -2910,7 +2910,7 @@
       "FDIC FILs"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0c8360bf9bd9ec30": {
@@ -2936,7 +2936,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false,
     "fintech_specific": false
   },
@@ -2963,7 +2963,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -2990,7 +2990,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3017,7 +3017,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3045,7 +3045,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3072,7 +3072,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3099,7 +3099,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3126,7 +3126,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3153,7 +3153,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3181,7 +3181,7 @@
       "OFAC"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": false
   },
@@ -3207,7 +3207,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ed7d60eaa1966824": {
@@ -3231,7 +3231,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b2003cd9f0c70fb8": {
@@ -3256,7 +3256,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "94cebda24e8c9e49": {
@@ -3280,7 +3280,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "98bb84afd26b6120": {
@@ -3304,7 +3304,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b50d016765c2b27d": {
@@ -3328,7 +3328,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2a861804e53eb953": {
@@ -3354,7 +3354,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fintech_specific": true
   },
@@ -3379,7 +3379,7 @@
       "CSBS"
     ],
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4967e0257d012481": {
@@ -3871,7 +3871,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/419f305",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e880efdaaf31a69b": {
@@ -3894,7 +3894,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/419978f",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b6f41c63c1fa7629": {
@@ -3918,7 +3918,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4193c0e",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4533608f9474b55b": {
@@ -3941,7 +3941,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4190a07",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "101c010760ecd4cf": {
@@ -3965,7 +3965,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/41880f3",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "da7bb43ec6c681dc": {
@@ -3990,7 +3990,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4188142",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e327d151a07f036b": {
@@ -4014,7 +4014,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4188cbf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "20d55f3259bf4d42": {
@@ -4041,7 +4041,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/41889d8",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/05/2026-11342/bank-secrecy-act-and-sanctions-compliance-standards-for-fdic-supervised-permitted-payment-stablecoin",
     "fr_title": "Bank Secrecy Act and Sanctions Compliance Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers",
@@ -4072,7 +4072,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4180409",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "cf69cd534d1f0362": {
@@ -4096,7 +4096,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/417184a",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c4dd607824dc6c02": {
@@ -4122,7 +4122,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/41751f1",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "f5ff5d45ba0e8111": {
@@ -4147,7 +4147,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4174117",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "adaf5b279e33bdee": {
@@ -4171,7 +4171,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4157b1d",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "4ff9807673386a89": {
@@ -4197,7 +4197,7 @@
     ],
     "url": "https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-25.html",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards",
     "fr_title": "Financial Data Transparency Act Joint Data Standards",
@@ -4225,7 +4225,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260625b.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f25a1b5a3a7a2093": {
@@ -4249,7 +4249,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260625a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "66958339bcc7a6ea": {
@@ -4272,7 +4272,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260624a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a60488f909842790": {
@@ -4295,7 +4295,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260622a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "13d0e1c7175adb95": {
@@ -4317,7 +4317,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260618b.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "47c281cd5c37cf30": {
@@ -4340,7 +4340,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260618a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f0a2125068f6998a": {
@@ -4366,7 +4366,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260618a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "bbe9f0695d8df486": {
@@ -4388,7 +4388,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "eeda99166431b34f": {
@@ -4411,7 +4411,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617b.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a18cb1a5b8d2a48b": {
@@ -4435,7 +4435,7 @@
     ],
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "95d5b5a3e9331ba4": {
@@ -4460,7 +4460,7 @@
     ],
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/SR2502.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "f8c62f0c8624223b": {
@@ -4484,7 +4484,7 @@
     ],
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr2408.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "aefdeda07c037033": {
@@ -4508,7 +4508,7 @@
     ],
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr2408.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "326e3ba0ee969e7f": {
@@ -4532,7 +4532,7 @@
     ],
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr2407.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "350519e44b0958e3": {
@@ -4556,7 +4556,7 @@
     ],
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/SR2406.htm",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fdb0d6777233e153": {
@@ -4580,7 +4580,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-reaches-settlement-with-firstcash-inc-and-its-subsidiaries-for-military-lending-act-violations/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f7c71516a8199c2c": {
@@ -4606,7 +4606,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-amends-wise-order-for-remittance-practices/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "dc45e93102ee0b91": {
@@ -4632,7 +4632,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-announcement-regarding-enforcement-actions-related-to-buy-now-pay-later-loans/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ced1a8953d6d0cfb": {
@@ -4657,7 +4657,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-keeps-its-enforcement-and-supervision-resources-focused-on-pressing-threats-to-consumers/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "aa7f260ec223291e": {
@@ -4682,7 +4682,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-offers-regulatory-relief-from-registration-requirements-for-small-loan-providers/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "cd2fbb2d2525daff": {
@@ -4706,7 +4706,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/2024-hmda-data-on-mortgage-lending-now-available/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ec5da26b21ee006c": {
@@ -4730,7 +4730,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-offers-regulatory-relief-for-small-loan-providers/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e826eaa936463af1": {
@@ -4754,7 +4754,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-seeks-to-vacate-abusive-unjust-case-against-townstone/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "64a7f7d91c1b9ffc": {
@@ -4777,7 +4777,7 @@
     ],
     "url": "https://www.consumerfinance.gov/about-us/newsroom/statement-on-designation-of-treasury-secretary-scott-bessent-as-acting-director-of-the-consumer-financial-protection-bureau/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ffdf7498ef5acafc": {
@@ -4804,7 +4804,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/truth-in-lending-regulation-z-annual-threshold-adjustments-credit-cards-hoepa-and-qualified-mortgages/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/15/2025-22773/truth-in-lending-regulation-z-annual-threshold-adjustments-credit-cards-hoepa-and-qualified",
     "fr_title": "Truth in Lending (Regulation Z) Annual Threshold Adjustments (Credit Cards, HOEPA, and Qualified Mortgages)",
@@ -4835,7 +4835,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/registry-of-nonbank-covered-persons-subject-to-certain-agency-and-court-orders-rescission/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/10/29/2025-19689/registry-of-nonbank-covered-persons-subject-to-certain-agency-and-court-orders-rescission",
     "fr_title": "Registry of Nonbank Covered Persons Subject to Certain Agency and Court Orders; Rescission",
@@ -4867,7 +4867,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-equal-credit-opportunity-act-regulation-b-extension-compliance-dates-2025/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/10/02/2025-19370/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b-extension-of-compliance",
     "fr_title": "Small Business Lending Under the Equal Credit Opportunity Act (Regulation B); Extension of Compliance Dates",
@@ -4896,7 +4896,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/procedure-related-to-rulemaking-rescission/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c1d9e6b554438239": {
@@ -4922,7 +4922,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/prohibition-on-creditors-and-consumer-reporting-agencies-concerning-medical-information-regulation-v/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/14/2024-30824/prohibition-on-creditors-and-consumer-reporting-agencies-concerning-medical-information-regulation-v",
     "fr_title": "Prohibition on Creditors and Consumer Reporting Agencies Concerning Medical Information (Regulation V)",
@@ -4952,7 +4952,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/civil-penalty-inflation-annual-adjustments/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/08/2025-00167/civil-penalty-inflation-adjustments",
     "fr_title": "Civil Penalty Inflation Adjustments",
@@ -4983,7 +4983,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/home-mortgage-disclosure-regulation-c-adjustment-asset-size-exemption-threshold/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/01/07/2026-00087/home-mortgage-disclosure-regulation-c-adjustment-to-asset-size-exemption-threshold",
     "fr_title": "Home Mortgage Disclosure (Regulation C) Adjustment to Asset-Size Exemption Threshold",
@@ -5015,7 +5015,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/truth-lending-act-regulation-z-adjustment-asset-size-exemption-threshold/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/01/07/2026-00085/truth-in-lending-act-regulation-z-adjustment-to-asset-size-exemption-threshold",
     "fr_title": "Truth in Lending Act (Regulation Z) Adjustment to Asset-Size Exemption Threshold",
@@ -5046,7 +5046,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/residential-property-assessed-clean-energy-financing-regulation-z/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/10/2024-30628/residential-property-assessed-clean-energy-financing-regulation-z",
     "fr_title": "Residential Property Assessed Clean Energy Financing (Regulation Z)",
@@ -5076,7 +5076,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/overdraft-lending-very-large-financial-institutions-final-rule/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "115006c4ce776b50": {
@@ -5102,7 +5102,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/defining-larger-participants-of-a-market-for-general-use-digital-consumer-payment-applications/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/12/10/2024-27836/defining-larger-participants-of-a-market-for-general-use-digital-consumer-payment-applications",
     "fr_title": "Defining Larger Participants of a Market for General-Use Digital Consumer Payment Applications",
@@ -5132,7 +5132,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/fair-credit-reporting-act-disclosures-annual-adjustment/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/15/2025-22772/fair-credit-reporting-act-disclosures",
     "fr_title": "Fair Credit Reporting Act Disclosures",
@@ -5164,7 +5164,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/11/18/2024-25079/required-rulemaking-on-personal-financial-data-rights",
     "fr_title": "Required Rulemaking on Personal Financial Data Rights",
@@ -5197,7 +5197,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/10/2026-06948/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06948/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
     "fr_title": "Anti-Money Laundering and Countering the Financing of Terrorism Programs",
@@ -5228,7 +5228,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/13/2026-00449/geographic-targeting-order-imposing-recordkeeping-and-reporting-requirements-on-certain-financial",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2a21fb52ec2dfe73": {
@@ -5252,7 +5252,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/22/2025-18271/delaying-the-effective-date-of-the-anti-money-launderingcountering-the-financing-of-terrorism",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fab0dfb14ef502ac": {
@@ -5276,7 +5276,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/10/2025-22425/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ba246471d09109e4": {
@@ -5301,7 +5301,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/11/17/2025-19927/proposal-of-special-measure-regarding-transactions-involving-ten-mexican-gambling-establishments-as",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/11/17/2025-19927/proposal-of-special-measure-regarding-transactions-involving-ten-mexican-gambling-establishments-as",
     "fr_title": "Proposal of Special Measure Regarding Transactions Involving Ten Mexican Gambling Establishments as a Class of Transactions of Primary Money Laundering Concern",
@@ -5333,7 +5333,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/16/2025-19571/imposition-of-special-measure-regarding-huione-group-as-a-foreign-financial-institution-of-primary",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/10/16/2025-19571/imposition-of-special-measure-regarding-huione-group-as-a-foreign-financial-institution-of-primary",
     "fr_title": "Imposition of Special Measure Regarding Huione Group, as a Foreign Financial Institution of Primary Money Laundering Concern",
@@ -5364,7 +5364,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/07/11/2022-14638/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-on",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/09/30/2025-18928/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-on",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change on Information Sharing Between Government Agencies and Financial Institutions",
@@ -5396,7 +5396,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/30/2025-18918/agency-information-collection-activities-proposed-new-information-collection-survey-of-the-costs-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/01/08/2026-00105/agency-information-collection-activities-proposed-new-information-collection-survey-of-the-costs-of",
     "fr_title": "Agency Information Collection Activities: Proposed New Information Collection; Survey of the Costs of AML/CFT Compliance; Comment Request",
@@ -5427,7 +5427,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/08/22/2025-16080/imposition-of-special-measures-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/08/22/2025-16080/imposition-of-special-measures-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "fr_title": "Imposition of Special Measures Prohibiting Certain Transmittals of Funds Involving CIBanco S.A., Instituci\u00f3n de Banca Multiple, Intercam Banco S.A., Instituci\u00f3n de Banca Multiple, and Vector Casa de Bolsa, S.A. de C.V.; Extension of Effective Date",
@@ -5458,7 +5458,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/11/2025-12973/imposition-of-special-measures-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/07/11/2025-12973/imposition-of-special-measures-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "fr_title": "Imposition of Special Measures Prohibiting Certain Transmittals of Funds Involving CIBanco S.A., Institution de Banca Multiple, Intercam Banco S.A., Instituci\u00f3n de Banca Multiple, and Vector Casa de Bolsa, S.A. de C.V.; Extension of Effective Date",
@@ -5489,7 +5489,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/06/30/2025-11993/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/06/30/2025-11993/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-cibanco-sa",
     "fr_title": "Imposition of Special Measure Prohibiting Certain Transmittals of Funds Involving CIBanco S.A., Instituci\u00f3n De Banca Multiple",
@@ -5521,7 +5521,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/06/30/2025-11991/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-vector-casa-de",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/06/30/2025-11991/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-vector-casa-de",
     "fr_title": "Imposition of Special Measure Prohibiting Certain Transmittals of Funds Involving Vector Casa de Bolsa, S.A. de C.V.",
@@ -5553,7 +5553,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/06/30/2025-11990/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-intercam-banco-sa",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/06/30/2025-11990/imposition-of-special-measure-prohibiting-certain-transmittals-of-funds-involving-intercam-banco-sa",
     "fr_title": "Imposition of Special Measure Prohibiting Certain Transmittals of Funds Involving Intercam Banco S.A., Instituci\u00f3n de Banca Multiple",
@@ -5584,7 +5584,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/06/18/2025-11211/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ca3352c5fcff238d": {
@@ -5608,7 +5608,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/01/11/2022-00332/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fc4f15545f1e22e7": {
@@ -5632,7 +5632,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/02/10/2022-02885/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7b0c828637b6f33c": {
@@ -5659,7 +5659,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/05/05/2025-07837/special-measure-regarding-huione-group-as-a-foreign-financial-institution-of-primary-money",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/05/05/2025-07837/special-measure-regarding-huione-group-as-a-foreign-financial-institution-of-primary-money",
     "fr_title": "Special Measure Regarding Huione Group, as a Foreign Financial Institution of Primary Money Laundering Concern",
@@ -5690,7 +5690,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/02/16/2022-03260/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "eeaea1c4a7bbec86": {
@@ -5715,7 +5715,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/02/16/2022-03266/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7279361822695b5e": {
@@ -5740,7 +5740,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/26/2025-05199/beneficial-ownership-information-reporting-requirement-revision-and-deadline-extension",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/03/26/2025-05199/beneficial-ownership-information-reporting-requirement-revision-and-deadline-extension",
     "fr_title": "Beneficial Ownership Information Reporting Requirement Revision and Deadline Extension",
@@ -5772,7 +5772,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/14/2025-04099/issuance-of-a-geographic-targeting-order-imposing-additional-recordkeeping-and-reporting",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/03/14/2025-04099/issuance-of-a-geographic-targeting-order-imposing-additional-recordkeeping-and-reporting",
     "fr_title": "Issuance of a Geographic Targeting Order Imposing Additional Recordkeeping and Reporting Requirements on Certain Money Services Businesses Along the Southwest Border",
@@ -5802,7 +5802,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/01/24/2022-01284/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "fr_title": "Financial Crimes Enforcement Network; Inflation Adjustment of Civil Monetary Penalties",
@@ -5832,7 +5832,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/11/13/2024-26262/agency-information-collection-activities-proposed-collection-comment-request-real-estate-reports",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a640edad51a93746": {
@@ -5856,7 +5856,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/10/18/2024-23920/update-to-the-public-utility-exemption-under-the-beneficial-ownership-information-reporting-rule",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "db451e931225c2b0": {
@@ -5883,7 +5883,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/10/11/2024-23430/imposition-of-special-measure-prohibiting-the-transmittal-of-funds-involving-pm2btc",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/10/11/2024-23430/imposition-of-special-measure-prohibiting-the-transmittal-of-funds-involving-pm2btc",
     "fr_title": "Imposition of Special Measure Prohibiting the Transmittal of Funds Involving PM2BTC",
@@ -5913,7 +5913,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/09/27/2024-22299/proposal-of-special-measure-against-ablv-bank-as-as-a-financial-institution-of-primary-money",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0a1d430099b60906": {
@@ -5937,7 +5937,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/09/17/2024-21079/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5ee3cd6ff06a4e6a": {
@@ -5962,7 +5962,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/15/2024-02854/financial-crimes-enforcement-network-anti-money-launderingcountering-the-financing-of-terrorism",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "18a5ee0eeab8e80d": {
@@ -5986,7 +5986,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/16/2024-02565/anti-money-laundering-regulations-for-residential-real-estate-transfers",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2af28e9e50b25205": {
@@ -6010,7 +6010,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/08/13/2024-18036/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ce05a5173b32a384": {
@@ -6036,7 +6036,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/08/13/2024-18035/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/08/13/2024-18035/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of Regulations Requiring Records To Be Made and Retained by Financial Institutions, Banks, and Providers and Sellers of Prepaid Access",
@@ -6066,7 +6066,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/08/13/2024-18034/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e9c00e1422cf24b6": {
@@ -6091,7 +6091,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/08/08/2024-17605/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/08/08/2024-17605/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of Transactions of Exempt Persons Regulations, and FinCEN Form 110, Designation of Exempt Person Report",
@@ -6122,7 +6122,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/07/03/2024-14415/imposition-of-special-measure-regarding-al-huda-bank-as-a-financial-institution-of-primary-money",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/07/03/2024-14415/imposition-of-special-measure-regarding-al-huda-bank-as-a-financial-institution-of-primary-money",
     "fr_title": "Imposition of Special Measure Regarding Al-Huda Bank as a Financial Institution of Primary Money Laundering Concern",
@@ -6153,7 +6153,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/06/20/2024-13590/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/06/20/2024-13590/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of the Customer Identification Program Regulatory Requirements for Certain Financial Institutions",
@@ -6183,7 +6183,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/06/11/2024-12728/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9f811f4150a355eb": {
@@ -6208,7 +6208,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/05/21/2024-10738/customer-identification-programs-for-registered-investment-advisers-and-exempt-reporting-advisers",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "952e8713d518300f": {
@@ -6234,7 +6234,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/04/22/2024-08529/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/04/22/2024-08529/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of Anti-Money Laundering Programs for Certain Financial Institutions",
@@ -6266,7 +6266,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/03/29/2024-06763/request-for-information-and-comment-on-customer-identification-program-rule-taxpayer-identification",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/03/29/2024-06763/request-for-information-and-comment-on-customer-identification-program-rule-taxpayer-identification",
     "fr_title": "Request for Information and Comment on Customer Identification Program Rule Taxpayer Identification Number Collection Requirement",
@@ -6297,7 +6297,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/26/2024-03965/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/02/26/2024-03965/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of the Beneficial Ownership Requirements for Legal Entity Customers",
@@ -6327,7 +6327,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/23/2024-03681/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ba1f86b8188f94af": {
@@ -6352,7 +6352,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/12/2024-02747/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7076c4db08903e90": {
@@ -6376,7 +6376,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/02/05/2024-02186/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/02/05/2024-02186/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of Reports of Transactions in Currency Regulations and FinCEN Form 112-Currency Transaction Report",
@@ -6407,7 +6407,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/01/31/2024-02004/proposal-of-special-measure-regarding-al-huda-bank-as-a-foreign-financial-institution-of-primary",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/01/31/2024-02004/proposal-of-special-measure-regarding-al-huda-bank-as-a-foreign-financial-institution-of-primary",
     "fr_title": "Proposal of Special Measure Regarding Al-Huda Bank, as a Foreign Financial Institution of Primary Money Laundering Concern",
@@ -6438,7 +6438,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/01/30/2024-01828/agency-information-collection-activities-proposed-collection-comment-request-beneficial-ownership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2024/01/30/2024-01828/agency-information-collection-activities-proposed-collection-comment-request-beneficial-ownership",
     "fr_title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Beneficial Ownership Information Requests",
@@ -6469,7 +6469,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/12/22/2023-27973/beneficial-ownership-information-access-and-safeguards",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/12/22/2023-27973/beneficial-ownership-information-access-and-safeguards",
     "fr_title": "Beneficial Ownership Information Access and Safeguards",
@@ -6499,7 +6499,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/09/28/2023-21226/beneficial-ownership-information-reporting-deadline-extension-for-reporting-companies-created-or",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/11/30/2023-26399/beneficial-ownership-information-reporting-deadline-extension-for-reporting-companies-created-or",
     "fr_title": "Beneficial Ownership Information Reporting Deadline Extension for Reporting Companies Created or Registered in 2024",
@@ -6530,7 +6530,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/11/08/2023-24559/use-of-fincen-identifiers-for-reporting-beneficial-ownership-information-of-entities",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/11/08/2023-24559/use-of-fincen-identifiers-for-reporting-beneficial-ownership-information-of-entities",
     "fr_title": "Use of FinCEN Identifiers for Reporting Beneficial Ownership Information of Entities",
@@ -6563,7 +6563,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/10/23/2023-23449/proposal-of-special-measure-regarding-convertible-virtual-currency-mixing-as-a-class-of-transactions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/10/23/2023-23449/proposal-of-special-measure-regarding-convertible-virtual-currency-mixing-as-a-class-of-transactions",
     "fr_title": "Proposal of Special Measure Regarding Convertible Virtual Currency Mixing, as a Class of Transactions of Primary Money Laundering Concern",
@@ -6592,7 +6592,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/19/2025-23364/privacy-act-of-1974-system-of-records",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "16bbc3ffdd9fd1d9": {
@@ -6616,7 +6616,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/08/10/2023-17092/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "04d187ff80b42042": {
@@ -6640,7 +6640,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/08/03/2023-16576/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "765e2f3459a36567": {
@@ -6664,7 +6664,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/08/03/2023-16573/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "087f81da27ccfe7f": {
@@ -6688,7 +6688,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/07/26/2023-15784/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0b1eada4b23f7390": {
@@ -6711,7 +6711,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/05/11/2023-10098/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5e9c60314860337c": {
@@ -6736,7 +6736,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/03/08/2023-04713/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "36481806092ccc07": {
@@ -6761,7 +6761,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/03/08/2023-04712/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "78f7385dc02053e7": {
@@ -6787,7 +6787,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/01/23/2023-01189/imposition-of-special-measure-prohibiting-the-transmittal-of-funds-involving-bitzlato",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/01/23/2023-01189/imposition-of-special-measure-prohibiting-the-transmittal-of-funds-involving-bitzlato",
     "fr_title": "Imposition of Special Measure Prohibiting the Transmittal of Funds Involving Bitzlato",
@@ -6818,7 +6818,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/01/17/2023-00708/agency-information-collection-activities-proposed-collection-comment-request-individual-fincen",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f9265a7feaf604b0": {
@@ -6843,7 +6843,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/01/17/2023-00703/agency-information-collection-activities-proposed-collection-comment-request-beneficial-ownership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/01/17/2023-00703/agency-information-collection-activities-proposed-collection-comment-request-beneficial-ownership",
     "fr_title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Beneficial Ownership Information Reports",
@@ -6874,7 +6874,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/12/16/2022-27031/beneficial-ownership-information-access-and-safeguards-and-use-of-fincen-identifiers-for-entities",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2022/12/16/2022-27031/beneficial-ownership-information-access-and-safeguards-and-use-of-fincen-identifiers-for-entities",
     "fr_title": "Beneficial Ownership Information Access and Safeguards, and Use of FinCEN Identifiers for Entities",
@@ -6905,7 +6905,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/11/04/2022-24050/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "bd4cff3fb42c9a42": {
@@ -6930,7 +6930,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2021/12/08/2021-26548/beneficial-ownership-information-reporting-requirements",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/03/26/2025-05199/beneficial-ownership-information-reporting-requirement-revision-and-deadline-extension",
     "fr_title": "Beneficial Ownership Information Reporting Requirement Revision and Deadline Extension",
@@ -6961,7 +6961,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/06/06/2022-12048/no-action-letter-process",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "9ada391221e83d0c": {
@@ -6985,7 +6985,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/03/23/2022-06157/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "eff8085bce4f5799": {
@@ -7009,7 +7009,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2021/12/08/2021-26549/anti-money-laundering-regulations-for-real-estate-transactions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "02c02b5ac72aa6ae": {
@@ -7034,7 +7034,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/01/25/2022-01331/pilot-program-on-sharing-of-suspicious-activity-reports-and-related-information-with-foreign",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2022/01/25/2022-01331/pilot-program-on-sharing-of-suspicious-activity-reports-and-related-information-with-foreign",
     "fr_title": "Pilot Program on Sharing of Suspicious Activity Reports and Related Information With Foreign Branches, Subsidiaries, and Affiliates",
@@ -7063,7 +7063,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2021/12/23/2021-27623/bank-secrecy-act-regulations-reports-of-foreign-financial-accounts-civil-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d4ead4f121011aee": {
@@ -7088,7 +7088,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2021/12/15/2021-27081/review-of-bank-secrecy-act-regulations-and-guidance",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "252bbff8819e1547": {
@@ -7112,7 +7112,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01699/requirements-for-insurance",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c50142c4e2938c3d": {
@@ -7136,7 +7136,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/05/07/2026-09009/thresholds-increase-for-the-major-assets-prohibition-of-the-depository-institution-management",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "83b62d0bb11e5536": {
@@ -7160,7 +7160,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/24/2026-08023/request-for-information-regarding-enhancing-and-streamlining-data-collection-from-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7ab6deec3bcca214": {
@@ -7184,7 +7184,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/22/2026-07806/bank-conversions-and-mergers-subpart-c-merger-of-insured-credit-unions-into-banks",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b55a2725f855dd0e": {
@@ -7208,7 +7208,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/16/2026-07415/proposed-new-and-renewal-of-agency-information-collections-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "667ad2f2aa293d0c": {
@@ -7233,7 +7233,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/08/2026-06757/chartering-and-field-of-membership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8e9f9a39e10cd588": {
@@ -7257,7 +7257,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/03/25/2026-05797/third-party-servicing-of-indirect-vehicle-loans",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e30ffcf3dabac6cb": {
@@ -7281,7 +7281,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/10/2025-12807/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3f5b313e4d948b42": {
@@ -7304,7 +7304,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/26/2026-03802/renewal-of-agency-information-collections-of-previously-approved-collections-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9f01d7f4463c530f": {
@@ -7327,7 +7327,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03758/statutory-liens",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9949d93295ffcbff": {
@@ -7350,7 +7350,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03757/credit-union-service-contracts",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1bbbc2455984e643": {
@@ -7373,7 +7373,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03756/refund-of-interest",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a046ce15ad252751": {
@@ -7396,7 +7396,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03755/purchase-sale-and-pledge-of-eligible-obligations",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "83b25d0419848ba9": {
@@ -7420,7 +7420,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03754/compensation-in-connection-with-loans-to-members-and-lines-of-credit-to-members",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "25d8d6910853d0fb": {
@@ -7444,7 +7444,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03753/post-election-training-for-new-board-members",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fcb83496d5124e29": {
@@ -7470,7 +7470,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/12/2026-02868/investments-in-and-licensing-of-permitted-payment-stablecoins-issuers",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/02/12/2026-02868/investments-in-and-licensing-of-permitted-payment-stablecoins-issuers",
     "fr_title": "Investments in and Licensing of Permitted Payment Stablecoins Issuers",
@@ -7500,7 +7500,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00592/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "aec77dba1aa83113": {
@@ -7523,7 +7523,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02764/mergers-of-insured-credit-unions-into-other-credit-unions-voluntary-termination-or-conversion-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "34aeb72daf677598": {
@@ -7546,7 +7546,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02763/bank-conversions-and-mergers-subpart-a-conversion-of-insured-credit-unions-to-mutual-savings-banks",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "585e0749f0ab42f9": {
@@ -7570,7 +7570,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/03/2026-02161/proposed-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "97354e257298bea5": {
@@ -7594,7 +7594,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01698/notice-of-termination-of-excess-insurance-coverage",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1feac895f2051e1c": {
@@ -7617,7 +7617,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01697/requirements-for-insurance-maximum-borrowing-authority",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "92e56af346526d99": {
@@ -7640,7 +7640,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01696/public-unit-and-nonmember-shares",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "16ae64bc7da6a81e": {
@@ -7664,7 +7664,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/06/12/2025-10667/agency-information-collection-for-comments-request-proposed-collection",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8885a1b2ab41e7c5": {
@@ -7687,7 +7687,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22487/corporate-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8ef29061f961136e": {
@@ -7711,7 +7711,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00591/nondiscrimination-requirements",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5dc5bb773786bcdb": {
@@ -7734,7 +7734,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/12/2026-00332/privacy-act-exemption-correction",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b8e5befc7512f8a8": {
@@ -7757,7 +7757,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23857/suretyship-and-guaranty-segregated-deposit-and-collateral",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "db5f974651d1e5c3": {
@@ -7781,7 +7781,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23856/catastrophic-act-reporting",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c52d5ce2b1294287": {
@@ -7804,7 +7804,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23855/limits-on-loans-to-other-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5903570005a7dd23": {
@@ -7828,7 +7828,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23854/accuracy-of-advertising-and-notice-of-insured-status",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b027aec2df7c225c": {
@@ -7852,7 +7852,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22490/guidance-on-response-programs-for-unauthorized-access-to-member-information-and-member-notice",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4bb4cf9da17f9881": {
@@ -7876,7 +7876,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22489/guidelines-for-safeguarding-member-information",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9798618b9ce0998f": {
@@ -7900,7 +7900,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22488/supervisory-committee-audits-and-verifications",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "97bafde3d54174d4": {
@@ -7925,7 +7925,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/26/2024-30644/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d9f7daf036e9e752": {
@@ -7948,7 +7948,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/29/2025-18856/the-ncua-staff-draft-2026-2027-budget",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a06e22ada234e2de": {
@@ -7973,7 +7973,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/21/2025-19623/prohibition-on-use-of-reputation-risk-by-ncua",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5f7c5feb1113dfab": {
@@ -7996,7 +7996,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e8ceefa0e51676a2": {
@@ -8020,7 +8020,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/07/2025-12531/chartering-and-field-of-membership-public-hearing-community-charter-application-for-area-with-a",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "79a11448a34e8087": {
@@ -8043,7 +8043,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12330/guidance-on-referrals-for-potential-criminal-enforcement",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "04c631638415397e": {
@@ -8067,7 +8067,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06971/proposed-agency-information-collection-activities-comment-request",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a85f00f0295839c0": {
@@ -8090,7 +8090,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06966/simplification-of-share-insurance-and-succession-planning-final-rules-solicitation-of-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "31665271cef36990": {
@@ -8113,7 +8113,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/18/2025-06845/sunshine-act-meetings-cancellation",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "647b9ffea484654d": {
@@ -8137,7 +8137,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/18/2025-06748/temporary-exceptions-to-firrea-appraisal-requirements-in-los-angeles-county-as-affected-by",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "926dc053a0f481e1": {
@@ -8161,7 +8161,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/01/15/2025-00737/civil-monetary-penalty-inflation-adjustment",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "82bc09eee653b7c7": {
@@ -8184,7 +8184,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/13/2024-29344/revision-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e2de4c00cf997f30": {
@@ -8208,7 +8208,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/26/2024-30449/succession-planning",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3054b87752c9bb0d": {
@@ -8233,7 +8233,7 @@
     ],
     "url": "https://www.fincen.gov/resources/advisories/aviso-de-fincen-fin-2025-a003",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3a1f30848e7c6200": {
@@ -8257,7 +8257,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2026-01/FinCEN-Alert-Federal-Child-Nutrition-Programs.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "3029a75f9ff53fc1": {
@@ -8282,7 +8282,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/FinCEN_Alert_Cross_Border_FINAL508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "a28e58d3416f79e5": {
@@ -8307,7 +8307,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2025-09/FinCEN-Notice-FMS-508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "cf85d910153a5f78": {
@@ -8332,7 +8332,7 @@
     ],
     "url": "https://www.fincen.gov/resources/advisories/fincen-advisory-fin-2025-a003",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "eb66b60dfd03c0b8": {
@@ -8359,7 +8359,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2025-08/FinCEN-Notice-CVCKIOSK.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "2ecf6318916840e5": {
@@ -8382,7 +8382,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2025-08/FinCEN-Infographic-Public-2025-508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a6a494c546f2ba05": {
@@ -8407,7 +8407,7 @@
     ],
     "url": "https://www.fincen.gov/resources/advisories/fincen-advisory-fin-2025-a002",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3344a13ebd1fefb4": {
@@ -8432,7 +8432,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Alert-Oil-Smuggling-FINAL-508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "bcd9f80f1f191812": {
@@ -8457,7 +8457,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/BCS-Alert-FINAL-508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "67ab26803095b0d8": {
@@ -8482,7 +8482,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-BOI-Notice-Deadline-Extension-508FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "eb7a9ba942615665": {
@@ -8506,7 +8506,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2024-12/Alert-FinCEN-Scams-FINAL508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "6cde2f1c2bee1adc": {
@@ -8532,7 +8532,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Alert-DeepFakes-Alert508FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "c5916cf7482d9b9a": {
@@ -8557,7 +8557,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Alert-Hizballah-Alert-508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "3d31baf16a884804": {
@@ -8581,7 +8581,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/IAFinalRuleFactSheet-FINAL-508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8abdbbb30e5231d8": {
@@ -8605,7 +8605,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/RREFactSheet.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e0e68783d6e57d1e": {
@@ -8630,7 +8630,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Joint-Notice-Timeshare-Mexico-508C-FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "3f3ba5887f0e4962": {
@@ -8653,7 +8653,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Alert-West-Bank-FINAL-508C-rescinded.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2a6a56a829b13e9a": {
@@ -8676,7 +8676,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_Infographic_Public_508FINAL_2024_June_7.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "41b03158ba3c0e04": {
@@ -8701,7 +8701,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_Notice_Counterfeit_US_Passport_FINAL508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "988b955790e2aa42": {
@@ -8725,7 +8725,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN-Alert-Extremist-Violence-FINAL508-rescinded.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ffb1f848f8cfeb49": {
@@ -8750,7 +8750,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_ERC_Fraud_Alert_FINAL508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "998aa771d893c3cc": {
@@ -8775,7 +8775,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_Joint_Notice_US_Export_Controls_FINAL508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "8d94c81f39414f4a": {
@@ -8800,7 +8800,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2025-09/FinCEN_Alert_Terrorist_Financing_proof1.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "019fe6c0296d1c45": {
@@ -8826,7 +8826,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_Alert_Pig_Butchering_FINAL_508c.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "1ac1aa7c772b1816": {
@@ -8851,7 +8851,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/Financial%20Trend%20Analysis_Ransomware%20508%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "7a2f81b70d9bef87": {
@@ -8875,7 +8875,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2025-09/FinCEN_Notice_Payroll_Tax_Evasion_and_Workers_Comp_508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "5538c11b829399ce": {
@@ -8900,7 +8900,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN%20and%20BIS%20Joint%20Alert%20_FINAL_508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "b7e0e8ed690bf4af": {
@@ -8923,7 +8923,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN_Infographic_Public_2023_April_21_FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "9badcf4e933e46e9": {
@@ -8948,7 +8948,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN Alert Mail Theft-Related Check Fraud FINAL 508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "2c63ffd5eecf78d3": {
@@ -8974,7 +8974,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN%20Alert%20Real%20Estate%20FINAL%20508_1-25-23%20FINAL%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "5411383e535d6ed4": {
@@ -8999,7 +8999,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN Alert Human Smuggling FINAL_508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "35fe53bc7c13d9ef": {
@@ -9024,7 +9024,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2022-06/FinCEN%20and%20Bis%20Joint%20Alert%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "f7d4d4dccc9dee4b": {
@@ -9049,7 +9049,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2022-03/FinCEN%20Alert%20Russian%20Elites%20High%20Value%20Assets_508%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "2979cc935ecae60b": {
@@ -9076,7 +9076,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2022-03/FinCEN%20Alert%20Russian%20Sanctions%20Evasion%20FINAL%20508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "6e5b949348bdb907": {
@@ -9101,7 +9101,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/RRP%20Fact%20Sheet%20Notice%20FINAL%20508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "1d05cfa8c0ca4f8e": {
@@ -9126,7 +9126,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2021-12/Financial_Threat_Analysis_IWT_FINAL%20508_122021.pdf ",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f7acf333d926dcb0": {
@@ -9151,7 +9151,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2021-11/FinCEN%20Environmental%20Crimes%20Notice%20508%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "6e18ee57c631844b": {
@@ -9175,7 +9175,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FinCEN%20OCSE%20Notice%20508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "e155a01d33580d33": {
@@ -9200,7 +9200,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2021-03/FinCEN%20Notice%20on%20Antiquities%20and%20Art_508C.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "3736bf6c6b1b7fd7": {
@@ -9224,7 +9224,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/Consolidated%20COVID-19%20Notice%20508%20Final.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "7c5f4608a63b9ac4": {
@@ -9249,7 +9249,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/COVID-19%20Vaccine%20Notice%20508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "b14574775698a4c6": {
@@ -9274,7 +9274,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2020-07/FinCEN%20Alert%20Twitter_508%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "bb41284b4fae80c3": {
@@ -9299,7 +9299,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/May_18_Notice_Related_to_COVID-19.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "1010f62047fd30a7": {
@@ -9323,7 +9323,7 @@
     ],
     "url": "https://www.fincen.gov/news/news-releases/financial-crimes-enforcement-network-provides-further-information-financial",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "7cccc4720240add8": {
@@ -9347,7 +9347,7 @@
     ],
     "url": "https://www.fincen.gov/news/news-releases/financial-crimes-enforcement-network-fincen-encourages-financial-institutions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "aa7ed323ebc5c21b": {
@@ -9371,7 +9371,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/ASCII_Batch_Filer_Update_05042018_dph.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "38f0f5303fb5d8be": {
@@ -9394,7 +9394,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-approves-final-rule-vital-records-preservation",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5a4edc2e04679438": {
@@ -9417,7 +9417,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-first-quarter-2026-credit-union-system-performance-data",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7625a68bff840c3d": {
@@ -9439,7 +9439,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-clarifies-federal-credit-unions-power",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "79c121d1b88cf308": {
@@ -9461,7 +9461,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-approves-final-rule-dependent-care-and-board-member-reimbursement",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3de88469a13d90dd": {
@@ -9485,7 +9485,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/federal-prudential-regulators-ask-financial-institutions-detect-report-illicit-activity-related-illegal-aliens",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e55d9104909e32fd": {
@@ -9508,7 +9508,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/beverly-hills-city-employees-federal-credit-union-merges-nuvision-federal-credit-union",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "cff18924c942b057": {
@@ -9532,7 +9532,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-prohibits-five-individuals-participating-affairs-any-federally-insured-depository-institution",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c4080012794b8724": {
@@ -9556,7 +9556,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/agencies-request-comment-financial-institutions-rating-system",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "f976c43b7b9df575": {
@@ -9581,7 +9581,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-proposed-rule-permitted-payment-stablecoin-issuer-standards",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "08f57296f9f94d2d": {
@@ -9604,7 +9604,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-chairman-joins-leaders-financial-literacy-roundtable",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "80a4e1c3db5985ef": {
@@ -9627,7 +9627,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/jackson-area-federal-credit-union-conserved",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f4bc08f05105a6e1": {
@@ -9650,7 +9650,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-eleventh-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "151244266802f2f3": {
@@ -9673,7 +9673,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/people-trust-community-federal-credit-union-closes",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0ef73aa71fa6c30b": {
@@ -9696,7 +9696,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-seeks-comment-enhancing-and-streamlining-data-collection",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "cb84d0e948bdba49": {
@@ -9719,7 +9719,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-tenth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e2dc295b2a4a105b": {
@@ -9743,7 +9743,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-briefed-brokered-reciprocal-deposits-deregulation-strategic-plan-annual-performance-plan",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fbf11f8f04e362bc": {
@@ -9766,7 +9766,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-ninth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0354822a8e5f4367": {
@@ -9789,7 +9789,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-hold-meeting-april-9",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9dad2b4e77918507": {
@@ -9812,7 +9812,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-2025-annual-report",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "68aa2ccee7688876": {
@@ -9835,7 +9835,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/copper-glass-closes-omega-federal-credit-union-assumes-loans-assets-shares",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9713aa679b14db9a": {
@@ -9858,7 +9858,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-prohibits-two-individuals-participating-affairs-any-federally-insured-depository-institution",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "50ec14f65e4da8e1": {
@@ -9882,7 +9882,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-new-charter-system",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "56760f875ad483a5": {
@@ -9905,7 +9905,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-eighth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3da0d63855125d20": {
@@ -9928,7 +9928,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-q4-2025-state-level-credit-union-data-report",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "658d2082af4678fc": {
@@ -9951,7 +9951,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-seventh-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1f598d09fe5a6508": {
@@ -9974,7 +9974,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-fourth-quarter-2025-credit-union-system-performance-data",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4c8abfe4885b1685": {
@@ -9998,7 +9998,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-issues-voluntary-egrpra-review-continues-deregulation-project",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "7c0738f67013f667": {
@@ -10022,7 +10022,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-issues-share-insurance-fund-results-fourth-quarter-2025",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "96562546323ebec3": {
@@ -10047,7 +10047,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-and-fdic-host-webinar-financial-scams",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9563a85546a473aa": {
@@ -10070,7 +10070,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-sixth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "762a46e8f18563e1": {
@@ -10093,7 +10093,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/fincen-issues-exceptive-relief-bank-secrecy-act-requirement-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "12b44f5907f63afe": {
@@ -10116,7 +10116,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncuas-funds-receive-clean-audit-opinions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "522112a13c9000bf": {
@@ -10140,7 +10140,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-expands-newly-chartered-and-urgent-needs-grants",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5c5a279988377349": {
@@ -10165,7 +10165,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-proposes-rule-permitted-payment-stablecoin-issuer-applications",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "8a10c577e0d52af2": {
@@ -10188,7 +10188,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-fifth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "6494215f5234baa5": {
@@ -10211,7 +10211,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-extends-loan-interest-rate-ceiling",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fee3801da8195748": {
@@ -10235,7 +10235,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-remain-open-credit-union-members-shares-insured-during-partial-federal-government-shutdown",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0c804f1fa6fe2e44": {
@@ -10258,7 +10258,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/chairman-hauptmans-statement-appointment-pcaob",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "267b9dfd0b00bd16": {
@@ -10281,7 +10281,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-2026-leadership-team",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "53c6e5f1ee19efb2": {
@@ -10304,7 +10304,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-fourth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f6661cfb19e8ddbb": {
@@ -10327,7 +10327,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/beverly-hills-city-employees-federal-credit-union-conserved",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d932d3b59c198900": {
@@ -10350,7 +10350,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-briefed-proposed-dependent-care-reimbursement-rule-and-central-liquidity-facility-budget",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "00c2233f86cea907": {
@@ -10373,7 +10373,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/people-trust-community-federal-credit-union-conserved",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "2511b301312e8f1d": {
@@ -10396,7 +10396,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-hold-meeting-january-22",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "52ca27c26442ae7d": {
@@ -10419,7 +10419,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-issues-2026-supervisory-priorities-letter-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "cca39f6b17dfb213": {
@@ -10442,7 +10442,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-third-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5e1787f4ca1fba65": {
@@ -10466,7 +10466,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2025/ncua-prohibits-three-individuals-participating-affairs-any-federally-insured-depository-institution-0",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5e4631e4d0100b39": {
@@ -10489,7 +10489,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2025/ncua-announces-second-round-deregulation-proposals",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "33d0750f47d431f3": {
@@ -10515,7 +10515,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/notice-proposed-rulemaking-permitted-payment-stablecoin",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program",
     "fr_title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
@@ -10544,7 +10544,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/fdics-office-ombudsman-publishes-2025-annual-report",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "671c225de8f63d37": {
@@ -10568,7 +10568,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/summary-deposits-survey-and-filing-june-30-2026",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "70572bd3a3a9f3ae": {
@@ -10592,7 +10592,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/proposed-revisions-uniform-financial-institutions-rating",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/05/19/2026-09944/uniform-financial-institutions-rating-system",
     "fr_title": "Uniform Financial Institutions Rating System",
@@ -10624,7 +10624,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/updated-questions-and-answers-regarding-fdic-official-signs",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "46f08dfb7e2ff3ef": {
@@ -10647,7 +10647,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-3",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4729ca28fe41b1ef": {
@@ -10670,7 +10670,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-2",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3c2405b538302dc4": {
@@ -10695,7 +10695,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/final-rule-revisions-community-bank-leverage-ratio-cblr",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/01/2025-21625/regulatory-capital-rule-revisions-to-the-community-bank-leverage-ratio-framework",
     "fr_title": "Regulatory Capital Rule: Revisions to the Community Bank Leverage Ratio Framework",
@@ -10724,7 +10724,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-1",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1373766c84235dd7": {
@@ -10747,7 +10747,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-0",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "84093b5b1dfeab7c": {
@@ -10770,7 +10770,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9de1e35eae562bde": {
@@ -10794,7 +10794,7 @@
     ],
     "url": "https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8c0463e56623e4c9": {
@@ -10817,7 +10817,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/4193a9c",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b2c98703d01a2169": {
@@ -10840,7 +10840,7 @@
     ],
     "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/415c6bd",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "357225bd01ea6bb8": {
@@ -10867,7 +10867,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/truth-in-lending-regulation-z-annual-threshold-adjustments-credit-cards-hoepa-and-qualified-mortgages-2025/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/12/15/2025-22773/truth-in-lending-regulation-z-annual-threshold-adjustments-credit-cards-hoepa-and-qualified",
     "fr_title": "Truth in Lending (Regulation Z) Annual Threshold Adjustments (Credit Cards, HOEPA, and Qualified Mortgages)",
@@ -10899,7 +10899,7 @@
     ],
     "url": "https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b-extension-of-compliance-dates-final-rule/",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/10/02/2025-19370/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b-extension-of-compliance",
     "fr_title": "Small Business Lending Under the Equal Credit Opportunity Act (Regulation B); Extension of Compliance Dates",
@@ -10928,7 +10928,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/02/2025-24184/delaying-the-effective-date-of-the-anti-money-launderingcountering-the-financing-of-terrorism",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "620e11814b3a80f4": {
@@ -10952,7 +10952,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/30/2025-18928/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-on",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/09/30/2025-18928/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-on",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change on Information Sharing Between Government Agencies and Financial Institutions",
@@ -10984,7 +10984,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/10/2025-17371/geographic-targeting-order-imposing-recordkeeping-and-reporting-requirements-on-certain-money",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/03/10/2026-04641/geographic-targeting-order-imposing-recordkeeping-and-reporting-requirements-on-certain-money",
     "fr_title": "Geographic Targeting Order Imposing Recordkeeping and Reporting Requirements on Certain Money Services Businesses Along the Southwest Border",
@@ -11014,7 +11014,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/05/23/2025-09310/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "23e68725167a551b": {
@@ -11038,7 +11038,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/05/22/2025-09162/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "af54fe68af41546b": {
@@ -11062,7 +11062,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06938/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "297f33fe8fa6a455": {
@@ -11087,7 +11087,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05349/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e24b987127b9c569": {
@@ -11111,7 +11111,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "fr_title": "Financial Crimes Enforcement Network; Inflation Adjustment of Civil Monetary Penalties",
@@ -11140,7 +11140,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/05/2024-28451/bank-secrecy-act-advisory-group-solicitation-of-application-for-membership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "bf2ab9f71ddee5ae": {
@@ -11165,7 +11165,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/09/04/2024-19260/financial-crimes-enforcement-network-anti-money-launderingcountering-the-financing-of-terrorism",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fb9f8cc9e6bb5acd": {
@@ -11189,7 +11189,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/08/29/2024-19198/anti-money-laundering-regulations-for-residential-real-estate-transfers",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "3e25c7c388604ac8": {
@@ -11214,7 +11214,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/07/03/2024-14414/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
     "fr_title": "Anti-Money Laundering and Countering the Financing of Terrorism Programs",
@@ -11244,7 +11244,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/01/25/2024-01420/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "fr_title": "Financial Crimes Enforcement Network; Inflation Adjustment of Civil Monetary Penalties",
@@ -11273,7 +11273,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/12/15/2023-27620/bank-secrecy-act-advisory-group-solicitation-of-application-for-membership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "dae4ddd65eb83be4": {
@@ -11297,7 +11297,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/11/30/2023-26399/beneficial-ownership-information-reporting-deadline-extension-for-reporting-companies-created-or",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2023/11/30/2023-26399/beneficial-ownership-information-reporting-deadline-extension-for-reporting-companies-created-or",
     "fr_title": "Beneficial Ownership Information Reporting Deadline Extension for Reporting Companies Created or Registered in 2024",
@@ -11328,7 +11328,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/09/13/2023-19814/privacy-act-of-1974-system-of-records",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/03/23/2026-05640/privacy-act-of-1974-system-of-records",
     "fr_title": "Privacy Act of 1974; System of Records",
@@ -11360,7 +11360,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/04/11/2023-07540/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/04/30/2026-08363/agency-information-collection-activities-proposed-renewal-comment-request-renewal-without-change-of",
     "fr_title": "Agency Information Collection Activities; Proposed Renewal; Comment Request; Renewal Without Change of the Registration of Money Services Businesses Regulation and FinCEN Form 107",
@@ -11389,7 +11389,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/02/13/2023-02977/bank-secrecy-act-advisory-group-solicitation-of-application-for-membership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "6980d4948ce6fc04": {
@@ -11413,7 +11413,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/02/03/C1-2023-00943/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "fr_title": "Financial Crimes Enforcement Network; Inflation Adjustment of Civil Monetary Penalties",
@@ -11443,7 +11443,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2023/01/19/2023-00943/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/01/17/2025-01374/financial-crimes-enforcement-network-inflation-adjustment-of-civil-monetary-penalties",
     "fr_title": "Financial Crimes Enforcement Network; Inflation Adjustment of Civil Monetary Penalties",
@@ -11473,7 +11473,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/09/30/2022-21020/beneficial-ownership-information-reporting-requirements",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2025/03/26/2025-05199/beneficial-ownership-information-reporting-requirement-revision-and-deadline-extension",
     "fr_title": "Beneficial Ownership Information Reporting Requirement Revision and Deadline Extension",
@@ -11503,7 +11503,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2022/02/08/2022-02593/anti-money-laundering-regulations-for-real-estate-transactions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "282a505a3fdce000": {
@@ -11526,7 +11526,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2021/12/23/2021-27906/bank-secrecy-act-advisory-group-solicitation-of-application-for-membership",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8c06369a495d362c": {
@@ -11550,7 +11550,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true,
     "fr_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12787/financial-data-transparency-act-joint-data-standards",
     "fr_title": "Financial Data Transparency Act Joint Data Standards",
@@ -11580,7 +11580,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/05/07/2026-09010/requirements-for-insurance",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1c60f5545462cd4d": {
@@ -11604,7 +11604,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/05/05/2026-08735/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "d0a3c663398aca05": {
@@ -11627,7 +11627,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/04/07/2026-06679/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "96336fafdb1a6dcb": {
@@ -11650,7 +11650,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/03/13/2026-04905/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "560bbf5126980cea": {
@@ -11674,7 +11674,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/03/11/2026-04761/records-preservation-program-and-appendices-record-retention-guidelines-catastrophic-act",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "5b931ddefd7b43c5": {
@@ -11699,7 +11699,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/03/03/2026-04154/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a040b1dea025d549": {
@@ -11723,7 +11723,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02765/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "97fcec44c8887461": {
@@ -11747,7 +11747,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/02/02/2026-01933/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8a6dc1cd01df1dd2": {
@@ -11771,7 +11771,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01693/agency-information-collection-for-comments-request-proposed-collection",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4e2d53b610789872": {
@@ -11795,7 +11795,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/26/2026-01382/dependent-care-and-board-member-expense-reimbursement",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "10ae9096cdfe6d7c": {
@@ -11818,7 +11818,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/21/2026-01035/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fd1cd01a95a677a6": {
@@ -11841,7 +11841,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00595/corporate-credit-unions",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f8120dfd29886861": {
@@ -11864,7 +11864,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/16/2025-22871/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1cd641151b64864b": {
@@ -11888,7 +11888,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/12/12/2025-22654/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "0111596e30ba2d34": {
@@ -11911,7 +11911,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/11/17/2025-20005/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "90fed51860d83a36": {
@@ -11934,7 +11934,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/11/04/2025-19764/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f3b6c6baa67e5181": {
@@ -11958,7 +11958,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/31/2025-19734/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9a3f77b1ef549144": {
@@ -11982,7 +11982,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/27/2025-19659/the-ncua-staff-draft-2026-2027-budget",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "dafc514333562534": {
@@ -12005,7 +12005,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/10/21/2025-19602/the-ncua-staff-draft-2026-2027-budget",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c65c7f4056171ff8": {
@@ -12028,7 +12028,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/09/16/2025-17833/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "1a9884d06bb2cd42": {
@@ -12052,7 +12052,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/08/25/2025-16248/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4b1e16d5a1dc9216": {
@@ -12076,7 +12076,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/08/15/2025-15586/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "886d6e71eb046151": {
@@ -12100,7 +12100,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/29/2025-14297/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "c4a5e4a18e0271dc": {
@@ -12123,7 +12123,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/21/2025-13706/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "14d35a4c1a9c564a": {
@@ -12147,7 +12147,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/21/2025-13627/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ab5d37e08b770be4": {
@@ -12171,7 +12171,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/07/18/2025-13529/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fa4820baa4802a96": {
@@ -12194,7 +12194,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/30/2025-07521/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "68d226143474a2e9": {
@@ -12218,7 +12218,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06965/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "02391f61bb678bf6": {
@@ -12241,7 +12241,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/04/15/2025-06428/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f0d534c969cc2a99": {
@@ -12264,7 +12264,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/25/2025-05087/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "50bb19b0f3682796": {
@@ -12287,7 +12287,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/14/2025-04212/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "694f53c8e4ab0e61": {
@@ -12310,7 +12310,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/03/04/2025-03506/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "68658c6f498bc641": {
@@ -12333,7 +12333,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/02/25/2025-03087/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "767c6b6bc810f3b6": {
@@ -12356,7 +12356,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2025/01/14/2025-00706/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b5c76b5ae6138f8e": {
@@ -12380,7 +12380,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/30/2024-31250/revision-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "b9cd22aa68a134b6": {
@@ -12403,7 +12403,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/27/2024-30989/renewal-of-agency-information-collection-of-a-previously-approved-collection-request-for-comments",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "48afbf497b8f50b7": {
@@ -12426,7 +12426,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/12/13/2024-29486/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "181c065ee834201a": {
@@ -12449,7 +12449,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/11/29/2024-28074/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fdbb82ff28137eed": {
@@ -12472,7 +12472,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/11/20/2024-27246/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "67da662680d82841": {
@@ -12495,7 +12495,7 @@
     ],
     "url": "https://www.federalregister.gov/documents/2024/11/19/2024-27027/sunshine-act-meetings",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "519eb7d04f8d8c08": {
@@ -12520,7 +12520,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/FTA_Russian_Export_Controls_FINAL_508.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "546ece2085190b3e": {
@@ -12545,7 +12545,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2022-12/Financial%20Trend%20Analysis_Russian%20Oligarchs%20FTA%20_Final.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "d8f4204af6faf04f": {
@@ -12570,7 +12570,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/2022-11/Financial%20Trend%20Analysis_Ransomware%20FTA%202_508%20FINAL.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "22e30a26e4f4c322": {
@@ -12594,7 +12594,7 @@
     ],
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-prohibits-five-individuals-participating-affairs-any-federally-insured-depository-institution-may-2026",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "98118ff5eead35c8": {
@@ -12618,7 +12618,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/314bfactsheet.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a6b5000aab3072d2": {
@@ -12642,7 +12642,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/314afactsheet.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "f913b2d7aadedbe1": {
@@ -12667,7 +12667,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/314bInfographic.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "4b6c21ba2a0ebbcf": {
@@ -12690,7 +12690,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/CMIR_Notice.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "8ae8da1e11dddb30": {
@@ -12714,7 +12714,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/prevention_guide.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "63fb255252edcc2c": {
@@ -12738,7 +12738,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/bsa_quickrefguide.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "ae5c422a4bbcc2ac": {
@@ -12763,7 +12763,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/report_reference.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "119f0a833594fde1": {
@@ -12786,7 +12786,7 @@
     ],
     "url": "https://www.fincen.gov/fact-sheet-bank-secrecy-act-effectiveness-and-efficiency",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "f1edb381117656bf": {
@@ -12811,7 +12811,7 @@
     ],
     "url": "https://www.fincen.gov/fact-sheet-section-312-usa-patriot-act-final-regulation-and-notice-proposed-rulemaking",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "9882ab814468ab66": {
@@ -12834,7 +12834,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/bsadirectefilingfactsheet.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   },
   "feec128b1c4370e5": {
@@ -12857,7 +12857,7 @@
     ],
     "url": "https://www.fincen.gov/acronyms",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "bbc838537f2a8848": {
@@ -12881,7 +12881,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/sarbul0201-f.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "e2a72d4dcc6a588a": {
@@ -12905,7 +12905,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/sarbul6-01.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "a1e3bb3a951050ca": {
@@ -12928,7 +12928,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/sarbul8-00.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "51cf717b04643966": {
@@ -12952,7 +12952,7 @@
     ],
     "url": "https://www.fincen.gov/system/files/shared/sarbul1.pdf",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": false
   },
   "fe0dc10ae9d05cb3": {
@@ -12976,7 +12976,7 @@
     ],
     "url": "https://www.fincen.gov/fincen-notice-97-1-clarification-time-designation-exempt-persons-purposes-31-cfr-10322h",
     "first_seen": "2026-07-18",
-    "last_seen": "2026-07-18",
+    "last_seen": "2026-07-19",
     "fr_checked": true
   }
 }
