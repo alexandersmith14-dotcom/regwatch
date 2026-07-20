@@ -17,6 +17,9 @@ Design notes:
 import argparse
 import html
 import json
+# main() binds a local named `html` for the page string, which shadows the module
+# there. Alias the escaper so it stays reachable inside main.
+from html import escape as hesc
 import os
 import webbrowser
 from collections import Counter
@@ -93,16 +96,6 @@ header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
 header .t{flex:1}
 h1{font-size:21px;margin:0 0 3px;color:#fff;font-weight:700;letter-spacing:-.01em}
 .sub{color:rgba(255,255,255,.82);font-size:13px;margin:0}
-/* Bookmark hint. Starts hidden and is revealed by script only on a device with
-   a keyboard, since Ctrl+D means nothing on a phone. */
-.bmk{display:none;align-items:center;gap:8px;margin:7px 0 0;
-  font-size:12px;color:rgba(255,255,255,.62)}
-.bmk kbd{font:inherit;font-size:11px;padding:2px 6px;border-radius:4px;
-  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
-  color:rgba(255,255,255,.92)}
-.bmk button{background:none;border:0;padding:0 2px;cursor:pointer;font-size:15px;
-  line-height:1;color:rgba(255,255,255,.45)}
-.bmk button:hover{background:none;color:rgba(255,255,255,.85)}
 button{font:inherit;font-size:13px;padding:8px 14px;color:var(--ink);
   background:var(--surface);border:1px solid var(--border);border-radius:6px;cursor:pointer}
 button:hover{background:var(--raised)}
@@ -361,6 +354,12 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
 
 JS = r"""
 const DATA = JSON.parse(document.getElementById('data').textContent);
+// Feed names grouped under the agency that publishes them. Readers think "OCC",
+// not "OCC versus OCC Bulletins".
+const GROUPS = JSON.parse(document.getElementById('groups').textContent);
+// feed name -> agency label, for the by-agency chart.
+const FEED_TO_AGENCY = {};
+GROUPS.forEach(([label, feeds]) => feeds.forEach(f => { FEED_TO_AGENCY[f] = label; }));
 const TODAY = document.body.dataset.today;
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
@@ -411,19 +410,17 @@ function rows() {
   return DATA.filter(d => {
     if (!showAll && !d.relevant) return false;
     if (!matchesQuery(d)) return false;
-    if (filter.kind === 'agency') return d.sources.includes(filter.value);
-    // Fintech uses the classifier's explicit judgment, not a word match. Matching
-    // the text found ~55 items because the model padded most summaries with the
-    // phrase "community banks and fintechs"; the real count is 14.
-    if (filter.kind === 'fintech') return d.fintech === true;
-    // Topics match any term in a list, not one literal word. A single keyword
-    // silently under-reports: "Lending" missed "loan" and "credit", and
-    // "Prepaid / FBO" would have missed an FBO item written as
-    // "for-benefit-of accounts".
-    if (filter.kind === 'tag') {
-      const hay = ((d.tags || []).join(' ') + ' ' + d.title + ' ' + d.why).toLowerCase();
-      return filter.value.split('|').some(t => hay.includes(t));
+    // One agency, several feeds — the pill value is pipe separated so "OCC"
+    // covers both the press feed and the bulletins.
+    if (filter.kind === 'agency') {
+      return filter.value.split('|').some(f => d.sources.includes(f));
     }
+    // Fintech uses the classifier's explicit judgment, not a word match.
+    // Searching the text instead returns 63 items where the classifier finds 48,
+    // agreeing on only 31: it misses 17 genuinely fintech items and adds 32 that
+    // are not, because most summaries carry the phrase "community banks and
+    // fintechs" regardless of subject. This is why it is a control, not a search.
+    if (filter.kind === 'fintech') return d.fintech === true;
     return true;
   });
 }
@@ -543,7 +540,16 @@ function renderDeadlines(rs) {
 
 function renderAgencies(rs) {
   const c = {};
-  rs.forEach(d => d.sources.forEach(s => c[s] = (c[s] || 0) + 1));
+  // Counted by agency, matching the Source pills. Counting raw feeds instead
+  // listed "FDIC" and "FDIC FILs" as if they were separate regulators, and an
+  // interagency item counted once per feed rather than once per agency.
+  rs.forEach(d => {
+    const seen = new Set();
+    d.sources.forEach(s => {
+      const label = FEED_TO_AGENCY[s] || s;
+      if (!seen.has(label)) { seen.add(label); c[label] = (c[label] || 0) + 1; }
+    });
+  });
   const e = Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, 10);
   const max = e.length ? e[0][1] : 1;
   $('#agencies').innerHTML = e.length ? e.map(([n, v]) =>
@@ -592,28 +598,6 @@ document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () =
   filter = {kind: p.dataset.kind, value: p.dataset.value || ''};
   render();
 }));
-
-// Bookmark tip. There is no way to bookmark a page from script -- every browser
-// removed that years ago -- so the most any page can honestly do is name the
-// shortcut. Shown only where the shortcut exists, and only until dismissed.
-(() => {
-  const tip = $('#bmk');
-  if (!tip) return;
-  // A coarse pointer with no hover is a touch device: no Ctrl, no Cmd, and the
-  // browser's own "add to home screen" already covers saving the page there.
-  const touch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-  let dismissed = false;
-  try { dismissed = localStorage.getItem('bmk') === 'off'; } catch (e) {}
-  if (touch || dismissed) return;
-  const mac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-  $('#bmkkey').textContent = mac ? '⌘' : 'Ctrl';
-  tip.style.display = 'flex';
-  $('#bmkx').addEventListener('click', () => {
-    tip.style.display = 'none';
-    // Private-mode browsers throw on write; the tip simply returns next visit.
-    try { localStorage.setItem('bmk', 'off'); } catch (e) {}
-  });
-})();
 
 $('#export').addEventListener('click', () => {
   const rs = rows();
@@ -673,18 +657,24 @@ applyViewport();
 setView(false);
 """
 
-# Each topic is a set of terms matched against tags + title + summary. Pipe
-# separated because the value rides in a data- attribute.
-TOPIC_PILLS = [
-    ("BSA / AML",
-     "aml|bsa|money laundering|sanction|ofac|suspicious activity|"
-     "beneficial owner|know your customer|customer identification|314(b)"),
-    ("Lending",
-     "lending|loan|credit|underwriting|mortgage|ecoa|regulation b|"
-     "fair lending|hmda|truth in lending"),
-    ("Enforcement",
-     "enforcement|consent order|civil money penalty|cease and desist|"
-     "settlement|charges|restitution"),
+# Feeds grouped under the agency that publishes them. Several agencies use more
+# than one channel, and the split is an artefact of how we fetch, not something a
+# reader cares about — nobody thinks "FDIC versus FDIC FILs", they think "FDIC".
+#
+# This also fixes a real gap. The pills used to be the top nine feeds by volume,
+# which meant you could filter to "Fed SR/CA Letters" but not to "Federal
+# Reserve", and to "OCC Bulletins" but not "OCC" — the two most recognisable
+# banking regulators looked missing, and 16 relevant items sat behind no pill at
+# all. Grouped, eight pills reach 100% of items with no truncation.
+AGENCY_GROUPS = [
+    ("FDIC", ["FDIC", "FDIC FILs"]),
+    ("OCC", ["OCC", "OCC Bulletins"]),
+    ("Federal Reserve", ["Federal Reserve", "Fed SR/CA Letters"]),
+    ("CFPB", ["CFPB", "CFPB Rules"]),
+    ("FinCEN", ["FinCEN", "FinCEN Advisories"]),
+    ("NCUA", ["NCUA", "NCUA Press"]),
+    ("OFAC", ["OFAC"]),
+    ("CSBS", ["CSBS"]),
 ]
 
 
@@ -842,20 +832,25 @@ def main():
 
     rows = build_rows(store)
     today = datetime.now(timezone.utc).date()
-    agencies = [a for a, _ in Counter(
-        s for d in rows if d["relevant"] for s in d["sources"]).most_common(9)]
 
-    # Grouped so it's obvious that one row filters by publisher and the other by
-    # subject — they look identical otherwise and read as one arbitrary list.
+    # Busiest agency first, so the ordering carries information rather than being
+    # alphabetical by accident. Empty groups are dropped — a pill that returns
+    # nothing is worse than no pill.
+    relevant_rows = [d for d in rows if d["relevant"]]
+    group_counts = [
+        (label, feeds, sum(1 for d in relevant_rows
+                           if any(f in d["sources"] for f in feeds)))
+        for label, feeds in AGENCY_GROUPS
+    ]
+    group_counts = sorted((g for g in group_counts if g[2]),
+                          key=lambda g: -g[2])
+
     source_pills = (
         '<button class="pill" data-kind="all" aria-pressed="true">All</button>'
-        + "".join(f'<button class="pill" data-kind="agency" data-value="{a}" '
-                  f'aria-pressed="false">{a}</button>' for a in agencies)
-    )
-    topic_pills = (
-        '<button class="pill" data-kind="fintech" aria-pressed="false">Fintech</button>'
-        + "".join(f'<button class="pill" data-kind="tag" data-value="{v}" '
-                  f'aria-pressed="false">{lbl}</button>' for lbl, v in TOPIC_PILLS)
+        + "".join(f'<button class="pill" data-kind="agency" '
+                  f'data-value="{hesc("|".join(feeds), quote=True)}" '
+                  f'aria-pressed="false">{hesc(label)}</button>'
+                  for label, feeds, _ in group_counts)
     )
 
     # Live counts in the share description, so the preview reflects reality
@@ -915,22 +910,15 @@ def main():
     <p class="sub">Community banks &amp; fintechs &middot; last updated
       {datetime.now(timezone.utc).strftime('%B %-d, %Y %H:%M UTC') if os.name != 'nt'
        else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</p>
-    <p class="bmk" id="bmk">
-      <span>Press <kbd id="bmkkey">Ctrl</kbd> + <kbd>D</kbd> to bookmark this page</span>
-      <button id="bmkx" type="button" aria-label="Dismiss bookmark tip"
-              title="Dismiss">&times;</button>
-    </p>
   </div>
   <button id="export">Export CSV</button>
 </header>
 
 <div class="notice">
   <strong>Read this first.</strong> The summaries are based on agency listings.
-  They are a starting point for triage, not legal or
-  compliance advice, and they can be wrong or incomplete. Always open the source
-  document before acting on anything here. Deadlines shown are structured fields
-  taken from matched Federal Register records; items without a match show none,
-  which does not mean none exists.
+  Always open the source document before acting on anything here. Deadlines shown
+  are structured fields taken from matched Federal Register records; items without
+  a match show none, which does not mean none exists.
   <div style="margin-top:9px">{coverage_html}</div>
   <div style="margin-top:6px">{regref_html}</div>
 </div>
@@ -956,15 +944,15 @@ def main():
       <button id="viewRelevant" aria-pressed="true">Relevant only</button>
       <button id="viewAll" aria-pressed="false">Everything</button>
     </div>
+    <!-- Fintech sits with the view toggle, not with Source, because it is the
+         same kind of control: a lens on the classifier's judgment rather than a
+         keyword. It is also the one filter the search box cannot reproduce. -->
+    <button class="pill" data-kind="fintech" aria-pressed="false">Fintech only</button>
     <span class="count" id="viewnote"></span>
   </div>
   <div class="pillgroup">
     <div class="grouplabel">Source<small>who published it</small></div>
     {source_pills}
-  </div>
-  <div class="pillgroup">
-    <div class="grouplabel">Topic<small>what it's about</small></div>
-    {topic_pills}
   </div>
 </details>
 
@@ -997,10 +985,9 @@ def main():
   <div class="who">
     <div class="name">Built by Alexander Smith, CRCM, CFE</div>
     <div class="role">Risk Advisory Services &middot; Kaufman Rossin</div>
-    <div class="pitch">I built this to keep track of federal regulatory activity
-      affecting community banks and fintechs. If your institution is tracking this
-      manually — or wants monitoring shaped around its own risk profile — I'm happy
-      to talk it through.</div>
+    <div class="pitch">I built this to track federal regulatory activity affecting
+      community banks and fintechs. If you're impacted by any of these updates, or
+      have questions, please feel free to reach out to see how we can help.</div>
   </div>
   <div class="acts">
     <a class="btn primary" href="https://www.linkedin.com/in/alexandersmith14/"
@@ -1016,6 +1003,7 @@ Summaries are model-generated from agency listings and are not a substitute for
 reading the source document. Not legal or compliance advice.</footer>
 </div>
 <script type="application/json" id="data">{json.dumps(rows)}</script>
+<script type="application/json" id="groups">{json.dumps(AGENCY_GROUPS)}</script>
 <script>{JS}</script>
 </body></html>"""
 
