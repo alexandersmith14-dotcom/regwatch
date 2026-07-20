@@ -564,6 +564,17 @@ function render() {
   renderCards(rs); renderDeadlines(rs); renderAgencies(rs); renderFilteredOut(); renderRegRef();
 }
 
+// Counts on the buttons, so the size of each lens is visible before clicking
+// rather than inferred afterwards. Computed from the data, never hardcoded.
+function labelViews() {
+  const rel = DATA.filter(d => d.relevant).length;
+  const fin = DATA.filter(d => d.relevant && d.fintech === true).length;
+  $('#viewRelevant').textContent = `Banks & fintechs (${rel})`;
+  $('#viewAll').textContent = `Everything (${DATA.length})`;
+  const f = $('[data-kind="fintech"]');
+  if (f) f.textContent = `Fintech only (${fin})`;
+}
+
 function setView(all) {
   showAll = all;
   $('#viewAll').setAttribute('aria-pressed', String(all));
@@ -654,6 +665,7 @@ function applyViewport() {
 MOBILE.addEventListener('change', applyViewport);
 applyViewport();
 
+labelViews();
 setView(false);
 """
 
@@ -941,7 +953,10 @@ def main():
   <div class="pillgroup">
     <div class="grouplabel">View<small>how much to show</small></div>
     <div class="viewtoggle">
-      <button id="viewRelevant" aria-pressed="true">Relevant only</button>
+      <!-- "Relevant only" was self-referential: relevant to whom? These say who
+           the page is for. Counts are filled in by script so they cannot go
+           stale against the data. -->
+      <button id="viewRelevant" aria-pressed="true">Banks &amp; fintechs</button>
       <button id="viewAll" aria-pressed="false">Everything</button>
     </div>
     <!-- Fintech sits with the view toggle, not with Source, because it is the

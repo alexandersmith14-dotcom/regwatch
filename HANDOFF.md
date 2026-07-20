@@ -71,7 +71,22 @@ gitignored.
   Two bugs came from being looser: "gg" matched "trigger", "regulation d" matched
   "data"/"disparate". Don't relax this.
 - **Relevance is a lens, not a gate.** The Relevant/Everything toggle exists
-  because one profile can't serve a public audience.
+  because one profile can't serve a public audience. The buttons are labelled
+  **Banks & fintechs / Fintech only / Everything** with live counts; "Relevant
+  only" was self-referential — relevant to whom?
+- **Do not split the view into "Community banks" vs "Fintechs".** Measured, not
+  assumed: a `bank_specific` judgment was added to the classifier and sampled
+  over 25 relevant items for $0.27. **24 of 25 came back true (96%)**, and of the
+  4 fintech items every one was *also* bank-specific — "fintech only" was empty.
+  A Community banks button would therefore show ~220 of 229 and be
+  indistinguishable from the default. The two are not independent axes; fintech
+  is a subset of bank. The field was removed again rather than kept unused. The
+  remaining ~$2.25 of backfill was not spent.
+- **Topic pills were removed.** BSA/AML matched 151 of 228 relevant items (66%),
+  which is a smaller "All" rather than a filter; Lending and Enforcement were
+  plain keyword matches the search box already does. Fintech survived because it
+  reads the classifier's judgment: searching "fintech" returns 63 where the
+  classifier finds 48, agreeing on only 31.
 - **The reg reference table carries no commentary**, and unverified entries (AA,
   JJ, SS, UU, ZZ) were removed rather than published with a caveat.
 - **Source health is judged from `fetch_report.json`, not from `store.json`.**
