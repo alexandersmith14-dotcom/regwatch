@@ -12978,30 +12978,5 @@
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
     "fr_checked": true
-  },
-  "2789c6f172aa5173": {
-    "relevant": true,
-    "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Medium",
-    "plain_english": "OFAC updated its Russia-related sanctions designations on the SDN list. All banks and money-service providers must screen against the updated list and block or reject transactions involving newly designated parties.",
-    "effective_or_comment_date": "2026-07-20",
-    "tags": [
-      "OFAC",
-      "sanctions",
-      "BSA/AML",
-      "Russia",
-      "SDN list"
-    ],
-    "key": "2789c6f172aa5173",
-    "title": "Russia-related Designations Updates",
-    "date": "2026-07-20",
-    "sources": [
-      "OFAC"
-    ],
-    "url": "https://ofac.treasury.gov/recent-actions/20260720",
-    "first_seen": "2026-07-20",
-    "last_seen": "2026-07-20",
-    "fr_checked": true
   }
 }
