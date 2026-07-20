@@ -175,14 +175,37 @@ documents and $71, and the extra 5,000 are routine notices. Full detail in
 
 ---
 
-## Next up when he returns
+## To-do / open items
 
-He is letting it run for some days before tuning. Likely topics:
+Carried forward as of 2026-07-20. Nothing here is broken — these are the next
+things to do, not fixes.
 
-1. ~~Whether any source silently broke~~ — done. `health.py` runs after each
-   deploy and turns the run red (which emails him) if a source stops delivering.
-   All 14 verified healthy on 2026-07-18.
-2. Whether the relevance judgment matches his — currently 228 of 508
-3. The historical backfill
-4. The LinkedIn launch post (a draft exists; update the deadlines in it before
-   posting, and refresh the preview via LinkedIn Post Inspector)
+1. **Relevance tuning** — does the keep judgment match Alexander's? Currently
+   363 of 665 relevant. Never reviewed against his eye; the highest-value open
+   item and it costs nothing. Related: FinCEN is a large share of the relevant
+   set, much of it older reference material — worth a look at whether it dilutes.
+2. **Historical backfill** — ~$16 one-off, ~1,450 rules/proposed rules back to
+   2018 across six agencies. Two switches in `fetcher.py` (`ARCHIVE_ENABLED`,
+   `FEDREG_AGENCIES_PENDING`). Run locally, 90–120 min. Full detail in README.
+3. **LinkedIn launch post** — a draft exists but predates the credit-union
+   expansion and the two state sources, so it undersells the tool now. Update the
+   deadlines and the audience framing before posting; refresh the preview via
+   LinkedIn Post Inspector. The pitch copy also dropped the word "federal" (state
+   sources are in now) — check it reads right.
+4. **Texas DOB phase 2** — its Enforcement Orders (money-services + bank sectors)
+   and Supervisory Memoranda are higher-value than the Industry Notices already
+   added. Enforcement Orders need per-sector link following; Supervisory Memoranda
+   carry no listing dates. Both over the same completed TLS chain.
+5. **More states** — the method is proven (probe reachability → find listing
+   pages → measure keep-rate → decide). FL and TX are in. Any new state gets the
+   same measure-first test; expect low volume per state.
+6. **GitHub 60-day inactivity rule** — scheduled workflows in public repos are
+   disabled after 60 days without repo activity. Bot commits happen daily but
+   whether they count is undocumented. If the page timestamp ever stops advancing
+   with no failure email, this is the likely cause. The weekly `regwatch-watchdog`
+   scheduled task is the backstop.
+
+Done 2026-07-20 (not open anymore): daily source health check + alerting,
+CI dependency fix, FinCEN date bug, tab/bookmark/home-screen icons, foldable
+panels + landscape fix, store push-guard, filter relabel, credit-union audience
+expansion, Florida OFR + Texas Dept of Banking sources, weekly watchdog task.
