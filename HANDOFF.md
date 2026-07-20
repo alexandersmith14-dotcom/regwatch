@@ -49,6 +49,7 @@ gitignored.
 | `deadlines.py` | Matches Federal Register records for comment/effective dates |
 | `dashboard.py` | Builds `dashboard.html` |
 | `health.py` | Per-source health check. `--report-only` to never exit non-zero |
+| `check_store.py` | Blocks a push that would delete events. Run by `.githooks/pre-push` |
 | `regref.py` | Fed regulation A–YY lookup table (47 entries) |
 | `make_og_image.py` | Regenerates the LinkedIn preview card |
 | `make_icons.py` | Regenerates favicon, home-screen icons and `site.webmanifest` |
@@ -114,6 +115,17 @@ gitignored.
   "09/2007". That is stored as `2007-09`, not `2007-09-01` — the day is unknown
   and inventing one asserts precision the source never gave. `YYYY-MM` still
   sorts correctly against `YYYY-MM-DD` as a string.
+- **`store.json` has two authors now, and git cannot merge it.** Since the CI
+  dependency fix the Action classifies and commits too, so a local copy taken
+  before a bot commit silently deletes whatever the bot added — the diff looks
+  like 900 reformatted lines either way. `check_store.py` blocks such a push and
+  names the events at risk. It runs from `.githooks/pre-push`, which needs
+  enabling once per clone:
+
+      git config core.hooksPath .githooks
+
+  Deliberate shrinks: `STORE_ALLOW_SHRINK=1 git push`. **Always rebase onto
+  `origin/main` before committing `store.json`.**
 - **`--refresh-dates` matches on title, so it only touches titles that appear
   exactly once in the current fetch, and only records whose date is unparseable.**
   Without both limits it re-dates recurring notices to a single shared date and,

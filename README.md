@@ -74,6 +74,7 @@ internet when you open it.
 | `dashboard.py` | Builds the web page |
 | `health.py` | Checks that all 14 sources are still working, and complains if not |
 | `make_icons.py` | Makes the tab/bookmark icon and the phone home-screen icons |
+| `check_store.py` | Safety catch — stops you overwriting analysed items by accident |
 | `dashboard.html` | The web page itself — this is what you open |
 | `store.json` | The memory. Everything it has ever seen and analysed. **Don't delete this** |
 | `updates.json` | Working file, rewritten every run — doesn't matter |
