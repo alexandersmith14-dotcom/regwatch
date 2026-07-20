@@ -68,6 +68,20 @@ gitignored.
 - **NYDFS and California DFPI are not scraped.** Both block automated access
   including real browsers. Alexander subscribed to their email alerts instead —
   the sanctioned route. Do not add stealth/anti-detection.
+- **State regulators are added one at a time, measured first.** Florida OFR
+  (Press Releases, 30%) and Texas Dept of Banking (Industry Notices, 33%) are in.
+  Texas CU Dept (dormant), OCCC (payday/pawn noise) and TX Savings & Mortgage
+  (mortgage-originator admin) were each examined and rejected. Same discipline as
+  the SEC/FTC/CFTC federal trials.
+- **The Texas cert handling is chain-completion, NOT disabled verification.**
+  www.dob.texas.gov serves a real SSL.com cert but omits the intermediate;
+  browsers fetch it via the cert's AIA extension, Python doesn't, so a plain
+  fetch fails "self-signed certificate in chain". `fetcher._dob_context` bundles
+  the intermediate (`certs-ssl-com-intermediate.pem`, expires 2031) and verifies
+  against the SSL.com root in certifi — proper verification. Do NOT "fix" a future
+  cert error here by disabling verification: the tool republishes what it fetches,
+  so an unverified connection means serving content whose integrity isn't checked.
+  If the bundled cert expires, refresh it from the AIA URL in fetcher.py.
 - **Search matches at word starts; terms ≤2 chars must match a whole word.**
   Two bugs came from being looser: "gg" matched "trigger", "regulation d" matched
   "data"/"disparate". Don't relax this.
