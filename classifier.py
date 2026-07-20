@@ -8,7 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 if not os.getenv("ANTHROPIC_API_KEY", "").startswith("sk-ant-"):
-    sys.exit("No valid ANTHROPIC_API_KEY found in .env — check the file.")
+    # Names both sources on purpose. In the Action there is no .env — the key
+    # arrives as an environment variable from the repo secret — so a message
+    # that only mentions the file sends you looking in the wrong place.
+    sys.exit("No valid ANTHROPIC_API_KEY. Locally: check .env. "
+             "In GitHub Actions: check the ANTHROPIC_API_KEY repo secret.")
 
 MODEL = "claude-opus-4-8"
 
