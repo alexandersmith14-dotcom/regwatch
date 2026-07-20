@@ -34,10 +34,12 @@ d = ImageDraw.Draw(img)
 d.rectangle([0, H - 14, W, H], fill=GREEN)
 
 d.text((70, 92), "Regulatory update tracker", font=font(62, bold=True), fill=WHITE)
-d.text((70, 178), "Community banks & fintechs", font=font(34), fill=GREEN)
+# Font stepped down from 34 to 30 to fit the longer three-audience subtitle
+# within the card at x=70.
+d.text((70, 182), "Community banks, credit unions & fintechs", font=font(30), fill=GREEN)
 
 lines = [
-    "14 federal agencies, one page.",
+    "US federal & state regulators, one page.",
     "Plain-English summaries, comment deadlines,",
     "and effective dates — updated daily.",
 ]

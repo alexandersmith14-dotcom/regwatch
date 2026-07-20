@@ -2006,12 +2006,11 @@
     "relevant": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is renewing existing information collections and submitting them to OMB under the Paperwork Reduction Act. This is a routine administrative notice affecting credit unions, not community banks or fintechs in our focus areas.",
+    "plain_english": "NCUA is renewing existing information collections and submitting them to OMB under the Paperwork Reduction Act. This is a routine administrative PRA notice with no substantive change to requirements.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "Paperwork Reduction Act",
-      "credit unions",
+      "PRA",
       "administrative"
     ],
     "agency": "NCUA",
@@ -2025,19 +2024,20 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": false,
+    "fintech_specific": false
   },
   "d6840359e8948f3b": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced a funding opportunity (NOFO) offering loans to qualifying credit unions through the Community Development Revolving Loan Fund. This is a credit-union-only grant/loan program outside our focus on community banks and fintechs.",
+    "plain_english": "NCUA opened a funding round under the Community Development Revolving Loan Fund, offering loans (and typically grants) to low-income-designated credit unions. Relevant only to qualifying CDCUs seeking this funding; no rule change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "funding",
-      "out-of-scope"
+      "CDRLF",
+      "funding"
     ],
     "agency": "NCUA",
     "title": "Community Development Revolving Loan Fund",
@@ -2050,19 +2050,27 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false,
+    "fr_url": "https://www.federalregister.gov/documents/2026/07/09/2026-13835/community-development-revolving-loan-fund",
+    "fr_title": "Community Development Revolving Loan Fund",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": null,
+    "fr_dates_text": "This NOFO is effective on the date of publication in the Federal Register. NCUA accepts applications on a rolling basis. Applicants will be notified of NCUA's decision after the agency's review is completed. The application review process will take approximately 180 calendar days."
   },
   "205aea27fe58e56f": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Final Rule",
-    "urgency": "Low",
-    "plain_english": "The NCUA finalized a rule removing reputation risk from its supervisory framework for credit unions, per Executive Order 14331. This applies only to NCUA-supervised credit unions and does not affect community banks or fintechs, which fall under other regulators.",
+    "urgency": "Medium",
+    "plain_english": "The NCUA finalized a rule eliminating reputation risk from its supervisory framework for credit unions, implementing Executive Order 14331. Examiners can no longer cite reputation risk as a basis for supervisory action against NCUA-supervised credit unions.",
     "effective_or_comment_date": "NCUA ceased examining for reputation risk effective September 25, 2025",
     "tags": [
       "NCUA",
-      "reputation risk",
       "credit unions",
-      "supervision"
+      "supervision",
+      "reputation risk",
+      "Executive Order 14331"
     ],
     "agency": "NCUA",
     "title": "Prohibition on the Use of Reputation Risk",
@@ -2075,7 +2083,14 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false,
+    "fr_url": "https://www.federalregister.gov/documents/2026/06/25/2026-12856/prohibition-on-the-use-of-reputation-risk",
+    "fr_title": "Prohibition on the Use of Reputation Risk",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": "2026-07-27",
+    "fr_dates_text": "This final rule is effective on July 27, 2026."
   },
   "e2b31fadda63d0e9": {
     "relevant": false,
@@ -2103,16 +2118,16 @@
     "fr_checked": false
   },
   "040b3416ee11195e": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Final Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA finalized updates to its records preservation and catastrophic act preparedness rules for credit unions, clarifying part 749 definitions and removing outdated references. This is a credit-union-only administrative rulemaking with no bearing on community banks, fintechs, or BaaS arrangements.",
+    "plain_english": "NCUA finalized administrative updates to its part 749 records preservation and catastrophic act preparedness rules for credit unions, clarifying definitions and removing outdated references. This is a housekeeping rulemaking affecting credit unions' recordkeeping obligations with no substantive new burden.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "records retention",
-      "out of scope"
+      "recordkeeping",
+      "final rule"
     ],
     "agency": "NCUA",
     "title": "Records Preservation Program and Appendices-Record Retention Guidelines; Catastrophic Act Preparedness Guidelines",
@@ -2125,19 +2140,27 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false,
+    "fr_url": "https://www.federalregister.gov/documents/2026/06/16/2026-12058/records-preservation-program-and-appendices-record-retention-guidelines-catastrophic-act",
+    "fr_title": "Records Preservation Program and Appendices-Record Retention Guidelines; Catastrophic Act Preparedness Guidelines",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": "2026-07-16",
+    "fr_dates_text": "This final rule is effective on July 16, 2026."
   },
   "23e3636a6d8952e5": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Final Rule",
-    "urgency": "Low",
-    "plain_english": "NCUA issued an interim final rule clarifying that federal credit unions can charge non-interest fees, including interchange, even when set with third parties. This is a credit-union-only matter that does not affect community banks or fintech/BaaS arrangements.",
+    "urgency": "Medium",
+    "plain_english": "NCUA's interim final rule confirms federal credit unions may charge non-interest fees, including interchange, even when those fees are set jointly with third parties, reinforcing federal preemption over state limits. This affects federal credit unions' fee structures but does not touch banks or fintech/BaaS arrangements.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "interchange fees",
-      "out of scope"
+      "preemption",
+      "fees",
+      "interchange"
     ],
     "agency": "NCUA",
     "title": "Preemption-Federal Credit Union Non-Interest Charges and Fees",
@@ -2150,19 +2173,26 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false,
+    "fr_url": "https://www.federalregister.gov/documents/2026/06/09/2026-11559/preemption-federal-credit-union-non-interest-charges-and-fees",
+    "fr_title": "Preemption-Federal Credit Union Non-Interest Charges and Fees",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-07-09",
+    "effective_on": "2026-06-30",
+    "fr_dates_text": "The interim final rule is effective June 30, 2026. Comments on the interim final rule must be received on or before July 9, 2026."
   },
   "f5433772722174d2": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Final Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA finalized a rule allowing federal credit unions to reimburse volunteer officials' dependent care costs incurred while performing official duties. This is a credit-union-only administrative/governance matter with no bearing on community banks or fintechs.",
+    "plain_english": "NCUA finalized a rule letting federal credit unions reimburse volunteer officials for dependent care costs incurred during official duties. This is a narrow governance/administrative matter affecting FCUs only, with no impact on banks or fintechs.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit-union-only",
+      "credit unions",
       "governance",
-      "not-relevant"
+      "final rule"
     ],
     "agency": "NCUA",
     "title": "Dependent Care and Board Member Expense Reimbursement",
@@ -2175,7 +2205,14 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/26/2026-01382/dependent-care-and-board-member-expense-reimbursement",
+    "fr_title": "Dependent Care and Board Member Expense Reimbursement",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by on or before March 27, 2026."
   },
   "38d620fcc8da5e4d": {
     "relevant": false,
@@ -2202,17 +2239,18 @@
     "fr_checked": false
   },
   "2b2a24b70db8fc75": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Proposed Rule",
-    "urgency": "Low",
-    "plain_english": "The NCUA proposes rules implementing the GENIUS Act for payment stablecoin issuance by subsidiaries of federally insured credit unions, plus share insurance and tokenized share amendments. This is a credit-union-only matter under NCUA jurisdiction and does not apply to community banks or fintechs in our scope.",
+    "urgency": "Medium",
+    "plain_english": "NCUA proposes rules implementing the GENIUS Act to allow subsidiaries of federally insured credit unions to issue payment stablecoins, with amendments covering share insurance and tokenized shares. This hits credit unions and their CUSOs wanting to enter stablecoin issuance, establishing a licensing/supervisory framework for a digital-asset activity.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "stablecoin",
+      "stablecoins",
       "GENIUS Act",
       "credit unions",
-      "out-of-scope"
+      "digital assets",
+      "share insurance"
     ],
     "agency": "NCUA",
     "title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act for the Issuance of Stablecoins by Entities Subject to the Jurisdiction of the National Credit Union Administration",
@@ -2225,7 +2263,14 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/05/18/2026-09915/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the",
+    "fr_title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act for the Issuance of Stablecoins by Entities Subject to the Jurisdiction of the National Credit Union Administration",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-07-17",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by July 17, 2026."
   },
   "bb5299cb9533b625": {
     "relevant": true,
@@ -2527,16 +2572,16 @@
     "fintech_specific": false
   },
   "3eee49204f314ab6": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA conserved WeDevelopment Federal Credit Union, a credit-union-only supervisory action. This falls outside our focus on community banks and fintechs and has no direct impact on our monitored areas.",
+    "plain_english": "NCUA placed WeDevelopment Federal Credit Union into conservatorship, taking control to address problems while keeping it operating. This is a single-institution supervisory action affecting that credit union's members; broader industry impact is minimal.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit union",
       "conservatorship",
-      "out-of-scope"
+      "credit union",
+      "supervisory action"
     ],
     "agency": "NCUA Press",
     "title": "WeDevelopment Federal Credit Union Conserved",
@@ -2549,18 +2594,20 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false
   },
   "b430065c7d9b0fbb": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced additional opportunities under the Community Development Revolving Loan Fund (CDRLF) program, which applies only to credit unions. This is a credit-union-specific funding program with no bearing on community banks or fintechs.",
+    "plain_english": "NCUA announced additional funding opportunities under the Community Development Revolving Loan Fund for credit unions. This is a credit-union-specific funding program; relevant to low-income-designated credit unions but not fintechs.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit-union-only",
-      "CDRLF"
+      "credit unions",
+      "CDRLF",
+      "community development"
     ],
     "agency": "NCUA Press",
     "title": "CDRLF Loan Program Offers Additional Opportunities",
@@ -2573,19 +2620,20 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false
   },
   "b839885ec3df30ce": {
     "relevant": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced $3.47 million in Community Development Revolving Loan Fund grants to credit unions. This is a credit-union-only administrative grant announcement with no rule or compliance implications for community banks or fintechs.",
+    "plain_english": "NCUA announced $3.47 million in CDRLF grants awarded to credit unions. This is an administrative grant distribution with no rule change or compliance implications.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit-unions",
+      "credit unions",
       "grants",
-      "not-relevant"
+      "CDRLF"
     ],
     "agency": "NCUA Press",
     "title": "NCUA Awards $3.47 Million through Expanded CDRLF Grants",
@@ -2598,7 +2646,8 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": false,
+    "fintech_specific": false
   },
   "a15502079697297c": {
     "relevant": false,
@@ -2624,14 +2673,15 @@
     "fr_checked": false
   },
   "86425d18da48b5df": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "This is an NCUA board briefing on regulatory updates, the Share Insurance Fund, and the mid-year budget, which pertains to credit unions rather than community banks or fintechs. It is a routine board meeting summary with no specific rules or requirements stated.",
+    "plain_english": "NCUA's board received briefings on regulatory updates, the Share Insurance Fund, and its mid-year budget. This is a routine board meeting summary with no new rules or requirements, though it touches on Share Insurance Fund status relevant to credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
+      "Share Insurance Fund",
       "board meeting",
       "budget"
     ],
@@ -2646,18 +2696,19 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false
   },
   "250773ec6b1d9bc4": {
     "relevant": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "This is a routine administrative notice announcing an NCUA Board meeting scheduled for June 24. It contains no substantive rule content and pertains to credit union governance, outside our community bank and fintech focus.",
+    "plain_english": "This is a routine administrative notice announcing an NCUA Board meeting on June 24 with no substantive rule content. Nothing here changes any obligations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "board meeting",
-      "administrative"
+      "administrative-notice",
+      "board-meeting"
     ],
     "agency": "NCUA Press",
     "title": "NCUA Board to Hold Meeting on June 24",
@@ -2670,18 +2721,19 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": false,
+    "fintech_specific": false
   },
   "b9860a9720fbdfb4": {
-    "relevant": false,
+    "relevant": true,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA released routine state-level credit union data for Q1 2026. This is a statistical/administrative report specific to credit unions and imposes no new requirements. It falls outside our focus on community banks and fintechs.",
+    "plain_english": "NCUA published routine Q1 2026 state-level credit union performance statistics. No new requirements\u2014useful as benchmarking data for credit unions but purely informational.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "data report"
+      "system performance data"
     ],
     "agency": "NCUA Press",
     "title": "NCUA Releases Q1 2026 State-level Credit Union Data Report",
@@ -2694,7 +2746,8 @@
     ],
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fintech_specific": false
   },
   "e09132251528cfc0": {
     "relevant": false,
@@ -7092,17 +7145,17 @@
     "fr_checked": true
   },
   "252bbff8819e1547": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to streamline share-insurance disclosure requirements for federally insured credit unions by eliminating redundant rules on disclosing nonmember account coverage. This is a credit-union-only matter with no bearing on community banks or fintechs.",
+    "plain_english": "NCUA proposes to streamline share-insurance disclosure rules for federally insured credit unions by removing redundant requirements around disclosing nonmember account coverage. Applies only to credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
       "share insurance",
-      "out of scope"
+      "credit unions",
+      "disclosure"
     ],
     "key": "252bbff8819e1547",
     "title": "Requirements for Insurance",
@@ -7113,20 +7166,27 @@
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01699/requirements-for-insurance",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/28/2026-01699/requirements-for-insurance",
+    "fr_title": "Requirements for Insurance",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-30",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 30, 2026."
   },
   "c50142c4e2938c3d": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes raising the major assets prohibition thresholds under the management interlocks act to $10 billion to reflect market changes since 1996, and removing a presumption tied to minority- or women-controlled institutions. This is a credit-union-focused governance rule about who may serve as management officials at multiple institutions.",
+    "plain_english": "NCUA proposes raising the major-assets prohibition thresholds under the Depository Institution Management Interlocks Act to $10 billion, updating figures unchanged since 1996, and removing a presumption tied to minority- or women-controlled institutions. This governance rule affects which people may serve as management officials at multiple credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "management interlocks",
       "credit unions",
-      "governance"
+      "governance",
+      "proposed rule"
     ],
     "key": "c50142c4e2938c3d",
     "title": "Thresholds Increase for the Major Assets Prohibition of the Depository Institution Management Interlocks Act Rule",
@@ -7137,19 +7197,26 @@
     "url": "https://www.federalregister.gov/documents/2026/05/07/2026-09009/thresholds-increase-for-the-major-assets-prohibition-of-the-depository-institution-management",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/05/07/2026-09009/thresholds-increase-for-the-major-assets-prohibition-of-the-depository-institution-management",
+    "fr_title": "Thresholds Increase for the Major Assets Prohibition of the Depository Institution Management Interlocks Act Rule",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-07-06",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by July 6, 2026."
   },
   "83b62d0bb11e5536": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is seeking comment on streamlining its credit union data collections (Call Report, Corporate Call Report, and Profile forms). This is a credit-union-only administrative matter outside our coverage of community banks and fintechs.",
+    "plain_english": "NCUA is seeking comment on streamlining its credit union data collections (Call Report, Corporate Call Report, and Profile forms). Credit unions may see changes to how and what they report, though this is early-stage information gathering with no immediate obligations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "call report",
+      "Call Report",
+      "data collection",
       "RFI"
     ],
     "key": "83b62d0bb11e5536",
@@ -7161,20 +7228,27 @@
     "url": "https://www.federalregister.gov/documents/2026/04/24/2026-08023/request-for-information-regarding-enhancing-and-streamlining-data-collection-from-credit-unions",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/04/24/2026-08023/request-for-information-regarding-enhancing-and-streamlining-data-collection-from-credit-unions",
+    "fr_title": "Request for Information Regarding Enhancing and Streamlining Data Collection From Credit Unions",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-23",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by June 23, 2026."
   },
   "7ab6deec3bcca214": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
-    "urgency": "Low",
-    "plain_english": "The NCUA proposes to loosen procedural, disclosure, and communication requirements for credit unions merging into banks, giving credit union boards more flexibility. This is a credit-union-specific conversion/merger matter outside our monitoring scope.",
+    "urgency": "Medium",
+    "plain_english": "NCUA proposes to relax procedural, disclosure, and member-communication requirements for credit unions converting/merging into banks, giving CU boards more flexibility. This affects credit unions considering conversion to a bank charter and the members whose voting/disclosure protections would change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit union",
-      "merger",
-      "conversion"
+      "credit unions",
+      "mergers",
+      "charter conversion",
+      "proposed rule"
     ],
     "key": "7ab6deec3bcca214",
     "title": "Bank Conversions and Mergers, Subpart C-Merger of Insured Credit Unions Into Banks",
@@ -7185,20 +7259,25 @@
     "url": "https://www.federalregister.gov/documents/2026/04/22/2026-07806/bank-conversions-and-mergers-subpart-c-merger-of-insured-credit-unions-into-banks",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/04/22/2026-07806/bank-conversions-and-mergers-subpart-c-merger-of-insured-credit-unions-into-banks",
+    "fr_title": "Bank Conversions and Mergers, Subpart C-Merger of Insured Credit Unions Into Banks",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-22",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before June 22, 2026."
   },
   "b55a2725f855dd0e": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is renewing existing information collections through OMB under the Paperwork Reduction Act. This is a routine administrative notice affecting credit unions and is outside our monitoring scope.",
+    "plain_english": "NCUA is renewing existing information collections through OMB under the Paperwork Reduction Act. This is a routine administrative PRA notice with no substantive rule change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "PRA",
-      "administrative",
-      "credit-unions"
+      "Paperwork Reduction Act",
+      "administrative"
     ],
     "key": "b55a2725f855dd0e",
     "title": "Proposed New and Renewal of Agency Information Collections; Request for Comments",
@@ -7212,18 +7291,18 @@
     "fr_checked": false
   },
   "667ad2f2aa293d0c": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to loosen associational common-bond rules so that requiring a product/service purchase no longer automatically disqualifies a group from field-of-membership eligibility. This is a credit-union chartering matter with no bearing on community banks, fintechs, or BaaS arrangements.",
+    "plain_english": "NCUA proposes to loosen associational common-bond rules so that requiring a product or service purchase no longer automatically disqualifies a group from field-of-membership eligibility. This expands chartering flexibility for federal credit unions seeking to add associational groups.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
       "field of membership",
       "chartering",
-      "not relevant"
+      "credit unions",
+      "common bond"
     ],
     "key": "667ad2f2aa293d0c",
     "title": "Chartering and Field of Membership",
@@ -7234,20 +7313,27 @@
     "url": "https://www.federalregister.gov/documents/2026/04/08/2026-06757/chartering-and-field-of-membership",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06757/chartering-and-field-of-membership",
+    "fr_title": "Chartering and Field of Membership",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-08",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before June 8, 2026."
   },
   "8e9f9a39e10cd588": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes removing prescriptive rules on third-party servicing of indirect vehicle loans for credit unions, moving to a principles-based approach. This is a credit-union-only matter outside our focus on community banks and fintechs.",
+    "plain_english": "NCUA proposes replacing prescriptive requirements for third-party servicing of indirect vehicle loans with a principles-based approach, giving credit unions more flexibility in managing these servicing arrangements. This affects federally-insured credit unions engaged in indirect auto lending. The summary itself notes it as a credit-union matter; credit unions are in scope on the same footing as community banks.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "indirect lending",
-      "deregulation"
+      "third-party servicing",
+      "proposed rule"
     ],
     "key": "8e9f9a39e10cd588",
     "title": "Third-Party Servicing of Indirect Vehicle Loans",
@@ -7258,20 +7344,27 @@
     "url": "https://www.federalregister.gov/documents/2026/03/25/2026-05797/third-party-servicing-of-indirect-vehicle-loans",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/03/25/2026-05797/third-party-servicing-of-indirect-vehicle-loans",
+    "fr_title": "Third-Party Servicing of Indirect Vehicle Loans",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-05-26",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by May 26, 2026."
   },
   "e30ffcf3dabac6cb": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA is soliciting comment on credit-union regulations (Agency Programs, Capital, Consumer Protection) under its voluntary EGRPRA review to find outdated or burdensome rules. This is a credit-union-only exercise with no direct bearing on community banks, fintechs, or bank-fintech partnerships.",
+    "plain_english": "NCUA is asking for comment under its voluntary EGRPRA review to identify outdated or burdensome credit-union rules across Agency Programs, Capital, and Consumer Protection categories. This affects federally-insured credit unions only; it's a housekeeping review with no immediate rule changes.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "EGRPRA",
-      "not relevant"
+      "regulatory review",
+      "comment request"
     ],
     "key": "e30ffcf3dabac6cb",
     "title": "Regulatory Publication and Voluntary Review as Contemplated by the Economic Growth and Regulatory Paperwork Reduction Act of 1996",
@@ -7282,7 +7375,13 @@
     "url": "https://www.federalregister.gov/documents/2025/07/10/2025-12807/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/03/03/2026-04154/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
+    "fr_title": "Regulatory Publication and Voluntary Review as Contemplated by the Economic Growth and Regulatory Paperwork Reduction Act of 1996",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-01",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by June 1, 2026."
   },
   "3f5b313e4d948b42": {
     "relevant": false,
@@ -7308,11 +7407,11 @@
     "fr_checked": false
   },
   "9f01d7f4463c530f": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to delete a redundant definition from its statutory lien rules for federal credit unions. This is a credit-union-only technical cleanup with no substantive effect.",
+    "plain_english": "NCUA proposes to delete a redundant definition from its statutory lien rules for federal credit unions. It's a technical cleanup with no substantive effect on how liens operate.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -7328,19 +7427,26 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03758/statutory-liens",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03758/statutory-liens",
+    "fr_title": "Statutory Liens",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before April 27, 2026."
   },
   "9949d93295ffcbff": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to eliminate a provision governing federal credit union service contracts to reduce administrative burden. This is a credit-union-only operational matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to eliminate a provision governing federal credit union service contracts to reduce administrative burden. Affects federal credit unions' contracting obligations; a deregulatory operational change with limited immediate impact.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "out of scope"
+      "deregulation",
+      "service contracts"
     ],
     "key": "9949d93295ffcbff",
     "title": "Credit Union Service Contracts",
@@ -7351,19 +7457,25 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03757/credit-union-service-contracts",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03757/credit-union-service-contracts",
+    "fr_title": "Credit Union Service Contracts",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by April 27, 2026."
   },
   "1bbbc2455984e643": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to rescind a redundant regulation on refunding interest to credit union members, since the underlying authority already exists in the FCU Act. This is a credit-union-only administrative cleanup with no impact on community banks, fintechs, or BaaS arrangements.",
+    "plain_english": "NCUA proposes to rescind a redundant regulation on refunding interest to credit union members because the FCU Act already provides the authority. This is a credit-union-only administrative cleanup with no substantive change to obligations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "regulatory cleanup"
     ],
     "key": "1bbbc2455984e643",
     "title": "Refund of Interest",
@@ -7374,19 +7486,27 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03756/refund-of-interest",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03756/refund-of-interest",
+    "fr_title": "Refund of Interest",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by April 27, 2026"
   },
   "a046ce15ad252751": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to streamline rules on how federal credit unions purchase, sell, and pledge eligible obligations by removing prescriptive policy-content lists and conflict-of-interest/compensation requirements, moving to a principles-based approach. This is a credit-union-only administrative matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to replace prescriptive policy-content lists and conflict-of-interest/compensation requirements governing how federal credit unions purchase, sell, and pledge eligible obligations with a principles-based approach. This is an administrative loosening affecting federal credit unions' loan-portfolio transaction practices.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "out of scope"
+      "eligible obligations",
+      "principles-based",
+      "proposed rule"
     ],
     "key": "a046ce15ad252751",
     "title": "Purchase, Sale, and Pledge of Eligible Obligations",
@@ -7397,20 +7517,27 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03755/purchase-sale-and-pledge-of-eligible-obligations",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03755/purchase-sale-and-pledge-of-eligible-obligations",
+    "fr_title": "Purchase, Sale, and Pledge of Eligible Obligations",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by April 27, 2026."
   },
   "83b25d0419848ba9": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to loosen its rules on how credit union officials and employees can be compensated on member loans, allowing lending metrics in incentive and bonus plans tied to overall financial performance. This is a credit-union-only compensation matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to relax restrictions on compensating credit union officials and employees for member loans, permitting lending metrics in incentive and bonus plans tied to overall financial performance. Applies to federally-insured credit unions; no impact on banks or fintechs.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "compensation",
-      "lending"
+      "lending",
+      "proposed rule"
     ],
     "key": "83b25d0419848ba9",
     "title": "Compensation in Connection With Loans to Members and Lines of Credit to Members",
@@ -7421,20 +7548,27 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03754/compensation-in-connection-with-loans-to-members-and-lines-of-credit-to-members",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03754/compensation-in-connection-with-loans-to-members-and-lines-of-credit-to-members",
+    "fr_title": "Compensation in Connection With Loans to Members and Lines of Credit to Members",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by April 27, 2026."
   },
   "25d8d6910853d0fb": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to drop the rule requiring federal credit union directors to gain working familiarity with finance and accounting within 6 months of taking office. This is a credit-union governance matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to eliminate the requirement that federal credit union directors become familiar with finance and accounting within six months of joining the board. This affects credit union governance and director obligations, easing onboarding expectations for new board members.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "governance",
-      "out of scope"
+      "proposed rule",
+      "directors"
     ],
     "key": "25d8d6910853d0fb",
     "title": "Post-Election Training for New Board Members",
@@ -7445,7 +7579,13 @@
     "url": "https://www.federalregister.gov/documents/2026/02/25/2026-03753/post-election-training-for-new-board-members",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03753/post-election-training-for-new-board-members",
+    "fr_title": "Post-Election Training for New Board Members",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by April 27, 2026."
   },
   "fcb83496d5124e29": {
     "relevant": true,
@@ -7480,17 +7620,17 @@
     "fr_dates_text": "Comments must be received by April 13, 2026."
   },
   "b561a160985326fe": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to rescind IRPS 08-2, reducing the number of sources federal credit unions must consult for chartering and field-of-membership compliance. This is a credit-union-only administrative matter outside our coverage of community banks and fintechs.",
+    "plain_english": "NCUA proposes to rescind IRPS 08-2, cutting the number of sources federal credit unions must consult for chartering and field-of-membership compliance. This is a credit-union-only administrative streamlining matter with no fintech dimension.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
       "field of membership",
-      "not relevant"
+      "chartering",
+      "credit unions"
     ],
     "key": "b561a160985326fe",
     "title": "Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements",
@@ -7501,19 +7641,27 @@
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00592/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/11/2026-02765/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
+    "fr_title": "Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-13",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before April 13, 2026."
   },
   "aec77dba1aa83113": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to relax formatting requirements for member disclosure statements when a credit union voluntarily terminates federal share insurance. This is a credit-union-only administrative matter outside our coverage.",
+    "plain_english": "NCUA proposes to relax formatting requirements for member disclosure statements when a credit union voluntarily terminates or converts its federal share insurance. This is a narrow administrative change affecting the disclosure process for credit unions pursuing insurance termination.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "share insurance"
+      "share insurance",
+      "mergers",
+      "disclosure"
     ],
     "key": "aec77dba1aa83113",
     "title": "Mergers of Insured Credit Unions Into Other Credit Unions; Voluntary Termination or Conversion of Insured Status",
@@ -7524,19 +7672,27 @@
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02764/mergers-of-insured-credit-unions-into-other-credit-unions-voluntary-termination-or-conversion-of",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/11/2026-02764/mergers-of-insured-credit-unions-into-other-credit-unions-voluntary-termination-or-conversion-of",
+    "fr_title": "Mergers of Insured Credit Unions Into Other Credit Unions; Voluntary Termination or Conversion of Insured Status",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-13",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before April 13, 2026."
   },
   "34aeb72daf677598": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to streamline rules for credit unions converting to mutual savings banks by removing prescriptive procedural and disclosure requirements. This is a credit-union-specific matter about conversion mechanics, outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to streamline the rules governing credit union conversions to mutual savings banks by dropping prescriptive procedural and disclosure requirements. This affects federally-insured credit unions contemplating a charter conversion, easing the process mechanics.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "charter conversion"
+      "conversions",
+      "mergers",
+      "charter"
     ],
     "key": "34aeb72daf677598",
     "title": "Bank Conversions and Mergers, Subpart A-Conversion of Insured Credit Unions to Mutual Savings Banks",
@@ -7547,19 +7703,24 @@
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02763/bank-conversions-and-mergers-subpart-a-conversion-of-insured-credit-unions-to-mutual-savings-banks",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/11/2026-02763/bank-conversions-and-mergers-subpart-a-conversion-of-insured-credit-unions-to-mutual-savings-banks",
+    "fr_title": "Bank Conversions and Mergers, Subpart A-Conversion of Insured Credit Unions to Mutual Savings Banks",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-13",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before April 13, 2026."
   },
   "585e0749f0ab42f9": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is submitting a new information collection to OMB under the Paperwork Reduction Act. This is a routine administrative notice specific to credit unions with no substantive regulatory change.",
+    "plain_english": "NCUA is submitting a routine Paperwork Reduction Act information collection to OMB for comment. It carries no substantive regulatory change and is purely administrative.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "credit union",
       "administrative"
     ],
     "key": "585e0749f0ab42f9",
@@ -7574,17 +7735,17 @@
     "fr_checked": false
   },
   "97354e257298bea5": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to adjust the timing of member notice requirements when a credit union terminates excess non-federal share insurance coverage. This is a credit-union-only administrative matter outside our focus on community banks and fintechs.",
+    "plain_english": "NCUA proposes adjusting the timing of member-notice requirements when a credit union terminates excess non-federal share insurance coverage. This affects credit unions that carry private excess insurance above the federal share-insurance limit; it is a narrow administrative notice-timing change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "share insurance",
-      "out of scope"
+      "member notice"
     ],
     "key": "97354e257298bea5",
     "title": "Notice of Termination of Excess Insurance Coverage",
@@ -7595,19 +7756,26 @@
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01698/notice-of-termination-of-excess-insurance-coverage",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/28/2026-01698/notice-of-termination-of-excess-insurance-coverage",
+    "fr_title": "Notice of Termination of Excess Insurance Coverage",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-30",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 30, 2026."
   },
   "1feac895f2051e1c": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to remove its regulatory maximum borrowing authority provision for federally insured credit unions, as it duplicates the statutory limit for federal credit unions. This is a credit-union-only administrative deregulation with no bearing on community banks or fintechs.",
+    "plain_english": "NCUA proposes removing its regulatory maximum borrowing authority provision for federally insured credit unions because it duplicates the statutory limit for federal credit unions. This is administrative deregulation affecting credit unions only, with no substantive change to borrowing capacity.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "borrowing authority"
     ],
     "key": "1feac895f2051e1c",
     "title": "Requirements for Insurance; Maximum Borrowing Authority",
@@ -7618,19 +7786,27 @@
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01697/requirements-for-insurance-maximum-borrowing-authority",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/28/2026-01697/requirements-for-insurance-maximum-borrowing-authority",
+    "fr_title": "Requirements for Insurance; Maximum Borrowing Authority",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-30",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 30, 2026."
   },
   "92e56af346526d99": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to drop the written-plan documentation requirement for credit unions whose borrowings, public unit, and nonmember shares collectively exceed 70% of capital, shifting to a principles-based supervisory approach. This is a credit-union-only funding rule outside our focus.",
+    "plain_english": "NCUA proposes to eliminate the written-plan documentation requirement for credit unions whose borrowings, public unit, and nonmember shares together exceed 70% of capital, moving to a principles-based supervisory approach. This affects credit union funding and liquidity management practices.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "funding"
+      "funding",
+      "nonmember shares",
+      "proposed rule"
     ],
     "key": "92e56af346526d99",
     "title": "Public Unit and Nonmember Shares",
@@ -7641,20 +7817,25 @@
     "url": "https://www.federalregister.gov/documents/2026/01/28/2026-01696/public-unit-and-nonmember-shares",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/28/2026-01696/public-unit-and-nonmember-shares",
+    "fr_title": "Public Unit and Nonmember Shares",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-30",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 30, 2026."
   },
   "16ae64bc7da6a81e": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting an information collection to OMB for review. This is an administrative/procedural notice affecting credit unions and carries no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting an information collection to OMB for review. No substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "Paperwork Reduction Act",
-      "administrative",
-      "credit unions"
+      "PRA",
+      "administrative"
     ],
     "key": "16ae64bc7da6a81e",
     "title": "Agency Information Collection for Comments Request: Proposed Collection",
@@ -7668,16 +7849,18 @@
     "fr_checked": false
   },
   "8885a1b2ab41e7c5": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to loosen governance and filing rules for corporate credit unions, removing the ALCO board-member requirement and certain accountant-report filings. This is a corporate-credit-union-specific matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to relax governance and filing requirements for corporate credit unions, dropping the ALCO board-member mandate and certain accountant-report filings. This affects corporate credit unions specifically, a narrow segment; retail/community credit unions are only indirectly touched.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "out of scope"
+      "corporate credit unions",
+      "governance",
+      "proposed rule"
     ],
     "key": "8885a1b2ab41e7c5",
     "title": "Corporate Credit Unions",
@@ -7688,20 +7871,26 @@
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22487/corporate-credit-unions",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/14/2026-00595/corporate-credit-unions",
+    "fr_title": "Corporate Credit Unions",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-16",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 16, 2026."
   },
   "8ef29061f961136e": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to delete an outdated, redundant regulation summarizing Fair Housing Act nondiscrimination rules for federal credit unions. This is a credit-union-only housekeeping change with no substantive impact on the entities we cover.",
+    "plain_english": "NCUA proposes deleting an outdated, redundant regulation that summarized Fair Housing Act nondiscrimination rules for federal credit unions. This is a housekeeping change with no substantive impact on credit union operations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "fair housing",
-      "deregulation"
+      "housekeeping"
     ],
     "key": "8ef29061f961136e",
     "title": "Nondiscrimination Requirements",
@@ -7712,7 +7901,13 @@
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00591/nondiscrimination-requirements",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/14/2026-00591/nondiscrimination-requirements",
+    "fr_title": "Nondiscrimination Requirements",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-16",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before March 16, 2026."
   },
   "5dc5bb773786bcdb": {
     "relevant": false,
@@ -7738,16 +7933,18 @@
     "fr_checked": false
   },
   "b8e5befc7512f8a8": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to remove segregated deposit and collateral requirements for federally insured credit unions acting as surety and guarantor, giving them more product design flexibility. This is a credit-union-only matter outside our focus on community banks and fintechs.",
+    "plain_english": "The NCUA proposes to eliminate segregated deposit and collateral requirements for federally insured credit unions that act as surety or guarantor, giving them more flexibility in structuring such products. Credit unions are in scope on the same footing as community banks, so this affects FICU product design.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "surety"
+      "proposed rule",
+      "suretyship",
+      "guaranty"
     ],
     "key": "b8e5befc7512f8a8",
     "title": "Suretyship and Guaranty; Segregated Deposit and Collateral",
@@ -7758,20 +7955,26 @@
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23857/suretyship-and-guaranty-segregated-deposit-and-collateral",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/29/2025-23857/suretyship-and-guaranty-segregated-deposit-and-collateral",
+    "fr_title": "Suretyship and Guaranty; Segregated Deposit and Collateral",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by February 27, 2026."
   },
   "db5f974651d1e5c3": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to give federally insured credit unions more time to report catastrophic acts and drop the specific documentation checklist. This is a credit-union-only administrative burden reduction outside our coverage scope.",
+    "plain_english": "NCUA proposes to give federally insured credit unions more time to report catastrophic acts and to eliminate the specific documentation checklist. This is an administrative burden reduction affecting credit-union reporting obligations only.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "catastrophic act reporting",
-      "not relevant"
+      "reporting",
+      "burden reduction"
     ],
     "key": "db5f974651d1e5c3",
     "title": "Catastrophic Act Reporting",
@@ -7782,19 +7985,26 @@
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23856/catastrophic-act-reporting",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/29/2025-23856/catastrophic-act-reporting",
+    "fr_title": "Catastrophic Act Reporting",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before February 27, 2026."
   },
   "c52d5ce2b1294287": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to remove regulatory provisions on approval and policies for credit unions lending to other credit unions; statutory requirements would still apply. This is a credit-union-only matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to strip out its regulatory provisions governing approval and policies for credit unions lending to other credit unions, leaving only the underlying statutory requirements. This affects federally-insured credit unions engaged in inter-CU lending; the practical impact is reduced regulatory prescription.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "out of scope"
+      "lending",
+      "deregulation"
     ],
     "key": "c52d5ce2b1294287",
     "title": "Limits on Loans to Other Credit Unions",
@@ -7805,20 +8015,26 @@
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23855/limits-on-loans-to-other-credit-unions",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/29/2025-23855/limits-on-loans-to-other-credit-unions",
+    "fr_title": "Limits on Loans to Other Credit Unions",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by February 27, 2026."
   },
   "5903570005a7dd23": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to streamline credit union advertising rules by eliminating the official advertising statement requirement. This is a credit-union-only matter affecting federally insured credit unions, outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to eliminate the official advertising statement requirement, streamlining advertising rules for federally insured credit unions. This is a credit-union-only change affecting how CUs disclose insured status in ads.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "advertising",
-      "not relevant"
+      "share insurance"
     ],
     "key": "5903570005a7dd23",
     "title": "Accuracy of Advertising and Notice of Insured Status",
@@ -7829,20 +8045,27 @@
     "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23854/accuracy-of-advertising-and-notice-of-insured-status",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/29/2025-23854/accuracy-of-advertising-and-notice-of-insured-status",
+    "fr_title": "Accuracy of Advertising and Notice of Insured Status",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by February 27, 2026."
   },
   "b027aec2df7c225c": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to move data-breach response program guidance out of the CFR (Appendix B to part 748) and reissue it as standalone guidance for federally insured credit unions. This is a credit-union-only administrative streamlining that doesn't change substantive requirements.",
+    "plain_english": "NCUA proposes to relocate its data-breach response and member-notification guidance out of the CFR (Appendix B to part 748) and reissue it as standalone guidance for federally insured credit unions. It's an administrative streamlining that doesn't change substantive breach-response or notice obligations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "data breach",
-      "administrative"
+      "member notification",
+      "guidance"
     ],
     "key": "b027aec2df7c225c",
     "title": "Guidance on Response Programs for Unauthorized Access to Member Information and Member Notice",
@@ -7853,14 +8076,20 @@
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22490/guidance-on-response-programs-for-unauthorized-access-to-member-information-and-member-notice",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/11/2025-22490/guidance-on-response-programs-for-unauthorized-access-to-member-information-and-member-notice",
+    "fr_title": "Guidance on Response Programs for Unauthorized Access to Member Information and Member Notice",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-09",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before February 9, 2026."
   },
   "4bb4cf9da17f9881": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to move its member-information safeguarding guidelines (Appendix A to part 748) out of the CFR and republish them as a Letter to Credit Unions, an administrative relocation with no substantive change. This is a credit-union-only, non-fintech matter outside our coverage.",
+    "plain_english": "The NCUA proposes to relocate its member-information safeguarding guidelines (Appendix A to part 748) out of the CFR and republish them as a Letter to Credit Unions, with no substantive change. This is an administrative housekeeping move affecting federally-insured credit unions only.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -7877,20 +8106,27 @@
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22489/guidelines-for-safeguarding-member-information",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/11/2025-22489/guidelines-for-safeguarding-member-information",
+    "fr_title": "Guidelines for Safeguarding Member Information",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-09",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before February 9, 2026."
   },
   "9798618b9ce0998f": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA proposes to streamline supervisory committee audit and verification rules for credit unions by removing outdated or duplicative requirements. This is a credit-union-only matter outside our coverage of community banks and fintechs.",
+    "plain_english": "NCUA proposes to streamline its supervisory committee audit and verification requirements for credit unions, removing outdated or duplicative provisions. This affects federally-insured credit unions' internal audit obligations; the summary characterizes it as credit-union-only, but credit unions are in our scope on the same footing as community banks.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "audit",
-      "out of scope"
+      "internal audit",
+      "supervisory committee",
+      "proposed rule"
     ],
     "key": "9798618b9ce0998f",
     "title": "Supervisory Committee Audits and Verifications",
@@ -7901,20 +8137,24 @@
     "url": "https://www.federalregister.gov/documents/2025/12/11/2025-22488/supervisory-committee-audits-and-verifications",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/12/11/2025-22488/supervisory-committee-audits-and-verifications",
+    "fr_title": "Supervisory Committee Audits and Verifications",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-02-09",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by February 9, 2026."
   },
   "97bafde3d54174d4": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is renewing previously approved information collections under the Paperwork Reduction Act, submitting them to OMB. This is a routine administrative PRA notice specific to credit unions with no substantive regulatory change.",
+    "plain_english": "NCUA is renewing previously approved information collections under the Paperwork Reduction Act and submitting them to OMB. This is a routine administrative PRA notice with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "information collection",
-      "credit unions",
       "administrative"
     ],
     "key": "97bafde3d54174d4",
@@ -7933,7 +8173,7 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA released its staff draft 2026-2027 budget for public comment, an administrative funding notice for the credit union regulator. It has no substantive regulatory impact on community banks or fintechs.",
+    "plain_english": "The NCUA released its staff draft 2026-2027 budget for public comment. It is an administrative funding notice with no substantive regulatory impact on credit unions or fintechs.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -7952,18 +8192,18 @@
     "fr_checked": false
   },
   "a06e22ada234e2de": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
-    "urgency": "Low",
-    "plain_english": "NCUA proposes to remove reputation risk from its supervisory program and bar examiners from pressuring credit unions to close accounts or deny services based on political/religious views or lawful-but-disfavored activities. This applies only to NCUA-regulated credit unions, which fall outside our community-bank and fintech coverage.",
+    "urgency": "Medium",
+    "plain_english": "NCUA proposes to eliminate reputation risk as a supervisory category and prohibit examiners from pressuring credit unions to close accounts or deny services based on political/religious views or lawful-but-disfavored activities. Hits federally-insured credit unions, which are in our scope alongside community banks. Reduces examiner discretion around 'debanking' concerns.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "reputation risk",
       "credit unions",
-      "debanking",
-      "supervision"
+      "reputation risk",
+      "supervision",
+      "debanking"
     ],
     "key": "a06e22ada234e2de",
     "title": "Prohibition on Use of Reputation Risk by NCUA",
@@ -7974,19 +8214,27 @@
     "url": "https://www.federalregister.gov/documents/2025/10/21/2025-19623/prohibition-on-use-of-reputation-risk-by-ncua",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/10/21/2025-19623/prohibition-on-use-of-reputation-risk-by-ncua",
+    "fr_title": "Prohibition on Use of Reputation Risk by NCUA",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2025-12-22",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by December 22, 2025."
   },
   "5f7c5feb1113dfab": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced a funding opportunity for technical assistance grants to low-income-designated credit unions through the CDRLF. This is a credit-union-only grant program outside our coverage scope.",
+    "plain_english": "NCUA opened its 2025 Community Development Revolving Loan Fund grant round, offering technical assistance grants to low-income-designated credit unions. This is a voluntary funding opportunity for qualifying CUs, not a rule change or compliance obligation.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "grants"
+      "CDRLF",
+      "grants",
+      "low-income designation"
     ],
     "key": "5f7c5feb1113dfab",
     "title": "2025 Community Development Revolving Loan Fund",
@@ -7997,20 +8245,26 @@
     "url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/10/01/2025-19091/2025-community-development-revolving-loan-fund",
+    "fr_title": "2025 Community Development Revolving Loan Fund",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": null,
+    "fr_dates_text": "This NOFO is effective on the date of publication in the Federal Register. NCUA will accept applications beginning on October 15, 2025, at 12 p.m. Eastern Time. Applications must be submitted by December 16, 2025 at 11:59 p.m. Eastern Time. Applications submitted after the application closing date and time will not be considered. Applicants will be notified of NCUA's decision after the agency's review is completed."
   },
   "e8ceefa0e51676a2": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA is holding a public hearing on a single credit union's community charter expansion request in the Miami area. This is a credit-union-only field-of-membership matter with no bearing on community banks, fintechs, or BaaS arrangements.",
+    "plain_english": "NCUA is holding a public hearing on one credit union's request to expand its community charter to the Miami area (population 2.5M+). This is a single-institution field-of-membership matter with no broader rule change; it affects only the applicant credit union.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit union",
       "field of membership",
-      "chartering"
+      "community charter",
+      "credit unions"
     ],
     "key": "e8ceefa0e51676a2",
     "title": "Chartering and Field of Membership-Public Hearing; Community Charter Application for Area With a Population of 2.5 Million or More",
@@ -8021,19 +8275,26 @@
     "url": "https://www.federalregister.gov/documents/2025/07/07/2025-12531/chartering-and-field-of-membership-public-hearing-community-charter-application-for-area-with-a",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/07/07/2025-12531/chartering-and-field-of-membership-public-hearing-community-charter-application-for-area-with-a",
+    "fr_title": "Chartering and Field of Membership-Public Hearing; Community Charter Application for Area With a Population of 2.5 Million or More",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2025-08-26",
+    "effective_on": null,
+    "fr_dates_text": "The public hearing will be held on September 23, 2025, at 1 p.m. Eastern. Interested parties seeking to make presentations during the hearing must register by August 26, 2025, to be placed on a list of presenters. The applicant along with no more than seven other interested parties may request to make presentations. The first six interested parties that contact the NCUA in writing will be permitted to make such presentations. Members of the public seeking to watch or listen to the virtual meeting must register to view the public hearing. The agency will not reimburse any travel expenses for interested parties making presentations, or members of the public attending the meeting. Written comments must be submitted by August 26, 2025."
   },
   "79a11448a34e8087": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Guidance",
     "urgency": "Low",
-    "plain_english": "NCUA issued a notice outlining how it will handle criminally liable regulatory offenses under an executive order on overcriminalization. This is a credit-union-focused administrative/policy notice with no direct bearing on community banks, fintechs, or our monitored topics.",
+    "plain_english": "NCUA issued a notice describing how it will approach criminally liable regulatory offenses in response to an executive order on overcriminalization. It's a credit-union-focused administrative/policy statement about enforcement referral practices, with no substantive change to compliance obligations.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "enforcement policy"
+      "enforcement policy",
+      "guidance"
     ],
     "key": "79a11448a34e8087",
     "title": "Guidance on Referrals for Potential Criminal Enforcement",
@@ -8047,17 +8308,18 @@
     "fr_checked": false
   },
   "04c631638415397e": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is proposing to extend its Call Report (Form 5300) with revised instructions, a credit-union-only administrative information collection notice. This is outside our focus and does not affect community banks or fintechs.",
+    "plain_english": "NCUA proposes to extend the Call Report (Form 5300) collection with revised instructions for credit unions. This is a routine paperwork-renewal notice affecting how credit unions file quarterly financial data; comment is invited but there is no substantive rule change.",
     "effective_or_comment_date": "Revised instructions proposed to take effect for the September 30, 2025 report date",
     "tags": [
       "NCUA",
-      "call report",
       "credit unions",
-      "administrative"
+      "Call Report",
+      "Form 5300",
+      "PRA"
     ],
     "key": "04c631638415397e",
     "title": "Proposed Agency Information Collection Activities; Comment Request",
@@ -8068,18 +8330,26 @@
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06971/proposed-agency-information-collection-activities-comment-request",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/04/23/2026-07888/proposed-agency-information-collection-activities-comment-request",
+    "fr_title": "Proposed Agency Information Collection Activities; Comment Request",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-22",
+    "effective_on": null,
+    "fr_dates_text": "Interested persons are invited to submit comments on or before June 22, 2026."
   },
   "a85f00f0295839c0": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is reopening comment on two credit-union final rules (share insurance simplification and succession planning) per the January 2025 regulatory freeze. This is a credit-union-only administrative matter outside our coverage.",
+    "plain_english": "NCUA reopened the comment period on two finalized credit-union rules \u2014 share insurance simplification and succession planning \u2014 as part of the January 2025 regulatory freeze. Credit unions may want to weigh in, but this is an administrative reopening rather than a new substantive change.",
     "effective_or_comment_date": "60-day comment period from 2025-04-23",
     "tags": [
       "NCUA",
       "credit unions",
+      "share insurance",
+      "succession planning",
       "comment period"
     ],
     "key": "a85f00f0295839c0",
@@ -8091,7 +8361,13 @@
     "url": "https://www.federalregister.gov/documents/2025/04/23/2025-06966/simplification-of-share-insurance-and-succession-planning-final-rules-solicitation-of-comments",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2025/04/23/2025-06966/simplification-of-share-insurance-and-succession-planning-final-rules-solicitation-of-comments",
+    "fr_title": "Simplification of Share Insurance and Succession Planning Final Rules; Solicitation of Comments",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2025-06-23",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before June 23, 2025."
   },
   "31665271cef36990": {
     "relevant": false,
@@ -8141,17 +8417,17 @@
     "fr_checked": false
   },
   "926dc053a0f481e1": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Final Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA made its annual inflation adjustment to maximum civil monetary penalties within its jurisdiction, a routine statutory update. This applies to credit unions under NCUA authority, not to community banks or fintechs.",
+    "plain_english": "NCUA made its routine annual inflation adjustment to the maximum civil monetary penalties it can assess. This affects federally-insured credit unions under NCUA authority; it's a statutory housekeeping update with no substantive change to conduct requirements.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "civil monetary penalty",
       "credit unions",
-      "administrative"
+      "civil monetary penalties",
+      "inflation adjustment"
     ],
     "key": "926dc053a0f481e1",
     "title": "Civil Monetary Penalty Inflation Adjustment",
@@ -8162,7 +8438,13 @@
     "url": "https://www.federalregister.gov/documents/2025/01/15/2025-00737/civil-monetary-penalty-inflation-adjustment",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/05/21/2026-10206/civil-monetary-penalty-inflation-adjustment",
+    "fr_title": "Civil Monetary Penalty Inflation Adjustment",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": null,
+    "fr_dates_text": null
   },
   "82bc09eee653b7c7": {
     "relevant": false,
@@ -8188,17 +8470,18 @@
     "fr_checked": false
   },
   "e2de4c00cf997f30": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Final Rule",
-    "urgency": "Low",
-    "plain_english": "NCUA finalized a rule requiring federally insured credit unions to adopt and periodically review written succession plans. This is a credit-union-only governance matter outside our community bank and fintech focus.",
+    "urgency": "Medium",
+    "plain_english": "NCUA finalized a rule requiring all federally insured credit unions to adopt and periodically review written succession plans for key positions like directors and senior management. This is a governance mandate hitting every FICU, aimed at ensuring continuity and reducing failure/merger risk from leadership gaps.",
     "effective_or_comment_date": "Effective January 1, 2026",
     "tags": [
       "NCUA",
       "credit unions",
       "governance",
-      "succession planning"
+      "succession planning",
+      "final rule"
     ],
     "key": "e2de4c00cf997f30",
     "title": "Succession Planning",
@@ -8209,7 +8492,13 @@
     "url": "https://www.federalregister.gov/documents/2024/12/26/2024-30449/succession-planning",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2024/12/26/2024-30449/succession-planning",
+    "fr_title": "Succession Planning",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": "2026-01-01",
+    "fr_dates_text": "This final rule is effective on January 1, 2026."
   },
   "3054b87752c9bb0d": {
     "relevant": true,
@@ -9375,16 +9664,17 @@
     "fr_checked": true
   },
   "38f0f5303fb5d8be": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Final Rule",
     "urgency": "Low",
-    "plain_english": "NCUA finalized a rule on vital records preservation for credit unions. This is a credit-union-only administrative/operational matter outside our coverage scope.",
+    "plain_english": "NCUA finalized a rule on vital records preservation for credit unions, a routine administrative/operational requirement. It hits federally-insured credit unions but carries no substantive strategic or fintech implications.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "records retention"
+      "records preservation",
+      "operational"
     ],
     "key": "38f0f5303fb5d8be",
     "title": "NCUA Board Approves Final Rule on Vital Records Preservation",
@@ -9395,19 +9685,19 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-approves-final-rule-vital-records-preservation",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "5a4edc2e04679438": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA published routine quarterly performance data for the credit union system. This is an administrative data release with no regulatory change or requirement, and is outside our focus on community banks and fintechs.",
+    "plain_english": "NCUA released its routine Q1 2026 system performance data for federally insured credit unions. This is an administrative data publication with no regulatory change or new requirement; useful for benchmarking but not actionable.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "data release"
+      "performance data"
     ],
     "key": "5a4edc2e04679438",
     "title": "NCUA Releases First Quarter 2026 Credit Union System Performance Data",
@@ -9418,18 +9708,19 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-first-quarter-2026-credit-union-system-performance-data",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "7625a68bff840c3d": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Guidance",
     "urgency": "Low",
-    "plain_english": "NCUA issued a clarification regarding federal credit unions' powers over certain operations/activities. This is a credit-union-only matter outside our focus on community banks and fintechs, and the summary provides no fintech-relevant detail.",
+    "plain_english": "NCUA issued a clarification on federal credit unions' powers over certain operations and activities. Credit unions are in scope, but the summary provides no fintech-relevant detail and limited specifics on what powers are being clarified.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions"
+      "credit unions",
+      "guidance"
     ],
     "key": "7625a68bff840c3d",
     "title": "NCUA Clarifies Federal Credit Unions\u2019 Power",
@@ -9489,11 +9780,11 @@
     "fr_checked": false
   },
   "e55d9104909e32fd": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "A routine credit union merger: Beverly Hills City Employees FCU merged into Nuvision FCU. This is a credit-union-only administrative matter with no bearing on community bank or fintech regulation.",
+    "plain_english": "NCUA announced a routine merger of Beverly Hills City Employees FCU into Nuvision FCU. It's a standard credit-union consolidation with no rule change or broader impact.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "credit union",
@@ -9509,20 +9800,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/beverly-hills-city-employees-federal-credit-union-merges-nuvision-federal-credit-union",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "cff18924c942b057": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Enforcement Action",
     "urgency": "Low",
-    "plain_english": "The NCUA issued prohibition orders barring five individuals from working at any federally insured depository institution. This is a routine credit-union enforcement action against specific individuals with no broader policy or fintech implications.",
+    "plain_english": "The NCUA barred five named individuals from working at any federally insured depository institution. It's a routine individual enforcement action with no policy or fintech implications.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "enforcement",
       "prohibition order",
-      "credit union"
+      "credit unions"
     ],
     "key": "cff18924c942b057",
     "title": "NCUA Prohibits Five Individuals from Participating in the Affairs of Any Federally Insured Depository Institution",
@@ -9608,11 +9899,11 @@
     "fr_checked": false
   },
   "80a4e1c3db5985ef": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA placed Jackson Area Federal Credit Union into conservatorship. This is a credit-union-specific administrative action outside our coverage of community banks and fintechs.",
+    "plain_english": "NCUA placed Jackson Area Federal Credit Union into conservatorship, taking over management to address safety-and-soundness or operational issues. This is a single-institution administrative action affecting that credit union's members; no rule change or broader industry obligation results.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9628,14 +9919,14 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/jackson-area-federal-credit-union-conserved",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "f4bc08f05105a6e1": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced another round of deregulation proposals for credit unions. This is a credit-union-only administrative matter outside our community bank and fintech focus, and the summary provides no specifics on scope.",
+    "plain_english": "NCUA announced its eleventh round of deregulation proposals for credit unions, but the summary provides no specifics on what rules would change. Credit unions should watch for details as proposals are released.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9651,14 +9942,14 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-eleventh-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "151244266802f2f3": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced the closure of a single federal credit union. This is a credit-union-only administrative matter with no bearing on community banks, fintechs, or partnership arrangements.",
+    "plain_english": "NCUA announced the closure of People Trust Community Federal Credit Union, a single-institution administrative action. Credit unions are in scope, but this has no broader rulemaking or systemic implications and affects only members of the closed institution.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9674,19 +9965,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/people-trust-community-federal-credit-union-closes",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "0ef73aa71fa6c30b": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is requesting comment on enhancing and streamlining its data collection processes. This is a credit-union administrative matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA is requesting comment on ways to enhance and streamline its data collection from federally-insured credit unions. This is an administrative process matter that could affect reporting burdens for credit unions in scope, but no specific rule change is detailed.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "data collection"
+      "data collection",
+      "comment request"
     ],
     "key": "0ef73aa71fa6c30b",
     "title": "NCUA Seeks Comment on Enhancing and Streamlining Data Collection",
@@ -9697,19 +9989,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-seeks-comment-enhancing-and-streamlining-data-collection",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "cb84d0e948bdba49": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a tenth round of deregulation proposals affecting credit union operations and activities. This is a credit-union-specific administrative matter with no stated fintech or community-bank impact.",
+    "plain_english": "NCUA announced its tenth round of deregulation proposals affecting credit union operations and activities. Credit unions are in scope, but the notice is high-level with no specifics on which rules change or fintech/community-bank impact yet stated. Watch for the actual proposed rule text and comment periods.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "rulemaking"
     ],
     "key": "cb84d0e948bdba49",
     "title": "NCUA Announces Tenth Round of Deregulation Proposals",
@@ -9720,20 +10013,22 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-tenth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "e2dc295b2a4a105b": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA Board received briefings on brokered/reciprocal deposit FAQs, a deregulation project, and its strategic and annual performance plans. This is a credit-union regulator administrative/board-meeting item with no direct bearing on community banks, BaaS arrangements, or fintech topics.",
+    "plain_english": "The NCUA Board received briefings on brokered/reciprocal deposit FAQs, a deregulation project, and its strategic and annual performance plans. Nothing was adopted; this is a board-meeting update signaling potential future guidance on brokered deposits and deregulatory direction for credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "brokered deposits",
-      "administrative"
+      "reciprocal deposits",
+      "deregulation",
+      "strategic plan"
     ],
     "key": "e2dc295b2a4a105b",
     "title": "NCUA Board Briefed on Brokered and Reciprocal Deposits FAQs, Deregulation Project, Strategic Plan, and Annual Performance Plan",
@@ -9744,14 +10039,14 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-board-briefed-brokered-reciprocal-deposits-deregulation-strategic-plan-annual-performance-plan",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "fbf11f8f04e362bc": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a ninth round of deregulation proposals affecting credit union operations and activities. This is a credit-union-only matter with no stated fintech or community bank implications.",
+    "plain_english": "NCUA rolled out a ninth batch of deregulation proposals aimed at easing credit union operational and activity requirements. Credit unions in scope should watch for specifics as proposals are published, though no fintech or community-bank implications are stated.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9767,7 +10062,7 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-ninth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "0354822a8e5f4367": {
     "relevant": false,
@@ -9816,16 +10111,17 @@
     "fr_checked": false
   },
   "68aa2ccee7688876": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "A credit union closed and its assets, loans and shares were assumed by another credit union. This is a credit-union-only closure matter outside our monitoring scope.",
+    "plain_english": "Copper & Glass credit union closed and OMEGA Federal Credit Union assumed its loans, assets, and shares. This is a routine NCUA-facilitated purchase-and-assumption affecting only members of the closed institution; no rules changed.",
     "effective_or_comment_date": "Not stated",
     "tags": [
+      "NCUA",
       "credit union",
       "closure",
-      "NCUA"
+      "purchase and assumption"
     ],
     "key": "68aa2ccee7688876",
     "title": "Copper & Glass Closes; OMEGA Federal Credit Union Assumes Loans, Assets, Shares",
@@ -9836,7 +10132,7 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/copper-glass-closes-omega-federal-credit-union-assumes-loans-assets-shares",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "9713aa679b14db9a": {
     "relevant": false,
@@ -9862,16 +10158,17 @@
     "fr_checked": false
   },
   "50ec14f65e4da8e1": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA launched a new online charter application system for credit union chartering and field-of-membership processes. This is an administrative/credit-union-only matter outside our coverage of community banks and fintechs.",
+    "plain_english": "NCUA launched a new online system for processing credit union charter applications and field-of-membership requests. This is an administrative modernization affecting credit unions seeking to charter or expand membership; it changes the submission mechanism, not the underlying rules.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "chartering",
+      "field of membership",
       "administrative"
     ],
     "key": "50ec14f65e4da8e1",
@@ -9883,14 +10180,14 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-new-charter-system",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "56760f875ad483a5": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced another round of deregulation proposals aimed at credit unions. This is a credit-union-only regulatory matter outside our community bank and fintech focus, with no detail tying it to BaaS, payments, or fintech partnerships.",
+    "plain_english": "NCUA announced an eighth round of deregulation proposals for credit unions. Details are sparse and no specifics were tied to BaaS, payments, or fintech partnerships, but credit unions are in scope on the same footing as community banks. Worth tracking for the substance once the actual proposals are published.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9906,19 +10203,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-eighth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "3da0d63855125d20": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA published routine quarterly state-level credit union industry data for Q4 2025. This is a statistical data release with no regulatory or compliance implications.",
+    "plain_english": "NCUA released its routine Q4 2025 state-level credit union industry data report. It's a statistical release with no regulatory or compliance implications, useful only as background system-performance data.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "industry data"
+      "industry data",
+      "statistics"
     ],
     "key": "3da0d63855125d20",
     "title": "NCUA Releases Q4 2025 State-level Credit Union Data Report",
@@ -9929,14 +10227,14 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-q4-2025-state-level-credit-union-data-report",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "658d2082af4678fc": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "NCUA announced a seventh round of deregulation proposals affecting credit union operations and activities. This is a credit-union-only regulatory matter with no specified fintech or community bank impact in the provided text.",
+    "update_type": "Proposed Rule",
+    "urgency": "Medium",
+    "plain_english": "NCUA rolled out its seventh round of deregulation proposals targeting credit union operations and activities. Credit unions should watch for specifics as proposals are detailed, but no fintech or community-bank-specific impact is stated in this text.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -9952,19 +10250,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-seventh-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "1f598d09fe5a6508": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA released routine quarterly performance data for the credit union system. This is credit-union-specific industry statistics with no regulatory change or action.",
+    "plain_english": "NCUA published its routine Q4 2025 credit union system performance data. This is industry statistics only, with no rule change or supervisory action. Useful for benchmarking credit union financial trends but requires no action.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "industry data"
+      "industry data",
+      "quarterly performance"
     ],
     "key": "1f598d09fe5a6508",
     "title": "NCUA Releases Fourth Quarter 2025 Credit Union System Performance Data",
@@ -9975,20 +10274,21 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-releases-fourth-quarter-2025-credit-union-system-performance-data",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "4c8abfe4885b1685": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced a voluntary EGRPRA-style regulatory review as part of a deregulation initiative aimed at reducing burden on credit unions. This is a credit-union-only administrative matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA launched a voluntary EGRPRA-style regulatory review as part of a broader deregulation push aimed at cutting compliance burden on credit unions. This is an early-stage administrative review with no immediate rule changes, but credit unions may get opportunities to flag burdensome regulations for revision.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "deregulation",
-      "EGRPRA"
+      "EGRPRA",
+      "regulatory review"
     ],
     "key": "4c8abfe4885b1685",
     "title": "NCUA Issues Voluntary EGRPRA Review; Continues Deregulation Project",
@@ -9999,20 +10299,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-issues-voluntary-egrpra-review-continues-deregulation-project",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "7c0738f67013f667": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA released routine quarterly Share Insurance Fund financial results for Q4 2025. This is a credit-union-only administrative report with no regulatory or compliance impact.",
+    "plain_english": "NCUA published its routine Q4 2025 Share Insurance Fund financial results. This is a system performance data release with no compliance or regulatory changes for credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
+      "Share Insurance Fund",
       "credit unions",
-      "share insurance fund",
-      "not relevant"
+      "quarterly results"
     ],
     "key": "7c0738f67013f667",
     "title": "NCUA Issues Share Insurance Fund Results for Fourth Quarter 2025",
@@ -10023,7 +10323,7 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-issues-share-insurance-fund-results-fourth-quarter-2025",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "96562546323ebec3": {
     "relevant": false,
@@ -10051,11 +10351,11 @@
     "fr_checked": false
   },
   "9563a85546a473aa": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a sixth round of deregulation proposals affecting credit union operations and activities. This is a credit-union-specific administrative matter with no stated fintech or community bank impact.",
+    "plain_english": "NCUA announced a sixth round of deregulation proposals affecting credit union operations and activities. Credit unions should watch for the specific proposals, but no fintech or bank-specific impact is stated and details are not yet provided.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -10071,19 +10371,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-sixth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "762a46e8f18563e1": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Notice",
-    "urgency": "Low",
-    "plain_english": "FinCEN granted exceptive relief on a BSA requirement specifically for credit unions. This is a credit-union-only matter outside our coverage of community banks and fintechs.",
+    "urgency": "Medium",
+    "plain_english": "FinCEN granted exceptive relief from a BSA requirement specifically for credit unions. This affects credit unions' AML compliance obligations, though the summary does not specify which requirement is being relaxed.",
     "effective_or_comment_date": "Not stated",
     "tags": [
+      "Credit Unions",
       "BSA/AML",
-      "credit unions",
-      "FinCEN"
+      "FinCEN",
+      "NCUA"
     ],
     "key": "762a46e8f18563e1",
     "title": "FinCEN Issues Exceptive Relief on a Bank Secrecy Act Requirement for Credit Unions",
@@ -10094,7 +10395,7 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/fincen-issues-exceptive-relief-bank-secrecy-act-requirement-credit-unions",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "12b44f5907f63afe": {
     "relevant": false,
@@ -10124,13 +10425,13 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA expanded its grant programs for newly chartered credit unions and urgent needs. This is a credit-union-only administrative grant program with no bearing on our focus areas.",
+    "plain_english": "NCUA expanded its grant programs for newly chartered credit unions and urgent needs. This is an administrative grant funding program with no regulatory or supervisory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "grants",
-      "not relevant"
+      "administrative"
     ],
     "key": "522112a13c9000bf",
     "title": "NCUA Expands Newly Chartered and Urgent Needs Grants",
@@ -10169,16 +10470,17 @@
     "fr_checked": true
   },
   "8a10c577e0d52af2": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a fifth round of deregulation proposals affecting credit union operations and activities. This is a credit-union-specific administrative matter with no stated fintech or BaaS content, and no details provided in the summary.",
+    "plain_english": "NCUA announced a fifth round of deregulation proposals aimed at credit union operations and activities. Details are not provided in the summary, but this is a credit-union-specific rulemaking effort worth tracking for regulatory relief affecting federally-insured credit unions.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "rulemaking"
     ],
     "key": "8a10c577e0d52af2",
     "title": "NCUA Announces Fifth Round of Deregulation Proposals",
@@ -10189,19 +10491,20 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-fifth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "6494215f5234baa5": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Other",
     "urgency": "Low",
-    "plain_english": "The NCUA Board extended the maximum permissible interest rate ceiling for federal credit union loans. This is a credit-union-only administrative matter outside our community bank and fintech focus.",
+    "plain_english": "The NCUA Board voted to keep the maximum permissible interest rate ceiling for federal credit union loans at its elevated level rather than let it revert to the statutory 15%. This is a routine, recurring administrative action affecting federal credit unions' lending flexibility.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "interest rate ceiling"
+      "interest rate ceiling",
+      "consumer lending"
     ],
     "key": "6494215f5234baa5",
     "title": "NCUA Board Extends Loan Interest Rate Ceiling",
@@ -10219,12 +10522,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA announced it will remain operational and share insurance remains in effect during a partial government shutdown. This is a credit-union-focused administrative notice with no regulatory change.",
+    "plain_english": "NCUA announced it will stay open and that share insurance remains in effect during a partial government shutdown. This is an administrative reassurance with no regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "government shutdown",
-      "credit unions",
+      "shutdown",
+      "share insurance",
       "administrative"
     ],
     "key": "fee3801da8195748",
@@ -10285,16 +10588,17 @@
     "fr_checked": false
   },
   "53c6e5f1ee19efb2": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a fourth round of deregulation proposals affecting credit union operations and activities. This is a credit-union-only matter outside our coverage of community banks and fintechs, and the summary provides no fintech-specific content.",
+    "plain_english": "NCUA announced its fourth round of deregulation proposals affecting credit union operations and activities. Credit unions are in scope on the same footing as community banks, so this matters, though the summary provides no specifics on which rules are being loosened.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "proposed rule"
     ],
     "key": "53c6e5f1ee19efb2",
     "title": "NCUA Announces Fourth Round of Deregulation Proposals",
@@ -10305,19 +10609,19 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-fourth-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "f6661cfb19e8ddbb": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Enforcement Action",
     "urgency": "Low",
-    "plain_english": "NCUA placed a single small credit union into conservatorship. This is a credit-union-specific administrative action outside our community bank and fintech focus.",
+    "plain_english": "NCUA placed Beverly Hills City Employees FCU into conservatorship, taking over management of a single small credit union. Since credit unions are in scope on the same footing as community banks, this is a relevant CU-specific administrative action, though it has no broader rule or systemic implications.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "conservatorship",
-      "credit union"
+      "credit union",
+      "conservatorship"
     ],
     "key": "f6661cfb19e8ddbb",
     "title": "Beverly Hills City Employees Federal Credit Union Conserved",
@@ -10335,12 +10639,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA Board received briefings on an internal dependent care reimbursement rule and the Central Liquidity Facility budget. These are credit-union-specific administrative matters with no bearing on community banks or fintechs.",
+    "plain_english": "The NCUA Board received briefings on an internal dependent care reimbursement rule and the Central Liquidity Facility budget. These are internal administrative and agency-budget matters with no operational impact on credit unions, community banks, or fintechs.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
-      "administrative"
+      "administrative",
+      "Central Liquidity Facility"
     ],
     "key": "d932d3b59c198900",
     "title": "NCUA Board Briefed on Proposed Dependent Care Reimbursement Rule and Central Liquidity Facility Budget",
@@ -10354,11 +10658,11 @@
     "fr_checked": false
   },
   "00c2233f86cea907": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
-    "update_type": "Notice",
+    "update_type": "Enforcement Action",
     "urgency": "Low",
-    "plain_english": "The NCUA placed People Trust Community Federal Credit Union into conservatorship. This is a credit-union-specific administrative action outside our coverage of community banks and fintechs.",
+    "plain_english": "The NCUA placed People Trust Community Federal Credit Union into conservatorship, taking control of the institution's operations. This is a credit-union-specific administrative action; members and the CU are directly affected, but there is no broader rule change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -10400,16 +10704,17 @@
     "fr_checked": false
   },
   "52ca27c26442ae7d": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Guidance",
-    "urgency": "Low",
-    "plain_english": "NCUA released its annual supervisory priorities letter for credit unions, outlining exam focus areas for 2026. This is a credit-union-only supervisory matter outside our coverage of community banks and fintechs.",
+    "urgency": "Medium",
+    "plain_english": "NCUA released its annual supervisory priorities letter identifying 2026 exam focus areas for credit unions. Credit union leadership and compliance teams should align risk management and audit preparation with the highlighted areas.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "supervisory priorities"
+      "supervisory priorities",
+      "examinations"
     ],
     "key": "52ca27c26442ae7d",
     "title": "NCUA Issues 2026 Supervisory Priorities Letter to Credit Unions",
@@ -10423,16 +10728,17 @@
     "fr_checked": false
   },
   "cca39f6b17dfb213": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a third round of deregulation proposals affecting credit union operations and activities. This is a credit-union-only matter outside our coverage of community banks and fintechs, and the summary provides no fintech-specific detail.",
+    "plain_english": "NCUA announced a third round of deregulation proposals affecting credit union operations and activities. Credit unions are in scope, but the summary provides no specifics on which rules are targeted, so the practical impact is unclear pending the actual proposal text.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "proposed rule"
     ],
     "key": "cca39f6b17dfb213",
     "title": "NCUA Announces Third Round of Deregulation Proposals",
@@ -10443,20 +10749,19 @@
     "url": "https://ncua.gov/newsroom/press-release/2026/ncua-announces-third-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "5e1787f4ca1fba65": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Enforcement Action",
     "urgency": "Low",
-    "plain_english": "NCUA issued prohibition orders barring three individuals from working at any federally insured depository institution. This is a routine credit-union enforcement action against specific individuals with no policy or fintech implications.",
+    "plain_english": ":",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "enforcement",
-      "prohibition order",
-      "credit union"
+      "prohibition order"
     ],
     "key": "5e1787f4ca1fba65",
     "title": "NCUA Prohibits Three Individuals from Participating in the Affairs of Any Federally Insured Depository Institution",
@@ -10470,16 +10775,17 @@
     "fr_checked": false
   },
   "5e4631e4d0100b39": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "NCUA announced a second round of deregulation proposals affecting credit union operations and activities. This is a credit-union-only matter outside our coverage of community banks and fintechs, and the summary provides no fintech-specific details.",
+    "plain_english": "NCUA announced a second round of deregulation proposals affecting credit union operations and activities. Federally-insured credit unions are in scope for us; watch for the specific rule text to assess impact. No fintech-specific details are provided.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "deregulation"
+      "deregulation",
+      "proposed rule"
     ],
     "key": "5e4631e4d0100b39",
     "title": "NCUA Announces Second Round of Deregulation Proposals",
@@ -10490,7 +10796,7 @@
     "url": "https://ncua.gov/newsroom/press-release/2025/ncua-announces-second-round-deregulation-proposals",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true
   },
   "33d0750f47d431f3": {
     "relevant": true,
@@ -11560,16 +11866,16 @@
     "fr_dates_text": "Effective date: The joint rule is effective on October 1, 2026. At the effective date, the joint rule will not change any reporting requirements without further action by the agencies."
   },
   "20927210b9d41f71": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to clean up its share insurance regulations by removing cross-reference provisions that duplicate rules codified elsewhere, without changing any actual compliance obligations. This is a credit-union-only administrative simplification with no substantive impact.",
+    "plain_english": "NCUA proposes to remove duplicative cross-reference provisions from its share insurance regulations, a purely administrative cleanup that changes no compliance obligations. Affects federally-insured credit unions only, with no substantive impact.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
       "share insurance",
+      "credit unions",
       "administrative"
     ],
     "key": "20927210b9d41f71",
@@ -11581,7 +11887,13 @@
     "url": "https://www.federalregister.gov/documents/2026/05/07/2026-09010/requirements-for-insurance",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/28/2026-01699/requirements-for-insurance",
+    "fr_title": "Requirements for Insurance",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-30",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 30, 2026."
   },
   "1c60f5545462cd4d": {
     "relevant": false,
@@ -11654,17 +11966,18 @@
     "fr_checked": false
   },
   "560bbf5126980cea": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to simplify part 749 governing credit union vital records preservation and catastrophic act preparedness, updating definitions and removing appendices. This is a credit-union-only administrative rulemaking with no bearing on community banks, fintechs, or BaaS arrangements.",
+    "plain_english": "NCUA proposes to streamline Part 749 governing credit union vital records preservation and catastrophic-act preparedness, updating definitions and removing outdated appendices. Applies only to federally-insured credit unions; it's an administrative modernization with no substantive new compliance burden.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "records retention",
-      "out of scope"
+      "Part 749",
+      "disaster preparedness"
     ],
     "key": "560bbf5126980cea",
     "title": "Records Preservation Program and Appendices-Record Retention Guidelines; Catastrophic Act Preparedness Guidelines",
@@ -11675,21 +11988,27 @@
     "url": "https://www.federalregister.gov/documents/2026/03/11/2026-04761/records-preservation-program-and-appendices-record-retention-guidelines-catastrophic-act",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/06/16/2026-12058/records-preservation-program-and-appendices-record-retention-guidelines-catastrophic-act",
+    "fr_title": "Records Preservation Program and Appendices-Record Retention Guidelines; Catastrophic Act Preparedness Guidelines",
+    "fr_match_score": 1.0,
+    "comments_close_on": null,
+    "effective_on": "2026-07-16",
+    "fr_dates_text": "This final rule is effective on July 16, 2026."
   },
   "5b931ddefd7b43c5": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA is soliciting comment on whether certain credit-union regulations (including its BSA/AML rules) are outdated or burdensome, as part of a routine EGRPRA-style review. This is a credit-union-specific administrative review that does not affect banks or fintechs we cover.",
+    "plain_english": "The NCUA is asking for comment on which of its credit-union regulations\u2014including BSA/AML rules\u2014are outdated or unduly burdensome, as part of a routine EGRPRA review. This is an early-stage input request affecting federally-insured credit unions; no rules change yet, but it's an opportunity to flag burdensome requirements.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
       "EGRPRA",
-      "regulatory review",
-      "BSA/AML"
+      "BSA/AML",
+      "regulatory review"
     ],
     "key": "5b931ddefd7b43c5",
     "title": "Regulatory Publication and Voluntary Review as Contemplated by the Economic Growth and Regulatory Paperwork Reduction Act of 1996",
@@ -11700,20 +12019,26 @@
     "url": "https://www.federalregister.gov/documents/2026/03/03/2026-04154/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/03/03/2026-04154/regulatory-publication-and-voluntary-review-as-contemplated-by-the-economic-growth-and-regulatory",
+    "fr_title": "Regulatory Publication and Voluntary Review as Contemplated by the Economic Growth and Regulatory Paperwork Reduction Act of 1996",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-06-01",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by June 1, 2026."
   },
   "a040b1dea025d549": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to rescind IRPS 06-1 to reduce the number of sources federal credit unions must consult for chartering and field-of-membership compliance. This is a credit-union-only chartering matter outside our community bank and fintech focus.",
+    "plain_english": "NCUA proposes to rescind IRPS 06-1 to consolidate the sources federal credit unions must consult for chartering and field-of-membership compliance. This is a credit-union-only chartering matter with no BaaS, payments or other fintech dimension.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "chartering",
-      "field of membership"
+      "field of membership",
+      "chartering"
     ],
     "key": "a040b1dea025d549",
     "title": "Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements",
@@ -11724,20 +12049,25 @@
     "url": "https://www.federalregister.gov/documents/2026/02/11/2026-02765/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/02/11/2026-02765/chartering-and-field-of-membership-for-federal-credit-unions-interpretive-rulings-and-policy",
+    "fr_title": "Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-04-13",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received on or before April 13, 2026."
   },
   "97fcec44c8887461": {
     "relevant": false,
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for comment. This is a credit-union administrative matter with no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for comment. No substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit union"
+      "administrative"
     ],
     "key": "97fcec44c8887461",
     "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
@@ -11755,13 +12085,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collections to OMB for review. This is a credit-union administrative filing with no substantive rule change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collections to OMB for review. No substantive rule change or new obligation.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "8a6dc1cd01df1dd2",
     "title": "Agency Information Collection for Comments Request: Proposed Collection",
@@ -11775,17 +12104,17 @@
     "fr_checked": false
   },
   "4e2d53b610789872": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to let federal credit unions reimburse volunteer officials for dependent care costs incurred while attending board meetings. This is a credit-union-only administrative matter with no bearing on community banks, fintechs, or partnership arrangements.",
+    "plain_english": "NCUA proposes to allow federal credit unions to reimburse volunteer board members for dependent care costs incurred while attending board meetings. This is a narrow administrative governance matter for federal credit unions with no operational or compliance impact.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "credit unions",
-      "expense reimbursement",
-      "not relevant"
+      "governance",
+      "proposed rule"
     ],
     "key": "4e2d53b610789872",
     "title": "Dependent Care and Board Member Expense Reimbursement",
@@ -11796,7 +12125,13 @@
     "url": "https://www.federalregister.gov/documents/2026/01/26/2026-01382/dependent-care-and-board-member-expense-reimbursement",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/26/2026-01382/dependent-care-and-board-member-expense-reimbursement",
+    "fr_title": "Dependent Care and Board Member Expense Reimbursement",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-27",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by on or before March 27, 2026."
   },
   "10ae9096cdfe6d7c": {
     "relevant": false,
@@ -11822,16 +12157,17 @@
     "fr_checked": false
   },
   "fd1cd01a95a677a6": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Proposed Rule",
     "urgency": "Low",
-    "plain_english": "The NCUA proposes to rescind IRPS 11-02 on chartering corporate credit unions as redundant to the Federal Corporate Credit Union Chartering Manual. This is an administrative cleanup affecting corporate credit unions only.",
+    "plain_english": "NCUA proposes to rescind IRPS 11-02 on chartering corporate credit unions as redundant with the Federal Corporate Credit Union Chartering Manual. This is an administrative cleanup affecting corporate credit unions only, with no substantive change to requirements.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "credit unions",
-      "administrative"
+      "corporate credit unions",
+      "chartering",
+      "administrative cleanup"
     ],
     "key": "fd1cd01a95a677a6",
     "title": "Corporate Credit Unions",
@@ -11842,7 +12178,13 @@
     "url": "https://www.federalregister.gov/documents/2026/01/14/2026-00595/corporate-credit-unions",
     "first_seen": "2026-07-18",
     "last_seen": "2026-07-20",
-    "fr_checked": false
+    "fr_checked": true,
+    "fr_url": "https://www.federalregister.gov/documents/2026/01/14/2026-00595/corporate-credit-unions",
+    "fr_title": "Corporate Credit Unions",
+    "fr_match_score": 1.0,
+    "comments_close_on": "2026-03-16",
+    "effective_on": null,
+    "fr_dates_text": "Comments must be received by March 16, 2026."
   },
   "f8120dfd29886861": {
     "relevant": false,
@@ -11872,13 +12214,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for review. This is administrative and credit-union-focused, with no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for comment. No substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "1cd641151b64864b",
     "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
@@ -11896,11 +12237,11 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is renewing previously approved information collections with OMB under the Paperwork Reduction Act. This is a routine administrative notice affecting credit unions and carries no substantive regulatory change.",
+    "plain_english": "NCUA is renewing existing OMB-approved information collections under the Paperwork Reduction Act. This is a routine administrative notice with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
-      "PRA",
+      "Paperwork Reduction Act",
       "administrative"
     ],
     "key": "0111596e30ba2d34",
@@ -11919,12 +12260,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA administrative notice announcing a Sunshine Act board meeting. No substantive regulatory change and it concerns credit union governance, outside our focus.",
+    "plain_english": "Routine NCUA Sunshine Act notice announcing a board meeting with no substantive regulatory change. Administrative in nature and outside scope.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "administrative",
-      "meeting notice"
+      "Sunshine Act"
     ],
     "key": "90fed51860d83a36",
     "title": "Sunshine Act Meetings",
@@ -11942,13 +12283,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting previously approved information collections to OMB for renewal. Administrative and credit-union-focused; no substantive regulatory change.",
+    "plain_english": "NCUA is submitting previously approved information collections to OMB for renewal under the Paperwork Reduction Act. This is a routine administrative notice with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "f3b6c6baa67e5181",
     "title": "Renewal of Agency Information Collection of a Previously Approved Collection; Request for Comments",
@@ -11966,13 +12306,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "The NCUA rescheduled its public hearing on its staff draft 2026-2027 budget to November 5, 2025. This is a routine administrative notice concerning credit union agency budgeting, not a regulatory change.",
+    "plain_english": "The NCUA rescheduled its public hearing on its staff draft 2026-2027 budget to November 5, 2025. This is a routine administrative budgeting notice, not a regulatory change.",
     "effective_or_comment_date": "Hearing November 5, 2025",
     "tags": [
       "NCUA",
       "budget",
-      "administrative",
-      "credit-unions"
+      "administrative"
     ],
     "key": "9a3f77b1ef549144",
     "title": "The NCUA Staff Draft 2026-2027 Budget",
@@ -12036,13 +12375,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for comment. It is administrative and credit-union-focused, with no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting existing information collections to OMB for comment. Administrative only, with no substantive change to any rule or requirement.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "1a9884d06bb2cd42",
     "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
@@ -12060,13 +12398,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is submitting routine renewals of previously approved information collections to OMB under the Paperwork Reduction Act. This is an administrative credit-union-focused notice with no substantive regulatory change.",
+    "plain_english": "NCUA is submitting routine renewals of previously approved information collections to OMB under the Paperwork Reduction Act. This is an administrative notice with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "4b1e16d5a1dc9216",
     "title": "Renewal of Agency Information Collection of a Previously Approved Collection; Request for Comments",
@@ -12084,13 +12421,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information collection renewals to OMB for review. This is a credit-union administrative matter with no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice submitting information-collection renewals to OMB. No substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit union"
+      "administrative"
     ],
     "key": "886d6e71eb046151",
     "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
@@ -12131,12 +12467,11 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is submitting routine renewals of previously approved information collections to OMB under the Paperwork Reduction Act. This is a credit-union administrative notice with no substantive regulatory change.",
+    "plain_english": "NCUA is renewing previously approved information collections with OMB under the Paperwork Reduction Act. This is a routine administrative notice with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "credit unions",
       "administrative"
     ],
     "key": "14d35a4c1a9c564a",
@@ -12155,13 +12490,13 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is seeking comment on a routine three-year renewal of its Call Report (Form 5300) collection under the Paperwork Reduction Act, with clarified instructions. This is a credit-union-only administrative filing matter outside our focus.",
+    "plain_english": "NCUA is seeking comment on a routine three-year PRA renewal of its Call Report (Form 5300) collection with clarified instructions. This is an administrative information-collection matter, not a substantive rule change.",
     "effective_or_comment_date": "Revised instructions proposed to take effect with the September 30, 2025 report date",
     "tags": [
       "NCUA",
-      "credit unions",
-      "call report",
-      "paperwork reduction act"
+      "Call Report",
+      "PRA",
+      "administrative"
     ],
     "key": "ab5d37e08b770be4",
     "title": "Renewal of Agency Information Collection of a Previously Approved Collection; Request for Comments",
@@ -12202,13 +12537,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "Routine NCUA Paperwork Reduction Act notice seeking comment on renewal of information collections before submission to OMB. This is an administrative, credit-union-only procedural matter with no substantive regulatory change.",
+    "plain_english": "Routine NCUA Paperwork Reduction Act notice seeking comment on renewing existing information collections before OMB submission. No substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "PRA",
-      "administrative",
-      "credit unions"
+      "administrative"
     ],
     "key": "68d226143474a2e9",
     "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
@@ -12249,12 +12583,12 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "This is a routine NCUA administrative notice of a board meeting under the Sunshine Act. It contains no substantive regulatory change and applies to credit union governance matters outside our focus.",
+    "plain_english": "Routine NCUA Sunshine Act notice of a board meeting with no substantive regulatory change.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
       "administrative",
-      "meeting notice"
+      "Sunshine Act"
     ],
     "key": "f0d534c969cc2a99",
     "title": "Sunshine Act Meetings",
@@ -12364,13 +12698,13 @@
     "fintech_specific": false,
     "update_type": "Notice",
     "urgency": "Low",
-    "plain_english": "NCUA is renewing an existing information collection with OMB under the Paperwork Reduction Act, with revisions taking effect for the March 31, 2025 report date. This is a routine administrative/reporting notice specific to credit unions and does not affect our focus areas.",
+    "plain_english": "NCUA is renewing a previously approved information collection with OMB under the Paperwork Reduction Act, with revisions applying to the March 31, 2025 report date. This is a routine administrative reporting notice with no substantive regulatory change.",
     "effective_or_comment_date": "Revisions to take effect with the March 31, 2025 report date",
     "tags": [
       "NCUA",
-      "Paperwork Reduction Act",
       "credit unions",
-      "administrative"
+      "administrative",
+      "Paperwork Reduction Act"
     ],
     "key": "b5c76b5ae6138f8e",
     "title": "Revision of Agency Information Collection of a Previously Approved Collection; Request for Comments",
@@ -12574,11 +12908,11 @@
     "fr_checked": true
   },
   "22e30a26e4f4c322": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Enforcement Action",
     "urgency": "Low",
-    "plain_english": "NCUA issued prohibition orders barring five individuals from working at any federally insured depository institution. This is a routine credit-union enforcement action against specific individuals with no policy or industry-wide implications.",
+    "plain_english": "NCUA issued prohibition orders barring five named individuals from working at any federally insured depository institution. It's a routine individual enforcement action with no policy or industry-wide implications.",
     "effective_or_comment_date": "Not stated",
     "tags": [
       "NCUA",
@@ -13073,16 +13407,17 @@
     "fr_checked": false
   },
   "914d3bef71cf8cce": {
-    "relevant": false,
+    "relevant": true,
     "fintech_specific": false,
     "update_type": "Enforcement Action",
-    "urgency": "Low",
-    "plain_english": "Florida's OFR placed Alliance Credit Union of Florida into conservatorship with NCUA appointed as conservator. This is a credit-union-only matter outside our coverage scope.",
+    "urgency": "Medium",
+    "plain_english": "Florida's OFR placed Alliance Credit Union of Florida into conservatorship, with NCUA appointed as conservator. This is a credit-union conservatorship, which is in scope on the same footing as community bank matters.",
     "effective_or_comment_date": "2024-11-08",
     "tags": [
       "credit union",
       "conservatorship",
-      "Florida"
+      "NCUA",
+      "Florida OFR"
     ],
     "key": "914d3bef71cf8cce",
     "title": "Alliance Credit Union of Florida Conserved",

@@ -93,6 +93,75 @@ def backfill(field, dry_run=False, limit=None):
     return 0
 
 
+def rejudge(contains=None, dry_run=False, limit=None):
+    """Re-run relevance on stored items that were previously DROPPED.
+
+    backfill() only touches relevant items — right for adding a field, wrong for a
+    profile change that WIDENS scope, since the newly-relevant items are exactly
+    the ones currently filtered out. This re-classifies dropped items so they can
+    flip to relevant under the new profile.
+
+    `contains` limits the re-judge to titles/summaries mentioning a term (e.g.
+    'credit union'), so widening the profile in one area does not pay to re-judge
+    every unrelated drop. An item that becomes relevant only because of the new
+    scope will mention that scope, so the filter does not miss real flips.
+    """
+    store = load_store()
+    targets = [r for r in store.values() if not r.get("relevant")]
+    if contains:
+        needle = contains.lower()
+        targets = [r for r in targets
+                   if needle in (r.get("title", "") + " "
+                                 + (r.get("plain_english", "") or "")
+                                 + " " + " ".join(r.get("tags") or [])).lower()]
+    if limit:
+        targets = targets[:limit]
+
+    print(f"{len(targets)} dropped item(s) to re-judge"
+          + (f" matching {contains!r}" if contains else ""))
+    if dry_run:
+        print(f"DRY RUN — would re-classify {len(targets)} "
+              f"(~${len(targets)*EST_COST_PER_ITEM:.2f})")
+        return 0
+    if not targets:
+        return 0
+
+    import classifier
+
+    flipped = 0
+    for i, rec in enumerate(targets, 1):
+        item = {
+            "agency": (rec.get("sources") or ["?"])[0],
+            "title": rec.get("title", ""),
+            "date": rec.get("date", ""),
+            "summary": rec.get("plain_english", ""),
+            "doc_type": rec.get("update_type", ""),
+        }
+        try:
+            fresh = classifier.classify(item)
+        except Exception as e:
+            print(f"[{i}/{len(targets)}] FAILED: {e}")
+            continue
+        was = rec.get("relevant")
+        # A full re-judgment: relevance can change, and the model-written fields
+        # follow it. Source-derived fields (date, sources, url, deadlines) are
+        # left alone.
+        for k in ("relevant", "fintech_specific", "update_type", "urgency",
+                  "plain_english", "tags"):
+            if k in fresh:
+                rec[k] = fresh[k]
+        if fresh.get("relevant") and not was:
+            flipped += 1
+        if i % 10 == 0 or i == len(targets):
+            print(f"[{i}/{len(targets)}] ...{flipped} flipped to relevant so far")
+            save_store(store)
+
+    save_store(store)
+    total_rel = sum(1 for r in store.values() if r.get("relevant"))
+    print(f"\n{flipped} item(s) flipped to relevant. {total_rel} relevant in store.")
+    return 0
+
+
 def refresh_dates(dry_run=False):
     """Re-read `date` for stored events from the current fetch. Costs nothing.
 
@@ -195,10 +264,18 @@ def main():
     ap.add_argument("--refresh-dates", action="store_true",
                     help="re-read dates from the current fetch for stored events "
                          "and re-key them (use after a date parsing fix; costs nothing)")
+    ap.add_argument("--rejudge", nargs="?", const="", metavar="TERM",
+                    help="re-classify DROPPED items so they can flip to relevant "
+                         "under a widened profile; optional TERM limits to matching "
+                         "items (e.g. --rejudge 'credit union')")
     args = ap.parse_args()
 
     if args.refresh_dates:
         return refresh_dates(dry_run=args.dry_run)
+
+    if args.rejudge is not None:
+        return rejudge(contains=args.rejudge or None, dry_run=args.dry_run,
+                       limit=args.limit)
 
     if args.backfill:
         return backfill(args.backfill, dry_run=args.dry_run, limit=args.limit)

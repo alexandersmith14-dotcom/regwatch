@@ -17,9 +17,13 @@ if not os.getenv("ANTHROPIC_API_KEY", "").startswith("sk-ant-"):
 MODEL = "claude-opus-4-8"
 
 # Who we are. The model scores relevance against this.
-PROFILE = """We monitor regulation affecting US community banks (under ~$10B assets)
-and fintechs, including BaaS/sponsor-bank arrangements, prepaid and FBO accounts,
-consumer lending and credit risk, BSA/AML, and internal audit obligations."""
+PROFILE = """We monitor regulation affecting US community banks (under ~$10B assets),
+federally-insured credit unions, and fintechs — including BaaS/sponsor-bank
+arrangements, prepaid and FBO accounts, consumer lending and credit risk, BSA/AML,
+and internal audit obligations. Credit unions are in scope on the same footing as
+community banks: NCUA rulemaking and guidance, share-insurance and field-of-
+membership matters, credit-union conservatorships and mergers, and system
+performance data all count."""
 
 # What counts as genuinely fintech-specific, as opposed to general bank regulation
 # that a fintech also happens to be subject to. Without this distinction the model
@@ -112,8 +116,8 @@ Date: {u['date']}{hint}
 Summary: {u['summary'] or '(no summary provided)'}
 
 Judge relevance against our focus above. Set relevant=false for items outside it
-(agricultural lending, credit-union-only matters we don't touch, routine personnel
-or administrative notices). Administrative notices include reminders to existing
+(agricultural lending unrelated to the institutions above, routine personnel or
+administrative notices). Administrative notices include reminders to existing
 licensees to renew a license, meet a continuing-education deadline, or pay a fee —
 these are not regulatory developments even when they come from a financial
 regulator and even when the licensees are money-services or fintech firms. A
