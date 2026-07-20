@@ -21,11 +21,52 @@ import json
 # there. Alias the escaper so it stays reachable inside main.
 from html import escape as hesc
 import os
+import re
 import webbrowser
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 
+import fetcher
 import regref
+
+# Where a reader lands when they click a source name. These are the human
+# listing pages, deliberately NOT the URLs fetcher.py uses — most of those are
+# raw RSS, which drops a reader into a wall of XML.
+#
+# Every one was checked to load. Two notes for whoever revisits this: the OCC
+# reorganised its site, so /news-issuances/... now soft-404s (returns 200 and
+# redirects to a 404 page) and the live pages are filtered newsroom views; and
+# consumerfinance.gov returns 403 to scripts while serving browsers normally, so
+# a failed command-line check there is not evidence of a dead link.
+SOURCE_LINKS = {
+    "FDIC": "https://www.fdic.gov/news/press-releases",
+    "FDIC FILs": "https://www.fdic.gov/news/financial-institution-letters",
+    "OCC": "https://www.occ.gov/news-events/newsroom/?nr=NewsRelease",
+    "OCC Bulletins": "https://www.occ.gov/news-events/newsroom/?nr=Bulletin",
+    "Federal Reserve": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
+    "Fed SR/CA Letters":
+        "https://www.federalreserve.gov/supervisionreg/srletters/srletters.htm",
+    "CFPB": "https://www.consumerfinance.gov/about-us/newsroom/",
+    "CFPB Rules": "https://www.consumerfinance.gov/rules-policy/final-rules/",
+    "FinCEN":
+        "https://www.federalregister.gov/agencies/financial-crimes-enforcement-network",
+    "FinCEN Advisories": "https://www.fincen.gov/resources/advisoriesbulletinsfact-sheets",
+    "NCUA":
+        "https://www.federalregister.gov/agencies/national-credit-union-administration",
+    "NCUA Press": "https://ncua.gov/news/press-releases",
+    "OFAC": "https://ofac.treasury.gov/recent-actions",
+    "CSBS": "https://www.csbs.org/newsroom",
+}
+
+# Every cite in regref.py is a part of title 12, given as "12 CFR 215",
+# "CFPB 1002" or "Fed 228" — the trailing number is the part either way.
+CFR_PART = re.compile(r"(\d{3,4})\s*$")
+
+
+def ecfr_url(cfr):
+    """eCFR link for a regref cite, or None if no part number is present."""
+    m = CFR_PART.search(cfr)
+    return f"https://www.ecfr.gov/current/title-12/part-{m.group(1)}" if m else None
 
 STORE_PATH = "store.json"
 OUT_PATH = "dashboard.html"
@@ -741,6 +782,14 @@ def kpis(rows, today):
     ]
 
 
+def _cfr_cell(cfr):
+    url = ecfr_url(cfr)
+    if not url:
+        return html.escape(cfr)
+    return (f'<a href="{url}" target="_blank" rel="noopener">'
+            f'{html.escape(cfr)}</a>')
+
+
 def regref_panel():
     """Federal Reserve regulation letter lookup, collapsed by default.
 
@@ -758,7 +807,11 @@ def regref_panel():
             f'<td class="rr-letter">{html.escape(letter)}</td>'
             f'<td>{subject}'
             + (f'<div class="rr-note">{note}</div>' if note else "")
-            + f'</td><td class="rr-cfr">{html.escape(cfr)}</td></tr>'
+            # The cite links to the part on eCFR. All 47 were checked to resolve.
+            # It stays a lookup aid, not a citation source — the caveat above the
+            # table still stands, and eCFR is the current text, not a point-in-time
+            # version, so anything being cited should be confirmed there directly.
+            + f'</td><td class="rr-cfr">{_cfr_cell(cfr)}</td></tr>'
             for letter, subject, cfr, note in entries
         )
         blocks.append(
@@ -798,17 +851,31 @@ def coverage_panel(store):
     tool that silently under-reports is worse than no tool, because absence reads
     as "nothing happened".
     """
+    # Live sources come from fetcher.py, not from the store. The store keeps
+    # records from feeds that were trialled and dropped — SEC, FTC and CFTC were
+    # each measured at 0 of 10 relevant and removed — and reading it alone made
+    # this panel claim to track FTC and CFTC while the paragraph directly below
+    # said it did not. A public page contradicting itself about its own coverage
+    # is worse than one that says less.
+    active = {s["agency"] for s, _ in fetcher.SOURCES}
+
     per = {}
     for r in store.values():
         for a in r.get("sources", []):
-            if str(r.get("date", "")).startswith("20"):
+            if a in active and str(r.get("date", "")).startswith("20"):
                 per.setdefault(a, []).append(r["date"])
 
     rows = []
     for agency in sorted(per):
         d = sorted(per[agency])
+        url = SOURCE_LINKS.get(agency)
+        name = html.escape(agency)
+        # Linked to the agency's own listing page so a reader can check the
+        # source rather than take this page's word for it.
+        label = (f'<a href="{url}" target="_blank" rel="noopener">{name}</a>'
+                 if url else name)
         rows.append(
-            f'<div><strong>{html.escape(agency)}</strong> — '
+            f'<div><strong>{label}</strong> — '
             f'{len(d)} items, {d[0]} to {d[-1]}</div>'
         )
 
