@@ -29,33 +29,40 @@ from datetime import date, datetime, timedelta, timezone
 import fetcher
 import regref
 
-# Where a reader lands when they click a source name. These are the human
-# listing pages, deliberately NOT the URLs fetcher.py uses — most of those are
-# raw RSS, which drops a reader into a wall of XML.
+# Where a reader lands when they click a source name. Human pages, deliberately
+# NOT the URLs fetcher.py uses — most of those are raw RSS and would drop a
+# reader into a wall of XML.
 #
-# Every one was checked to load. Two notes for whoever revisits this: the OCC
-# reorganised its site, so /news-issuances/... now soft-404s (returns 200 and
-# redirects to a 404 page) and the live pages are filtered newsroom views; and
-# consumerfinance.gov returns 403 to scripts while serving browsers normally, so
-# a failed command-line check there is not evidence of a dead link.
+# Six agencies here publish through two feeds. The primary one links to the
+# agency home page, which effectively never moves; the secondary one links to its
+# specific index, because "FDIC FILs" pointing at fdic.gov would say nothing about
+# what that feed actually is. Durability where it costs nothing, specificity where
+# it earns its keep.
+#
+# Two notes for whoever revisits these. The OCC reorganised its site, so the old
+# /news-issuances/... paths now soft-404 — they return 200 and redirect to a 404
+# page, which a status check alone would pass. And consumerfinance.gov returns
+# 403 to scripts while serving browsers normally, so a failed command-line check
+# there is not evidence of a dead link; both CFPB links were confirmed in a real
+# browser.
 SOURCE_LINKS = {
-    "FDIC": "https://www.fdic.gov/news/press-releases",
+    # Primary feed -> agency home page.
+    "FDIC": "https://www.fdic.gov/",
+    "OCC": "https://www.occ.gov/",
+    "Federal Reserve": "https://www.federalreserve.gov/",
+    "CFPB": "https://www.consumerfinance.gov/",
+    "FinCEN": "https://www.fincen.gov/",
+    "NCUA": "https://ncua.gov/",
+    "OFAC": "https://ofac.treasury.gov/",
+    "CSBS": "https://www.csbs.org/",
+    # Secondary feed -> the specific listing it is named after.
     "FDIC FILs": "https://www.fdic.gov/news/financial-institution-letters",
-    "OCC": "https://www.occ.gov/news-events/newsroom/?nr=NewsRelease",
     "OCC Bulletins": "https://www.occ.gov/news-events/newsroom/?nr=Bulletin",
-    "Federal Reserve": "https://www.federalreserve.gov/newsevents/pressreleases.htm",
     "Fed SR/CA Letters":
         "https://www.federalreserve.gov/supervisionreg/srletters/srletters.htm",
-    "CFPB": "https://www.consumerfinance.gov/about-us/newsroom/",
     "CFPB Rules": "https://www.consumerfinance.gov/rules-policy/final-rules/",
-    "FinCEN":
-        "https://www.federalregister.gov/agencies/financial-crimes-enforcement-network",
     "FinCEN Advisories": "https://www.fincen.gov/resources/advisoriesbulletinsfact-sheets",
-    "NCUA":
-        "https://www.federalregister.gov/agencies/national-credit-union-administration",
     "NCUA Press": "https://ncua.gov/news/press-releases",
-    "OFAC": "https://ofac.treasury.gov/recent-actions",
-    "CSBS": "https://www.csbs.org/newsroom",
 }
 
 # Every cite in regref.py is a part of title 12, given as "12 CFR 215",
