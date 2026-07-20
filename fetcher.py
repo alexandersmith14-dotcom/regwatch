@@ -138,6 +138,29 @@ VIEWS_ROW_PAGES = [
     },
 ]
 
+# ------------------------------------------------ Florida OFR (first state source)
+# Florida's Office of Financial Regulation is the first state regulator added.
+# Unlike NYDFS and California DFPI, it does NOT block automated access — a plain
+# request returns 200 — so it is fetched directly, no email subscription needed.
+#
+# Only Press Releases. Its Industry Alerts page was measured too (25% keep-rate)
+# but is mostly hurricane proclamations and license-renewal reminders; Press
+# Releases carried the actual regulatory signal at 35% — state-level money
+# services, crypto and check-casher enforcement that never appears in the federal
+# feeds (e.g. the OFR agreement with BAM Trading / Binance.US). Its enforcement is
+# search-only, not a browsable list, so it cannot be scraped and is left out.
+#
+# Each item is a <p class="h3"><a>Title</a></p> followed by an MM/DD/YYYY date and
+# a summary paragraph; server-rendered, so no browser is required.
+
+FLOFR_PAGES = [
+    {"agency": "FL OFR Press", "url": "https://flofr.gov/news/press-releases",
+     "base": "https://flofr.gov"},
+]
+
+FLOFR_H3 = re.compile(r'<p[^>]*class="[^"]*\bh3\b[^"]*"[^>]*>(.*?)</p>', re.S | re.I)
+FLOFR_DATE = re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b")
+
 # ---------------------------------------------------------------- HTML helpers
 
 TAG = re.compile(r"<[^>]+>")
@@ -436,6 +459,54 @@ def fetch_views_rows(source):
     return cap([x for _, x in items])
 
 
+def fetch_flofr(source):
+    """Scrape a Florida OFR listing page (h3-title + MM/DD/YYYY + summary blocks).
+
+    Split the page on each <p class="h3">; everything up to the next one is a
+    single item. The date is the first MM/DD/YYYY after the title, and the
+    summary is the text following it.
+    """
+    html = get(source["url"])
+    marks = [m.start() for m in FLOFR_H3.finditer(html)]
+    if not marks:
+        raise RuntimeError("no h3 items found (page layout may have changed)")
+
+    items = []
+    for a, b in zip(marks, marks[1:] + [len(html)]):
+        chunk = html[a:b]
+        h3 = FLOFR_H3.search(chunk)
+        link = LINK.search(h3.group(1)) if h3 else None
+        if not link:
+            continue
+        title = text_of(link.group(2))
+        if not title:
+            continue
+        rest = chunk[h3.end():]
+        m = FLOFR_DATE.search(rest)
+        if m:
+            try:
+                dt = datetime(int(m.group(3)), int(m.group(1)), int(m.group(2)))
+                date_str = dt.strftime("%Y-%m-%d")
+            except ValueError:
+                dt, date_str = datetime.min, "unknown"
+            summary = text_of(rest[m.end():])[:300]
+        else:
+            dt, date_str, summary = datetime.min, "unknown", text_of(rest)[:300]
+
+        items.append((dt, {
+            "agency": source["agency"],
+            "title": title,
+            "url": urllib.parse.urljoin(source["base"], link.group(1)),
+            "date": date_str,
+            "summary": summary,
+            "source_type": "scraped_list",
+        }))
+    if not items:
+        raise RuntimeError("h3 blocks found but none had a usable title")
+    items.sort(key=lambda p: p[0], reverse=True)
+    return cap([x for _, x in items])
+
+
 # ----------------------------------------------------------------------- main
 
 SOURCES = (
@@ -448,6 +519,7 @@ SOURCES = (
     + ([({**s}, fetch_fedreg_archive) for s in FEDREG_AGENCIES] if ARCHIVE_ENABLED else [])
     + [(s, fetch_table) for s in HTML_TABLES]
     + [(s, fetch_views_rows) for s in VIEWS_ROW_PAGES]
+    + [(s, fetch_flofr) for s in FLOFR_PAGES]
 )
 
 def main():

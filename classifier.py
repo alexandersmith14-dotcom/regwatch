@@ -29,7 +29,13 @@ BaaS or sponsor-bank arrangements; payments, money transmission or MSB rules;
 prepaid, stored value or FBO/for-benefit-of accounts; stablecoins, digital assets,
 crypto or virtual currency; open banking or data access (e.g. Dodd-Frank 1033);
 marketplace, embedded or non-bank lending; neobanks and bank-fintech partnerships;
-or a fintech charter or licensing question.
+or a substantive change to a fintech charter or licensing regime.
+
+A routine operational reminder to existing licensees — a license-renewal deadline,
+a continuing-education deadline, a fee-schedule or filing-window notice — is NOT a
+licensing question in this sense, even when the licensees are money transmitters,
+check cashers or other fintech-adjacent firms. The trigger is a change to the
+rules, not a reminder to comply with existing ones.
 
 It is NOT fintech-specific merely because a fintech would also have to comply.
 Routine safety-and-soundness guidance, bank failures, general fair-lending rules,
@@ -107,8 +113,13 @@ Summary: {u['summary'] or '(no summary provided)'}
 
 Judge relevance against our focus above. Set relevant=false for items outside it
 (agricultural lending, credit-union-only matters we don't touch, routine personnel
-or administrative notices). Set fintech_specific per the scope above — be strict,
-most bank regulation is not fintech-specific.
+or administrative notices). Administrative notices include reminders to existing
+licensees to renew a license, meet a continuing-education deadline, or pay a fee —
+these are not regulatory developments even when they come from a financial
+regulator and even when the licensees are money-services or fintech firms. A
+change to the licensing rules is relevant; a reminder to comply with the current
+ones is not. Set fintech_specific per the scope above — be strict, most bank
+regulation is not fintech-specific.
 
 Write plain_english for a reader who already knows we cover community banks and
 fintechs: say what changed and who it hits. Do not pad it with the phrase

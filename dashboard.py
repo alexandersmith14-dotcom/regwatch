@@ -63,6 +63,8 @@ SOURCE_LINKS = {
     "CFPB Rules": "https://www.consumerfinance.gov/rules-policy/final-rules/",
     "FinCEN Advisories": "https://www.fincen.gov/resources/advisoriesbulletinsfact-sheets",
     "NCUA Press": "https://ncua.gov/news/press-releases",
+    # First state regulator.
+    "FL OFR Press": "https://flofr.gov/news/press-releases",
 }
 
 # Every cite in regref.py is a part of title 12, given as "12 CFR 215",
@@ -886,15 +888,29 @@ def coverage_panel(store):
             f'{len(d)} items, {d[0]} to {d[-1]}</div>'
         )
 
+    # Florida OFR is a state regulator and the only one currently tracked, so the
+    # "not tracked" note has to carve it out or the panel contradicts itself the
+    # way it did over FTC/CFTC. Detected from the live source list rather than
+    # hard-coded, so it stays correct as states are added or removed.
+    state_tracked = sorted(a for a in active if a.startswith("FL OFR"))
+    if state_tracked:
+        state_note = (
+            'MOST state regulators (including NYDFS and California DFPI, which '
+            'block automated access) — Florida\'s Office of Financial Regulation '
+            'is tracked and is the exception')
+    else:
+        state_note = ('state regulators (including NYDFS and California DFPI, '
+                      'which block automated access)')
+
     return (
         '<details class="coverage"><summary>What this covers, and what it does not'
         '</summary><div class="body">'
         '<p><strong>Tracked:</strong> the US federal banking and financial-crime '
-        'agencies listed below. History depth varies by source — some publish '
-        'archives going back years, others only their most recent items.</p>'
+        'agencies listed below, plus the Florida Office of Financial Regulation. '
+        'History depth varies by source — some publish archives going back years, '
+        'others only their most recent items.</p>'
         f'<div class="grid">{"".join(rows)}</div>'
-        '<p style="margin-top:12px"><strong>Not tracked:</strong> state regulators '
-        '(including NYDFS and California DFPI, which block automated access), '
+        f'<p style="margin-top:12px"><strong>Not tracked:</strong> {state_note}, '
         'FFIEC, SEC, FTC and CFTC. Congressional activity and court decisions are '
         'not covered. Anything an agency published but did not list on the pages '
         'above will be missing.</p>'

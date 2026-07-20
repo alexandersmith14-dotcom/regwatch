@@ -13003,5 +13003,475 @@
     "first_seen": "2026-07-20",
     "last_seen": "2026-07-20",
     "fr_checked": true
+  },
+  "2c4e1d5636655dbf": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Enforcement Action",
+    "urgency": "Medium",
+    "plain_english": "Florida's OFR reached a settlement/agreement with BAM Trading Services (Binance.US), a crypto exchange licensed in Florida as a money transmitter. This is a state-level enforcement-type action against a crypto money transmitter, signaling continued regulatory scrutiny of crypto exchanges operating under MSB licenses.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "crypto",
+      "money transmitter",
+      "enforcement",
+      "Florida OFR",
+      "MSB"
+    ],
+    "key": "2c4e1d5636655dbf",
+    "title": "OFR Enters into Agreement with BAM Trading Services, Inc.",
+    "date": "2025-11-04",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/ofr-enters-into-agreement-with-bam-trading-services--inc",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "8ec0de15dfe35bf6": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "A $106M multistate/SEC settlement with Vanguard over securities/mutual fund matters. This concerns an asset manager and broker-dealer, not community banks, BaaS arrangements, or the fintech topics we cover.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "securities",
+      "SEC",
+      "out-of-scope"
+    ],
+    "key": "8ec0de15dfe35bf6",
+    "title": "$106 Million Multistate Settlement Reached with Vanguard",
+    "date": "2025-01-17",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/106-million-multistate-settlement-reached-with-vanguard",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "95503268f0d3a69a": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "",
+    "effective_or_comment_date": "Not stated",
+    "tags": [],
+    "key": "95503268f0d3a69a",
+    "title": "$20 Million Fine Levied Against Bayview Companies",
+    "date": "2025-01-08",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/20-million-fine-levied-against-bayview-companies",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "914d3bef71cf8cce": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida's OFR placed Alliance Credit Union of Florida into conservatorship with NCUA appointed as conservator. This is a credit-union-only matter outside our coverage scope.",
+    "effective_or_comment_date": "2024-11-08",
+    "tags": [
+      "credit union",
+      "conservatorship",
+      "Florida"
+    ],
+    "key": "914d3bef71cf8cce",
+    "title": "Alliance Credit Union of Florida Conserved",
+    "date": "2024-11-08",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/alliance-credit-union-of-florida-conserved",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "3ed9835f7e3fd967": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Florida OFR published a consumer-assistance notice pointing residents affected by Hurricane Helene to resources for locating their financial services providers. This is a disaster-response public service announcement, not a regulatory change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Florida OFR",
+      "disaster relief",
+      "consumer resources"
+    ],
+    "key": "3ed9835f7e3fd967",
+    "title": "OFR Offers Helpful Resources for Floridians Impacted by Hurricane Helene",
+    "date": "2024-10-04",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/ofr-offers-helpful-resources-for-floridians-impacted-by-hurricane-helene",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "950fd4a588dfd82d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Florida's OFR issued a press release touting its budget accomplishments for FY2024-25. This is an administrative/promotional notice with no rule change or new requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "press release",
+      "Florida OFR"
+    ],
+    "key": "950fd4a588dfd82d",
+    "title": "Office of Financial Regulation Highlights 2024-25 Budget Accomplishments",
+    "date": "2024-06-13",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/office-of-financial-regulation-highlights-2024-25-budget-accomplishments",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "575607e9c0897d79": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida OFR issued an immediate cease-and-desist order against GSB LTD (d/b/a GS Partners) and affiliated GSB Group entities over alleged unregistered and fraudulent securities and banking activity. This is a state enforcement action against an unlicensed crypto/investment operation, not a rule change affecting regulated banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "unregistered securities",
+      "crypto",
+      "state regulator"
+    ],
+    "key": "575607e9c0897d79",
+    "title": "OFR Issues Immediate Final Order to GSB LTD, d/b/a GS Partners",
+    "date": "2023-11-27",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/ofr-issues-immediate-final-order-to-gsb-ltd--d-b-a-gs-partners",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "a7088a84f3e864da": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Florida's OFR Commissioner issued a statement on the Governor signing SB 180 on securities regulation. This concerns state securities law and does not address community banking, BaaS, payments, or other fintech topics in our scope.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "securities",
+      "Florida",
+      "state regulation"
+    ],
+    "key": "a7088a84f3e864da",
+    "title": "Statement on the Signing of Securities Legislation",
+    "date": "2023-06-09",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/statement-on-the-signing-of-securities-legislation",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "19c8d5a96cb718d7": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Notice",
+    "urgency": "Medium",
+    "plain_english": "Florida enacted HB 607, revising its Money Services Businesses statute, which governs money transmitters and related MSBs operating in the state. This is a statutory change to the licensing/regulatory regime for money-services firms, not a routine reminder. Fintechs and MSBs licensed or seeking to operate in Florida should review the new requirements, though the specifics aren't detailed in this statement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "money transmission",
+      "MSB",
+      "state licensing",
+      "Florida",
+      "fintech"
+    ],
+    "key": "19c8d5a96cb718d7",
+    "title": "Statement on the Signing of Money Services Legislation",
+    "date": "2023-05-25",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/statement-on-the-signing-of-money-services-legislation",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "43ae35198a02f6ef": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Florida OFR is promoting America Saves Week financial wellness resources. This is a consumer-education PR item with no regulatory change or obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial literacy",
+      "press release",
+      "no action"
+    ],
+    "key": "43ae35198a02f6ef",
+    "title": "OFR Celebrates America Saves Week 2023",
+    "date": "2023-02-27",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/ofr-celebrates-america-saves-week-2023",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "d7c6a2e5adec57b3": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida OFR announced the arrest of an individual for an elder investment fraud scheme involving unregistered securities sales. This is an individual criminal enforcement matter, not a regulatory change affecting banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "elder-exploitation",
+      "securities"
+    ],
+    "key": "d7c6a2e5adec57b3",
+    "title": "Orlando Man Arrested for Alleged Role in Elder Investment Scam",
+    "date": "2022-12-23",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/orlando-man-arrested-for-alleged-role-in-elder-investment-scam",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "07f3b4d7177ce951": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida's OFR sent warning letters, subpoenas and document requests to more than a dozen unlicensed check-cashing operators for advertising and providing check-cashing services without a license. This is a state enforcement sweep against specific unlicensed actors, not a change to licensing rules or MSB regulation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "check cashing",
+      "Florida",
+      "unlicensed activity"
+    ],
+    "key": "07f3b4d7177ce951",
+    "title": "OFR Issues Warning to Unlicensed Check Cashers",
+    "date": "2022-12-02",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/ofr-issues-warning-to-unlicensed-check-cashers1222022",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "75c8f34750f8d70d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "A Florida individual was sentenced for an investment fraud scheme targeting an elderly couple. This is a criminal enforcement matter against an individual, not a change to any rule affecting community banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "Florida"
+    ],
+    "key": "75c8f34750f8d70d",
+    "title": "Former Naples Man Sentenced for Role in Investment Scam",
+    "date": "2022-11-17",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/former-naples-man-sentenced-for-role-in-investment-scam",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "f32d2eba6a103373": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "A Florida man was sentenced for an investment fraud scheme. This is an individual criminal enforcement matter with no bearing on community bank or fintech regulation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "Florida"
+    ],
+    "key": "f32d2eba6a103373",
+    "title": "Tampa Area Man Sentenced for Role in Investment Fraud",
+    "date": "2022-11-15",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/tampa-area-man-sentenced-for-role-in-investment-fraud",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "e6151cd37841f648": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "Florida enacted SB 1680, which modernizes and revises outdated language in the state's banking laws. It's a general update to Florida's banking statutes affecting state-chartered institutions; the summary provides no fintech-specific detail.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Florida",
+      "state banking law",
+      "modernization",
+      "OFR"
+    ],
+    "key": "e6151cd37841f648",
+    "title": "Statement on the Signing of Banking Modernization Legislation",
+    "date": "2022-06-09",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/statement-on-the-signing-of-banking-modernization-legislation",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "d1ec54f4da6dbbae": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Florida OFR press release touting state budget funding for its financial modernization efforts after the governor signed the FY2022-2023 budget. It announces no rule change or new requirement affecting banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Florida OFR",
+      "press release",
+      "budget",
+      "administrative"
+    ],
+    "key": "d1ec54f4da6dbbae",
+    "title": "Freedom First Budget Furthers OFR Financial Modernization Efforts",
+    "date": "2022-06-07",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/freedom-first-budget-furthers-ofr-financial-modernization-efforts",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "69908d0d31fbbbc5": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "A Florida man was sentenced for stock and real estate investment scams and ordered to pay restitution. This is an individual fraud enforcement matter with no bearing on bank or fintech regulation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "securities fraud",
+      "Florida"
+    ],
+    "key": "69908d0d31fbbbc5",
+    "title": "Delray Beach Man Sentenced to Five Years for Role in Securities and Real Estate Investment Scams",
+    "date": "2022-06-01",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/delray-beach-man-sentenced-to-five-years-for-role-in-securities-and-real-estate-investment-scams",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "bf40a3a22a2a8897": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Notice",
+    "urgency": "Medium",
+    "plain_english": "Florida's OFR Commissioner commented on Governor DeSantis signing HB 273, which amends the state's Money Services Businesses statute and addresses cryptocurrency/virtual currency activity. This affects MSBs and crypto firms operating in Florida by changing the state licensing/regulatory framework for virtual currency.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cryptocurrency",
+      "money services business",
+      "Florida",
+      "state law",
+      "virtual currency"
+    ],
+    "key": "bf40a3a22a2a8897",
+    "title": "Statement on the Signing of Cryptocurrency Legislation",
+    "date": "2022-05-13",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/statement-on-the-signing-of-cryptocurrency-legislation5132022",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "59f90049a3c65ad2": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida OFR announced the arrest of an individual for an alleged fraudulent investment scheme with over $377,000 in victim losses. This is a state fraud enforcement action against an individual, not a regulatory change affecting banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "Florida OFR"
+    ],
+    "key": "59f90049a3c65ad2",
+    "title": "Miami Man Arrested for Role in Alleged Investment Scam",
+    "date": "2022-05-05",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/miami-man-arrested-for-role-in-alleged-investment-scam",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "7c2ddc89017e9061": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Enforcement Action",
+    "urgency": "Low",
+    "plain_english": "Florida OFR announced the arrest of an individual loan broker for an alleged advance-fee loan fraud scheme, charged with grand theft, identity theft, and violating Florida's loan broker law. This is an individual criminal enforcement matter, not a regulatory rule change affecting banks or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "enforcement",
+      "fraud",
+      "loan broker",
+      "Florida"
+    ],
+    "key": "7c2ddc89017e9061",
+    "title": "Hendry County Loan Broker Arrested for Role in Alleged Fraudulent Advance Fee for Loan Scheme",
+    "date": "2022-03-25",
+    "sources": [
+      "FL OFR Press"
+    ],
+    "url": "https://flofr.gov/news/press-releases/details/hendry-county-loan-broker-arrested-for-role-in-alleged-fraudulent-advance-fee-for-loan-scheme",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
   }
 }
