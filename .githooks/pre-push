@@ -1,0 +1,10 @@
+#!/bin/sh
+# Blocks a push that would delete events from store.json.
+#
+# Versioned in the repo rather than living in .git/hooks, which git does not
+# track. Enable once per clone:
+#
+#     git config core.hooksPath .githooks
+#
+# Override for a deliberate deletion:  STORE_ALLOW_SHRINK=1 git push
+python check_store.py origin/main || exit 1
