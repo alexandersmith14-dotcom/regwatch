@@ -13808,5 +13808,3201 @@
     "first_seen": "2026-07-20",
     "last_seen": "2026-07-20",
     "fr_checked": false
+  },
+  "875d9c0fe266be43": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking is promoting a free consumer-oriented webinar on cybersecurity awareness. This is an educational outreach event, not a regulatory development or change to any rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "consumer education",
+      "cybersecurity",
+      "outreach"
+    ],
+    "key": "875d9c0fe266be43",
+    "title": "Free Financial Education Webinar: Cybersecurity Awareness: Protecting Financial Accounts in the Digital Age",
+    "date": "2026-04-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2026-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b0596bba3323869e": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking issued a cyber alert covering basic cyber hygiene fundamentals for financial institutions. This is general safety-and-soundness awareness guidance, not a binding rule change, and applies broadly to state-supervised institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "state regulator",
+      "Texas",
+      "guidance"
+    ],
+    "key": "b0596bba3323869e",
+    "title": "Cyber Alert: The Fundamentals of Cyber Hygiene for Financial Institutions",
+    "date": "2026-03-09",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2026-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "f890feff854eda8a": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of a banking conference co-hosted by the Dallas Fed and the Texas Department of Banking. It is an event notice, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "conference",
+      "event",
+      "Texas",
+      "notice"
+    ],
+    "key": "f890feff854eda8a",
+    "title": "2026 Eleventh District Banking Conference - Hosted by the Federal Reserve Bank of Dallas in Partnership with the Texas Department of Banking",
+    "date": "2026-02-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2026-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "e0abb72d0b402c09": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking is relocating its Dallas regional office. This is a purely administrative notice with no regulatory or compliance implications.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "office relocation"
+    ],
+    "key": "e0abb72d0b402c09",
+    "title": "Dallas Regional Office Relocation",
+    "date": "2025-12-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "bf0ed0c8774444f6": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a free consumer financial education webinar on earning and budgeting. It is not a regulatory development and carries no compliance implications.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "consumer outreach"
+    ],
+    "key": "bf0ed0c8774444f6",
+    "title": "Free Financial Education Webinar: Earning and Budgeting: Your Pathway to a Strong Financial Foundation",
+    "date": "2025-11-07",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "75d16d55089c60da": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking is hosting a training webinar on its new FLEX system. This is an administrative/operational notice, not a change to any regulatory requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "administrative notice",
+      "training"
+    ],
+    "key": "75d16d55089c60da",
+    "title": "FLEX System Training Webinar: Texas Department of Banking Hosts Training on New FLEX System",
+    "date": "2025-09-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "38c5d90889fda3b1": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking announced a new system called FLEX, an administrative/operational IT announcement with no substantive rule change described. It does not alter regulatory requirements for banks, credit unions, or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "administrative",
+      "state regulator"
+    ],
+    "key": "38c5d90889fda3b1",
+    "title": "Texas Department of Banking Unveils FLEX System",
+    "date": "2025-09-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "a7217ed4237f4754": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A free educational webinar on avoiding financial exploitation hosted by the TX Dept of Banking. This is a public outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "event"
+    ],
+    "key": "a7217ed4237f4754",
+    "title": "Free Financial Education Webinar: Avoiding Financial Exploitation",
+    "date": "2025-08-14",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "7bb2cfcd45ebae46": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The TX Dept of Banking published cyber hygiene awareness fact sheets and suggested board questions to help institutions assess their cybersecurity posture. This is educational/awareness material for supervised banks, not a new rule or requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "guidance",
+      "state-regulator",
+      "board-oversight"
+    ],
+    "key": "7bb2cfcd45ebae46",
+    "title": "Cyber Hygiene Awareness Fact Sheets and Board Questions",
+    "date": "2025-07-09",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b4e604936f386df4": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice for a free consumer financial education webinar. It carries no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach"
+    ],
+    "key": "b4e604936f386df4",
+    "title": "Free Financial Education Webinar: Improving Your Financial Confidence",
+    "date": "2025-05-19",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "a9c0613047d6577e": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of a banking conference co-hosted by the Dallas Fed and the Texas Department of Banking. It is an event notice with no regulatory change or requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "event",
+      "conference",
+      "Texas"
+    ],
+    "key": "a9c0613047d6577e",
+    "title": "2025 Eleventh District Banking Conference Hosted by the Federal Reserve Bank of Dallas in Partnership with the Texas Department of Banking",
+    "date": "2025-04-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "8a996a567724a28c": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional announcement for a free financial education webinar hosted by the Texas Department of Banking. It contains no regulatory development, rule change, or supervisory expectation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "event",
+      "non-regulatory"
+    ],
+    "key": "8a996a567724a28c",
+    "title": "Free Financial Education Webinar: Financial Fitness",
+    "date": "2025-02-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "db5e0dc100b69dfd": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "The Texas Department of Banking issued a cyber alert urging state-regulated institutions to take immediate steps to guard against cybersecurity threats. It's a general safety-and-soundness advisory applicable to supervised banks, not tied to a specific rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "state regulator",
+      "Texas",
+      "guidance"
+    ],
+    "key": "db5e0dc100b69dfd",
+    "title": "Cyber Alert: Cybersecurity Threats: Actions to Take Today",
+    "date": "2025-01-24",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2025-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "7dd6cc2a04fb40d2": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking is promoting a free financial education webinar for young adults. This is a consumer outreach event with no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "Texas"
+    ],
+    "key": "7dd6cc2a04fb40d2",
+    "title": "Free Financial Education Webinar: Financial Foundations for Young Adults",
+    "date": "2024-11-04",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2024-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "7266c0b9664404c8": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas Department of Banking updated a voluntary ransomware self-assessment tool aimed at prepaid funeral contract sellers and perpetual care cemeteries. These entities fall outside our coverage of community banks, credit unions, and fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "cybersecurity",
+      "ransomware",
+      "nonbank"
+    ],
+    "key": "7266c0b9664404c8",
+    "title": "Updated Nonbank Financial Service Businesses Ransomware Self-Assessment Tool - Prepaid Funeral Contract Sellers and Perpetual Care Cemeteries",
+    "date": "2024-10-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2024-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "45198a69c9d221c2": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Dept of Banking updated its ransomware self-assessment tool for money services businesses, a voluntary framework to help MSBs gauge cybersecurity readiness against ransomware threats. It hits Texas-licensed money transmitters and MSBs but is guidance/tooling rather than a binding rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MSB",
+      "cybersecurity",
+      "ransomware",
+      "Texas",
+      "money transmission"
+    ],
+    "key": "45198a69c9d221c2",
+    "title": "Updated Nonbank Financial Service Businesses Ransomware Self-Assessment Tool - Money Services Businesses",
+    "date": "2024-10-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2024-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "150e0d7d04406024": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The FFIEC announced it will sunset its Cybersecurity Assessment Tool (CAT), which institutions have used to gauge cyber risk and preparedness. Banks and credit unions relying on the CAT will need to transition to alternative frameworks (e.g., NIST CSF, CISA CPGs). No new obligation, but existing cyber self-assessment practices tied to the tool should be updated.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "FFIEC",
+      "risk management",
+      "examination"
+    ],
+    "key": "150e0d7d04406024",
+    "title": "Federal Financial Institutions Examination Council Announces the Sunset of Cybersecurity Assessment Tool (CAT)",
+    "date": "2024-08-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2024-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "fae56da5b6854625": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of a 2024 Regional Bank Risk Summit hosted by the Texas Department of Banking. It is an event notice, not a regulatory development, and imposes no new rules or requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "event",
+      "Texas",
+      "conference"
+    ],
+    "key": "fae56da5b6854625",
+    "title": "2024 Regional Bank Risk Summit",
+    "date": "2024-08-27",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/industrynotices/in2024-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4eacb1638d25c9f2": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice authorizing emergency closing of offices, likely a routine administrative/operational proclamation tied to weather or emergency events. It does not change any regulatory rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "emergency-closing"
+    ],
+    "key": "4eacb1638d25c9f2",
+    "title": "Emergency Closing of Offices",
+    "date": "2024-07-05",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2024-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "afd76f63fc4b1951": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking is promoting a free financial education webinar. This is an outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "event"
+    ],
+    "key": "afd76f63fc4b1951",
+    "title": "Free Financial Education Webinar: Inform, Inspire, Ignite!",
+    "date": "2024-03-22",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2024-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0d05d7165e888bc7": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An operational advisory about the April 8 solar eclipse, not a regulatory development. No rule change or compliance obligation for banks, credit unions, or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "operational notice",
+      "Texas"
+    ],
+    "key": "0d05d7165e888bc7",
+    "title": "Texas Department of Banking Provides Guidance for April 8 Eclipse",
+    "date": "2024-03-07",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2024-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "f6025d217f8b4fd7": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An on-demand consumer financial education webinar on getting organized. This is a public education resource, not a regulatory development affecting bank, credit union, or fintech obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "consumer outreach",
+      "Texas"
+    ],
+    "key": "f6025d217f8b4fd7",
+    "title": "On-Demand Financial Education Webinar: Ready, Set, Get Organized!",
+    "date": "2024-02-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2024-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "95e190a15d14b261": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Banking Commissioner submitted comments on an FDIC proposal setting corporate governance and risk management standards for institutions with $10B+ in assets. This targets larger institutions above our community-bank threshold and is a comment letter, not a rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "corporate governance",
+      "risk management",
+      "FDIC",
+      "comment letter"
+    ],
+    "key": "95e190a15d14b261",
+    "title": "Commissioner Submits Comments in Response to FDIC Proposed Guidelines Establishing Standards for Corporate Governance and Risk Management for Covered Institutions with Total Consolidated Assets for $10 Billion or More",
+    "date": "2024-02-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/ltr2024-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "ab4ad5fea976447f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A consumer-facing financial education webinar on managing holiday finances. It carries no regulatory change or compliance obligation for supervised institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "consumer education",
+      "webinar",
+      "non-regulatory"
+    ],
+    "key": "ab4ad5fea976447f",
+    "title": "On Demand Financial Education Webinar: Financially Surviving the Holidays",
+    "date": "2023-11-30",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2023-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2aa3a8f289e1422c": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking released version 2.0 of its Ransomware Self-Assessment Tool to help institutions evaluate and reduce ransomware exposure. This is voluntary cybersecurity guidance relevant to state-supervised banks; it's a resource, not a new mandate.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "ransomware",
+      "state regulator",
+      "operational risk"
+    ],
+    "key": "2aa3a8f289e1422c",
+    "title": "Ransomware Self-Assessment Tool Version 2.0 for Mitigating the Risks of Ransomware",
+    "date": "2023-10-25",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2023-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "8866e8e95b04952c": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Other",
+    "urgency": "Medium",
+    "plain_english": "The Texas Legislature passed legislation changing the regulatory framework for money services businesses (money transmitters and currency exchangers). This affects MSBs and fintechs licensed or operating in Texas, potentially altering licensing, compliance, or supervisory requirements. Firms should review the enacted changes to assess impact on their Texas operations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "money services businesses",
+      "money transmission",
+      "state licensing",
+      "Texas",
+      "fintech"
+    ],
+    "key": "8866e8e95b04952c",
+    "title": "Texas Legislature Passes Legislation Impacting Money Services Businesses",
+    "date": "2023-08-22",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2023-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "633950ae035faab8": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "The Texas Department of Banking clarified how state legal lending limits apply when a bank purchases loans originated by third parties, raising supervisory concerns about concentration and credit risk in loan-purchase arrangements. This directly affects state-chartered banks buying loans from fintech or marketplace lenders, a common structure in bank-fintech partnership and BaaS lending programs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "lending limits",
+      "loan purchases",
+      "bank-fintech partnerships",
+      "marketplace lending",
+      "state supervision",
+      "credit risk"
+    ],
+    "key": "633950ae035faab8",
+    "title": "Applicability of Texas Legal Lending Limit Statutes to Purchases of Third-Party Loans and Related Supervisory Concerns",
+    "date": "2023-04-25",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2023-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "32623a0812cb60a3": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A consumer financial education webinar on vehicle purchasing, jointly hosted by two Texas state agencies. This is a public outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "consumer education",
+      "Texas",
+      "webinar"
+    ],
+    "key": "32623a0812cb60a3",
+    "title": "Free Financial Education Webinar: Making a Streetwise Vehicle Purchase Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2023-03-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2023-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "40296de0f90f953e": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice for a free consumer financial education webinar on avoiding financial exploitation, jointly hosted by two Texas agencies. It carries no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "consumer education",
+      "webinar",
+      "non-regulatory"
+    ],
+    "key": "40296de0f90f953e",
+    "title": "Free Financial Education Webinar: Avoiding the Risk of Financial Exploitation, Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2022-11-17",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "aece090dc14753ee": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A consumer-facing financial education webinar about understanding credit. This is a public outreach event with no regulatory change or compliance obligation for supervised institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "consumer education",
+      "outreach",
+      "not relevant"
+    ],
+    "key": "aece090dc14753ee",
+    "title": "Financial Education Webinar: Understanding Your Credit",
+    "date": "2022-08-25",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "faa91d3ce6265508": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Final Rule",
+    "urgency": "Medium",
+    "plain_english": "Texas amended its rule to require state-chartered banks to notify the Department of Banking of computer security incidents. Texas state-chartered banks must update their incident-response and notification procedures to comply.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "incident notification",
+      "Texas",
+      "state-chartered banks"
+    ],
+    "key": "faa91d3ce6265508",
+    "title": "Amendment to Rule Requiring Notification of a Computer Security Incident by a Texas State-Chartered Bank",
+    "date": "2022-08-22",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "12d4fc232bcd085b": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a consumer financial-education webinar hosted by the Dallas Fed. It carries no regulatory change or compliance obligation for banks, credit unions, or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "webinar",
+      "non-regulatory"
+    ],
+    "key": "12d4fc232bcd085b",
+    "title": "Financial Education Webinar: Building Wealth: A Checklist to Get You Started Presented by the Federal Reserve Bank of Dallas",
+    "date": "2022-04-20",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "83b45fba828fb569": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an administrative oath-of-office affidavit for a director, not a regulatory development. It carries no rule change or compliance obligation for supervised institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "personnel"
+    ],
+    "key": "83b45fba828fb569",
+    "title": "Director\u2019s Affidavit - Oath of Office",
+    "date": "2022-03-14",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "5487edeb09631b77": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "This is a routine administrative form (oath of office affidavit) for directors, managers, and managing participants at Texas state-chartered institutions. It is a standard filing document, not a change to any regulatory requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "forms",
+      "Texas"
+    ],
+    "key": "5487edeb09631b77",
+    "title": "Director, Manager, Managing Participant Affidavit \u2013 Oath of Office",
+    "date": "2022-03-14",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "413b90cdea0254d8": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a consumer financial education webinar hosted jointly by Texas regulators, not a regulatory development. It imposes no new obligations on any institution.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "Texas",
+      "consumer outreach"
+    ],
+    "key": "413b90cdea0254d8",
+    "title": "Financial Education Webinar: Money Smart: Values, Influences, Spending and Saving, Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2022-02-11",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2022-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "98ee37bb197ce405": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a consumer financial-education webinar on holiday spending co-hosted by two Texas agencies. It carries no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "consumer outreach",
+      "Texas"
+    ],
+    "key": "98ee37bb197ce405",
+    "title": "Financial Education Webinar: Holiday Spending Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2021-11-10",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "5089091d5cca4f5e": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A general awareness notice tied to Cybersecurity Awareness Month promoting cybersecurity fundamentals. It carries no new rule, requirement, or deadline.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "awareness",
+      "Texas"
+    ],
+    "key": "5089091d5cca4f5e",
+    "title": "Cybersecurity Awareness Month: Focusing on the Fundamentals",
+    "date": "2021-10-06",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "96dae67872461366": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Texas directs money services businesses to file their Call Report through the NMLS system. This is a reporting-mechanism/filing procedure for MSB licensees rather than a substantive change to money-transmission rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "money services business",
+      "NMLS",
+      "MSB call report",
+      "Texas",
+      "money transmission"
+    ],
+    "key": "96dae67872461366",
+    "title": "Utilization of Nationwide Multistate Licensing System Money Services Business Call Report",
+    "date": "2021-09-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "45b4470555dad197": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The TX Dept of Banking is soliciting pre-comment input and hosting a webinar on rules governing electronic disclosure for home equity lending and treatment of out-of-state financial institutions. This is an early-stage rulemaking notice affecting lenders making Texas home equity loans, including community banks operating in the state.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "home equity lending",
+      "electronic disclosure",
+      "rulemaking",
+      "consumer lending"
+    ],
+    "key": "45b4470555dad197",
+    "title": "Home Equity Lending: Electronic Disclosure and Out-of-State Financial Institutions Precomment and Webinar Notice",
+    "date": "2021-07-19",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "2db030cc15ea1c37": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a consumer financial-education webinar on budgeting jointly hosted by Texas state regulators. It carries no regulatory change or obligation for any supervised institution.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "Texas",
+      "outreach"
+    ],
+    "key": "2db030cc15ea1c37",
+    "title": "Financial Education Webinar: Building a Better Budget Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2021-07-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "8c4fb41acfc50728": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "Texas' banking regulator clarified that state-chartered banks have authority to provide virtual currency custody services to customers, provided they have adequate risk-management and controls in place. This gives Texas banks a green light to offer crypto custody, expanding permissible activity in the digital-asset space.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "digital assets",
+      "crypto custody",
+      "state banking",
+      "Texas",
+      "virtual currency"
+    ],
+    "key": "8c4fb41acfc50728",
+    "title": "Authority of Texas State-Chartered Banks to Provide Virtual Currency Custody Services to Customers",
+    "date": "2021-06-10",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2c9d7f5e1d6e0d55": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas is imposing additional AML program requirements and mandating participation in the FinCEN 314(a) information-sharing program for state-chartered public trust companies. This is a BSA/AML compliance expansion targeting trust companies rather than banks or fintechs specifically.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "314(a)",
+      "trust companies",
+      "Texas",
+      "FinCEN"
+    ],
+    "key": "2c9d7f5e1d6e0d55",
+    "title": "Additional Anti-Money Laundering Program Requirements and Participation in 314(a) Program for Texas State-Chartered Public Trust Companies",
+    "date": "2021-06-07",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0d76c6591dd9688b": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A consumer financial education webinar on housing decisions, jointly presented by two Texas state agencies. This is a public outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "consumer outreach",
+      "Texas"
+    ],
+    "key": "0d76c6591dd9688b",
+    "title": "Financial Education Webinar: A Blueprint for Smart Housing Decisions Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2021-04-14",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2021-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "55c771bb5a25b4b6": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas Department of Banking published a voluntary self-assessment tool to help nonbank financial service businesses (including PFCs/PCCs and money-services firms) gauge and reduce ransomware risk. It's an optional resource, not a rule change, but relevant to fintechs and MSBs operating in Texas assessing cyber resilience.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "ransomware",
+      "nonbank",
+      "Texas",
+      "MSB"
+    ],
+    "key": "55c771bb5a25b4b6",
+    "title": "Self-Assessment Tool for Mitigating the Risks of Ransomware for Nonbank Financial Service Businesses \u2013 PFC/PCC",
+    "date": "2020-12-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-16.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "f910fa2e8da4d2e5": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas DOB released a voluntary self-assessment tool to help money services businesses evaluate and mitigate ransomware risk. It's guidance/resource material aimed at nonbank financial firms, not a binding rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MSB",
+      "cybersecurity",
+      "ransomware",
+      "state guidance",
+      "money transmission"
+    ],
+    "key": "f910fa2e8da4d2e5",
+    "title": "Self-Assessment Tool for Mitigating the Risks of Ransomware for Nonbank Financial Service Businesses \u2013 MSB",
+    "date": "2020-12-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-15.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4f46ad409c888957": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a consumer financial education webinar on applying for credit, jointly hosted by two Texas regulators. It is an educational outreach event, not a regulatory development affecting institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "consumer education",
+      "Texas",
+      "webinar"
+    ],
+    "key": "4f46ad409c888957",
+    "title": "Financial Education Webinar: Applying for Credit Presented Jointly by the Office of Consumer Credit Commissioner and Texas Department of Banking",
+    "date": "2020-10-26",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-14.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "f85e47a34d826c2b": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking published a voluntary self-assessment tool to help state-chartered institutions evaluate and mitigate ransomware risks. It's a cybersecurity resource rather than a binding rule, useful for internal audit and IT risk programs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "ransomware",
+      "state regulator",
+      "risk management"
+    ],
+    "key": "f85e47a34d826c2b",
+    "title": "Self-Assessment Tool for Mitigating the Risks of Ransomware",
+    "date": "2020-10-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-13.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b655a4755658c029": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice permitting emergency closing of offices, typically tied to weather or disaster events. This is an operational/administrative notice and does not change any substantive regulatory obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "emergency closure",
+      "administrative"
+    ],
+    "key": "b655a4755658c029",
+    "title": "Emergency Closing of Offices",
+    "date": "2020-08-25",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "c75b6ad2cdd041ce": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The TX Dept of Banking is reviewing its home equity lending rule and has released a precomment draft plus a webinar notice to solicit early input. This affects Texas-based mortgage/home equity lenders, including community banks that offer home equity products, but it is an early-stage state rule review, not a binding change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "home equity lending",
+      "Texas",
+      "state regulation",
+      "rule review",
+      "consumer lending"
+    ],
+    "key": "c75b6ad2cdd041ce",
+    "title": "Home Equity Lending Rule Review: Precomment Draft and Online Webinar Notice",
+    "date": "2020-07-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "68fd32ceb48bbc73": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Interagency examiner guidance directing supervisors to weight the effects of the COVID-19 pandemic when assessing an institution's safety and soundness. It hits banks and credit unions under examination, instructing examiners to consider pandemic-driven stress rather than penalizing institutions for conditions outside their control.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "safety-and-soundness",
+      "COVID-19",
+      "examination",
+      "interagency-guidance"
+    ],
+    "key": "68fd32ceb48bbc73",
+    "title": "Interagency Examiner Guidance For Assessing Safety and Soundness Considering the Effect of the COVID-19 Pandemic on Institutions",
+    "date": "2020-06-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "a1bc56a2409d9b28": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking announced it would resume its examination process in June 2020 after a COVID-related pause. This is an administrative/operational notice about examiner activity, not a change to any rule or requirement.",
+    "effective_or_comment_date": "June 2020",
+    "tags": [
+      "Texas",
+      "examinations",
+      "COVID-19",
+      "administrative notice"
+    ],
+    "key": "a1bc56a2409d9b28",
+    "title": "Department of Banking Resumes Examination Process in June",
+    "date": "2020-05-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "75d6081f4d55a1bb": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking warned regulated institutions of heightened cyberattack activity during crisis periods (COVID-19), urging vigilance and reinforced cybersecurity controls. This is a general safety-and-soundness advisory applicable to banks operating under Texas oversight.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "state regulator",
+      "Texas",
+      "COVID-19",
+      "operational risk"
+    ],
+    "key": "75d6081f4d55a1bb",
+    "title": "Increased Cyber Activity During Times of Crisis",
+    "date": "2020-04-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "81cdd1228d48c298": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas trust company call report filing and certification of exempt status notice. This is a routine state filing requirement for trust companies, outside our focus on community banks, credit unions, and fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "trust company",
+      "call report"
+    ],
+    "key": "81cdd1228d48c298",
+    "title": "Trust Company Call Report and Certification of Exempt Status",
+    "date": "2020-04-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "dd8f14c34e80e773": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas banking regulator issued business continuity planning guidance in response to COVID-19, prompting state-chartered institutions to review pandemic preparedness and operational resilience. This is general safety-and-soundness guidance for supervised banks.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "business continuity",
+      "COVID-19",
+      "operational resilience",
+      "state regulation"
+    ],
+    "key": "dd8f14c34e80e773",
+    "title": "Business Continuity Planning Considerations \u2013 COVID-19",
+    "date": "2020-03-30",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "9987a07e7bac393d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a COVID-era Treasury/CISA memo designating financial services workers as essential critical infrastructure during pandemic lockdowns. It is an administrative continuity notice, not a change to any banking, credit union, or fintech rule.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "COVID-19",
+      "essential workers",
+      "business continuity"
+    ],
+    "key": "9987a07e7bac393d",
+    "title": "Treasury Memo Designates Financial Services Sector Essential Critical Infrastructure Workers",
+    "date": "2020-03-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "5143bfe5f1057cec": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking issued COVID-19 support and guidance for its regulated institutions, encouraging accommodations for affected customers and operational flexibility during the pandemic. This is general safety-and-soundness/pandemic-response guidance for state-chartered banks, not a rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "COVID-19",
+      "state banking",
+      "guidance",
+      "Texas"
+    ],
+    "key": "5143bfe5f1057cec",
+    "title": "Texas Department of Banking Provides Support and Guidance for Coronavirus Disease 2019 (COVID \u2013 19)",
+    "date": "2020-03-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "1d2520a53c735920": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "Texas DOB sets out requirements for money services businesses (money transmitters/MSBs) to file cybersecurity incident reports with the state. This imposes a new breach/incident reporting obligation on MSBs and payments firms licensed in Texas.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MSB",
+      "money transmission",
+      "cybersecurity",
+      "state regulation",
+      "Texas",
+      "incident reporting"
+    ],
+    "key": "1d2520a53c735920",
+    "title": "Requirements for a Cybersecurity Incident Report filed by a Money Services Business",
+    "date": "2020-02-06",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "c1d2c3e36acc933c": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "The Texas Department of Banking set requirements for state-chartered banks and trust companies to file cybersecurity incident reports. This is a state-level operational/security compliance obligation for Texas-chartered institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "state-chartered banks",
+      "incident reporting",
+      "Texas"
+    ],
+    "key": "c1d2c3e36acc933c",
+    "title": "Requirements for a Cybersecurity Incident Report filed by a Texas State-Chartered Bank or Trust Company",
+    "date": "2020-02-06",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2020-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4846dc257297da6d": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "A recap of highlights from the annual Community Banking in the 21st Century research conference. Informational content on community banking trends and research, not a rule change or actionable requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "community banking",
+      "research",
+      "conference"
+    ],
+    "key": "4846dc257297da6d",
+    "title": "Highlights from the 7 th Annual Community Banking in the 21st Century Research and Policy Conference",
+    "date": "2019-10-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2019-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "e00caac909ae1f81": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative stakeholder meeting notice from the TX Dept of Banking on dispute resolution, negotiated rulemaking, and Finance Commission appeals procedures. This is a procedural/administrative announcement with no substantive rule change affecting the institutions we cover.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative notice",
+      "Texas",
+      "procedural"
+    ],
+    "key": "e00caac909ae1f81",
+    "title": "Stakeholders Meeting: Alternate Dispute Resolution, Negotiated Rulemaking, and Finance Commission Appeals",
+    "date": "2019-09-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2019-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "98c97252c803059b": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking stakeholder meeting to review mortgage payoff statement rules and consider amendments to the payoff statement form. This is a narrow state-level administrative process on mortgage servicing paperwork, not affecting our covered institutions or fintech scope.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "mortgage servicing",
+      "state regulation",
+      "Texas"
+    ],
+    "key": "98c97252c803059b",
+    "title": "Stakeholders Meeting: Review of Mortgage Payoff Statement Rules and Proposed Amendments to Payoff Statement Form",
+    "date": "2019-08-14",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2019-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "e3a673b60ddb7039": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas Department of Banking guidance addressing banking services for hemp and hemp-related products businesses. Without more detail, this appears to be state-level guidance on serving hemp businesses rather than a change affecting our monitored institutions' core rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "hemp",
+      "Texas",
+      "state guidance"
+    ],
+    "key": "e3a673b60ddb7039",
+    "title": "Hemp and Hemp-Related Products",
+    "date": "2019-07-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2019-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "46a306204663e209": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Medium",
+    "plain_english": "Notice that FinCEN's Customer Due Diligence (CDD) rule, including beneficial ownership identification for legal-entity customers, is now in effect for financial institutions. Applies broadly to banks and credit unions, requiring updated BSA/AML onboarding and monitoring procedures.",
+    "effective_or_comment_date": "2018-05-11 (rule effective; notice dated 2018-05-16)",
+    "tags": [
+      "BSA/AML",
+      "CDD",
+      "beneficial ownership",
+      "FinCEN"
+    ],
+    "key": "46a306204663e209",
+    "title": "BSA Customer Due Diligence Requirements for Financial Institutions Now in Effect",
+    "date": "2018-05-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2018-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0215284e9116e8c6": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "State-level guidance encouraging banks to prepare for adopting the CECL accounting methodology for estimating credit losses. Affects loan-loss reserve estimation and data collection at supervised institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "CECL",
+      "accounting",
+      "credit risk",
+      "allowance for loan losses"
+    ],
+    "key": "0215284e9116e8c6",
+    "title": "Preparing for the Implementation of the Current Expected Credit Losses (CECL) Methodology",
+    "date": "2018-03-26",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2018-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "95952fd968c2a0ec": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of an educational workshop on business email compromise hosted by the FBI, Secret Service and others. It is not a regulatory development or a rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "event",
+      "BEC"
+    ],
+    "key": "95952fd968c2a0ec",
+    "title": "Business E-mail Compromise Workshop Presented by the FBI, U.S. Secret Service, MS-ISAC, REN-ISAC, R-CISC, and Symantec",
+    "date": "2017-12-04",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-15.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "491645fa7adcf7d0": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FinCEN issued an advisory alerting financial institutions to red flags associated with proceeds of Venezuelan political corruption moving through the US financial system. Institutions should incorporate these indicators into BSA/AML monitoring and SAR filing. Applies broadly to all financial institutions, not just fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "FinCEN",
+      "advisory",
+      "corruption",
+      "SAR"
+    ],
+    "key": "491645fa7adcf7d0",
+    "title": "FinCEN Issues Advisory to Financial Institutions Regarding Widespread Political Corruption in Venezuela and Proceeds Moving Through U.S. Financial System",
+    "date": "2017-11-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-14.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4db2613fa0c2583d": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FinCEN issued an advisory alerting financial institutions to watch for disaster-related fraud schemes (benefits fraud, charities fraud, cyber-enabled scams) and to file SARs with relevant terminology. This is a BSA/AML awareness advisory applicable to all covered institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "FinCEN",
+      "fraud",
+      "SAR",
+      "advisory"
+    ],
+    "key": "4db2613fa0c2583d",
+    "title": "FinCEN Issues Advisory to Financial Institutions Regarding Disaster-Related Fraud",
+    "date": "2017-11-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-13.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "de9e7ab5f94a54a0": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Texas DOB is hosting an educational webinar for money services businesses covering permissible investment reporting requirements and recent legislative changes. This is an informational event for MSB licensees rather than a new rule, though it touches on legislative changes to money transmission requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "money transmission",
+      "MSB",
+      "Texas",
+      "permissible investments",
+      "payments"
+    ],
+    "key": "de9e7ab5f94a54a0",
+    "title": "Financial Education Webinar for MSBs - Guidance on Texas Permissible Investment Reports and Legislative Changes",
+    "date": "2017-10-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-12.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "bf8b19e1c4e9fede": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice concerning designation of a representative for abandoned-asset notices. This is an administrative/procedural matter unrelated to community bank, credit union, or fintech regulatory developments.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "administrative",
+      "abandoned property"
+    ],
+    "key": "bf8b19e1c4e9fede",
+    "title": "Designation of Representative for Notice of an Abandoned Asset",
+    "date": "2017-10-12",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2b5eaf6b8a4b95bb": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking issued guidance supporting institutions and borrowers affected by Hurricane Harvey, addressing home equity loans and home repairs. It offers regulatory flexibility for lenders working with disaster-affected borrowers in Texas.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "disaster relief",
+      "home equity lending",
+      "Texas",
+      "state guidance"
+    ],
+    "key": "2b5eaf6b8a4b95bb",
+    "title": "Department Provides Support and Guidance for Financial Institutions and Borrowers Affected by Hurricane Harvey \u2013 Home Equity Loans and Home Repairs",
+    "date": "2017-10-02",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "45b5a10f6431c185": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "CSBS released a CECL readiness checklist tool to help institutions prepare for the transition to the current expected credit losses accounting standard. It's a voluntary self-assessment aid for community banks and credit unions managing the implementation of the new loan-loss methodology.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "CECL",
+      "accounting",
+      "credit risk",
+      "CSBS",
+      "community banks"
+    ],
+    "key": "45b5a10f6431c185",
+    "title": "CSBS Current Expected Credit Losses (CECL) Readiness Checklist Tool",
+    "date": "2017-09-27",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "5967c3182ce7e71f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A free financial education webinar announcement about protecting vulnerable adults from financial exploitation. This is an outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "educational event",
+      "elder financial abuse",
+      "outreach"
+    ],
+    "key": "5967c3182ce7e71f",
+    "title": "Free Financial Education Webinar - Protect Vulnerable Adults from Financial Exploitation",
+    "date": "2017-09-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "42dc58027fbd4915": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an administrative announcement of town hall meetings hosted by the Texas Department of Banking. It contains no regulatory change or substantive development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "event",
+      "Texas"
+    ],
+    "key": "42dc58027fbd4915",
+    "title": "Texas Town Hall Meetings 2017",
+    "date": "2017-06-06",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "1c0bc77f1521fc3a": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking flagged an update to the Currency Transaction Report (CTR) form and offered a technical webinar on filing. This is a BSA/AML operational update affecting institutions that file CTRs, but it's a procedural/form update rather than a substantive rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "CTR",
+      "Texas",
+      "reporting"
+    ],
+    "key": "1c0bc77f1521fc3a",
+    "title": "Update to the Currency Transaction Report and Technical Webinar",
+    "date": "2017-06-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "f55720965f5b54e8": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a free financial education webinar tied to the Texas Financial Education Endowment. It carries no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "Texas",
+      "webinar"
+    ],
+    "key": "f55720965f5b54e8",
+    "title": "Free Financial Education Webinar: Texas Financial Education Endowment (TFEE)",
+    "date": "2017-05-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "93762e0e1bd19c87": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a notice of a free educational webinar explaining how money services businesses should complete various filings. It's an operational/educational reminder, not a change to licensing or filing rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MSB",
+      "Texas",
+      "educational webinar",
+      "administrative notice"
+    ],
+    "key": "93762e0e1bd19c87",
+    "title": "Free Financial Education Webinar: Guidance on Various Filings for MSBs",
+    "date": "2017-03-09",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "9fb9be78b1f9c541": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice for a free financial education webinar tied to Money Smart Week Texas. This is an educational event announcement with no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "event notice",
+      "non-regulatory"
+    ],
+    "key": "9fb9be78b1f9c541",
+    "title": "Free Financial Education Webinar: Money Smart Week Texas",
+    "date": "2017-02-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "ca6bf10dec077aae": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An announcement of an upcoming tabletop exercise hosted by the North Texas Electronic Crimes Task Force. This is an event notice, not a regulatory development affecting rules or obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "event",
+      "cybercrime",
+      "Texas"
+    ],
+    "key": "ca6bf10dec077aae",
+    "title": "North Texas Electronic Crimes Task Force \u2013 Upcoming Tabletop Exercise",
+    "date": "2017-01-19",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "13be786b3894f88d": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "CSBS released a voluntary BSA/AML self-assessment tool to help banks gauge their AML risk and control adequacy. It's an optional resource, not a mandate, useful for institutions wanting to benchmark their compliance programs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "CSBS",
+      "self-assessment",
+      "compliance tools"
+    ],
+    "key": "13be786b3894f88d",
+    "title": "Conference of State Bank Supervisors (CSBS) Releases BSA/AML Self-Assessment Tool",
+    "date": "2017-01-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2017-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "fa4a186fd85742cb": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A free educational webinar on cybersecurity awareness for money services businesses. This is an informational/administrative event notice, not a change to any rule or requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "education",
+      "MSB",
+      "Texas"
+    ],
+    "key": "fa4a186fd85742cb",
+    "title": "Free Financial Education Webinar: Cybersecurity Awareness for Money Services Businesses",
+    "date": "2016-10-19",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-12.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "841934e90613757f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Announcement of a free financial education webinar hosted by the Dallas Fed. This is a promotional/educational notice, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "webinar",
+      "administrative notice"
+    ],
+    "key": "841934e90613757f",
+    "title": "Free Financial Education Webinar: Navigate, an Educational Resource by the Dallas FRB",
+    "date": "2016-10-05",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "41ef59b85bcbb70d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of an academic/policy conference on community banking hosted by the TX Dept of Banking. It contains no rule change, guidance, or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "conference",
+      "community banking",
+      "event"
+    ],
+    "key": "41ef59b85bcbb70d",
+    "title": "4th Annual Community Banking Research and Policy Conference",
+    "date": "2016-09-27",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6d174792d15019e7": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas Dept of Banking flagged CFPB amendments to mortgage rules. This is general mortgage-lending regulation affecting mortgage originators; no fintech-specific angle.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "mortgage",
+      "CFPB",
+      "Texas",
+      "consumer lending"
+    ],
+    "key": "6d174792d15019e7",
+    "title": "Guidance on CFPB Amendments to Mortgage Rule",
+    "date": "2016-09-02",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "187f53de6a078835": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Proposed Rule",
+    "urgency": "Medium",
+    "plain_english": "Federal banking regulators via the FFIEC proposed a new streamlined Call Report for small institutions, reducing reporting burden for smaller banks. This would affect community banks that qualify by size and complexity.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Call Report",
+      "FFIEC",
+      "community banks",
+      "reporting burden"
+    ],
+    "key": "187f53de6a078835",
+    "title": "FFIEC - Banking Regulators Seek Comment on Proposed Small Institution \u201cCall Report\u201d",
+    "date": "2016-08-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "1d2f48629c04ef1e": {
+    "relevant": true,
+    "fintech_specific": true,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas banking regulator issued fraud awareness guidance directed at money services businesses. It targets MSBs/money transmitters with fraud-prevention messaging rather than changing any licensing or operational rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MSB",
+      "money transmission",
+      "fraud",
+      "Texas",
+      "guidance"
+    ],
+    "key": "1d2f48629c04ef1e",
+    "title": "Fraud Awareness for Money Services Businesses",
+    "date": "2016-08-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "17ed7c006cae6d00": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "FinCEN issued Geographic Targeting Orders requiring US title insurance companies to report certain all-cash luxury real estate purchases. This targets title insurers, not community banks, credit unions, or fintechs, and falls outside our scope.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "FinCEN",
+      "GTO",
+      "title insurance",
+      "AML"
+    ],
+    "key": "17ed7c006cae6d00",
+    "title": "FinCEN Issues Geographic Targeting Orders: U.S. Title Insurance Companies Must Comply",
+    "date": "2016-07-28",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "d4003d0a619e9c20": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative notice about an upcoming incident response testing exercise from the Texas Department of Banking. This is an operational drill notice, not a regulatory change affecting our covered institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "incident response"
+    ],
+    "key": "d4003d0a619e9c20",
+    "title": "Incident Response Testing - Upcoming Testing Exercise",
+    "date": "2016-07-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b62731eb69e8a0a8": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement for a free financial education webinar about children's college savings accounts in Texas. It carries no regulatory requirement or rule change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "webinar",
+      "administrative notice"
+    ],
+    "key": "b62731eb69e8a0a8",
+    "title": "Free Financial Education Webinar - Expanding Children's Savings Accounts for College in Texas",
+    "date": "2016-06-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "00021e0492bce1b5": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Administrative announcement of the TX Department of Banking's 2016 town hall meetings. No regulatory change or requirement is described.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "event"
+    ],
+    "key": "00021e0492bce1b5",
+    "title": "2016 Town Hall Meetings",
+    "date": "2016-05-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "fa6e78d637915cd7": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an administrative announcement of a train-the-trainer workshop in Dallas, not a regulatory development. It contains no rule changes or compliance obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "event",
+      "Texas"
+    ],
+    "key": "fa6e78d637915cd7",
+    "title": "Train-the-Trainer Workshop in Dallas",
+    "date": "2016-05-02",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "71670cf5fea69b64": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional announcement recognizing National Financial Literacy Month. No regulatory change or requirement is involved.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial-literacy",
+      "announcement"
+    ],
+    "key": "71670cf5fea69b64",
+    "title": "April is National Financial Literacy Month",
+    "date": "2016-04-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2016-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4d5ff0853c18f537": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of a financial education webinar about bankers and Volunteer Income Tax Assistance programs. It is an educational/outreach notice, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "Texas"
+    ],
+    "key": "4d5ff0853c18f537",
+    "title": "Financial Education Webinar - Bankers and Volunteer Income Tax Assistance Programs",
+    "date": "2015-11-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2a47fbf992b1d1ac": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice recognizing National Cyber Security Awareness Month. It contains no rule change or new requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "awareness",
+      "cybersecurity",
+      "no-action"
+    ],
+    "key": "2a47fbf992b1d1ac",
+    "title": "Promoting National Cyber Security Awareness Month",
+    "date": "2015-09-24",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6252fcc8009ae156": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative notice about training workshops from the TX Dept of Banking. It carries no regulatory change or new obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "training",
+      "Texas"
+    ],
+    "key": "6252fcc8009ae156",
+    "title": "Train the Trainer Workshops",
+    "date": "2015-09-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "17c41495ca28e345": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas banking regulator flagged the FFIEC Cybersecurity Assessment Tool and encouraged institutions to use it to gauge cyber risk and preparedness. This is general safety-and-soundness cybersecurity guidance for state-chartered banks, not a fintech-specific measure.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "FFIEC",
+      "state regulator",
+      "safety and soundness"
+    ],
+    "key": "17c41495ca28e345",
+    "title": "Cybersecurity Assessments & the FFIEC Cybersecurity Assessment Tool",
+    "date": "2015-09-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b1d3451dc0313052": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A financial education webinar announcement promoting the FDIC's Money Smart for Older Adults curriculum. This is an outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "Texas"
+    ],
+    "key": "b1d3451dc0313052",
+    "title": "Financial Education Webinar: Money Smart for Older Adults",
+    "date": "2015-08-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6bde44267d0e8bc9": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an administrative event announcement ('Day with the Commissioner') from the Texas Department of Banking, not a regulatory development. It contains no rule change or substantive guidance.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "event",
+      "Texas"
+    ],
+    "key": "6bde44267d0e8bc9",
+    "title": "Day with the Commissioner",
+    "date": "2015-05-21",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b1d175bb3555d575": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a Texas banker alert warning about an unlicensed appraiser. It is a fraud/bad-actor notice unrelated to community bank, credit union, or fintech regulatory developments.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "appraiser",
+      "fraud alert",
+      "Texas"
+    ],
+    "key": "b1d175bb3555d575",
+    "title": "Banker Alert - Unlicensed Appraiser James \u201cJay\u201d Edwards",
+    "date": "2015-05-20",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "48a68e204206024d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A financial education webinar promoting the FDIC's Money Smart curriculum for young people. This is an outreach event, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "non-regulatory"
+    ],
+    "key": "48a68e204206024d",
+    "title": "Financial Education Webinar: FDIC Money Smart for Young People and Banking on Kids",
+    "date": "2015-05-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b285265f9174a675": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Reminder to banks about the one-time election to opt out of including accumulated other comprehensive income (AOCI) in regulatory capital under Basel III. Relevant to community banks managing capital treatment of unrealized gains/losses on available-for-sale securities.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "capital",
+      "Basel III",
+      "AOCI",
+      "community banks"
+    ],
+    "key": "b285265f9174a675",
+    "title": "Reminder: One-Time Election - Accumulated Other Comprehensive Income (AOCI)",
+    "date": "2015-04-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "93236bfb915dd25e": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a financial education webinar announcement for the Texas Financial Education Endowment program. It carries no regulatory change or compliance obligation for regulated institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "Texas",
+      "webinar"
+    ],
+    "key": "93236bfb915dd25e",
+    "title": "Financial Education Webinar: Texas Financial Education Endowment (TFEE)",
+    "date": "2015-02-02",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "7507a3989d91db9a": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Notice concerning the AOCI opt-out election under the Basel III regulatory capital rules, which lets qualifying banks exclude accumulated other comprehensive income from common equity tier 1 capital. This is general regulatory-capital guidance affecting state-chartered banks, not a fintech topic.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "capital",
+      "Basel III",
+      "AOCI",
+      "state banking"
+    ],
+    "key": "7507a3989d91db9a",
+    "title": "Key Regulatory Capital Regulation Change: Accumulated Other Comprehensive Income (AOCI)",
+    "date": "2015-01-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2015-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "ef092bbb7047152f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement for a cybersecurity leadership event in Austin, not a regulatory development. No rule change or compliance obligation is involved.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "event",
+      "cybersecurity",
+      "Texas"
+    ],
+    "key": "ef092bbb7047152f",
+    "title": "Event - Executive Leadership of Cybersecurity - Austin",
+    "date": "2014-10-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2014-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2dba91fead4a11d4": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an educational webinar announcement on meeting CRA obligations, not a regulatory development or rule change. It carries no new requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "CRA",
+      "educational event",
+      "Texas"
+    ],
+    "key": "2dba91fead4a11d4",
+    "title": "Financial Education Webinar: \"Healthy Communities: A Framework for Meeting CRA Obligations\"",
+    "date": "2014-09-29",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2014-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "b5de6ba43dd3aeff": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement for a community banking research conference co-hosted by the Fed and CSBS. It is an informational event notice, not a regulatory development.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "conference",
+      "community banking",
+      "event notice"
+    ],
+    "key": "b5de6ba43dd3aeff",
+    "title": "2nd Annual Fed/CSBS Community Banking Research ConferenceSeptember 23th-24th",
+    "date": "2014-09-10",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2014-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6c681ed048ae819f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative notice about town hall meetings from the Texas Department of Banking with no substantive regulatory change. There is no rulemaking, guidance, or compliance obligation attached.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "notice"
+    ],
+    "key": "6c681ed048ae819f",
+    "title": "Town Hall Meetings",
+    "date": "2014-05-16",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2014-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "08597692ce674bd7": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A financial education webinar announcement about Texas Children's Savings Accounts. It carries no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "event",
+      "Texas"
+    ],
+    "key": "08597692ce674bd7",
+    "title": "Financial Education Webinar: \"Texas Children's Savings Accounts\"",
+    "date": "2014-04-24",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2014-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "4d8cae46856622ed": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative notice from the Texas Department of Banking about an upcoming incident response testing exercise. This is an operational/logistical notice rather than a regulatory development affecting institution obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative-notice",
+      "texas",
+      "operational"
+    ],
+    "key": "4d8cae46856622ed",
+    "title": "Incident Response Testing \u2013 Upcoming Testing Exercise",
+    "date": "2013-10-11",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-12.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "eaebbfef9d50c3e4": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a financial education webinar on meeting CRA requirements through Junior Achievement. It is not a regulatory development and imposes no new obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "CRA",
+      "financial education",
+      "webinar"
+    ],
+    "key": "eaebbfef9d50c3e4",
+    "title": "Financial Education Webinar: \"Strategies to Meet Bank CRA Requirements through Junior Achievement\"",
+    "date": "2013-10-10",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-11.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2891110259204cfb": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of a Fed/CSBS community banking research conference, not a regulatory development. No rules or requirements changed.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "conference",
+      "community banking",
+      "announcement"
+    ],
+    "key": "2891110259204cfb",
+    "title": "Fed/CSBS Community Banking Research Conference October 2-3, 2013",
+    "date": "2013-09-26",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-10.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "fe9e0805f0b65636": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A consumer financial education webinar on fraud prevention and identity theft for seniors. This is a public outreach event, not a regulatory development affecting institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "consumer outreach",
+      "fraud"
+    ],
+    "key": "fe9e0805f0b65636",
+    "title": "Financial Education Webinar: \"Fraud Prevention for Seniors and Identity Theft\"",
+    "date": "2013-06-05",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-09.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6ed12c136ae4c057": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is an announcement of town hall meetings on community banking, not a regulatory development. No rule change or new requirement is involved.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "community banking",
+      "event",
+      "Texas"
+    ],
+    "key": "6ed12c136ae4c057",
+    "title": "Town Hall Meetings: Community Banking in America",
+    "date": "2013-05-08",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2875bb93c0a49336": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A reminder to banks and MSBs to comply with existing FinCEN mandatory BSA e-filing requirements. This is an operational compliance reminder, not a change to any rule.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "reminder",
+      "MSB"
+    ],
+    "key": "2875bb93c0a49336",
+    "title": "Mandatory BSA E-Filing Reminder for Banks and MSBs",
+    "date": "2013-02-15",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2be2d527edbd542b": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a free financial-education webinar. It carries no regulatory change or requirement for banks, credit unions, or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "outreach",
+      "non-regulatory"
+    ],
+    "key": "2be2d527edbd542b",
+    "title": "Free Financial Education Webinar: \"Building Wealth App\"",
+    "date": "2013-01-30",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "9e7b137abcf7812c": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking announced the relocation of its San Antonio regional office. This is a routine administrative notice with no regulatory change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas"
+    ],
+    "key": "9e7b137abcf7812c",
+    "title": "San Antonio Regional Office Relocation",
+    "date": "2013-01-22",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "babbd961cebf6264": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "An administrative notice about an upcoming incident response testing exercise from the Texas Department of Banking. This is an operational/administrative announcement, not a regulatory change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "Texas",
+      "incident response"
+    ],
+    "key": "babbd961cebf6264",
+    "title": "Incident Response Testing \u2013 Upcoming Testing Exercise",
+    "date": "2012-11-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "d9da31ca5d3786b1": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas state banking regulator guidance directing executive officers to actively oversee cyber-crime and information-security risks. This is general safety-and-soundness/cybersecurity guidance for state-chartered institutions, not a fintech-specific rule.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "state regulator",
+      "board oversight",
+      "safety and soundness"
+    ],
+    "key": "d9da31ca5d3786b1",
+    "title": "Executive Officer Oversight of Cyber-crime Risks",
+    "date": "2012-11-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0a8c8b81814e74a8": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "CSBS issued a statement on the Basel III capital proposals, reflecting state regulators' concerns about applying the framework to smaller institutions. Relevant to community banks weighing potential capital-rule impacts, but this is a comment/statement rather than a binding change.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Basel III",
+      "capital",
+      "CSBS",
+      "community banks"
+    ],
+    "key": "0a8c8b81814e74a8",
+    "title": "CSBS Issues Statement on BASEL III",
+    "date": "2012-10-03",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": true
+  },
+  "5a2365f28fef4c7d": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "This is a promotional notice for a free financial education webinar aimed at small businesses. It contains no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "event",
+      "Texas"
+    ],
+    "key": "5a2365f28fef4c7d",
+    "title": "Free Financial Education Webinar: \"Money Smart for Small Business\"",
+    "date": "2012-09-04",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2013-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "55a1bc5995efa492": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking revised its policy on branch certificates, affecting state-chartered banks' branch establishment procedures. This is a routine administrative/procedural change with no summary detail provided.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "state banking",
+      "branching",
+      "policy revision"
+    ],
+    "key": "55a1bc5995efa492",
+    "title": "Policy Revision Regarding Branch Certificates",
+    "date": "2012-05-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2012-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "1b95dfb5dbd8861e": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "Administrative notice that the Texas Department of Banking changed its web domain. No regulatory change or substantive requirement.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "administrative",
+      "notice"
+    ],
+    "key": "1b95dfb5dbd8861e",
+    "title": "Reminder: Department of Banking Domain Change",
+    "date": "2012-05-04",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2012-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "c7db12e05c065052": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A free financial education webinar announcement from the Texas Department of Banking. This is an administrative/outreach notice with no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial education",
+      "webinar",
+      "administrative"
+    ],
+    "key": "c7db12e05c065052",
+    "title": "Free Financial Education Webinar: \"Consumer Education and Engagement\"",
+    "date": "2012-05-04",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2012-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "706dc0aa361548f4": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A free financial education webinar announcement from the Texas Department of Banking. This is a public outreach/educational notice with no regulatory change or compliance obligation.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial literacy",
+      "outreach",
+      "Texas"
+    ],
+    "key": "706dc0aa361548f4",
+    "title": "Free Financial Education Webinar: \"Financial Literacy Weeks\"",
+    "date": "2012-01-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2012-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "164f08f1dc508779": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas issued a supervisory memo setting expectations for state-chartered institutions to manage corporate account takeover fraud, covering risk assessment, layered security controls, and customer awareness. It applies to state-supervised banks and is general online-banking/BSA-adjacent security guidance rather than a fintech-specific rule.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "cybersecurity",
+      "fraud",
+      "risk management",
+      "Texas",
+      "corporate account takeover"
+    ],
+    "key": "164f08f1dc508779",
+    "title": "Supervisory Memorandum 1029: Standards for the Risk Management of Corporate Account Takeovers",
+    "date": "2012-01-13",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2012-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0446d7f59c7f5dc5": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "An administrative reference to BSA forms from the Texas Department of Banking with no substantive summary or rule change provided. There is no actionable regulatory development here.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "BSA/AML",
+      "forms",
+      "administrative"
+    ],
+    "key": "0446d7f59c7f5dc5",
+    "title": "BSA Forms",
+    "date": "2011-11-02",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-08.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "6fbec25d08ffc617": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Other",
+    "urgency": "Low",
+    "plain_english": "A financial literacy benchmarking report/initiative from the Texas Department of Banking. This is an educational/informational item, not a regulatory development affecting institution obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial literacy",
+      "Texas",
+      "informational"
+    ],
+    "key": "6fbec25d08ffc617",
+    "title": "Benchmarking Financial Literacy- Year 5",
+    "date": "2011-10-27",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-07.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "ba4ea6ce7062b439": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice for a free financial education webinar from the Texas Department of Banking. This is not a regulatory development and imposes no requirements.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial-education",
+      "administrative-notice"
+    ],
+    "key": "ba4ea6ce7062b439",
+    "title": "Free Financial Education Webinar",
+    "date": "2011-10-20",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-06.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "61c234f2105cca9f": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice on emergency preparedness, with no substantive detail provided. This is a general operational/administrative topic rather than a specific regulatory change affecting our covered institutions.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "emergency preparedness",
+      "operational"
+    ],
+    "key": "61c234f2105cca9f",
+    "title": "Emergency Preparedness",
+    "date": "2011-06-01",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-05.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "51cecd8bc7f87894": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A routine reminder to mortgage loan originators about a registration deadline. This is a compliance reminder to existing licensees, not a change to the rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "MLO",
+      "licensing reminder",
+      "Texas"
+    ],
+    "key": "51cecd8bc7f87894",
+    "title": "Registration Deadline for MLOs",
+    "date": "2011-05-17",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-04.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "1134c993d96a7e17": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A promotional notice marking April as Financial Literacy Month. No regulatory change or requirement is involved.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial literacy",
+      "awareness",
+      "non-substantive"
+    ],
+    "key": "1134c993d96a7e17",
+    "title": "April is Financial Literacy Month",
+    "date": "2011-04-07",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-03.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "2a7605ee2b81fa7e": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "Texas Dept of Banking circulated the final interagency overdraft payment supervisory guidance (FIL-81-2010), which sets expectations for how banks manage automated overdraft programs, including disclosures, monitoring of excessive use, and daily limits. It hits state-chartered banks offering overdraft protection programs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "overdraft",
+      "consumer protection",
+      "supervisory guidance",
+      "Texas"
+    ],
+    "key": "2a7605ee2b81fa7e",
+    "title": "Letter on Final Overdraft Payment Supervisory Guidance, FIL-81-2010.",
+    "date": "2011-02-23",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "14310571e44dcb14": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice about S.A.F.E. Act training for mortgage loan originators. This is a routine training/compliance reminder for existing MLO licensees, not a change to licensing rules.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "SAFE Act",
+      "mortgage",
+      "MLO",
+      "Texas",
+      "training"
+    ],
+    "key": "14310571e44dcb14",
+    "title": "S.A.F.E. Act and Mortgage Loan Originators (MLOs) Training",
+    "date": "2011-01-24",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2011-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "80afc7c0bce84afd": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A routine financial literacy survey notice from the Texas Department of Banking. It carries no regulatory change or compliance obligation for the institutions we cover.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "financial literacy",
+      "survey",
+      "administrative"
+    ],
+    "key": "80afc7c0bce84afd",
+    "title": "Financial Literacy Survey - Year 4",
+    "date": "2010-10-19",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2010-02.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "0072384cd76162ae": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A request for comment on NMLS federal registry fees for mortgage loan originators. This is a routine fee-related administrative notice, not a substantive change to licensing rules or scope relevant to community banks, credit unions, or fintechs.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "mortgage",
+      "NMLS",
+      "fees",
+      "MLO"
+    ],
+    "key": "0072384cd76162ae",
+    "title": "Request for Comment: NMLS Federal Registry Fees for Mortgage Loan Originators",
+    "date": "2010-10-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2010-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "3e200c55bdb6fe97": {
+    "relevant": true,
+    "fintech_specific": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "The Texas Department of Banking issued guidance on foreclosure practices and best practices, likely covering servicing and documentation standards for state-chartered institutions. This is general bank operational guidance rather than a fintech-specific matter.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "foreclosure",
+      "best practices",
+      "servicing",
+      "state regulator"
+    ],
+    "key": "3e200c55bdb6fe97",
+    "title": "Foreclosures and Best Practices",
+    "date": "2010-10-11",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2010-00.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
+  },
+  "af2f9887abda52da": {
+    "relevant": false,
+    "fintech_specific": false,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "A Texas Department of Banking notice about a Closed Account Notification System, with no substantive detail provided. There is no rule change or regulatory development described that affects the institutions or fintech topics we track.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "Texas",
+      "state banking",
+      "administrative"
+    ],
+    "key": "af2f9887abda52da",
+    "title": "Closed Account Notification System (CANS)",
+    "date": "2008-03-18",
+    "sources": [
+      "TX Dept of Banking"
+    ],
+    "url": "https://www.dob.texas.gov/sites/default/files/files/news/Industrynotices/in2008-01.pdf",
+    "first_seen": "2026-07-20",
+    "last_seen": "2026-07-20",
+    "fr_checked": false
   }
 }

@@ -63,8 +63,9 @@ SOURCE_LINKS = {
     "CFPB Rules": "https://www.consumerfinance.gov/rules-policy/final-rules/",
     "FinCEN Advisories": "https://www.fincen.gov/resources/advisoriesbulletinsfact-sheets",
     "NCUA Press": "https://ncua.gov/news/press-releases",
-    # First state regulator.
+    # State regulators.
     "FL OFR Press": "https://flofr.gov/news/press-releases",
+    "TX Dept of Banking": "https://www.dob.texas.gov/news-and-events/industry-notices",
 }
 
 # Every cite in regref.py is a part of title 12, given as "12 CFR 215",
@@ -888,27 +889,37 @@ def coverage_panel(store):
             f'{len(d)} items, {d[0]} to {d[-1]}</div>'
         )
 
-    # Florida OFR is a state regulator and the only one currently tracked, so the
-    # "not tracked" note has to carve it out or the panel contradicts itself the
-    # way it did over FTC/CFTC. Detected from the live source list rather than
-    # hard-coded, so it stays correct as states are added or removed.
-    state_tracked = sorted(a for a in active if a.startswith("FL OFR"))
-    if state_tracked:
+    # State regulators are tracked selectively now, so the "not tracked" note has
+    # to name the exceptions or the panel contradicts itself the way it did over
+    # FTC/CFTC. Which states are tracked is detected from the live source list
+    # (agency names beginning with a 2-letter state code), so this stays correct
+    # as states are added or removed rather than drifting against a hard-coded list.
+    STATE_NAMES = {"FL": "Florida", "TX": "Texas"}
+    tracked_states = sorted({
+        STATE_NAMES.get(a.split()[0], a.split()[0])
+        for a in active if a[:2] in STATE_NAMES and a[2:3] == " "
+    })
+    if tracked_states:
+        joined = (tracked_states[0] if len(tracked_states) == 1
+                  else " and ".join([", ".join(tracked_states[:-1]), tracked_states[-1]])
+                  if len(tracked_states) > 2
+                  else " and ".join(tracked_states))
         state_note = (
             'MOST state regulators (including NYDFS and California DFPI, which '
-            'block automated access) — Florida\'s Office of Financial Regulation '
-            'is tracked and is the exception')
+            f'block automated access) — {joined} are tracked and are the exception')
     else:
         state_note = ('state regulators (including NYDFS and California DFPI, '
                       'which block automated access)')
 
+    tracked_intro = (
+        'the US federal banking and financial-crime agencies listed below'
+        + (f', plus the {joined} state financial regulators' if tracked_states else '')
+        + '. History depth varies by source — some publish archives going back '
+        'years, others only their most recent items.')
     return (
         '<details class="coverage"><summary>What this covers, and what it does not'
         '</summary><div class="body">'
-        '<p><strong>Tracked:</strong> the US federal banking and financial-crime '
-        'agencies listed below, plus the Florida Office of Financial Regulation. '
-        'History depth varies by source — some publish archives going back years, '
-        'others only their most recent items.</p>'
+        f'<p><strong>Tracked:</strong> {tracked_intro}</p>'
         f'<div class="grid">{"".join(rows)}</div>'
         f'<p style="margin-top:12px"><strong>Not tracked:</strong> {state_note}, '
         'FFIEC, SEC, FTC and CFTC. Congressional activity and court decisions are '
