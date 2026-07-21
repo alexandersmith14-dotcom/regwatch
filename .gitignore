@@ -25,3 +25,6 @@ store.json.bak
 # would never be true again. In CI these are kept as run artifacts instead.
 fetch_report.json
 health.json
+
+# wrangler local cache — contains account id/name, not for a public repo
+worker/.wrangler/
