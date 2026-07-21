@@ -147,6 +147,15 @@ header button:hover{filter:brightness(1.06)}
 #askout li{margin-bottom:3px}
 #askout .warn{color:var(--warn)}
 .ask-note{font-size:11.5px;color:var(--ink-muted);margin-top:9px}
+.ask-row select{font:inherit;font-size:13px;padding:9px 10px;color:var(--ink);
+  background:var(--page);border:1px solid var(--border);border-radius:6px}
+/* Only rendered for an unlocked session. */
+.ask-tier{margin-left:8px;font-size:10px;font-weight:700;letter-spacing:.04em;
+  padding:2px 7px;border-radius:99px;background:var(--accent);
+  color:var(--on-accent);text-transform:uppercase}
+#askout .ans+.ans{margin-top:9px}
+#askout .who{font-size:11px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:7px}
 @media (max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px){
   .ask-panel{padding:12px 13px;margin-bottom:14px}
   .ask-row input{flex:1 1 100%}
@@ -384,7 +393,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks, credit unions &amp; fintechs &middot; last updated
-      July 21, 2026 09:56 UTC</p>
+      July 21, 2026 10:08 UTC</p>
   </div>
   <button id="export">Export CSV</button>
 </header>
@@ -925,10 +934,41 @@ function askMd(t) {
     .replace(/\n{2,}/g, '<br><br>');
 }
 
+// Unlock: visiting ?unlock=TOKEN once stores the token and strips it from the
+// URL. Unlocked requests get full length, model choice and compare; everyone
+// else gets the capped public tier. The token only ever goes to the Worker.
+const ASK_UNLOCK = (() => {
+  try {
+    const u = new URL(location.href);
+    const t = u.searchParams.get('unlock');
+    if (t) {
+      localStorage.setItem('rw_unlock', t);
+      u.searchParams.delete('unlock');
+      history.replaceState({}, '', u.toString());
+      return t;
+    }
+    return localStorage.getItem('rw_unlock') || '';
+  } catch (e) { return ''; }
+})();
+
 (function initAsk() {
   const q = $('#askq'), go = $('#askgo'), out = $('#askout');
   if (!q || !go) return;
   const say = html => { out.innerHTML = html; };
+
+  // Unlocked gets a model picker (populated after the first answer tells us
+  // which providers the backend actually has keys for).
+  let picker = null;
+  if (ASK_UNLOCK) {
+    picker = document.createElement('select');
+    picker.id = 'askp';
+    picker.innerHTML = '<option value="">best available</option>';
+    go.parentNode.insertBefore(picker, go);
+    const badge = document.createElement('span');
+    badge.className = 'ask-tier';
+    badge.textContent = 'full access';
+    q.parentNode.parentNode.querySelector('h2').appendChild(badge);
+  }
 
   async function ensureIndex() {
     if (ASK_INDEX) return true;
@@ -948,21 +988,55 @@ function askMd(t) {
     say('<div class="ans">Searching the regulations&hellip;</div>');
     try {
       await ensureIndex();
-      const passages = askSearch(question, 6);
+      // Unlocked pulls far more context; the Worker caps the rest.
+      const passages = askSearch(question, ASK_UNLOCK ? 18 : 6);
       if (!passages.length) {
         say('<div class="ans">Nothing in the tracked regulations or updates '
           + 'matches that. Try different wording, or search the list below.</div>');
         return;
       }
+      const sel = picker ? picker.value : '';
       const res = await fetch(ASK_ENDPOINT, {
         method: 'POST', headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({question, passages}),
+        body: JSON.stringify({
+          question, passages,
+          unlock: ASK_UNLOCK || undefined,
+          provider: sel && sel !== '__compare' ? sel : undefined,
+          compare: sel === '__compare' || undefined,
+        }),
       });
       const d = await res.json();
       if (d.error) { say('<div class="ans warn">' + esc(d.error) + '</div>'); return; }
+
+      // Populate the model picker once we know what the backend has.
+      if (picker && d.providers && picker.options.length <= 1) {
+        d.providers.forEach(p => picker.add(new Option(p, p)));
+        if (d.providers.length > 1) picker.add(new Option('compare all', '__compare'));
+      }
+
       const cites = [...new Set(passages.map(p => p.label))].join(' &middot; ');
-      say('<div class="ans">' + askMd(d.answer)
-        + '<div class="cites">Grounded in: ' + cites + '</div></div>');
+      const blocks = (d.answers || []).map(a => a.error
+        ? '<div class="ans warn"><div class="who">' + esc(a.provider) + '</div>'
+          + esc(a.error) + '</div>'
+        : '<div class="ans">'
+          + (d.answers.length > 1
+              ? '<div class="who">' + esc(a.provider) + ' &middot; ' + esc(a.model) + '</div>'
+              : '')
+          + askMd(a.text) + '</div>').join('');
+
+      // With several models, show where their citations agree — the useful
+      // signal when a free model answers a regulatory question.
+      let agree = '';
+      if ((d.answers || []).length > 1) {
+        const sets = d.answers.filter(a => a.text)
+          .map(a => new Set((a.text.match(/\b\d{1,2}\s*CFR\s*\d+(?:\.\d+)?/gi) || [])
+            .map(s => s.replace(/\s+/g, ' ').toUpperCase())));
+        if (sets.length > 1) {
+          const common = [...sets[0]].filter(c => sets.every(s => s.has(c)));
+          agree = '<br>Models agreed on: ' + (common.join(', ') || 'nothing — worth reading the source');
+        }
+      }
+      say(blocks + '<div class="cites">Grounded in: ' + cites + agree + '</div>');
     } catch (e) {
       say('<div class="ans warn">The assistant is unavailable right now. '
         + 'Everything below still works.</div>');
