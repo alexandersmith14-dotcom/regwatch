@@ -5,20 +5,18 @@
  * updates and loads corpus.json for the CFR text). This Worker does the part
  * that must stay server-side: calling the model with the API key.
  *
- * TWO TIERS, same endpoint:
- *
- *   public  — anyone on the site. Capped question/passage/response size, one
- *             model. Enough to be genuinely useful, bounded enough that a
- *             stranger cannot drain the quota.
- *   unlocked — you. Full length, all configured models, and --compare. Enabled
- *             by sending an unlock token that matches the UNLOCK_TOKEN secret.
- *             Open the site once as ?unlock=YOUR_TOKEN and the page remembers it.
+ * Everyone gets the same thing: full-length questions, every configured model,
+ * and compare. No tiers, no tokens, no rate limit.
  *
  * Secrets (npx wrangler secret put NAME, or the dashboard):
  *   GROQ_API_KEY        required
- *   UNLOCK_TOKEN        required for the unlocked tier
- *   GEMINI_API_KEY      optional — enables gemini + compare
- *   OPENROUTER_API_KEY  optional — enables openrouter + compare
+ *   GEMINI_API_KEY      optional — adds gemini to the picker and to compare
+ *   OPENROUTER_API_KEY  optional — adds openrouter likewise
+ *
+ * Set secrets with printf '%s' (no trailing newline) — a piped newline makes the
+ * auth header "Bearer key
+" and the provider returns 401. Verify names with
+ * `npx wrangler secret list`; a stray space in a name fails silently.
  */
 
 const ALLOWED_ORIGINS = [
@@ -33,11 +31,6 @@ const ALLOWED_ORIGINS = [
 // 413 (request too large) and the feature simply breaks. Raising them does not
 // give a better answer, it gives no answer.
 const LIMITS = { question: 1500, passages: 12, passageChars: 2500, tokens: 3000 };
-
-// Per-IP limit for the PUBLIC tier only, applied when a KV namespace named
-// RATELIMIT is bound. The unlocked tier is never rate limited.
-const RATE_LIMIT = 12;
-const RATE_WINDOW_SECONDS = 60 * 10;
 
 const PROVIDERS = {
   groq: {
@@ -85,16 +78,6 @@ const json = (body, status, origin) =>
   new Response(JSON.stringify(body), {
     status, headers: { "Content-Type": "application/json", ...cors(origin) },
   });
-
-async function rateLimited(request, env) {
-  if (!env.RATELIMIT) return false;
-  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-  const key = `rl:${ip}`;
-  const n = parseInt((await env.RATELIMIT.get(key)) || "0", 10);
-  if (n >= RATE_LIMIT) return true;
-  await env.RATELIMIT.put(key, String(n + 1), { expirationTtl: RATE_WINDOW_SECONDS });
-  return false;
-}
 
 function available(env) {
   return Object.keys(PROVIDERS).filter((n) => env[PROVIDERS[n].env]);

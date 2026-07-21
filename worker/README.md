@@ -30,19 +30,6 @@ https://regwatch-ask.YOUR-SUBDOMAIN.workers.dev
 **Send that URL to Claude (or paste it into `ASK_ENDPOINT` in `dashboard.py`),
 then rebuild and push.** Until that is set, the ask box is not wired up.
 
-## Optional: per-IP rate limiting
-
-Without this the Worker still caps question length, passage count, passage size
-and response tokens — so any single request is bounded. Adding a KV namespace
-also bounds how *often* one address can ask:
-
-```bash
-npx wrangler kv namespace create RATELIMIT
-```
-
-Paste the returned id into `wrangler.toml`, uncomment that block, redeploy.
-Default is 8 questions per IP per 10 minutes.
-
 ## What it costs, honestly
 
 - **Cloudflare Workers** free tier: 100,000 requests/day. A public compliance
