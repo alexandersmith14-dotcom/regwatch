@@ -1,0 +1,15 @@
+name = "regwatch-ask"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+# The API key is a SECRET, never in this file and never in the published page:
+#   npx wrangler secret put GROQ_API_KEY
+#
+# Optional per-IP rate limiting. Create a KV namespace and uncomment to bind it:
+#   npx wrangler kv namespace create RATELIMIT
+# then paste the returned id below. Without it the Worker still enforces the
+# size and token caps, it just will not count requests per address.
+#
+# [[kv_namespaces]]
+# binding = "RATELIMIT"
+# id = "paste-the-id-from-the-command-above"

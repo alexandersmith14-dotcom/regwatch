@@ -112,6 +112,10 @@ jobs:
           cp icon-maskable-512.png site/icon-maskable-512.png
           cp apple-touch-icon.png site/apple-touch-icon.png
           cp site.webmanifest site/site.webmanifest
+          # CFR text for the "Ask the regulations" panel. Retrieval runs in the
+          # browser, so this must be published or the panel can only draw on the
+          # tracked updates. Regenerate with: python ecfr_corpus.py
+          cp corpus.json site/corpus.json
 
       - name: Publish to Pages
         uses: actions/upload-pages-artifact@v3

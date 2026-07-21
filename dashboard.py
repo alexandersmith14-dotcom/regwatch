@@ -188,6 +188,39 @@ header button:hover{filter:brightness(1.06)}
 .rr.hidden,.rr-group.hidden{display:none}
 .coverage code{background:var(--chip);padding:1px 5px;border-radius:3px;font-size:11.5px}
 
+/* "Ask the regulations" panel. Retrieval runs in the browser; only the model
+   call goes to a Cloudflare Worker, which holds the API key server-side. */
+.ask-panel{background:var(--surface);border:1px solid var(--border);
+  border-left:4px solid var(--brand);border-radius:9px;padding:16px 18px;
+  margin-bottom:18px}
+.ask-panel h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--brand);margin:0 0 6px;font-weight:700}
+.ask-panel .sub{font-size:12.5px;color:var(--ink-2);margin:0 0 11px}
+.ask-row{display:flex;gap:8px;flex-wrap:wrap}
+.ask-row input{flex:1 1 380px;font:inherit;font-size:13px;padding:9px 12px;
+  color:var(--ink);background:var(--page);border:1px solid var(--border);
+  border-radius:6px}
+.ask-row input:focus{outline:2px solid var(--brand);outline-offset:1px}
+.ask-row button{font:inherit;font-size:13px;font-weight:700;padding:9px 18px;
+  background:var(--brand);color:#fff;border:1px solid var(--brand);
+  border-radius:6px;cursor:pointer}
+.ask-row button:disabled{opacity:.55;cursor:default}
+#askout{margin-top:13px;font-size:13.5px;line-height:1.6;color:var(--ink)}
+#askout:empty{display:none}
+#askout .ans{background:var(--raised);border:1px solid var(--border);
+  border-radius:8px;padding:13px 15px}
+#askout .cites{font-size:12px;color:var(--ink-muted);margin-top:9px;
+  padding-top:8px;border-top:1px solid var(--rule)}
+#askout h3{font-size:13px;margin:11px 0 5px;color:var(--ink)}
+#askout ul{margin:5px 0 5px 20px;padding:0}
+#askout li{margin-bottom:3px}
+#askout .warn{color:var(--warn)}
+.ask-note{font-size:11.5px;color:var(--ink-muted);margin-top:9px}
+@media (max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px){
+  .ask-panel{padding:12px 13px;margin-bottom:14px}
+  .ask-row input{flex:1 1 100%}
+  .ask-row button{width:100%}
+}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:12px;margin-bottom:18px}
 .kpi{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:14px 16px}
@@ -776,6 +809,118 @@ applyViewport();
 
 labelViews();
 setView(false);
+
+// ---------------------------------------------------------- Ask the regulations
+// Retrieval happens HERE, in the browser: the page already holds every tracked
+// update, and corpus.json adds the actual CFR text. Only the model call leaves,
+// to a Cloudflare Worker that holds the API key server-side — so the key is
+// never in this page, and searching costs nothing.
+const ASK_ENDPOINT = 'https://regwatch-ask.alexandersmith14.workers.dev';
+
+const STOP = new Set(('the a an and or of to in for on is are be as by with that this it at from '
+  + 'any all no not may must shall will can under per each').split(' '));
+const tok = s => (String(s).toLowerCase().match(/[a-z0-9]+/g) || [])
+  .filter(w => w.length > 1 && !STOP.has(w));
+
+let ASK_INDEX = null;
+
+// BM25 (Okapi) over regs + tracked updates. Same ranking as the local tool.
+function buildAskIndex(regs) {
+  const passages = [];
+  regs.forEach(s => passages.push({
+    kind: 'regulation', label: s.citation, title: s.heading,
+    stamp: 'as of ' + s.as_of,
+    text: s.reg_name + ' ' + s.heading + ' ' + s.text,
+  }));
+  DATA.filter(d => d.relevant).forEach(d => passages.push({
+    kind: 'update', label: (d.sources || []).join(', '), title: d.title,
+    stamp: 'dated ' + d.date,
+    text: d.title + ' ' + (d.why || '') + ' ' + (d.tags || []).join(' '),
+  }));
+  const docs = passages.map(p => tok(p.text));
+  const N = docs.length, avgdl = docs.reduce((a, d) => a + d.length, 0) / (N || 1);
+  const df = {};
+  docs.forEach(d => new Set(d).forEach(t => { df[t] = (df[t] || 0) + 1; }));
+  const idf = {};
+  for (const t in df) idf[t] = Math.log(1 + (N - df[t] + 0.5) / (df[t] + 0.5));
+  const tf = docs.map(d => { const c = {}; d.forEach(t => c[t] = (c[t] || 0) + 1); return c; });
+  return { passages, docs, idf, tf, avgdl, k1: 1.5, b: 0.75 };
+}
+
+function askSearch(q, k) {
+  const ix = ASK_INDEX, terms = tok(q), scored = [];
+  for (let i = 0; i < ix.passages.length; i++) {
+    const c = ix.tf[i], dl = ix.docs[i].length;
+    let s = 0;
+    for (const t of terms) {
+      if (!c[t]) continue;
+      s += (ix.idf[t] || 0) * (c[t] * (ix.k1 + 1)) /
+           (c[t] + ix.k1 * (1 - ix.b + ix.b * dl / ix.avgdl));
+    }
+    if (s > 0) scored.push([s, i]);
+  }
+  scored.sort((a, b) => b[0] - a[0]);
+  return scored.slice(0, k).map(([, i]) => ix.passages[i]);
+}
+
+// The models answer in markdown; render the small subset they actually use.
+function askMd(t) {
+  return t.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))
+    .replace(/^#{1,6}\s*(.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^\s*[-*]\s+(.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>')
+    .replace(/\n{2,}/g, '<br><br>');
+}
+
+(function initAsk() {
+  const q = $('#askq'), go = $('#askgo'), out = $('#askout');
+  if (!q || !go) return;
+  const say = html => { out.innerHTML = html; };
+
+  async function ensureIndex() {
+    if (ASK_INDEX) return true;
+    try {
+      const r = await fetch('corpus.json');
+      ASK_INDEX = buildAskIndex(r.ok ? await r.json() : []);
+    } catch (e) {
+      ASK_INDEX = buildAskIndex([]);   // updates-only still answers usefully
+    }
+    return true;
+  }
+
+  async function ask() {
+    const question = q.value.trim();
+    if (!question) return;
+    go.disabled = true;
+    say('<div class="ans">Searching the regulations&hellip;</div>');
+    try {
+      await ensureIndex();
+      const passages = askSearch(question, 6);
+      if (!passages.length) {
+        say('<div class="ans">Nothing in the tracked regulations or updates '
+          + 'matches that. Try different wording, or search the list below.</div>');
+        return;
+      }
+      const res = await fetch(ASK_ENDPOINT, {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({question, passages}),
+      });
+      const d = await res.json();
+      if (d.error) { say('<div class="ans warn">' + esc(d.error) + '</div>'); return; }
+      const cites = [...new Set(passages.map(p => p.label))].join(' &middot; ');
+      say('<div class="ans">' + askMd(d.answer)
+        + '<div class="cites">Grounded in: ' + cites + '</div></div>');
+    } catch (e) {
+      say('<div class="ans warn">The assistant is unavailable right now. '
+        + 'Everything below still works.</div>');
+    } finally {
+      go.disabled = false;
+    }
+  }
+  go.addEventListener('click', ask);
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+})();
 """
 
 # Feeds grouped under the agency that publishes them. Several agencies use more
@@ -1122,6 +1267,22 @@ def main():
   a match show none, which does not mean none exists.
   <div style="margin-top:9px">{coverage_html}</div>
   <div style="margin-top:6px">{regref_html}</div>
+</div>
+
+<div class="ask-panel">
+  <h2>Ask the regulations</h2>
+  <p class="sub">Answers are drawn from the actual CFR text plus the updates
+    below, with citations. This is research to verify against the source &mdash;
+    not legal or compliance advice.</p>
+  <div class="ask-row">
+    <input id="askq" autocomplete="off" maxlength="400"
+           placeholder="e.g. what must an adverse action notice contain under Reg B?"
+           aria-label="Ask a question about the regulations">
+    <button id="askgo" type="button">Ask</button>
+  </div>
+  <div id="askout" aria-live="polite"></div>
+  <div class="ask-note">Covers Regulation B, E and DD plus everything tracked
+    below. Answers can be wrong or incomplete &mdash; always open the source.</div>
 </div>
 
 <div class="kpis">{kpi_html}</div>
