@@ -214,6 +214,39 @@ Texas source pills, click-to-filter KPI tiles.
 
 ---
 
+## "Ask the regulations" — the one moving part with a dependency
+
+The public dashboard has a question box that answers from actual CFR text plus
+the tracked updates, with citations. It is the only feature that depends on
+anything outside this repo.
+
+    browser                          Cloudflare Worker          Groq
+    searches corpus.json + the  ──▶  adds the API key      ──▶  answers
+    tracked updates (BM25, free)     (a stored secret)
+
+- **Retrieval runs in the browser.** GitHub Pages cannot hold an API key —
+  anything in the page is readable. So the page searches locally (it already has
+  every update; `corpus.json` adds the regulation text) and only the model call
+  leaves. Search is therefore free at any traffic level.
+- **`corpus.json`** is built by `ecfr_corpus.py` from the free eCFR API (Regs B,
+  E, DD — 67 sections; add parts in `PARTS`). The workflow publishes it. If it
+  stops being published, the box still answers, but only from the updates.
+- **The Worker** lives in `worker/` — deployed at
+  `regwatch-ask.alexandersmith14.workers.dev`, endpoint hardcoded in
+  `dashboard.py` as `ASK_ENDPOINT`. Deploy notes in `worker/README.md`.
+- **The key is a Worker secret**, never in the repo or the page. Check it with
+  `npx wrangler secret list` — it must be exactly `GROQ_API_KEY`. A trailing
+  space in the name once made the Worker report "backend not configured" while
+  the dashboard showed the secret as present; the name is invisible-whitespace
+  sensitive.
+- **Quota is the expected failure.** On a free key, heavy public use exhausts it
+  and the box says so plainly; the rest of the dashboard is unaffected. Add the
+  KV rate limit (see `worker/README.md`) before moving to a paid key.
+- Never commit `worker/.wrangler/` — it holds the Cloudflare account id and an
+  account name containing a personal email. Gitignored after being committed once.
+
+---
+
 ## Something else reads store.json now
 
 **RegAssistant** (`C:\Users\alexa\RegAssistant`) is a separate, private compliance
