@@ -738,6 +738,10 @@ AGENCY_GROUPS = [
     ("NCUA", ["NCUA", "NCUA Press"]),
     ("OFAC", ["OFAC"]),
     ("CSBS", ["CSBS"]),
+    # State regulators. Labelled by state so the pill reads as the state, not the
+    # feed name — a reader filters by "Florida", not "FL OFR Press".
+    ("Florida", ["FL OFR Press"]),
+    ("Texas", ["TX Dept of Banking"]),
 ]
 
 
