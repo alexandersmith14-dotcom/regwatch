@@ -46,6 +46,23 @@ Routine safety-and-soundness guidance, bank failures, general fair-lending rules
 call-report changes and personnel announcements are not fintech items even though
 fintechs operate in the same system."""
 
+# The credit-union parallel to FINTECH_SCOPE. Same discipline: it must mean
+# "materially about credit unions", not "credit unions also comply" — otherwise
+# it labels most of the store true (an earlier bank_specific flag hit 96% for
+# exactly that reason and was removed). This flag drives a "Credit unions only"
+# lens, so it needs to isolate the CU-focused subset, not everything CUs touch.
+CU_SCOPE = """Credit-union-specific means the item is materially about credit unions
+in particular: NCUA rulemaking or supervisory guidance; federal share insurance
+(NCUSIF); field-of-membership or credit-union chartering; credit-union
+conservatorships, liquidations or mergers; credit-union-specific call or system
+performance data; or guidance addressed to credit unions.
+
+It is NOT credit-union-specific merely because credit unions also comply. An
+interagency BSA/AML rule, a general cybersecurity alert, a broad consumer-
+protection rule or a sanctions notice is not credit-union-specific even though
+credit unions follow it — the same way it is not fintech-specific just because
+fintechs follow it."""
+
 SCHEMA = {
     "type": "object",
     "properties": {
@@ -58,6 +75,12 @@ SCHEMA = {
             "description": "True ONLY if the item is materially about a fintech topic "
                            "per the fintech scope given. False for general bank "
                            "regulation that fintechs merely also comply with.",
+        },
+        "credit_union": {
+            "type": "boolean",
+            "description": "True ONLY if the item is materially about credit unions "
+                           "per the credit-union scope given. False for general "
+                           "regulation that credit unions merely also comply with.",
         },
         "update_type": {
             "type": "string",
@@ -85,6 +108,7 @@ SCHEMA = {
     "required": [
         "relevant",
         "fintech_specific",
+        "credit_union",
         "update_type",
         "urgency",
         "plain_english",
@@ -108,6 +132,8 @@ Our focus:
 
 {FINTECH_SCOPE}
 
+{CU_SCOPE}
+
 Analyze this regulatory update.
 
 Agency: {u['agency']}
@@ -122,8 +148,9 @@ licensees to renew a license, meet a continuing-education deadline, or pay a fee
 these are not regulatory developments even when they come from a financial
 regulator and even when the licensees are money-services or fintech firms. A
 change to the licensing rules is relevant; a reminder to comply with the current
-ones is not. Set fintech_specific per the scope above — be strict, most bank
-regulation is not fintech-specific.
+ones is not. Set fintech_specific and credit_union per their scopes above, judged
+independently of each other — be strict on both. Most bank regulation is neither
+fintech-specific nor credit-union-specific; an item can be one, both, or neither.
 
 Write plain_english for a reader who already knows we cover community banks and
 fintechs: say what changed and who it hits. Do not pad it with the phrase

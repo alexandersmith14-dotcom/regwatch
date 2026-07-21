@@ -472,6 +472,10 @@ function rows() {
     // are not, because most summaries carry the phrase "community banks and
     // fintechs" regardless of subject. This is why it is a control, not a search.
     if (filter.kind === 'fintech') return d.fintech === true;
+    // Credit unions likewise use the classifier's judgment, not the NCUA source:
+    // NCUA publishes plenty that is not credit-union-specific, and interagency
+    // credit-union items arrive under other agencies' names.
+    if (filter.kind === 'credit_union') return d.credit_union === true;
     return true;
   });
 }
@@ -620,10 +624,13 @@ function render() {
 function labelViews() {
   const rel = DATA.filter(d => d.relevant).length;
   const fin = DATA.filter(d => d.relevant && d.fintech === true).length;
-  $('#viewRelevant').textContent = `Banks & fintechs (${rel})`;
+  const cu = DATA.filter(d => d.relevant && d.credit_union === true).length;
+  $('#viewRelevant').textContent = `Banks, credit unions & fintechs (${rel})`;
   $('#viewAll').textContent = `Everything (${DATA.length})`;
   const f = $('[data-kind="fintech"]');
   if (f) f.textContent = `Fintech only (${fin})`;
+  const c = $('[data-kind="credit_union"]');
+  if (c) c.textContent = `Credit unions only (${cu})`;
 }
 
 function setView(all) {
@@ -755,6 +762,7 @@ def build_rows(store):
             "urgency": r.get("urgency", "Low"), "relevant": bool(r.get("relevant")),
             "why": r.get("plain_english", ""), "tags": r.get("tags", []),
             "fintech": bool(r.get("fintech_specific")),
+            "credit_union": bool(r.get("credit_union")),
             "comments_close_on": r.get("comments_close_on"),
             "effective_on": r.get("effective_on"),
         })
@@ -1062,13 +1070,15 @@ def main():
       <!-- "Relevant only" was self-referential: relevant to whom? These say who
            the page is for. Counts are filled in by script so they cannot go
            stale against the data. -->
-      <button id="viewRelevant" aria-pressed="true">Banks &amp; fintechs</button>
+      <button id="viewRelevant" aria-pressed="true">Banks, credit unions &amp; fintechs</button>
       <button id="viewAll" aria-pressed="false">Everything</button>
     </div>
-    <!-- Fintech sits with the view toggle, not with Source, because it is the
-         same kind of control: a lens on the classifier's judgment rather than a
-         keyword. It is also the one filter the search box cannot reproduce. -->
+    <!-- Fintech and Credit unions sit with the view toggle, not with Source,
+         because they are the same kind of control: lenses on the classifier's
+         judgment rather than keywords, and the two filters the search box cannot
+         reproduce (a text match on "fintech"/"credit union" is far noisier). -->
     <button class="pill" data-kind="fintech" aria-pressed="false">Fintech only</button>
+    <button class="pill" data-kind="credit_union" aria-pressed="false">Credit unions only</button>
     <span class="count" id="viewnote"></span>
   </div>
   <div class="pillgroup">
