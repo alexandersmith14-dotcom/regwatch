@@ -205,7 +205,31 @@ things to do, not fixes.
    with no failure email, this is the likely cause. The weekly `regwatch-watchdog`
    scheduled task is the backstop.
 
-Done 2026-07-20 (not open anymore): daily source health check + alerting,
+Done 2026-07-20/21 (not open anymore): daily source health check + alerting,
 CI dependency fix, FinCEN date bug, tab/bookmark/home-screen icons, foldable
 panels + landscape fix, store push-guard, filter relabel, credit-union audience
-expansion, Florida OFR + Texas Dept of Banking sources, weekly watchdog task.
+expansion, Florida OFR + Texas Dept of Banking sources, weekly watchdog task,
+"Credit unions only" lens + "Banks, credit unions & fintechs" label, Florida and
+Texas source pills, click-to-filter KPI tiles.
+
+---
+
+## Something else reads store.json now
+
+**RegAssistant** (`C:\Users\alexa\RegAssistant`) is a separate, private compliance
+research assistant. It reads this project's `store.json` (relevant items only,
+read-only) as its "what changed recently" corpus, alongside actual regulation
+text pulled from the free eCFR API. Ask it a question, it answers grounded in
+both, with citations, via a free LLM provider (Groq/Gemini/OpenRouter/Cerebras);
+`--compare` asks several and shows where they disagree.
+
+Two things that matter to RegWatch:
+
+- **`store.json`'s shape is now a small contract.** RegAssistant reads `title`,
+  `plain_english`, `tags`, `relevant`, `sources`, `date` and `url`. Renaming or
+  dropping those fields breaks it. Adding fields is safe.
+- **It is deliberately NOT part of RegWatch.** RegWatch stays the public,
+  self-running tracker with no server and no chatbot; a public Q&A bot would add
+  hosting, cost and — the real reason — a materially higher liability posture
+  (answering "what does the reg require" under a CRCM's name reads as advice).
+  Keep them separate.
