@@ -27,9 +27,13 @@ const ALLOWED_ORIGINS = [
   "http://localhost:8800",
 ];
 
+// Sized to what the free tiers actually accept, not to what sounds generous.
+// 20 passages x 6000 chars is ~27k tokens of input and Groq rejects it with 413
+// (request too large). 12 x 2500 is ~7.5k tokens — still four times the public
+// context, and it works on all three providers.
 const LIMITS = {
   public:   { question: 600,  passages: 8,  passageChars: 1500, tokens: 1000 },
-  unlocked: { question: 2000, passages: 20, passageChars: 6000, tokens: 4000 },
+  unlocked: { question: 1500, passages: 12, passageChars: 2500, tokens: 3000 },
 };
 
 // Per-IP limit for the PUBLIC tier only, applied when a KV namespace named
@@ -113,10 +117,12 @@ async function callProvider(name, messages, env, tokens) {
   });
   if (!r.ok) {
     const detail = (await r.text()).slice(0, 160);
-    return { provider: name, model: p.model, error:
-      r.status === 429
-        ? "usage limit reached for this model right now"
-        : `unavailable (${r.status})`, detail };
+    const msg = r.status === 429
+      ? "usage limit reached for this model right now"
+      : r.status === 413
+        ? "too much context for this model — try a narrower question"
+        : `unavailable (${r.status})`;
+    return { provider: name, model: p.model, error: msg, detail };
   }
   const d = await r.json();
   return { provider: name, model: p.model,

@@ -937,7 +937,8 @@ const ASK_UNLOCK = (() => {
     try {
       await ensureIndex();
       // Unlocked pulls far more context; the Worker caps the rest.
-      const passages = askSearch(question, ASK_UNLOCK ? 18 : 6);
+      // 12 is what the free tiers accept; 18 made Groq return 413.
+      const passages = askSearch(question, ASK_UNLOCK ? 12 : 6);
       if (!passages.length) {
         say('<div class="ans">Nothing in the tracked regulations or updates '
           + 'matches that. Try different wording, or search the list below.</div>');

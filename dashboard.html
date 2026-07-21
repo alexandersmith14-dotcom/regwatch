@@ -393,7 +393,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks, credit unions &amp; fintechs &middot; last updated
-      July 21, 2026 10:23 UTC</p>
+      July 21, 2026 10:26 UTC</p>
   </div>
   <button id="export">Export CSV</button>
 </header>
@@ -989,7 +989,8 @@ const ASK_UNLOCK = (() => {
     try {
       await ensureIndex();
       // Unlocked pulls far more context; the Worker caps the rest.
-      const passages = askSearch(question, ASK_UNLOCK ? 18 : 6);
+      // 12 is what the free tiers accept; 18 made Groq return 413.
+      const passages = askSearch(question, ASK_UNLOCK ? 12 : 6);
       if (!passages.length) {
         say('<div class="ans">Nothing in the tracked regulations or updates '
           + 'matches that. Try different wording, or search the list below.</div>');
