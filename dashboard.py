@@ -882,41 +882,17 @@ function askMd(t) {
     .replace(/\n{2,}/g, '<br><br>');
 }
 
-// Unlock: visiting ?unlock=TOKEN once stores the token and strips it from the
-// URL. Unlocked requests get full length, model choice and compare; everyone
-// else gets the capped public tier. The token only ever goes to the Worker.
-const ASK_UNLOCK = (() => {
-  try {
-    const u = new URL(location.href);
-    const t = u.searchParams.get('unlock');
-    if (t) {
-      localStorage.setItem('rw_unlock', t);
-      u.searchParams.delete('unlock');
-      history.replaceState({}, '', u.toString());
-      return t;
-    }
-    return localStorage.getItem('rw_unlock') || '';
-  } catch (e) { return ''; }
-})();
-
 (function initAsk() {
   const q = $('#askq'), go = $('#askgo'), out = $('#askout');
   if (!q || !go) return;
   const say = html => { out.innerHTML = html; };
 
-  // Unlocked gets a model picker (populated after the first answer tells us
-  // which providers the backend actually has keys for).
-  let picker = null;
-  if (ASK_UNLOCK) {
-    picker = document.createElement('select');
-    picker.id = 'askp';
-    picker.innerHTML = '<option value="">best available</option>';
-    go.parentNode.insertBefore(picker, go);
-    const badge = document.createElement('span');
-    badge.className = 'ask-tier';
-    badge.textContent = 'full access';
-    q.parentNode.parentNode.querySelector('h2').appendChild(badge);
-  }
+  // Model picker for everyone; options fill in once the backend reports which
+  // providers it has keys for.
+  const picker = document.createElement('select');
+  picker.id = 'askp';
+  picker.innerHTML = '<option value="">best available</option>';
+  go.parentNode.insertBefore(picker, go);
 
   async function ensureIndex() {
     if (ASK_INDEX) return true;
@@ -937,19 +913,18 @@ const ASK_UNLOCK = (() => {
     try {
       await ensureIndex();
       // Unlocked pulls far more context; the Worker caps the rest.
-      // 12 is what the free tiers accept; 18 made Groq return 413.
-      const passages = askSearch(question, ASK_UNLOCK ? 12 : 6);
+      // 12 is what the free tiers accept; more makes Groq return 413.
+      const passages = askSearch(question, 12);
       if (!passages.length) {
         say('<div class="ans">Nothing in the tracked regulations or updates '
           + 'matches that. Try different wording, or search the list below.</div>');
         return;
       }
-      const sel = picker ? picker.value : '';
+      const sel = picker.value;
       const res = await fetch(ASK_ENDPOINT, {
         method: 'POST', headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
           question, passages,
-          unlock: ASK_UNLOCK || undefined,
           provider: sel && sel !== '__compare' ? sel : undefined,
           compare: sel === '__compare' || undefined,
         }),
@@ -958,7 +933,7 @@ const ASK_UNLOCK = (() => {
       if (d.error) { say('<div class="ans warn">' + esc(d.error) + '</div>'); return; }
 
       // Populate the model picker once we know what the backend has.
-      if (picker && d.providers && picker.options.length <= 1) {
+      if (d.providers && picker.options.length <= 1) {
         d.providers.forEach(p => picker.add(new Option(p, p)));
         if (d.providers.length > 1) picker.add(new Option('compare all', '__compare'));
       }

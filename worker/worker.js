@@ -27,14 +27,12 @@ const ALLOWED_ORIGINS = [
   "http://localhost:8800",
 ];
 
-// Sized to what the free tiers actually accept, not to what sounds generous.
-// 20 passages x 6000 chars is ~27k tokens of input and Groq rejects it with 413
-// (request too large). 12 x 2500 is ~7.5k tokens — still four times the public
-// context, and it works on all three providers.
-const LIMITS = {
-  public:   { question: 600,  passages: 8,  passageChars: 1500, tokens: 1000 },
-  unlocked: { question: 1500, passages: 12, passageChars: 2500, tokens: 3000 },
-};
+// One tier: everyone gets the full thing — full-length questions, all models,
+// compare. These numbers are not a policy choice, they are the ceiling the free
+// providers actually accept: past roughly 12 passages x 2500 chars Groq returns
+// 413 (request too large) and the feature simply breaks. Raising them does not
+// give a better answer, it gives no answer.
+const LIMITS = { question: 1500, passages: 12, passageChars: 2500, tokens: 3000 };
 
 // Per-IP limit for the PUBLIC tier only, applied when a KV namespace named
 // RATELIMIT is bound. The unlocked tier is never rate limited.
@@ -143,16 +141,7 @@ export default {
     try { body = await request.json(); }
     catch { return json({ error: "bad request" }, 400, origin); }
 
-    // Tier. Constant-ish comparison is unnecessary here: a wrong token simply
-    // yields the public tier, it does not reveal anything.
-    const unlocked = Boolean(env.UNLOCK_TOKEN && body.unlock === env.UNLOCK_TOKEN);
-    const lim = unlocked ? LIMITS.unlocked : LIMITS.public;
-
-    if (!unlocked && (await rateLimited(request, env))) {
-      return json({ error:
-        "Too many questions from this address. Try again in a few minutes." },
-        429, origin);
-    }
+    const lim = LIMITS;
 
     const question = String(body.question || "").trim().slice(0, lim.question);
     if (!question) return json({ error: "no question" }, 400, origin);
@@ -176,20 +165,15 @@ export default {
     ];
 
     const ready = available(env);
-    // Model choice and compare are unlocked-only; public always gets groq.
-    let targets = ["groq"];
-    if (unlocked) {
-      if (body.compare) targets = ready;
-      else if (body.provider && ready.includes(body.provider)) targets = [body.provider];
-    }
+    // Everyone gets model choice and compare.
+    let targets = [ready[0] || "groq"];
+    if (body.compare) targets = ready;
+    else if (body.provider && ready.includes(body.provider)) targets = [body.provider];
 
     try {
       const answers = await Promise.all(
         targets.map((n) => callProvider(n, messages, env, lim.tokens)));
-      return json({
-        answers, tier: unlocked ? "unlocked" : "public",
-        providers: unlocked ? ready : undefined,
-      }, 200, origin);
+      return json({ answers, providers: ready }, 200, origin);
     } catch (e) {
       return json({ error: "upstream unreachable" }, 502, origin);
     }
