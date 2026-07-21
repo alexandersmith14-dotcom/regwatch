@@ -29,6 +29,29 @@ from datetime import date, datetime, timedelta, timezone
 import fetcher
 import regref
 
+# The Ask box stays; the CFR text it used to answer from does not.
+#
+# Scoped down 2026-07-21 on evidence. A bake-off of free reconciler models turned
+# up the failure this feature cannot afford: given 12 CFR 1002.9, whose source
+# text contains only the subsection markers (a)(2)(i) and (a)(2)(ii), the
+# answering model invented (iii) through (vi) and attached one to each element of
+# the notice. The reconciler then in use (gemma-4-26b) reproduced all six as fact
+# in its final list, giving a hallucination citation-level precision. Two other
+# free models quarantined and flagged it instead, so this is model quality, not
+# a design fault — but on a page carrying a CRCM's name, free models inventing
+# CFR subsections is not a risk worth running for a nice-to-have.
+#
+# Answering only from the tracked updates removes the failure mode rather than
+# hoping a better reconciler catches it: with no CFR text in front of them, there
+# are no subsections available to fabricate. The updates carry agency and date,
+# which the page already holds and the reader can click through to.
+#
+# Turn regulations back on when the answering models are ones worth citing.
+# `ecfr_corpus.py`, corpus.json and the whole retrieval path still work; this
+# flag only decides whether the browser loads the corpus and asks about it.
+ASK_ENABLED = True
+ASK_INCLUDE_REGULATIONS = False
+
 # Where a reader lands when they click a source name. Human pages, deliberately
 # NOT the URLs fetcher.py uses — most of those are raw RSS and would drop a
 # reader into a wall of XML.
@@ -216,12 +239,13 @@ header button:hover{filter:brightness(1.06)}
 #askout li{margin-bottom:3px}
 #askout .warn{color:var(--warn)}
 .ask-note{font-size:11.5px;color:var(--ink-muted);margin-top:9px}
-.ask-row select{font:inherit;font-size:13px;padding:9px 10px;color:var(--ink);
-  background:var(--page);border:1px solid var(--border);border-radius:6px}
-/* Only rendered for an unlocked session. */
-.ask-tier{margin-left:8px;font-size:10px;font-weight:700;letter-spacing:.04em;
-  padding:2px 7px;border-radius:99px;background:var(--accent);
-  color:var(--on-accent);text-transform:uppercase}
+/* The individual model answers behind the reconciled one. Collapsed by default:
+   the merged answer is what to read, these are for checking it. */
+#askout .askraw{margin-top:9px}
+#askout .askraw summary{font-size:12px;color:var(--ink-2);cursor:pointer;
+  padding:5px 0;user-select:none}
+#askout .askraw summary:hover{color:var(--brand)}
+#askout .askraw .ans{margin-top:8px}
 #askout .ans+.ans{margin-top:9px}
 #askout .who{font-size:11px;font-weight:700;letter-spacing:.05em;
   text-transform:uppercase;color:var(--brand);margin-bottom:7px}
@@ -819,11 +843,12 @@ applyViewport();
 labelViews();
 setView(false);
 
-// ---------------------------------------------------------- Ask the regulations
+// ------------------------------------------------------- Ask the tracked updates
 // Retrieval happens HERE, in the browser: the page already holds every tracked
-// update, and corpus.json adds the actual CFR text. Only the model call leaves,
-// to a Cloudflare Worker that holds the API key server-side — so the key is
-// never in this page, and searching costs nothing.
+// update. Only the model call leaves, to a Cloudflare Worker that holds the API
+// key server-side — so the key is never in this page, and searching costs
+// nothing. corpus.json (the actual CFR text) is loaded only when the panel says
+// data-regs="1"; see ASK_INCLUDE_REGULATIONS in dashboard.py for why it is off.
 const ASK_ENDPOINT = 'https://regwatch-ask.alexandersmith14.workers.dev';
 
 const STOP = new Set(('the a an and or of to in for on is are be as by with that this it at from '
@@ -887,15 +912,18 @@ function askMd(t) {
   if (!q || !go) return;
   const say = html => { out.innerHTML = html; };
 
-  // Model picker for everyone; options fill in once the backend reports which
-  // providers it has keys for.
-  const picker = document.createElement('select');
-  picker.id = 'askp';
-  picker.innerHTML = '<option value="">best available</option>';
-  go.parentNode.insertBefore(picker, go);
+  // No model picker. Every question goes to every model the Worker has a key
+  // for, and the Worker reconciles them into one answer. "Best available" asked
+  // the reader to choose between three names they have no way to rank.
+
+  // corpus.json is fetched only when the panel asks for regulations. With it off
+  // the index is the tracked updates alone, so there is no CFR text in front of
+  // the models and no subsections for them to invent.
+  const WANT_REGS = document.querySelector('.ask-panel')?.dataset.regs === '1';
 
   async function ensureIndex() {
     if (ASK_INDEX) return true;
+    if (!WANT_REGS) { ASK_INDEX = buildAskIndex([]); return true; }
     try {
       const r = await fetch('corpus.json');
       ASK_INDEX = buildAskIndex(r.ok ? await r.json() : []);
@@ -909,58 +937,64 @@ function askMd(t) {
     const question = q.value.trim();
     if (!question) return;
     go.disabled = true;
-    say('<div class="ans">Searching the regulations&hellip;</div>');
+    say('<div class="ans">Searching the tracked updates&hellip;</div>');
     try {
       await ensureIndex();
-      // Unlocked pulls far more context; the Worker caps the rest.
       // 12 is what the free tiers accept; more makes Groq return 413.
       const passages = askSearch(question, 12);
       if (!passages.length) {
-        say('<div class="ans">Nothing in the tracked regulations or updates '
-          + 'matches that. Try different wording, or search the list below.</div>');
+        say('<div class="ans">Nothing in the tracked updates matches that. '
+          + 'Try different wording, or search the list below.</div>');
         return;
       }
-      const sel = picker.value;
+      say('<div class="ans">Asking the models and comparing their answers&hellip;</div>');
       const res = await fetch(ASK_ENDPOINT, {
         method: 'POST', headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          question, passages,
-          provider: sel && sel !== '__compare' ? sel : undefined,
-          compare: sel === '__compare' || undefined,
-        }),
+        body: JSON.stringify({question, passages}),
       });
       const d = await res.json();
       if (d.error) { say('<div class="ans warn">' + esc(d.error) + '</div>'); return; }
 
-      // Populate the model picker once we know what the backend has.
-      if (d.providers && picker.options.length <= 1) {
-        d.providers.forEach(p => picker.add(new Option(p, p)));
-        if (d.providers.length > 1) picker.add(new Option('compare all', '__compare'));
+      const all = d.answers || [];
+      const good = all.filter(a => a.text && a.text.trim());
+      if (!good.length) {
+        // Every model failed — usually free-tier quota. Say which and why.
+        say('<div class="ans warn">No model could answer just now.<br>'
+          + all.map(a => esc(a.provider) + ': ' + esc(a.error || 'no answer')).join('<br>')
+          + '</div>');
+        return;
+      }
+
+      // One answer to read. The reconcile pass is instructed to state the
+      // models' disagreements inside the text, so a single block is not hiding
+      // a split — but the raw answers stay one click away, because "they
+      // agreed" is a claim the reader should be able to check.
+      const main = d.merged ? d.merged.text : good[0].text;
+      let note;
+      if (d.merged) {
+        note = 'Reconciled from ' + good.length + ' models'
+             + (good.length < (d.asked || good.length)
+                 ? ' (' + (d.asked - good.length) + ' unavailable)' : '')
+             + (d.merged.independent
+                 ? ' by a separate model.'
+                 : ' by one of them — no independent reconciler configured.');
+      } else {
+        note = good.length + ' of ' + (d.asked || good.length)
+             + ' models answered, so there was nothing to compare.';
+      }
+
+      let raw = '';
+      if (good.length > 1) {
+        raw = '<details class="askraw"><summary>See the ' + good.length
+            + ' separate answers</summary>'
+            + good.map(a => '<div class="ans"><div class="who">' + esc(a.provider)
+                + ' &middot; ' + esc(a.model) + '</div>' + askMd(a.text) + '</div>').join('')
+            + '</details>';
       }
 
       const cites = [...new Set(passages.map(p => p.label))].join(' &middot; ');
-      const blocks = (d.answers || []).map(a => a.error
-        ? '<div class="ans warn"><div class="who">' + esc(a.provider) + '</div>'
-          + esc(a.error) + '</div>'
-        : '<div class="ans">'
-          + (d.answers.length > 1
-              ? '<div class="who">' + esc(a.provider) + ' &middot; ' + esc(a.model) + '</div>'
-              : '')
-          + askMd(a.text) + '</div>').join('');
-
-      // With several models, show where their citations agree — the useful
-      // signal when a free model answers a regulatory question.
-      let agree = '';
-      if ((d.answers || []).length > 1) {
-        const sets = d.answers.filter(a => a.text)
-          .map(a => new Set((a.text.match(/\b\d{1,2}\s*CFR\s*\d+(?:\.\d+)?/gi) || [])
-            .map(s => s.replace(/\s+/g, ' ').toUpperCase())));
-        if (sets.length > 1) {
-          const common = [...sets[0]].filter(c => sets.every(s => s.has(c)));
-          agree = '<br>Models agreed on: ' + (common.join(', ') || 'nothing — worth reading the source');
-        }
-      }
-      say(blocks + '<div class="cites">Grounded in: ' + cites + agree + '</div>');
+      say('<div class="ans">' + askMd(main) + '</div>' + raw
+        + '<div class="cites">' + note + '<br>Grounded in: ' + cites + '</div>');
     } catch (e) {
       say('<div class="ans warn">The assistant is unavailable right now. '
         + 'Everything below still works.</div>');
@@ -1267,6 +1301,34 @@ def main():
         for lbl, val, note, cls, key in kpis(rows, today)
     )
 
+    # Gated on ASK_ENABLED — see the note at the top of this file. When off the
+    # panel is simply absent; initAsk() finds no #askq and returns, so no
+    # corpus.json fetch and no call to the Worker.
+    # data-regs is read by initAsk() to decide whether to load corpus.json, so
+    # the scope of the feature is set here in Python, not duplicated in the JS.
+    ask_html = f"""
+<!-- Ask sits after the numbers and the filters, not before them. The tiles and
+     the search box are what most readers came for and they cost nothing; the
+     question box is the slow, optional thing. -->
+<div class="ask-panel" data-regs="{1 if ASK_INCLUDE_REGULATIONS else 0}">
+  <h2>Ask the tracked updates</h2>
+  <p class="sub">Answers are drawn from the {'regulation text and the ' if ASK_INCLUDE_REGULATIONS else ''}updates
+    tracked on this page, with sources named. Every question goes to three
+    separate models and their answers are reconciled into one, with any
+    disagreement between them stated in the answer. This is research to verify
+    against the source &mdash; not legal or compliance advice.</p>
+  <div class="ask-row">
+    <input id="askq" autocomplete="off" maxlength="400"
+           placeholder="e.g. what has FinCEN said about beneficial ownership?"
+           aria-label="Ask a question about the tracked updates">
+    <button id="askgo" type="button">Ask</button>
+  </div>
+  <div id="askout" aria-live="polite"></div>
+  <div class="ask-note">Covers the updates tracked below{', and Regulation B, E and DD' if ASK_INCLUDE_REGULATIONS else ' &mdash; not regulation text'}.
+    Answers can be wrong or incomplete &mdash; always open the source.</div>
+</div>
+""" if ASK_ENABLED else ""
+
     html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -1319,22 +1381,6 @@ def main():
   <div style="margin-top:6px">{regref_html}</div>
 </div>
 
-<div class="ask-panel">
-  <h2>Ask the regulations</h2>
-  <p class="sub">Answers are drawn from the actual CFR text plus the updates
-    below, with citations. This is research to verify against the source &mdash;
-    not legal or compliance advice.</p>
-  <div class="ask-row">
-    <input id="askq" autocomplete="off" maxlength="400"
-           placeholder="e.g. what must an adverse action notice contain under Reg B?"
-           aria-label="Ask a question about the regulations">
-    <button id="askgo" type="button">Ask</button>
-  </div>
-  <div id="askout" aria-live="polite"></div>
-  <div class="ask-note">Covers Regulation B, E and DD plus everything tracked
-    below. Answers can be wrong or incomplete &mdash; always open the source.</div>
-</div>
-
 <div class="kpis">{kpi_html}</div>
 <div class="pillgroup">
   <div class="grouplabel">Search<small>any word</small></div>
@@ -1373,6 +1419,7 @@ def main():
   </div>
 </details>
 
+{ask_html}
 <div class="cols">
   <div class="colmain">
     <!-- <details> rather than <div> so these fold on a phone, same mechanism as

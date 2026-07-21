@@ -214,26 +214,82 @@ Texas source pills, click-to-filter KPI tiles.
 
 ---
 
-## "Ask the regulations" — the one moving part with a dependency
+## "Ask the tracked updates" — the one moving part with a dependency
 
-The public dashboard has a question box that answers from actual CFR text plus
-the tracked updates, with citations. It is the only feature that depends on
-anything outside this repo.
+The public dashboard has a question box that answers from the tracked updates,
+naming the agency and date behind each point. It is the only feature that depends
+on anything outside this repo.
 
-    browser                          Cloudflare Worker          Groq
-    searches corpus.json + the  ──▶  adds the API key      ──▶  answers
-    tracked updates (BM25, free)     (a stored secret)
+    browser                          Cloudflare Worker      3 models answer
+    searches the tracked       ──▶   adds the keys,    ──▶  in parallel, then a
+    updates (BM25, free)             fans out               4th reconciles them
 
+- **It no longer answers from CFR text, deliberately.** `ASK_INCLUDE_REGULATIONS`
+  in `dashboard.py` is `False`, so the browser does not load `corpus.json` and no
+  regulation text goes to the models. See the next bullet for the evidence. The
+  plain keyword search box is a different thing entirely — no model, no network —
+  and was never affected.
+- **Why: a free model fabricated CFR subsections.** Measured 2026-07-21. The
+  source text of 12 CFR 1002.9 contains only the markers `(a)(2)(i)` and
+  `(a)(2)(ii)`. Given exactly that text, `gpt-oss-20b` cited `(iii)` through
+  `(vi)` and attached one to each element of the notice. The reconciler then in
+  use, `gemma-4-26b`, reproduced all six as fact in its main list — a
+  hallucination promoted to citation-level precision under a CRCM's name. With no
+  CFR text in front of the models there are no subsections to invent, which
+  removes the failure rather than hoping a reviewer catches it. Same reasoning
+  that keeps RegAssistant out of this repo. Turn it back on when the answering
+  models are ones worth citing.
+- **The prompts were hardened at the same time.** The answer prompt forbids
+  citing any CFR part or subsection not appearing verbatim in the sources, and
+  forbids subdividing one that does. The reconcile prompt now treats a citation
+  only one answer makes as unconfirmed — report it as that answer's claim, never
+  restate it as fact.
 - **Retrieval runs in the browser.** GitHub Pages cannot hold an API key —
-  anything in the page is readable. So the page searches locally (it already has
-  every update; `corpus.json` adds the regulation text) and only the model call
-  leaves. Search is therefore free at any traffic level.
+  anything in the page is readable. So the page searches locally and only the
+  model call leaves. Search is therefore free at any traffic level.
 - **`corpus.json`** is built by `ecfr_corpus.py` from the free eCFR API (Regs B,
-  E, DD — 67 sections; add parts in `PARTS`). The workflow publishes it. If it
-  stops being published, the box still answers, but only from the updates.
+  E, DD — 67 sections; add parts in `PARTS`). The workflow still publishes it and
+  it is still current; nothing loads it while the flag is off.
 - **The Worker** lives in `worker/` — deployed at
   `regwatch-ask.alexandersmith14.workers.dev`, endpoint hardcoded in
   `dashboard.py` as `ASK_ENDPOINT`. Deploy notes in `worker/README.md`.
+- **There is no model picker, and one question costs four provider calls.**
+  Groq, Gemini and OpenRouter each answer from the same passages; a fourth model
+  then reads *only those three answers, not the sources*, and writes the single
+  answer shown. It cannot invent a citation none of them made — the merge can
+  only narrow. It is told to state disagreements rather than pick a side, and the
+  three raw answers stay behind a "See the N separate answers" toggle, because
+  "the models agreed" is a claim the reader should be able to check.
+  The reconciler is deliberately not one of the answerers: asked to judge a set
+  including its own answer, a model prefers its own. Falling back to an answerer
+  works but is degraded, and the page says so under the answer.
+- **The reconciler order is measured; don't reshuffle it on taste.** Same
+  question, same set of answers to every candidate. `nemotron-3-ultra-550b` and
+  `nemotron-3-super-120b` both quarantined the invented citations into an
+  attributed "where the answers differ" section and told the reader to verify;
+  `gemma-4-26b` restated them as fact. Order is now ultra → super → gemma, and
+  gemma is a last-resort fallback, not the choice. Ultra is slower (57s vs 11s,
+  and erratic — it was also 4s once) and that trade was made deliberately.
+  `gemma-4-31b:free` was rate-limited upstream on every attempt, so it is unused.
+  Note the `openrouter` answerer comment warns off Nemotron for *answering* —
+  that was measured with 12 large passages, where it burns its budget on internal
+  reasoning. The reconcile input is ~6k chars and the objection does not apply.
+- **The free-provider search is recorded in `worker.js`; don't repeat it.**
+  Cerebras looked ideal and is dead: the key is valid and `/v1/models` lists
+  three models, but chat completions returns **402 payment_required on every
+  one** — the free tier grants no inference at all. OpenAI has no free API tier
+  regardless of what a free ChatGPT account suggests. DeepSeek has no free tier
+  either (cheap, but needs a balance — and it is a Chinese-jurisdiction API,
+  which is a firm-policy question before it is a technical one). On OpenRouter
+  the familiar `:free` slugs (llama-3.3-70b, deepseek-v3, qwen-2.5-72b,
+  mistral-small, gemma-3-27b) now 404 "unavailable for free". Cerebras and OpenAI
+  are left configured but out of `RECONCILERS`, so enabling either is a one-word
+  change once billing exists.
+- **Quota and latency both got worse, deliberately.** Free quota is reached ~4×
+  sooner — two bake-off runs in a row exhausted Groq's — and measured end-to-end
+  times were 37s / 46s / 49s / 121s. The reconcile cannot start until the slowest
+  answerer returns. Add the KV rate limit (`worker/README.md`) **before this goes
+  public**, not just before a paid key.
 - **The key is a Worker secret**, never in the repo or the page. Check it with
   `npx wrangler secret list` — it must be exactly `GROQ_API_KEY`. A trailing
   space in the name once made the Worker report "backend not configured" while
