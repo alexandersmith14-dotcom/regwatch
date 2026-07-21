@@ -1,4 +1,9 @@
-# regwatch-ask — the backend for "Ask the regulations"
+# regwatch-ask — the backend for "Ask"
+
+> **The feature is parked.** `ASK_ENABLED = False` in `dashboard.py`, so the
+> dashboard renders no question box and nothing calls this Worker. It is left
+> deployed with its secrets intact so unparking is one flag and no redeploy.
+> The rest of this file describes how it works when switched back on.
 
 A Cloudflare Worker. It exists for one reason: the published dashboard is a
 static file on GitHub Pages and **cannot hold an API key**. Anything in that page

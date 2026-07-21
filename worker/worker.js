@@ -19,7 +19,8 @@
  *   GROQ_API_KEY        answerer — at least one answerer is required
  *   GEMINI_API_KEY      answerer, optional
  *   OPENROUTER_API_KEY  answerer, optional
- *   CEREBRAS_API_KEY    reconciler, optional — free tier
+ *   DEEPSEEK_API_KEY    reconciler, preferred — PAID (~$0.0016/question)
+ *   CEREBRAS_API_KEY    reconciler, optional — free tier grants no inference
  *   OPENAI_API_KEY      reconciler, optional — PAID, no free API tier exists
  *
  * With no reconciler key the reconcile falls back to one of the answerers, which
@@ -68,9 +69,22 @@ const PROVIDERS = {
   // bigger sibling and came back 429 rate-limited upstream; the retired *:free
   // slugs (llama-3.3-70b, deepseek-v3, qwen-2.5-72b, mistral-small, gemma-3-27b)
   // now all 404 with "unavailable for free".
-  // All three run on the OpenRouter key an answerer also uses, but on different
-  // weights, so none of them is grading its own work. Ordered by the bake-off
-  // at RECONCILERS below; judge is the fallback, not the choice.
+  // PAID, and the preferred reconciler. Roughly $0.0016 a question at 2k in /
+  // 800 out, so ~600 questions per dollar — but unlike the free keys the failure
+  // mode here is a bill, not a pause. Set a spend limit on the DeepSeek account,
+  // and note the endpoint is callable by anyone who knows the URL (the Origin
+  // check only stops browsers; a plain client sets any header it likes). The KV
+  // rate limit in README.md matters more now than it did.
+  //
+  // Model is named explicitly: `deepseek-chat` and `deepseek-reasoner` are
+  // deprecated 2026-07-24 and are NOT safe defaults.
+  deepseek: {
+    url: "https://api.deepseek.com/chat/completions",
+    model: "deepseek-v4-pro", env: "DEEPSEEK_API_KEY",
+  },
+  // The free fallbacks. All three run on the OpenRouter key an answerer also
+  // uses, but on different weights, so none of them is grading its own work.
+  // Ordered by the bake-off at RECONCILERS below; judge is last resort.
   ultra: {
     url: "https://openrouter.ai/api/v1/chat/completions",
     model: "nvidia/nemotron-3-ultra-550b-a55b:free", env: "OPENROUTER_API_KEY",
@@ -123,8 +137,16 @@ const PROVIDERS = {
 // reader to verify; gemma-4-26b reproduced all six as fact in its main list.
 // Ultra is slower (57s vs 11s, and erratic) and that is the trade accepted.
 // gemma-4-31b was rate-limited upstream on every attempt, so it is not listed.
+// deepseek first: paid, but it is one call per question and the gatekeeper for
+// everything the reader sees. The free ones stay behind it so the feature keeps
+// working — degraded, and the page says so — if the balance runs out.
+//
+// Note this does NOT make it safe to switch regulations back on. The fabricated
+// subsections came from an ANSWERER reading CFR text; a better judge catches
+// more, but catching is not preventing. Re-enabling ASK_INCLUDE_REGULATIONS
+// means upgrading the answerers and re-running the bake-off first.
 const ANSWERERS = ["groq", "gemini", "openrouter"];
-const RECONCILERS = ["openai", "ultra", "super", "judge"];
+const RECONCILERS = ["deepseek", "openai", "ultra", "super", "judge"];
 
 const SYSTEM = `You are a regulatory research assistant for US community banks, credit
 unions and fintechs. Answer ONLY from the sources provided below. Each source is

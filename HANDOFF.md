@@ -152,6 +152,15 @@ gitignored.
 
 ## Parked, ready to go
 
+**"Ask"** — built, measured, working, and switched off at `ASK_ENABLED` in
+`dashboard.py`. Three models answer, a fourth reconciles. Unparking is one flag;
+the Worker and its keys are still deployed. Before it goes back on a public page:
+add the KV rate limit (`worker/README.md`) — one question is four provider calls
+and two bake-off runs alone exhausted Groq's free quota — and decide whether
+model-written prose belongs under a CRCM's name. `DEEPSEEK_API_KEY` is wired as
+the preferred reconciler but was never set, so it currently falls back to the
+free models.
+
 **Historical backfill** — ~1,450 rules and proposed rules back to 2018 across six
 agencies, about **$16** one-off, then unchanged daily cost. Two switches in
 `fetcher.py`, both off:
@@ -214,11 +223,23 @@ Texas source pills, click-to-filter KPI tiles.
 
 ---
 
-## "Ask the tracked updates" — the one moving part with a dependency
+## "Ask" — PARKED, and the only part with an outside dependency
 
-The public dashboard has a question box that answers from the tracked updates,
-naming the agency and date behind each point. It is the only feature that depends
-on anything outside this repo.
+**Not on the page.** `ASK_ENABLED = False` in `dashboard.py`. Nothing is broken
+and nothing was deleted; flipping that one flag brings the box back exactly as
+described below. The Worker stays deployed with its keys, so unparking needs no
+redeploy.
+
+Parked deliberately, not because it failed: scoped to the tracked updates it
+worked well and measured well. But model-written prose under a CRCM's name is a
+liability posture to take on purpose rather than by default — the same reasoning
+that keeps RegAssistant out of this repo. Revisit with models worth citing.
+
+**The plain keyword search box is a different thing and is unaffected** — no
+model, no network, still covers every tracked update. Don't confuse the two when
+reading the rest of this section.
+
+Everything below describes the feature as it stands when unparked.
 
     browser                          Cloudflare Worker      3 models answer
     searches the tracked       ──▶   adds the keys,    ──▶  in parallel, then a

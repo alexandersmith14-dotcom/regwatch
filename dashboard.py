@@ -29,27 +29,35 @@ from datetime import date, datetime, timedelta, timezone
 import fetcher
 import regref
 
-# The Ask box stays; the CFR text it used to answer from does not.
+# "Ask" is parked. Nothing is broken and nothing was deleted — set ASK_ENABLED
+# back to True and the box returns exactly as it was.
 #
-# Scoped down 2026-07-21 on evidence. A bake-off of free reconciler models turned
-# up the failure this feature cannot afford: given 12 CFR 1002.9, whose source
-# text contains only the subsection markers (a)(2)(i) and (a)(2)(ii), the
-# answering model invented (iii) through (vi) and attached one to each element of
-# the notice. The reconciler then in use (gemma-4-26b) reproduced all six as fact
-# in its final list, giving a hallucination citation-level precision. Two other
-# free models quarantined and flagged it instead, so this is model quality, not
-# a design fault — but on a page carrying a CRCM's name, free models inventing
-# CFR subsections is not a risk worth running for a nice-to-have.
+# Parked 2026-07-21 on evidence. A bake-off of free models turned up the failure
+# this feature cannot afford: the source text of 12 CFR 1002.9 carries only the
+# subsection markers (a)(2)(i) and (a)(2)(ii), but the answering model cited
+# (iii) through (vi) and attached one to each element of the notice, and the
+# reconciler then in use (gemma-4-26b) restated all six as fact in its main list
+# — a hallucination given citation-level precision. Two other free models
+# quarantined and flagged it, so this is model quality, not a design fault.
 #
-# Answering only from the tracked updates removes the failure mode rather than
-# hoping a better reconciler catches it: with no CFR text in front of them, there
-# are no subsections available to fabricate. The updates carry agency and date,
-# which the page already holds and the reader can click through to.
+# Scoping the box to the tracked updates removed that specific failure (no CFR
+# text in, no subsections to invent) and measured well. It is parked anyway:
+# model-written prose under a CRCM's name is a liability posture to take
+# deliberately rather than by default, which is the same reasoning that already
+# keeps RegAssistant out of this repo.
 #
-# Turn regulations back on when the answering models are ones worth citing.
-# `ecfr_corpus.py`, corpus.json and the whole retrieval path still work; this
-# flag only decides whether the browser loads the corpus and asks about it.
-ASK_ENABLED = True
+# Preserved and still working: the Worker and its keys, the reconciler order
+# measured in the bake-off, corpus.json, ecfr_corpus.py, the in-browser BM25
+# retrieval and the whole client path. Unparking is this one flag.
+#
+# ASK_INCLUDE_REGULATIONS stays False independently. Before setting it True,
+# upgrade the ANSWERERS and re-run the bake-off — the fabrication came from an
+# answerer reading CFR text, and a better reconciler catches rather than
+# prevents it.
+#
+# The plain keyword search box is a different thing entirely — no model, no
+# network — and is unaffected by either flag.
+ASK_ENABLED = False
 ASK_INCLUDE_REGULATIONS = False
 
 # Where a reader lands when they click a source name. Human pages, deliberately
