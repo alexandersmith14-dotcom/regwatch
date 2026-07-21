@@ -48,7 +48,10 @@ const PROVIDERS = {
   },
   openrouter: {
     url: "https://openrouter.ai/api/v1/chat/completions",
-    model: "nvidia/nemotron-3-super-120b-a12b:free", env: "OPENROUTER_API_KEY",
+    // NOT a reasoning model on purpose. nemotron-3-super spends its whole token
+    // budget on internal reasoning once the context is large and returns empty
+    // content — fine on a toy prompt, useless with 20 retrieved passages.
+    model: "openai/gpt-oss-20b:free", env: "OPENROUTER_API_KEY",
   },
 };
 
