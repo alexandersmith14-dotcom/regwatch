@@ -195,6 +195,18 @@ header button:hover{filter:brightness(1.06)}
 .kpi .v{font-size:32px;line-height:1.15;letter-spacing:-.02em;margin:6px 0 2px}
 .kpi .n{font-size:12px;color:var(--ink-muted)}
 .kpi .n.up{color:var(--crit)} .kpi .n.down{color:var(--ok)}
+/* Clickable tiles (those with a non-zero count) filter the list on click. */
+.kpi[data-kpi]{cursor:pointer;user-select:none;text-align:left;
+  transition:border-color .1s,box-shadow .1s}
+.kpi[data-kpi]:hover{border-color:var(--brand)}
+.kpi[data-kpi]:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+.kpi[aria-pressed="true"]{border-color:var(--brand);
+  box-shadow:inset 0 0 0 1px var(--brand)}
+.kpi[data-kpi]::after{content:"filter ▸";display:block;margin-top:6px;
+  font-size:10.5px;font-weight:600;letter-spacing:.04em;color:var(--brand);
+  opacity:0;transition:opacity .1s}
+.kpi[data-kpi]:hover::after,.kpi[aria-pressed="true"]::after{opacity:1}
+.kpi[aria-pressed="true"]::after{content:"filtering ▾"}
 
 /* Two labelled groups. The pills used to be one undifferentiated row, which hid
    the fact that they answer different questions: agency pills filter by WHO
@@ -476,6 +488,9 @@ function rows() {
     // NCUA publishes plenty that is not credit-union-specific, and interagency
     // credit-union items arrive under other agencies' names.
     if (filter.kind === 'credit_union') return d.credit_union === true;
+    // KPI tiles: d.kpi holds the tile keys this item satisfies, tagged at build
+    // time so the tile count and this list are the same computation.
+    if (filter.kind === 'kpi') return (d.kpi || []).includes(filter.value);
     return true;
   });
 }
@@ -661,12 +676,48 @@ searchBox.addEventListener('keydown', e => {
   if (e.key === 'Escape' && searchBox.value) { $('#clearq').click(); }
 });
 
+// One active filter at a time across pills AND kpi tiles, so selecting either
+// clears the other.
+function clearFilterUI() {
+  document.querySelectorAll('.pill, .kpi[data-kpi]')
+    .forEach(x => x.setAttribute('aria-pressed', 'false'));
+  $('#viewnote').textContent = '';
+}
+
 document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => {
-  document.querySelectorAll('.pill').forEach(x => x.setAttribute('aria-pressed', 'false'));
+  clearFilterUI();
   p.setAttribute('aria-pressed', 'true');
   filter = {kind: p.dataset.kind, value: p.dataset.value || ''};
   render();
 }));
+
+// KPI tiles filter the list to exactly what they count. Clicking the active tile
+// again clears back to all. KPI items are all relevant, so also drop out of the
+// "Everything" view for a consistent picture.
+document.querySelectorAll('.kpi[data-kpi]').forEach(k => {
+  const activate = () => {
+    const key = k.dataset.kpi;
+    const already = filter.kind === 'kpi' && filter.value === key;
+    clearFilterUI();
+    if (already) {
+      filter = {kind: 'all', value: ''};
+      const all = $('.pill[data-kind="all"]');
+      if (all) all.setAttribute('aria-pressed', 'true');
+    } else {
+      filter = {kind: 'kpi', value: key};
+      k.setAttribute('aria-pressed', 'true');
+      $('#viewnote').textContent = 'Showing: ' + k.querySelector('.l').textContent;
+      showAll = false;
+      $('#viewAll').setAttribute('aria-pressed', 'false');
+      $('#viewRelevant').setAttribute('aria-pressed', 'true');
+    }
+    render();
+  };
+  k.addEventListener('click', activate);
+  k.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+  });
+});
 
 $('#export').addEventListener('click', () => {
   const rs = rows();
@@ -771,36 +822,56 @@ def build_rows(store):
 
 
 def kpis(rows, today):
-    """Headline numbers. Only counts we can actually substantiate."""
+    """Headline numbers, and tag each item with the tiles it belongs to.
+
+    Each relevant row gets r["kpi"] = the list of tile keys it satisfies, and the
+    tile counts are derived from those tags — so a tile's number and the list you
+    get by clicking it are computed once and cannot drift apart. Non-relevant rows
+    get an empty list, which also makes the click filter relevant-only for free.
+    """
     def within(d, lo, hi):
         return bool(d) and str(lo) <= d <= str(hi)
 
     wk_start = today - timedelta(days=7)
     prev_start = today - timedelta(days=14)
-    rel = [r for r in rows if r["relevant"]]
-
-    this_wk = sum(1 for r in rel if within(r["date"], wk_start, today))
-    last_wk = sum(1 for r in rel if within(r["date"], prev_start, wk_start))
-    delta = this_wk - last_wk
-
-    open_c = [r for r in rel if r["comments_close_on"] and r["comments_close_on"] >= str(today)]
-    soon = sum(1 for r in open_c if r["comments_close_on"] <= str(today + timedelta(days=30)))
-
     month_start = today.replace(day=1)
-    enf = sum(1 for r in rel if r["type"] == "Enforcement Action"
-              and within(r["date"], month_start, today))
-
     q_start = date(today.year, 3 * ((today.month - 1) // 3) + 1, 1)
     q_end = date(today.year + (q_start.month + 3 > 12), ((q_start.month + 2) % 12) + 1, 28)
-    eff = sum(1 for r in rel if r["effective_on"] and str(q_start) <= r["effective_on"] <= str(q_end))
+    soon_end = today + timedelta(days=30)
 
+    for r in rows:
+        r["kpi"] = []
+    rel = [r for r in rows if r["relevant"]]
+
+    last_wk = 0
+    for r in rel:
+        if within(r["date"], wk_start, today):
+            r["kpi"].append("week")
+        if within(r["date"], prev_start, wk_start):
+            last_wk += 1
+        if r["comments_close_on"] and r["comments_close_on"] >= str(today):
+            r["kpi"].append("comments")
+        if r["type"] == "Enforcement Action" and within(r["date"], month_start, today):
+            r["kpi"].append("enforcement")
+        if r["effective_on"] and str(q_start) <= r["effective_on"] <= str(q_end):
+            r["kpi"].append("effective")
+
+    def count(key):
+        return sum(1 for r in rel if key in r["kpi"])
+
+    this_wk = count("week")
+    soon = sum(1 for r in rel if "comments" in r["kpi"]
+               and r["comments_close_on"] <= str(soon_end))
+    delta = this_wk - last_wk
     dn = "up" if delta > 0 else "down" if delta < 0 else ""
     dtxt = f"{'+' if delta > 0 else ''}{delta} vs last week" if delta else "same as last week"
+    # (label, value, note, delta-class, tile key)
     return [
-        ("Updates this week", this_wk, dtxt, dn),
-        ("Open comment periods", len(open_c), f"{soon} closing within 30 days", ""),
-        ("Enforcement actions", enf, "This month", ""),
-        ("Effective this quarter", eff, f"Rules taking effect by {q_end.strftime('%b %Y')}", ""),
+        ("Updates this week", this_wk, dtxt, dn, "week"),
+        ("Open comment periods", count("comments"), f"{soon} closing within 30 days", "", "comments"),
+        ("Enforcement actions", count("enforcement"), "This month", "", "enforcement"),
+        ("Effective this quarter", count("effective"),
+         f"Rules taking effect by {q_end.strftime('%b %Y')}", "", "effective"),
     ]
 
 
@@ -991,10 +1062,14 @@ def main():
     coverage_html = coverage_panel(store)
     regref_html = regref_panel()
 
+    # Tiles are clickable when they count something — clicking filters the list to
+    # exactly those items. A zero tile is left inert (nothing to show).
     kpi_html = "".join(
-        f'<div class="kpi"><div class="l">{lbl}</div><div class="v">{val}</div>'
-        f'<div class="n {cls}">{note}</div></div>'
-        for lbl, val, note, cls in kpis(rows, today)
+        (f'<div class="kpi" data-kpi="{key}" role="button" tabindex="0" '
+         f'aria-pressed="false">' if val else '<div class="kpi">')
+        + f'<div class="l">{lbl}</div><div class="v">{val}</div>'
+          f'<div class="n {cls}">{note}</div></div>'
+        for lbl, val, note, cls, key in kpis(rows, today)
     )
 
     html = f"""<!doctype html>
