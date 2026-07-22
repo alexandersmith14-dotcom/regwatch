@@ -1,8 +1,30 @@
 # regwatch-ask — the backend for "Ask"
 
-> **The feature is parked.** `ASK_ENABLED = False` in `dashboard.py`, so the
-> dashboard renders no question box and nothing calls this Worker. It is left
-> deployed with its secrets intact so unparking is one flag and no redeploy.
+> **The feature is parked and this Worker is DELETED from Cloudflare.**
+> `ASK_ENABLED = False` in `dashboard.py`, so the dashboard renders no question
+> box and nothing calls this endpoint. The deployment was taken down on
+> 2026-07-21 rather than left idle: it was publicly callable by anyone who knew
+> the URL — the Origin check only constrains browsers, since a plain client sets
+> whatever headers it likes — and that becomes a billable open endpoint the
+> moment a paid key is added.
+>
+> **To bring it back**, from this folder:
+>
+> ```bash
+> npx wrangler deploy
+> npx wrangler secret put GROQ_API_KEY         # answerer (at least one required)
+> npx wrangler secret put GEMINI_API_KEY       # answerer
+> npx wrangler secret put OPENROUTER_API_KEY   # answerer AND all free reconcilers
+> npx wrangler secret put DEEPSEEK_API_KEY     # preferred reconciler, PAID, optional
+> ```
+>
+> Those were the live secret names at deletion, minus `CEREBRAS_API_KEY`, which
+> was set but useless — see the note on Cerebras below. The keys themselves are
+> gone with the Worker and must be reissued from each provider's console.
+> The URL is derived from the account and worker name in `wrangler.toml`, so a
+> redeploy should return the same endpoint already hardcoded as `ASK_ENDPOINT`
+> in `dashboard.py` — verify it matches before flipping `ASK_ENABLED`.
+>
 > The rest of this file describes how it works when switched back on.
 
 A Cloudflare Worker. It exists for one reason: the published dashboard is a
