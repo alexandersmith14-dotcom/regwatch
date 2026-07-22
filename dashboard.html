@@ -65,12 +65,21 @@
   --on-accent:#101418;
 }
 *{box-sizing:border-box}
-/* museo-sans is the firm's typeface but it's licensed through Adobe Fonts and
-   can't be embedded in a self-contained file. This is the exact fallback chain
-   kaufmanrossin.com declares after it, so the dashboard matches what the site
-   shows on any machine without a Typekit licence. Calibri ships with Windows. */
+/* museo-sans is the firm's typeface, licensed through Adobe Fonts and not
+   embeddable in a self-contained file, so it only resolves on a machine that has
+   it installed locally. Everything after it is the fallback that actually runs.
+   It used to be kaufmanrossin.com's chain — Calibri,Georgia,Verdana — and that
+   was a real bug on phones: Calibri is a Windows font, so desktops got Calibri
+   and looked right, while iOS has no Calibri and fell through to GEORGIA, a
+   serif book face, for the whole dashboard. It rendered like a printed document,
+   not a tool. Measured on a 390px viewport before changing it.
+   The system stack below gives SF on iOS, Segoe UI on Windows, Roboto on
+   Android — each platform's own interface face, which is what "native" looks
+   like. Do not reintroduce Georgia or Verdana as fallbacks. */
 body{margin:0;padding:22px;background:var(--page);color:var(--ink);
-  font:14px/1.55 museo-sans,Calibri,Georgia,Verdana,sans-serif}
+  font:14px/1.55 museo-sans,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+    "Helvetica Neue",Arial,sans-serif;
+  -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1240px;margin:0 auto}
 header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
   background:var(--brand-bg);color:#fff;padding:18px 22px;border-radius:8px;
@@ -230,95 +239,6 @@ header button:hover{filter:brightness(1.06)}
 .cols{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
 @media (max-width:900px){.cols{grid-template-columns:1fr}}
 
-/* Phone layout. The desktop proportions put 1,434px of header, counts and
-   filters above the first actual update — nearly two full screens of scrolling
-   before any content, on the device most LinkedIn traffic arrives from.
-   Everything here buys that height back.
-
-   Not width alone. A phone in landscape is around 800px wide, so a plain
-   max-width:640px rule handed it the full desktop layout on a 375px-tall
-   screen: updates above deadlines, the filter block fully expanded, nothing
-   foldable, small tap targets. The pointer test catches a phone in either
-   orientation; the width bound keeps large tablets and touch-capable laptops on
-   the desktop layout, which is what suits them.
-
-   MUST stay in sync with the MOBILE matchMedia in the script below. */
-@media (max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px){
-  body{padding:12px}
-  header{padding:14px 16px;gap:12px;margin-bottom:14px}
-  h1{font-size:18px}
-  .sub{font-size:12px}
-  .notice{padding:11px 13px;font-size:12.5px;margin-bottom:14px}
-
-  /* Two-up instead of stacked: four numbers in half the height. */
-  .kpis{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
-  .kpi{padding:10px 12px;border-radius:8px}
-  .kpi .v{font-size:23px;margin:3px 0 1px}
-  .kpi .l,.kpi .n{font-size:11px;line-height:1.3}
-
-  /* Label above the controls rather than beside them — the fixed 104px column
-     was taking 31% of a 331px content width and pushing the source pills onto
-     five rows. */
-  .grouplabel{width:100%;flex:0 0 100%;margin-bottom:1px}
-  .grouplabel small{display:inline;margin-left:6px}
-  .pillgroup{gap:6px;margin-bottom:11px}
-  .pill{padding:5px 11px;font-size:12px}
-  .searchwrap{flex:1 1 100%;max-width:none}
-
-  .panel{padding:13px 14px}
-  .cols{gap:14px}
-  .card h3{font-size:14px}
-  .card p{font-size:12.5px}
-
-  .rr-table td,.rr-table th{padding:4px 5px;font-size:11.5px}
-  .rr-letter{width:46px}
-  .contact{padding:15px 16px;gap:14px}
-
-  /* Stacked columns put deadlines eight screens down, below every update card,
-     even though they are the most actionable thing on the page. display:contents
-     lifts the panels out of their column wrappers so they can be ordered. */
-  .cols{display:flex;flex-direction:column;gap:14px}
-  .colmain,.colside{display:contents}
-  .p-deadlines{order:1}
-  .p-updates{order:2}
-  #alsofound{order:3}
-  .p-agencies{order:4}
-
-  /* Bigger touch targets. */
-  .pill{padding:8px 13px}
-  .viewtoggle button{padding:9px 15px}
-  .card h3{line-height:1.45}
-  .card h3 a{display:inline-block;padding:2px 0}
-  #showmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
-    color:var(--brand);background:var(--surface)}
-
-  /* Foldable panels. Only here, and only as an affordance the reader can use --
-     both stay open on arrival. Collapsing the update list by default would show
-     a visitor from LinkedIn a page of headings and nothing else. */
-  .foldable>summary{cursor:pointer;list-style:none;display:block}
-  .foldable>summary::-webkit-details-marker{display:none}
-  /* Flex so the disclosure arrow can sit hard right. The card-count span floats
-     right on desktop; inside a flex row that float is ignored and it simply
-     lands between the title and the arrow, which reads correctly on a phone. */
-  .foldable>summary h2{display:flex;align-items:center;gap:8px}
-  .foldable>summary h2::after{content:"▸";margin-left:auto;font-size:13px;
-    line-height:1;color:var(--brand)}
-  .foldable[open]>summary h2::after{content:"▾"}
-  /* The heading's bottom margin is the gap to the content; with the panel shut
-     that becomes dead space under the bar. */
-  .foldable:not([open])>summary h2{margin-bottom:0}
-
-  /* Collapse the filter block. 327px of pills sat above the first update on a
-     phone; search stays out here because it is the control people reach for. */
-  #filters summary{display:block;cursor:pointer;list-style:none;
-    font-size:12.5px;font-weight:700;color:var(--brand);padding:9px 13px;
-    background:var(--surface);border:1px solid var(--border);border-radius:8px;
-    margin-bottom:12px}
-  #filters summary::-webkit-details-marker{display:none}
-  #filters summary::after{content:" ▸";}
-  #filters[open] summary::after{content:" ▾";}
-  #filters[open] summary{margin-bottom:10px}
-}
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:16px 18px}
 .panel+.panel{margin-top:18px}
 .panel h2{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;
@@ -387,6 +307,124 @@ header button:hover{filter:brightness(1.06)}
 .contact a.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
 .contact a.btn.primary:hover{filter:brightness(1.12)}
 footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
+
+/* ===================================================================
+   PHONE LAYOUT LIVES LAST, AND MUST STAY LAST.
+
+   Media-query rules carry no extra specificity, so any base rule written
+   below this block beats it on source order alone. It used to sit in the
+   middle of the stylesheet with ~70 lines after it, and seven overrides
+   were silently dead: .panel padding, .card h3 size and line-height,
+   .card p size, .contact padding and gap. Phones were quietly served
+   desktop spacing and nothing pointed at it - the page just looked a bit
+   wrong. Add new base rules ABOVE this block, never below.
+   =================================================================== */
+/* Phone layout. The desktop proportions put 1,434px of header, counts and
+   filters above the first actual update — nearly two full screens of scrolling
+   before any content, on the device most LinkedIn traffic arrives from.
+   Everything here buys that height back.
+
+   Not width alone. A phone in landscape is around 800px wide, so a plain
+   max-width:640px rule handed it the full desktop layout on a 375px-tall
+   screen: updates above deadlines, the filter block fully expanded, nothing
+   foldable, small tap targets. The pointer test catches a phone in either
+   orientation; the width bound keeps large tablets and touch-capable laptops on
+   the desktop layout, which is what suits them.
+
+   MUST stay in sync with the MOBILE matchMedia in the script below. */
+@media (max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px){
+  /* Type scale. The old one ran 11-12.5px for everything secondary, which on a
+     phone reads as dense rather than compact — small type is the main thing that
+     makes a page feel clunky rather than considered. Nothing here is larger than
+     its desktop size; the phone just stops being punished. */
+  body{padding:12px;font-size:15px}
+  header{padding:16px 16px;gap:12px;margin-bottom:14px}
+  h1{font-size:21px;line-height:1.25}
+  .sub{font-size:13px}
+  .notice{padding:13px 14px;font-size:13.5px;margin-bottom:14px}
+
+  /* Two-up instead of stacked: four numbers in half the height. */
+  .kpis{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+  .kpi{padding:12px 13px;border-radius:10px}
+  .kpi .v{font-size:26px;margin:4px 0 2px}
+  .kpi .l,.kpi .n{font-size:12px;line-height:1.35}
+
+  /* Label above the controls rather than beside them — the fixed 104px column
+     was taking 31% of a 331px content width and pushing the source pills onto
+     five rows. */
+  .grouplabel{width:100%;flex:0 0 100%;margin-bottom:3px}
+  .grouplabel small{display:inline;margin-left:6px}
+  .pillgroup{gap:7px;margin-bottom:13px}
+  .searchwrap{flex:1 1 100%;max-width:none}
+
+  /* 16px is not a style choice. Safari zooms the whole page when you focus an
+     input smaller than 16px, so tapping search used to lurch the layout and
+     leave the reader pinched in. This is the fix for that, not a size bump. */
+  #q{font-size:16px;padding-top:11px;padding-bottom:11px}
+
+  .panel{padding:14px 15px}
+  .cols{gap:14px}
+  .card h3{font-size:15px}
+  .card p{font-size:13.5px}
+
+  .rr-table td,.rr-table th{padding:4px 5px;font-size:11.5px}
+  .rr-letter{width:46px}
+  .contact{padding:15px 16px;gap:14px}
+
+  /* Stacked columns put deadlines eight screens down, below every update card,
+     even though they are the most actionable thing on the page. display:contents
+     lifts the panels out of their column wrappers so they can be ordered. */
+  .cols{display:flex;flex-direction:column;gap:14px}
+  .colmain,.colside{display:contents}
+  .p-deadlines{order:1}
+  .p-updates{order:2}
+  #alsofound{order:3}
+  .p-agencies{order:4}
+
+  /* Touch targets. Apple's guideline is 44px and these measured 33-35px, which
+     is the difference between tapping a filter and aiming at one. min-height
+     with centred content rather than more padding, so the pill rows do not grow
+     taller than they need to. */
+  .pill,.viewtoggle button{min-height:44px;display:inline-flex;align-items:center;
+    justify-content:center;font-size:13px}
+  .pill{padding:0 14px}
+  .viewtoggle button{padding:0 16px}
+  .viewtoggle{border-radius:14px}
+  #export{min-height:44px;padding:0 16px;font-size:13px}
+  #showmore{min-height:44px}
+  .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
+  .card h3{line-height:1.45}
+  .card h3 a{display:inline-block;padding:2px 0}
+  #showmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
+    color:var(--brand);background:var(--surface)}
+
+  /* Foldable panels. Only here, and only as an affordance the reader can use --
+     both stay open on arrival. Collapsing the update list by default would show
+     a visitor from LinkedIn a page of headings and nothing else. */
+  .foldable>summary{cursor:pointer;list-style:none;display:block}
+  .foldable>summary::-webkit-details-marker{display:none}
+  /* Flex so the disclosure arrow can sit hard right. The card-count span floats
+     right on desktop; inside a flex row that float is ignored and it simply
+     lands between the title and the arrow, which reads correctly on a phone. */
+  .foldable>summary h2{display:flex;align-items:center;gap:8px}
+  .foldable>summary h2::after{content:"▸";margin-left:auto;font-size:13px;
+    line-height:1;color:var(--brand)}
+  .foldable[open]>summary h2::after{content:"▾"}
+  /* The heading's bottom margin is the gap to the content; with the panel shut
+     that becomes dead space under the bar. */
+  .foldable:not([open])>summary h2{margin-bottom:0}
+
+  /* Collapse the filter block. 327px of pills sat above the first update on a
+     phone; search stays out here because it is the control people reach for. */
+  #filters summary{display:block;cursor:pointer;list-style:none;
+    font-size:12.5px;font-weight:700;color:var(--brand);padding:9px 13px;
+    background:var(--surface);border:1px solid var(--border);border-radius:8px;
+    margin-bottom:12px}
+  #filters summary::-webkit-details-marker{display:none}
+  #filters summary::after{content:" ▸";}
+  #filters[open] summary::after{content:" ▾";}
+  #filters[open] summary{margin-bottom:10px}
+}
 </style></head>
 <body data-today="2026-07-22"><div class="wrap">
 
@@ -394,7 +432,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="t">
     <h1>Regulatory update tracker</h1>
     <p class="sub">Community banks, credit unions &amp; fintechs &middot; last updated
-      July 22, 2026 12:15 UTC</p>
+      July 22, 2026 20:06 UTC</p>
   </div>
   <button id="export">Export CSV</button>
 </header>
