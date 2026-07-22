@@ -190,7 +190,6 @@ h1{font-size:21px;margin:0 0 3px;color:#fff;font-weight:700;letter-spacing:-.01e
 /* Desktop keeps both facts on one line; the separator is CSS so the phone can
    drop it and break instead. */
 .sub .stamp::before{content:" · "}
-.lbl-full{display:inline}
 button{font:inherit;font-size:13px;padding:8px 14px;color:var(--ink);
   background:var(--surface);border:1px solid var(--border);border-radius:6px;cursor:pointer}
 button:hover{background:var(--raised)}
@@ -447,8 +446,12 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
      a two-line title and a three-line subtitle. Two causes, both fixed here
      rather than by shrinking type:
        1. "Export CSV" took 102px of a 366px row, leaving the title 220px and
-          forcing the wrap. Hiding "Export " leaves "CSV" and gives the title
-          the width to sit on one line.
+          forcing the wrap. The button is now hidden outright on phones —
+          downloading a spreadsheet is a desktop action, and nobody opens a CSV
+          on a handset to do work with it. That returns the whole row to the
+          title. The button stays in the markup so its click handler always has
+          an element; display:none also takes it out of the tab order, which is
+          what we want when it is not offered.
        2. The audience and the timestamp ran together into three ragged lines.
           They are separate blocks now, and the stamp is dimmed — it is
           reference, not a headline.
@@ -460,8 +463,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .sub{font-size:12.5px;line-height:1.4}
   .sub .stamp{display:block;font-size:11.5px;opacity:.72;margin-top:2px}
   .sub .stamp::before{content:none}
-  .lbl-full{display:none}
-  #export{flex:0 0 auto}
+  #export{display:none}
   /* Stays at readable body size on purpose — see the .notice comment above; a
      public tool cannot put its caveats in the footer. Only the padding and the
      leading tighten here, and the deadline explanation moved into the coverage
@@ -515,7 +517,6 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .pill{padding:0 14px}
   .viewtoggle button{padding:0 16px}
   .viewtoggle{border-radius:14px}
-  #export{min-height:44px;padding:0 16px;font-size:13px}
   #showmore,#dlmore{min-height:44px}
   .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
   .card h3{line-height:1.45}
@@ -1477,9 +1478,9 @@ def main():
       {datetime.now(timezone.utc).strftime('%B %-d, %Y %H:%M UTC') if os.name != 'nt'
        else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</span></p>
   </div>
-  <!-- "Export" is hidden on a phone, leaving "CSV". The full label cost 102px of
-       a 366px row, which is what forced the title onto two lines. -->
-  <button id="export"><span class="lbl-full">Export </span>CSV</button>
+  <!-- Hidden entirely on a phone; see the media query. Kept in the markup rather
+       than built conditionally so the click handler always has its element. -->
+  <button id="export">Export CSV</button>
 </header>
 
 <!-- The visible caveat is now the instruction only: what the summaries are, and
