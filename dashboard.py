@@ -187,6 +187,10 @@ header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
 header .t{flex:1}
 h1{font-size:21px;margin:0 0 3px;color:#fff;font-weight:700;letter-spacing:-.01em}
 .sub{color:rgba(255,255,255,.82);font-size:13px;margin:0}
+/* Desktop keeps both facts on one line; the separator is CSS so the phone can
+   drop it and break instead. */
+.sub .stamp::before{content:" · "}
+.lbl-full{display:inline}
 button{font:inherit;font-size:13px;padding:8px 14px;color:var(--ink);
   background:var(--surface);border:1px solid var(--border);border-radius:6px;cursor:pointer}
 button:hover{background:var(--raised)}
@@ -438,9 +442,26 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
      makes a page feel clunky rather than considered. Nothing here is larger than
      its desktop size; the phone just stops being punished. */
   body{padding:12px;font-size:15px}
-  header{padding:16px 16px;gap:12px;margin-bottom:14px}
-  h1{font-size:21px;line-height:1.25}
-  .sub{font-size:13px}
+
+  /* The header was 152px — 18% of an iPhone screen — as a solid navy slab with
+     a two-line title and a three-line subtitle. Two causes, both fixed here
+     rather than by shrinking type:
+       1. "Export CSV" took 102px of a 366px row, leaving the title 220px and
+          forcing the wrap. Hiding "Export " leaves "CSV" and gives the title
+          the width to sit on one line.
+       2. The audience and the timestamp ran together into three ragged lines.
+          They are separate blocks now, and the stamp is dimmed — it is
+          reference, not a headline.
+     The accent rule also drops 4px to 3px: at phone width a 4px bar reads as a
+     third element rather than a trim. */
+  header{padding:14px 16px;gap:10px;margin-bottom:14px;border-bottom-width:3px;
+    align-items:flex-start}
+  h1{font-size:20px;line-height:1.2;margin:0 0 4px}
+  .sub{font-size:12.5px;line-height:1.4}
+  .sub .stamp{display:block;font-size:11.5px;opacity:.72;margin-top:2px}
+  .sub .stamp::before{content:none}
+  .lbl-full{display:none}
+  #export{flex:0 0 auto}
   .notice{padding:13px 14px;font-size:13.5px;margin-bottom:14px}
 
   /* Two-up instead of stacked: four numbers in half the height. */
@@ -1411,11 +1432,16 @@ def main():
 <header>
   <div class="t">
     <h1>Regulatory update tracker</h1>
-    <p class="sub">Community banks, credit unions &amp; fintechs &middot; last updated
+    <!-- The audience and the timestamp are two different facts. Run together they
+         wrapped to three ragged lines on a phone; as separate blocks they are two
+         tidy ones, and the stamp can be dimmed since it is reference, not billing. -->
+    <p class="sub">Community banks, credit unions &amp; fintechs<span class="stamp">Updated
       {datetime.now(timezone.utc).strftime('%B %-d, %Y %H:%M UTC') if os.name != 'nt'
-       else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</p>
+       else datetime.now(timezone.utc).strftime('%B %d, %Y %H:%M UTC')}</span></p>
   </div>
-  <button id="export">Export CSV</button>
+  <!-- "Export" is hidden on a phone, leaving "CSV". The full label cost 102px of
+       a 366px row, which is what forced the title onto two lines. -->
+  <button id="export"><span class="lbl-full">Export </span>CSV</button>
 </header>
 
 <div class="notice">
