@@ -17367,5 +17367,30 @@
     "first_seen": "2026-07-20",
     "last_seen": "2026-07-22",
     "fr_checked": false
+  },
+  "9260cd9bcc8dd5f7": {
+    "relevant": true,
+    "fintech_specific": false,
+    "credit_union": true,
+    "update_type": "Notice",
+    "urgency": "Low",
+    "plain_english": "NCUA is hosting a Vision250 roundtable series, an outreach/engagement activity involving credit unions. This is an operational event rather than a rule or guidance change, so there are no new compliance obligations.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "NCUA",
+      "credit unions",
+      "outreach",
+      "Vision250"
+    ],
+    "key": "9260cd9bcc8dd5f7",
+    "title": "NCUA Hosts Vision250 Roundtable Series",
+    "date": "2026-07-22",
+    "sources": [
+      "NCUA Press"
+    ],
+    "url": "https://ncua.gov/newsroom/press-release/2026/ncua-hosts-vision250-roundtable-series",
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "fr_checked": true
   }
 }
