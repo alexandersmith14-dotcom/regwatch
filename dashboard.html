@@ -254,6 +254,10 @@ header button:hover{filter:brightness(1.06)}
 .foldable>summary::-webkit-details-marker{display:none}
 .foldable>summary h2{cursor:default}
 .panel .note{font-size:12px;color:var(--ink-2);margin:-6px 0 12px}
+/* Scope line under the deadlines heading. Sits tight to the rule above it so it
+   reads as part of the heading rather than as the first row of the list. */
+.dlscope{font-size:12px;color:var(--ink-muted);margin:-6px 0 10px;
+  font-variant-numeric:tabular-nums}
 
 .card{padding:14px 0;border-bottom:1px solid var(--rule)}
 .card:first-of-type{padding-top:0}
@@ -461,7 +465,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
          wrapped to three ragged lines on a phone; as separate blocks they are two
          tidy ones, and the stamp can be dimmed since it is reference, not billing. -->
     <p class="sub">Community banks, credit unions &amp; fintechs<span class="stamp">Updated
-      July 22, 2026 20:54 UTC</span></p>
+      July 22, 2026 21:06 UTC</span></p>
   </div>
   <!-- Hidden entirely on a phone; see the media query. Kept in the markup rather
        than built conditionally so the click handler always has its element. -->
@@ -534,6 +538,11 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   <div class="colside">
     <details class="panel p-deadlines foldable" open>
       <summary><h2>Upcoming deadlines</h2></summary>
+      <!-- Says what the panel is currently scoped to. Without it the heading
+           read "Upcoming deadlines" whatever was selected, and two of the KPI
+           tiles are defined BY having a deadline — so filtering to them returns
+           every deadline of that type and looks like the click did nothing. -->
+      <div id="dlscope" class="dlscope"></div>
       <div id="deadlines"></div>
       <!-- Hidden in the markup and revealed by script only when something is
            actually capped, so a script failure leaves every deadline visible
@@ -747,7 +756,9 @@ function renderCards(rs) {
   }
 }
 
-function renderDeadlines(rs) {
+// Deadlines carried by a set of rows. Used twice: once for what is on screen,
+// once for the unfiltered total behind the "N of M" line.
+function deadlineItems(rs) {
   const items = [];
   rs.forEach(d => {
     if (d.comments_close_on && d.comments_close_on >= TODAY)
@@ -755,6 +766,24 @@ function renderDeadlines(rs) {
     if (d.effective_on && d.effective_on >= TODAY)
       items.push({d, when: d.effective_on, what: 'Takes effect'});
   });
+  return items;
+}
+
+// Human name for whatever is narrowing the page right now. Read off the pressed
+// control rather than mapped from filter.kind, so it cannot drift from the label
+// the reader actually clicked.
+function scopeLabel() {
+  const parts = [];
+  if (filter.kind !== 'all') {
+    const el = $('.kpi[aria-pressed="true"] .l') || $('.pill[aria-pressed="true"]');
+    if (el) parts.push(el.textContent.trim());
+  }
+  if (query) parts.push('“' + query + '”');
+  return parts.join(' · ');
+}
+
+function renderDeadlines(rs) {
+  const items = deadlineItems(rs);
   items.sort((a, b) => a.when.localeCompare(b.when));
   // Sorted soonest-first, so a cap hides the least urgent — never the ones about
   // to close.
@@ -777,6 +806,17 @@ function renderDeadlines(rs) {
     const hidden = items.length - shown.length;
     dlMore.hidden = hidden <= 0;
     dlMore.textContent = `Show ${hidden} more deadline${hidden === 1 ? '' : 's'}`;
+  }
+
+  // "N of M · what you clicked". M is every upcoming deadline in the current
+  // view, so the reader can see the filter bit even when the rows look familiar.
+  const scope = $('#dlscope');
+  if (scope) {
+    const total = deadlineItems(DATA.filter(d => showAll || d.relevant)).length;
+    const what = scopeLabel();
+    scope.textContent = what
+      ? `${items.length} of ${total} · ${what}`
+      : `All upcoming · ${total}`;
   }
 }
 
