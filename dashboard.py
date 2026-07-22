@@ -281,6 +281,8 @@ header button:hover{filter:brightness(1.06)}
 .kpi .v{font-size:32px;line-height:1.15;letter-spacing:-.02em;margin:6px 0 2px}
 .kpi .n{font-size:12px;color:var(--ink-muted)}
 .kpi .n.up{color:var(--crit)} .kpi .n.down{color:var(--ok)}
+/* Long/short phrasings of a tile note; the phone block swaps them. */
+.kpi .n-short{display:none}
 /* Clickable tiles (those with a non-zero count) filter the list on click. */
 .kpi[data-kpi]{cursor:pointer;user-select:none;text-align:left;
   transition:border-color .1s,box-shadow .1s}
@@ -479,6 +481,10 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .kpi{padding:12px 13px;border-radius:10px}
   .kpi .v{font-size:26px;margin:4px 0 2px}
   .kpi .l,.kpi .n{font-size:12px;line-height:1.35}
+  /* Short phrasing so no tile note wraps: one wrapped note made the bottom row
+     16px taller and left the tile beside it looking half empty. */
+  .kpi .n-long{display:none}
+  .kpi .n-short{display:inline}
 
   /* Label above the controls rather than beside them — the fixed 104px column
      was taking 31% of a 331px content width and pushing the source pills onto
@@ -1232,8 +1238,14 @@ def kpis(rows, today):
         ("Updates this week", this_wk, dtxt, dn, "week"),
         ("Open comment periods", count("comments"), f"{soon} closing within 30 days", "", "comments"),
         ("Enforcement actions", count("enforcement"), "This month", "", "enforcement"),
+        # Two phrasings of one fact. At phone width the long form wraps to a
+        # second line, which makes the whole bottom row 16px taller and leaves
+        # the Enforcement tile beside it visibly empty — grid rows match heights,
+        # so one wrapping note dents the tile next to it. Both are built from the
+        # same q_end, so they cannot drift; CSS picks which is shown.
         ("Effective this quarter", count("effective"),
-         f"Rules taking effect by {q_end.strftime('%b %Y')}", "", "effective"),
+         f'<span class="n-long">Rules taking effect by {q_end.strftime("%b %Y")}</span>'
+         f'<span class="n-short">By {q_end.strftime("%b %Y")}</span>', "", "effective"),
     ]
 
 
