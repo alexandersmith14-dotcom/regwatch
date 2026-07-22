@@ -416,11 +416,11 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .viewtoggle button{padding:0 16px}
   .viewtoggle{border-radius:14px}
   #export{min-height:44px;padding:0 16px;font-size:13px}
-  #showmore{min-height:44px}
+  #showmore,#dlmore{min-height:44px}
   .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
   .card h3{line-height:1.45}
   .card h3 a{display:inline-block;padding:2px 0}
-  #showmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
+  #showmore,#dlmore{width:100%;margin-top:12px;padding:11px;font-weight:600;
     color:var(--brand);background:var(--surface)}
 
   /* Foldable panels. Only here, and only as an affordance the reader can use --
@@ -460,7 +460,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
          wrapped to three ragged lines on a phone; as separate blocks they are two
          tidy ones, and the stamp can be dimmed since it is reference, not billing. -->
     <p class="sub">Community banks, credit unions &amp; fintechs<span class="stamp">Updated
-      July 22, 2026 20:23 UTC</span></p>
+      July 22, 2026 20:28 UTC</span></p>
   </div>
   <!-- "Export" is hidden on a phone, leaving "CSV". The full label cost 102px of
        a 366px row, which is what forced the title onto two lines. -->
@@ -534,6 +534,10 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
     <details class="panel p-deadlines foldable" open>
       <summary><h2>Upcoming deadlines</h2></summary>
       <div id="deadlines"></div>
+      <!-- Hidden in the markup and revealed by script only when something is
+           actually capped, so a script failure leaves every deadline visible
+           rather than a button that does nothing. -->
+      <button id="dlmore" type="button" hidden>Show more deadlines</button>
     </details>
     <div class="panel p-agencies">
       <h2>Updates by agency</h2>
@@ -706,7 +710,14 @@ function renderFilteredOut() {
 const MOBILE = window.matchMedia(
   '(max-width:640px), (hover:none) and (pointer:coarse) and (max-width:1024px)');
 let cardLimit = MOBILE.matches ? 8 : 25;
+// Deadlines are ordered FIRST on a phone because they are the most actionable
+// thing here — but uncapped that panel ran 1,389px, two thirds of everything
+// above the first update card. Capping it keeps the ordering decision without
+// making the reader scroll past 78 dates to reach an update. Desktop is a side
+// column where length costs nothing, so it stays uncapped.
+let dlLimit = MOBILE.matches ? 6 : Infinity;
 let userChoseLimit = false;      // never override an explicit "show more"
+let userChoseDlLimit = false;    // same, for the deadlines panel
 let userToggledFilters = false;  // or an explicit open/close
 
 function renderCards(rs) {
@@ -744,7 +755,10 @@ function renderDeadlines(rs) {
       items.push({d, when: d.effective_on, what: 'Takes effect'});
   });
   items.sort((a, b) => a.when.localeCompare(b.when));
-  $('#deadlines').innerHTML = items.length ? items.map(({d, when, what}) => {
+  // Sorted soonest-first, so a cap hides the least urgent — never the ones about
+  // to close.
+  const shown = items.slice(0, dlLimit);
+  $('#deadlines').innerHTML = shown.length ? shown.map(({d, when, what}) => {
     const n = days(when);
     const cls = n <= 14 ? 'soon' : n <= 45 ? 'mid' : 'far';
     const col = cls === 'soon' ? 'var(--crit)' : cls === 'mid' ? 'var(--warn)' : 'var(--ok)';
@@ -756,6 +770,13 @@ function renderDeadlines(rs) {
       </div></div>`;
   }).join('')
   : '<div class="empty">No dated deadlines in this view. Dates come from matched Federal Register documents; items without a match show none.</div>';
+
+  const dlMore = $('#dlmore');
+  if (dlMore) {
+    const hidden = items.length - shown.length;
+    dlMore.hidden = hidden <= 0;
+    dlMore.textContent = `Show ${hidden} more deadline${hidden === 1 ? '' : 's'}`;
+  }
 }
 
 function renderAgencies(rs) {
@@ -894,6 +915,14 @@ if (showMoreBtn) showMoreBtn.addEventListener('click', () => {
   showMoreBtn.hidden = true;
 });
 
+const dlMoreBtn = document.getElementById('dlmore');
+if (dlMoreBtn) dlMoreBtn.addEventListener('click', () => {
+  dlLimit = Infinity;
+  userChoseDlLimit = true;
+  render();
+  dlMoreBtn.hidden = true;
+});
+
 const filtersEl = document.getElementById('filters');
 if (filtersEl) filtersEl.addEventListener('toggle', () => { userToggledFilters = true; });
 
@@ -908,6 +937,7 @@ foldables.forEach(el => {
 
 function applyViewport() {
   if (!userChoseLimit) cardLimit = MOBILE.matches ? 8 : 25;
+  if (!userChoseDlLimit) dlLimit = MOBILE.matches ? 6 : Infinity;
   // Re-open anything the reader folded on a phone before turning to landscape or
   // widening the window; a collapsed panel on desktop has no visible way back.
   if (!MOBILE.matches) foldables.forEach(el => { el.open = true; });
