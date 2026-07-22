@@ -17392,5 +17392,55 @@
     "first_seen": "2026-07-22",
     "last_seen": "2026-07-22",
     "fr_checked": true
+  },
+  "89378a9ad399ad1a": {
+    "relevant": true,
+    "fintech_specific": false,
+    "credit_union": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FDIC announced routine disaster-relief measures for institutions serving areas of Louisiana hit by Tropical Storm Arthur, encouraging regulatory flexibility on lending, reporting, and CRA consideration for recovery efforts. Standard post-disaster supervisory relief applicable to affected banks.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "FDIC",
+      "disaster relief",
+      "Louisiana",
+      "supervisory relief"
+    ],
+    "key": "89378a9ad399ad1a",
+    "title": "Supervisory Relief to Help Financial Institutions and Facilitate Recovery in Areas of Louisiana Affected by Tropical Storm Arthur",
+    "date": "2026-07-22",
+    "sources": [
+      "FDIC FILs"
+    ],
+    "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-7",
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "fr_checked": false
+  },
+  "a460219df1d9d52c": {
+    "relevant": true,
+    "fintech_specific": false,
+    "credit_union": false,
+    "update_type": "Guidance",
+    "urgency": "Low",
+    "plain_english": "FDIC issued disaster relief guidance encouraging institutions to work with borrowers affected by severe storms and flooding in Mississippi, with regulatory flexibility on lending, reporting, and CRA consideration. Standard disaster-relief measure applying to affected banks in the region.",
+    "effective_or_comment_date": "Not stated",
+    "tags": [
+      "disaster relief",
+      "FDIC",
+      "Mississippi",
+      "supervisory relief"
+    ],
+    "key": "a460219df1d9d52c",
+    "title": "Supervisory Relief to Help Financial Institutions and Facilitate Recovery in Areas of Mississippi Affected by Severe Storms, Straight-Line Winds, Tornadoes, and Flooding",
+    "date": "2026-07-22",
+    "sources": [
+      "FDIC FILs"
+    ],
+    "url": "https://www.fdic.gov/news/financial-institution-letters/2026/supervisory-relief-help-financial-institutions-and-6",
+    "first_seen": "2026-07-22",
+    "last_seen": "2026-07-22",
+    "fr_checked": false
   }
 }
