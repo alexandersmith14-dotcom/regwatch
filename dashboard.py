@@ -462,7 +462,11 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .sub .stamp::before{content:none}
   .lbl-full{display:none}
   #export{flex:0 0 auto}
-  .notice{padding:13px 14px;font-size:13.5px;margin-bottom:14px}
+  /* Stays at readable body size on purpose — see the .notice comment above; a
+     public tool cannot put its caveats in the footer. Only the padding and the
+     leading tighten here, and the deadline explanation moved into the coverage
+     panel. The caveat itself is not shrunk to get the height down. */
+  .notice{padding:12px 13px;font-size:13px;line-height:1.45;margin-bottom:14px}
 
   /* Two-up instead of stacked: four numbers in half the height. */
   .kpis{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
@@ -1300,7 +1304,15 @@ def coverage_panel(store):
         '</summary><div class="body">'
         f'<p><strong>Tracked:</strong> {tracked_intro}</p>'
         f'<div class="grid">{"".join(rows)}</div>'
-        f'<p style="margin-top:12px"><strong>Not tracked:</strong> {state_note}, '
+        # Moved here from the always-visible notice, which ran to six lines on a
+        # phone. The instruction a reader must act on ("open the source") stays
+        # up top; this is the explanation of how deadlines are derived, which is
+        # reference and belongs with the other scope caveats.
+        '<p style="margin-top:12px"><strong>Deadlines:</strong> shown only where a '
+        'Federal Register record could be matched, and taken from that record\'s '
+        'structured fields. An item showing no deadline has no match — that does '
+        'not mean no deadline exists.</p>'
+        f'<p><strong>Not tracked:</strong> {state_note}, '
         'FFIEC, SEC, FTC and CFTC. Congressional activity and court decisions are '
         'not covered. Anything an agency published but did not list on the pages '
         'above will be missing.</p>'
@@ -1444,11 +1456,13 @@ def main():
   <button id="export"><span class="lbl-full">Export </span>CSV</button>
 </header>
 
+<!-- The visible caveat is now the instruction only: what the summaries are, and
+     what to do about it. How deadlines are derived moved into "What this covers"
+     with the other scope caveats — it explains rather than instructs, and it was
+     costing two of six lines on a phone. Nothing was deleted. -->
 <div class="notice">
   <strong>Read this first.</strong> The summaries are based on agency listings.
-  Always open the source document before acting on anything here. Deadlines shown
-  are structured fields taken from matched Federal Register records; items without
-  a match show none, which does not mean none exists.
+  Always open the source document before acting on anything here.
   <div style="margin-top:9px">{coverage_html}</div>
   <div style="margin-top:6px">{regref_html}</div>
 </div>
