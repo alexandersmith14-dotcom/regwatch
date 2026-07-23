@@ -497,9 +497,12 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
 
   /* Two-up instead of stacked: four numbers in half the height. */
   .kpis{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
-  .kpi{padding:12px 13px;border-radius:10px}
-  .kpi .v{font-size:26px;margin:4px 0 2px}
-  .kpi .l,.kpi .n{font-size:12px;line-height:1.35}
+  /* A light shrink: tighter padding and a slightly smaller value number, to buy
+     back a little height above the first update without making the tiles cramped
+     — the big number stays the headline. */
+  .kpi{padding:10px 12px;border-radius:10px}
+  .kpi .v{font-size:23px;margin:2px 0 1px}
+  .kpi .l,.kpi .n{font-size:11.5px;line-height:1.3}
   /* Short phrasing so no tile note wraps: one wrapped note made the bottom row
      16px taller and left the tile beside it looking half empty. */
   .kpi .n-long{display:none}
