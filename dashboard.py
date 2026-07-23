@@ -15,6 +15,7 @@ Design notes:
     scope, so a manual toggle wins in both directions.
 """
 import argparse
+import hashlib
 import html
 import json
 # main() binds a local named `html` for the page string, which shadows the module
@@ -111,6 +112,11 @@ def ecfr_url(cfr):
 
 STORE_PATH = "store.json"
 OUT_PATH = "dashboard.html"
+# Subscribable calendar feed of every upcoming deadline. Built here, deployed by
+# the workflow, and refreshed each daily run — a reader subscribes once and new
+# comment periods appear in their own calendar automatically, with reminders.
+# Derived output, never committed (see .gitignore).
+ICS_PATH = "deadlines.ics"
 
 # Absolute URL of the published site. Social scrapers require absolute URLs for
 # og:image and og:url — a relative path silently produces no preview.
@@ -409,6 +415,26 @@ header button:hover{filter:brightness(1.06)}
 .dl .ttl a:hover{text-decoration:underline}
 .dl .when{font-size:12px;margin-top:3px;font-variant-numeric:tabular-nums}
 .soon{color:var(--crit)} .mid{color:var(--warn)} .far{color:var(--ok)}
+/* Per-deadline "add to calendar". Sits on the same row as the date rather than
+   its own line — on a phone six of these each costing a line put ~140px back
+   onto a panel we had just spent effort shrinking. Quiet until hovered so it
+   doesn't compete with the deadline itself. */
+.dlfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:3px}
+.dlfoot .when{margin-top:0}
+.dl .cal{flex:none;font:inherit;font-size:11.5px;color:var(--brand);
+  background:none;border:1px solid transparent;border-radius:6px;
+  padding:4px 7px;cursor:pointer;white-space:nowrap}
+.dl .cal:hover{border-color:var(--border);text-decoration:underline}
+/* Subscribe row above the deadline list. */
+.dlsub{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
+.dlsub a,.dlsub button{font:inherit;font-size:12px;font-weight:600;cursor:pointer;
+  border:1px solid var(--border);border-radius:8px;padding:6px 11px;
+  color:var(--brand);background:var(--surface);text-decoration:none;
+  display:inline-flex;align-items:center;gap:5px}
+.dlsub a:hover,.dlsub button:hover{border-color:var(--brand)}
+.dlsub .hint{font-size:11px;color:var(--ink-muted);border:none;padding:0;
+  background:none;font-weight:400}
 
 .agrow{display:grid;grid-template-columns:120px 1fr 74px;gap:7px 10px;align-items:center}
 .agrow .n{font-size:12.5px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -550,6 +576,10 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .viewtoggle button{padding:0 16px}
   .viewtoggle{border-radius:14px}
   #showmore,#dlmore{min-height:44px}
+  /* Inline on the date row, so it costs no extra line, but padded enough to be
+     tappable. A full 44px here would grow every deadline row instead. */
+  .dl .cal{min-height:34px;padding:0 10px;border-color:var(--border)}
+  .dlsub a,.dlsub button{min-height:38px}
   .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
   .card h3{line-height:1.45}
   .card h3 a{display:inline-block;padding:2px 0}
@@ -789,6 +819,58 @@ function scopeLabel() {
   return parts.join(' · ');
 }
 
+// One-event .ics for the per-deadline "Add to calendar" button. Mirrors the
+// server-built feed (build_ics in dashboard.py) — same all-day event, same two
+// alarms — so a single deadline and the whole feed behave identically. RFC 5545:
+// CRLF endings, escaped text, folded lines.
+function icsEsc(t) {
+  return String(t).replace(/\\/g, '\\\\').replace(/\n/g, '\\n')
+    .replace(/,/g, '\\,').replace(/;/g, '\\;');
+}
+function icsFold(line) {            // <=75 octets, continuation lines start with a space
+  const enc = new TextEncoder();
+  let out = '', cur = '';
+  for (const ch of line) {
+    if (enc.encode(cur + ch).length > 74) { out += (out ? '\r\n' : '') + cur; cur = ' ' + ch; }
+    else cur += ch;
+  }
+  return out + (out ? '\r\n' : '') + cur;
+}
+function ymdPlus1(ymd) {
+  const d = new Date(ymd + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10).replace(/-/g, '');
+}
+function eventIcs(title, when, label, url) {
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+  let h = 0; const key = when + label + title;
+  for (let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) | 0;
+  const uid = 'regwatch-' + when.replace(/-/g, '') + '-' + (h >>> 0).toString(36);
+  return [
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//RegWatch//Regulatory deadlines//EN',
+    'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:' + uid + '@regwatch',
+    'DTSTAMP:' + stamp,
+    'DTSTART;VALUE=DATE:' + when.replace(/-/g, ''),
+    'DTEND;VALUE=DATE:' + ymdPlus1(when),
+    icsFold('SUMMARY:' + icsEsc(label + ': ' + title)),
+    icsFold('DESCRIPTION:' + icsEsc(label + '. Open the source before acting: ' + url)),
+    icsFold('URL:' + url),
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:RegWatch deadline in 7 days', 'TRIGGER:-P7D', 'END:VALARM',
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:RegWatch deadline tomorrow', 'TRIGGER:-P1D', 'END:VALARM',
+    'END:VEVENT', 'END:VCALENDAR',
+  ].join('\r\n') + '\r\n';
+}
+function downloadText(name, text, mime) {
+  const blob = new Blob([text], { type: mime });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
 function renderDeadlines(rs) {
   const items = deadlineItems(rs);
   items.sort((a, b) => a.when.localeCompare(b.when));
@@ -803,7 +885,12 @@ function renderDeadlines(rs) {
       <div class="dot" style="background:${col}"></div>
       <div class="body">
         <div class="ttl"><a href="${esc(d.fr_url || d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a></div>
-        <div class="when ${cls}">${esc(what)} ${esc(when)} · ${n} day${n === 1 ? '' : 's'}</div>
+        <div class="dlfoot">
+          <div class="when ${cls}">${esc(what)} ${esc(when)} · ${n} day${n === 1 ? '' : 's'}</div>
+          <button class="cal" data-t="${esc(d.title)}" data-w="${esc(when)}"
+            data-l="${esc(what)}" data-u="${esc(d.fr_url || d.url)}"
+            aria-label="Add this deadline to your calendar">+ Calendar</button>
+        </div>
       </div></div>`;
   }).join('')
   : '<div class="empty">No dated deadlines in this view. Dates come from matched Federal Register documents; items without a match show none.</div>';
@@ -969,6 +1056,30 @@ if (dlMoreBtn) dlMoreBtn.addEventListener('click', () => {
   userChoseDlLimit = true;
   render();
   dlMoreBtn.hidden = true;
+});
+
+// "Add to calendar" per deadline — delegated, since the list re-renders on every
+// filter change. Builds a one-event .ics and downloads it; the phone's calendar
+// app opens it, the desktop's saves it.
+const dlList = document.getElementById('deadlines');
+if (dlList) dlList.addEventListener('click', e => {
+  const b = e.target.closest('.cal');
+  if (!b) return;
+  const ics = eventIcs(b.dataset.t, b.dataset.w, b.dataset.l, b.dataset.u);
+  const name = (b.dataset.l + '-' + b.dataset.w).replace(/[^a-z0-9]+/gi, '-')
+    .toLowerCase().replace(/^-|-$/g, '') + '.ics';
+  downloadText(name, ics, 'text/calendar');
+});
+
+// Copy the feed URL for calendar apps that want it pasted rather than a webcal
+// handoff. Falls back to selecting the text if the clipboard API is unavailable.
+const dlCopy = document.getElementById('dlcopy');
+if (dlCopy) dlCopy.addEventListener('click', async () => {
+  const url = dlCopy.dataset.url, label = dlCopy.textContent;
+  try { await navigator.clipboard.writeText(url); }
+  catch (e) { prompt('Copy this feed link into your calendar:', url); return; }
+  dlCopy.textContent = 'Copied ✓';
+  setTimeout(() => { dlCopy.textContent = label; }, 1600);
 });
 
 const filtersEl = document.getElementById('filters');
@@ -1425,6 +1536,99 @@ def coverage_panel(store):
     )
 
 
+# ----------------------------------------------------------- calendar feed (.ics)
+# One VEVENT per upcoming deadline, each an all-day event carrying two DISPLAY
+# alarms (7 days and 1 day before). The same event structure is built client-side
+# for the per-item "Add to calendar" button; keep the two in step if either
+# changes. RFC 5545: CRLF line endings, text escaping, and 75-octet line folding.
+
+def _ics_escape(text):
+    return (str(text).replace("\\", "\\\\").replace("\n", "\\n")
+            .replace(",", "\\,").replace(";", "\\;"))
+
+
+def _ics_fold(line):
+    # Fold to <=75 octets with a leading space on continuations. Measured in
+    # UTF-8 bytes, and a multi-byte char is never split across a fold.
+    out, cur = [], b""
+    for ch in line:
+        b = ch.encode("utf-8")
+        if len(cur) + len(b) > 74:
+            out.append(cur)
+            cur = b" " + b
+        else:
+            cur += b
+    out.append(cur)
+    return b"\r\n".join(out).decode("utf-8")
+
+
+def _ics_events(rows, today):
+    """(uid, yyyymmdd, label, title, url) for every upcoming deadline, soonest first.
+
+    Deduplicated by UID. The store deliberately keeps same-agency items separate
+    (merging them once collapsed three distinct OFAC actions), so one regulatory
+    action can appear twice with an identical title, date and URL. On the page
+    that is two rows; in a calendar it is one deadline, and emitting two VEVENTs
+    under one UID is ambiguous — parsers may keep either or drop one silently.
+    """
+    events, seen = [], set()
+    for r in rows:
+        if not r["relevant"]:
+            continue
+        for field, label in (("comments_close_on", "Comments close"),
+                             ("effective_on", "Takes effect")):
+            d = r.get(field)
+            # Full YYYY-MM-DD only; a month-only date can't be a calendar day.
+            if not d or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) or d < str(today):
+                continue
+            url = r.get("fr_url") or r.get("url") or SITE_URL
+            # URL is in the hash so two genuinely different items that happen to
+            # share a title and date get distinct UIDs — a shared UID makes a
+            # calendar treat them as one event and silently drop the other.
+            uid = "regwatch-" + hashlib.sha1(
+                (d + field + r["title"] + url).encode("utf-8")).hexdigest()[:16]
+            if uid in seen:
+                continue
+            seen.add(uid)
+            events.append((uid, d.replace("-", ""), label, r["title"], url))
+    events.sort(key=lambda e: e[1])
+    return events
+
+
+def build_ics(rows, today):
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0",
+        "PRODID:-//RegWatch//Regulatory deadlines//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+        "X-WR-CALNAME:RegWatch regulatory deadlines",
+        "X-WR-CALDESC:Comment-period and effective-date deadlines tracked by RegWatch.",
+        "REFRESH-INTERVAL;VALUE=DURATION:P1D", "X-PUBLISHED-TTL:P1D",
+    ]
+    for uid, ymd, label, title, url in _ics_events(rows, today):
+        y, m, day = int(ymd[:4]), int(ymd[4:6]), int(ymd[6:])
+        end = (date(y, m, day) + timedelta(days=1)).strftime("%Y%m%d")
+        lines += [
+            "BEGIN:VEVENT",
+            f"UID:{uid}@regwatch",
+            f"DTSTAMP:{stamp}",
+            f"DTSTART;VALUE=DATE:{ymd}",
+            f"DTEND;VALUE=DATE:{end}",
+            f"SUMMARY:{_ics_escape(label + ': ' + title)}",
+            f"DESCRIPTION:{_ics_escape(label + '. Open the source before acting: ' + url)}",
+            f"URL:{url}",
+            "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:RegWatch deadline in 7 days",
+            "TRIGGER:-P7D", "END:VALARM",
+            "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:RegWatch deadline tomorrow",
+            "TRIGGER:-P1D", "END:VALARM",
+            "END:VEVENT",
+        ]
+    lines.append("END:VCALENDAR")
+    # Fold every line, headers included — one over-length header is still a spec
+    # violation some parsers reject. Folding a short line is a no-op.
+    return "\r\n".join(_ics_fold(l) for l in lines) + "\r\n"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--open", action="store_true")
@@ -1625,6 +1829,16 @@ def main():
            tiles are defined BY having a deadline — so filtering to them returns
            every deadline of that type and looks like the click did nothing. -->
       <div id="dlscope" class="dlscope"></div>
+      <!-- Subscribe once and new comment periods appear in the reader's own
+           calendar automatically, with reminders. webcal:// makes Google/Apple/
+           Outlook offer to subscribe; the copy button is the manual fallback for
+           apps that want the https URL pasted in. The feed is a static file the
+           daily build refreshes — no per-user state, no server. -->
+      <div class="dlsub">
+        <a href="webcal://{SITE_URL.split('://', 1)[1]}{ICS_PATH}">Subscribe in your calendar</a>
+        <button id="dlcopy" type="button" data-url="{SITE_URL}{ICS_PATH}">Copy feed link</button>
+        <span class="hint">auto-updates daily, with reminders</span>
+      </div>
       <div id="deadlines"></div>
       <!-- Hidden in the markup and revealed by script only when something is
            actually capped, so a script failure leaves every deadline visible
@@ -1666,8 +1880,16 @@ reading the source document. Not legal or compliance advice.</footer>
 
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
+
+    # The subscribable feed. Written with CRLF already embedded, so newline="" to
+    # stop the platform translating them again.
+    ics = build_ics(rows, today)
+    with open(ICS_PATH, "w", encoding="utf-8", newline="") as f:
+        f.write(ics)
+
     print(f"Wrote {OUT_PATH} ({os.path.getsize(OUT_PATH)/1024:.0f} KB) — "
           f"{sum(1 for r in rows if r['relevant'])} relevant of {len(rows)} events")
+    print(f"Wrote {ICS_PATH} ({ics.count('BEGIN:VEVENT')} deadlines)")
     if args.open:
         webbrowser.open("file://" + os.path.abspath(OUT_PATH))
 

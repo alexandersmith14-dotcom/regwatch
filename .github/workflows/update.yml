@@ -116,6 +116,10 @@ jobs:
           # browser, so this must be published or the panel can only draw on the
           # tracked updates. Regenerate with: python ecfr_corpus.py
           cp corpus.json site/corpus.json
+          # Subscribable calendar feed of upcoming deadlines, written by
+          # dashboard.py in the build step above. Readers subscribe to this URL
+          # once and new comment periods appear in their calendar automatically.
+          cp deadlines.ics site/deadlines.ics
 
       - name: Publish to Pages
         uses: actions/upload-pages-artifact@v3
