@@ -131,6 +131,14 @@ SITE_URL = "https://alexandersmith14-dotcom.github.io/regwatch/"
 CSS = """
 :root{
   color-scheme:light;
+  /* One definition of the page font, referenced by body AND the search input.
+     The input needs it stated explicitly: Samsung Internet ignores font:inherit
+     on form controls and imposes its own Samsung Sans, so the search box drew in
+     a visibly rounder typeface than the rest of the page. An explicit family via
+     this variable overrides that, and sharing the variable keeps the two in
+     lockstep. museo-sans is the firm face when installed; the rest is the system
+     fallback that actually renders. */
+  --ui-font:museo-sans,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --page:#f4f4f4; --surface:#ffffff; --raised:#fafafa;
   --ink:#212529; --ink-2:#3c3c3c; --ink-muted:#6c757d;
   --rule:#e3e3e3; --border:rgba(0,0,0,.12);
@@ -177,8 +185,7 @@ CSS = """
    Android — each platform's own interface face, which is what "native" looks
    like. Do not reintroduce Georgia or Verdana as fallbacks. */
 body{margin:0;padding:22px;background:var(--page);color:var(--ink);
-  font:14px/1.55 museo-sans,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-    "Helvetica Neue",Arial,sans-serif;
+  font-family:var(--ui-font);font-size:14px;line-height:1.55;
   -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1240px;margin:0 auto}
 header{display:flex;align-items:center;gap:16px;margin-bottom:20px;
@@ -314,12 +321,13 @@ header button:hover{filter:brightness(1.06)}
    makes it an ordinary text field that honours the font below. Size matches the
    body (14px) rather than the old 13px, so it no longer reads a notch smaller. */
 .searchwrap input{width:100%;appearance:none;-webkit-appearance:none;
-  font:inherit;font-size:14px;padding:8px 30px 8px 12px;
+  font-family:var(--ui-font);font-size:14px;padding:8px 30px 8px 12px;
   color:var(--ink);background:var(--surface);border:1px solid var(--border);
   border-radius:999px}
 .searchwrap input:focus{outline:2px solid var(--brand);outline-offset:1px;
   border-color:var(--brand)}
 .searchwrap input::-webkit-search-cancel-button{display:none}
+.searchwrap input::placeholder{font-family:var(--ui-font);opacity:1;color:var(--ink-muted)}
 #clearq{position:absolute;right:4px;top:50%;transform:translateY(-50%);
   border:none;background:transparent;color:var(--ink-muted);font-size:17px;
   line-height:1;padding:2px 8px;cursor:pointer;border-radius:50%}
