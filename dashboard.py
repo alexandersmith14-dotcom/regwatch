@@ -23,6 +23,7 @@ import json
 from html import escape as hesc
 import os
 import re
+import urllib.parse
 import webbrowser
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
@@ -1071,15 +1072,17 @@ if (dlList) dlList.addEventListener('click', e => {
   downloadText(name, ics, 'text/calendar');
 });
 
-// Copy the feed URL for calendar apps that want it pasted rather than a webcal
-// handoff. Falls back to selecting the text if the clipboard API is unavailable.
+// Copy the feed URL — the universal path for Outlook, Apple and anything that
+// isn't Google. The confirmation says what to do with it, because a bare
+// "Copied" leaves the reader holding a URL with no next step. prompt() is the
+// fallback where the clipboard API is blocked (it is denied on insecure origins).
 const dlCopy = document.getElementById('dlcopy');
 if (dlCopy) dlCopy.addEventListener('click', async () => {
   const url = dlCopy.dataset.url, label = dlCopy.textContent;
   try { await navigator.clipboard.writeText(url); }
-  catch (e) { prompt('Copy this feed link into your calendar:', url); return; }
-  dlCopy.textContent = 'Copied ✓';
-  setTimeout(() => { dlCopy.textContent = label; }, 1600);
+  catch (e) { prompt('Copy this feed link, then add it in your calendar:', url); return; }
+  dlCopy.textContent = 'Copied — paste in your calendar';
+  setTimeout(() => { dlCopy.textContent = label; }, 2600);
 });
 
 const filtersEl = document.getElementById('filters');
@@ -1672,6 +1675,17 @@ def main():
     coverage_html = coverage_panel(store)
     regref_html = regref_panel()
 
+    # Calendar-feed links. A bare webcal:// link was the first attempt and it is
+    # a trap: it only does anything if the device has an app registered for that
+    # scheme. Android Chrome does not, so the button silently did nothing —
+    # reported as "gets stuck", which is exactly how a dead control reads.
+    # Google's own subscribe URL takes the webcal address as ?cid= and works
+    # wherever the reader is signed in; copying the https URL covers Outlook,
+    # Apple and everything else.
+    feed_url = f"{SITE_URL}{ICS_PATH}"
+    feed_gcal = ("https://calendar.google.com/calendar/r?cid="
+                 + urllib.parse.quote("webcal://" + feed_url.split("://", 1)[1], safe=""))
+
     # Tiles are clickable when they count something — clicking filters the list to
     # exactly those items. A zero tile is left inert (nothing to show).
     kpi_html = "".join(
@@ -1830,13 +1844,13 @@ def main():
            every deadline of that type and looks like the click did nothing. -->
       <div id="dlscope" class="dlscope"></div>
       <!-- Subscribe once and new comment periods appear in the reader's own
-           calendar automatically, with reminders. webcal:// makes Google/Apple/
-           Outlook offer to subscribe; the copy button is the manual fallback for
-           apps that want the https URL pasted in. The feed is a static file the
-           daily build refreshes — no per-user state, no server. -->
+           calendar automatically, with reminders. Google gets a real link that
+           always resolves; everyone else copies the https URL and pastes it into
+           their own "add calendar from web". No bare webcal:// — see feed_gcal.
+           The feed is a static file the daily build refreshes: no server. -->
       <div class="dlsub">
-        <a href="webcal://{SITE_URL.split('://', 1)[1]}{ICS_PATH}">Subscribe in your calendar</a>
-        <button id="dlcopy" type="button" data-url="{SITE_URL}{ICS_PATH}">Copy feed link</button>
+        <a href="{feed_gcal}" target="_blank" rel="noopener">Add to Google Calendar</a>
+        <button id="dlcopy" type="button" data-url="{feed_url}">Copy feed link</button>
         <span class="hint">auto-updates daily, with reminders</span>
       </div>
       <div id="deadlines"></div>

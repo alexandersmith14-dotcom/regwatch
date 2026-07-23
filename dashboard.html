@@ -518,7 +518,7 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
          wrapped to three ragged lines on a phone; as separate blocks they are two
          tidy ones, and the stamp can be dimmed since it is reference, not billing. -->
     <p class="sub">Community banks, credit unions &amp; fintechs<span class="stamp">Updated
-      July 23, 2026 20:11 UTC</span></p>
+      July 23, 2026 20:26 UTC</span></p>
   </div>
   <!-- Hidden entirely on a phone; see the media query. Kept in the markup rather
        than built conditionally so the click handler always has its element. -->
@@ -597,12 +597,12 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
            every deadline of that type and looks like the click did nothing. -->
       <div id="dlscope" class="dlscope"></div>
       <!-- Subscribe once and new comment periods appear in the reader's own
-           calendar automatically, with reminders. webcal:// makes Google/Apple/
-           Outlook offer to subscribe; the copy button is the manual fallback for
-           apps that want the https URL pasted in. The feed is a static file the
-           daily build refreshes — no per-user state, no server. -->
+           calendar automatically, with reminders. Google gets a real link that
+           always resolves; everyone else copies the https URL and pastes it into
+           their own "add calendar from web". No bare webcal:// — see feed_gcal.
+           The feed is a static file the daily build refreshes: no server. -->
       <div class="dlsub">
-        <a href="webcal://alexandersmith14-dotcom.github.io/regwatch/deadlines.ics">Subscribe in your calendar</a>
+        <a href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Falexandersmith14-dotcom.github.io%2Fregwatch%2Fdeadlines.ics" target="_blank" rel="noopener">Add to Google Calendar</a>
         <button id="dlcopy" type="button" data-url="https://alexandersmith14-dotcom.github.io/regwatch/deadlines.ics">Copy feed link</button>
         <span class="hint">auto-updates daily, with reminders</span>
       </div>
@@ -1097,15 +1097,17 @@ if (dlList) dlList.addEventListener('click', e => {
   downloadText(name, ics, 'text/calendar');
 });
 
-// Copy the feed URL for calendar apps that want it pasted rather than a webcal
-// handoff. Falls back to selecting the text if the clipboard API is unavailable.
+// Copy the feed URL — the universal path for Outlook, Apple and anything that
+// isn't Google. The confirmation says what to do with it, because a bare
+// "Copied" leaves the reader holding a URL with no next step. prompt() is the
+// fallback where the clipboard API is blocked (it is denied on insecure origins).
 const dlCopy = document.getElementById('dlcopy');
 if (dlCopy) dlCopy.addEventListener('click', async () => {
   const url = dlCopy.dataset.url, label = dlCopy.textContent;
   try { await navigator.clipboard.writeText(url); }
-  catch (e) { prompt('Copy this feed link into your calendar:', url); return; }
-  dlCopy.textContent = 'Copied ✓';
-  setTimeout(() => { dlCopy.textContent = label; }, 1600);
+  catch (e) { prompt('Copy this feed link, then add it in your calendar:', url); return; }
+  dlCopy.textContent = 'Copied — paste in your calendar';
+  setTimeout(() => { dlCopy.textContent = label; }, 2600);
 });
 
 const filtersEl = document.getElementById('filters');
