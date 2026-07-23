@@ -307,7 +307,14 @@ header button:hover{filter:brightness(1.06)}
 .grouplabel small{display:block;font-weight:400;letter-spacing:0;
   text-transform:none;font-size:11px;line-height:1.3;margin-top:1px}
 .searchwrap{position:relative;flex:1 1 340px;max-width:520px}
-.searchwrap input{width:100%;font:inherit;font-size:13px;padding:8px 30px 8px 12px;
+/* appearance:none is not cosmetic here. A type="search" field keeps its native
+   appearance by default, and a native search control renders in the OS's own
+   control font rather than the page font — which is why the search box looked
+   like a different typeface from everything around it. Resetting appearance
+   makes it an ordinary text field that honours the font below. Size matches the
+   body (14px) rather than the old 13px, so it no longer reads a notch smaller. */
+.searchwrap input{width:100%;appearance:none;-webkit-appearance:none;
+  font:inherit;font-size:14px;padding:8px 30px 8px 12px;
   color:var(--ink);background:var(--surface);border:1px solid var(--border);
   border-radius:999px}
 .searchwrap input:focus{outline:2px solid var(--brand);outline-offset:1px;
@@ -551,7 +558,8 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   .foldable:not([open])>summary h2{margin-bottom:0}
 
   /* Collapse the filter block. 327px of pills sat above the first update on a
-     phone; search stays out here because it is the control people reach for. */
+     phone; search stays OUTSIDE this <details> — now directly below the collapsed
+     summary — because it is the control people reach for and must stay visible. */
   #filters summary{display:block;cursor:pointer;list-style:none;
     font-size:12.5px;font-weight:700;color:var(--brand);padding:9px 13px;
     background:var(--surface);border:1px solid var(--border);border-radius:8px;
@@ -1542,18 +1550,9 @@ def main():
 </div>
 
 <div class="kpis">{kpi_html}</div>
-<div class="pillgroup">
-  <div class="grouplabel">Search<small>any word</small></div>
-  <div class="searchwrap">
-    <input id="q" type="search" autocomplete="off"
-           placeholder="e.g. stablecoin, Regulation B, comment period…"
-           aria-label="Search updates">
-    <button id="clearq" type="button" hidden aria-label="Clear search">&times;</button>
-  </div>
-</div>
-<!-- Search stays visible; the rest collapses on a phone. Kept as one <details>
-     that JS opens on wide screens, so desktop is unchanged and mobile gets ~330px
-     of pills back above the first update. -->
+<!-- Filters & view sits above Search now (was the other way round). On a phone
+     this block collapses to its summary, so Search still lands directly under a
+     single "Filters & view ▸" line and stays the first live control. -->
 <details id="filters" open>
   <summary>Filters &amp; view</summary>
   <div class="pillgroup">
@@ -1578,6 +1577,15 @@ def main():
     {source_pills}
   </div>
 </details>
+<div class="pillgroup">
+  <div class="grouplabel">Search<small>any word</small></div>
+  <div class="searchwrap">
+    <input id="q" type="search" autocomplete="off"
+           placeholder="e.g. stablecoin, Regulation B, comment period…"
+           aria-label="Search updates">
+    <button id="clearq" type="button" hidden aria-label="Clear search">&times;</button>
+  </div>
+</div>
 
 {ask_html}
 <div class="cols">
