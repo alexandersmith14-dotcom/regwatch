@@ -23,7 +23,6 @@ import json
 from html import escape as hesc
 import os
 import re
-import urllib.parse
 import webbrowser
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
@@ -427,20 +426,6 @@ header button:hover{filter:brightness(1.06)}
   background:none;border:1px solid transparent;border-radius:6px;
   padding:4px 7px;cursor:pointer;white-space:nowrap}
 .dl .cal:hover{border-color:var(--border);text-decoration:underline}
-/* Subscribe row above the deadline list. ONE button, because copying the link is
-   the only path that works everywhere — this audience is largely on Outlook, and
-   Outlook has no reliable one-click subscribe URL. The Google shortcut stays as a
-   plain text link rather than a second button: two equal-weight buttons read as
-   alternatives when only one of them is universal. */
-.dlsub{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
-.dlsub button{font:inherit;font-size:12px;font-weight:600;cursor:pointer;
-  border:1px solid var(--border);border-radius:8px;padding:6px 11px;
-  color:var(--brand);background:var(--surface);
-  display:inline-flex;align-items:center;gap:5px}
-.dlsub button:hover{border-color:var(--brand)}
-.dlsub .hint{font-size:11px;color:var(--ink-muted);font-weight:400}
-.dlsub .hint a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--border)}
-.dlsub .hint a:hover{border-bottom-color:var(--brand)}
 
 .agrow{display:grid;grid-template-columns:120px 1fr 74px;gap:7px 10px;align-items:center}
 .agrow .n{font-size:12.5px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -585,10 +570,6 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   /* Inline on the date row, so it costs no extra line, but padded enough to be
      tappable. A full 44px here would grow every deadline row instead. */
   .dl .cal{min-height:34px;padding:0 10px;border-color:var(--border)}
-  .dlsub button{min-height:38px}
-  /* The Google shortcut is a text link, so give it its own padding to stay
-     tappable without turning it back into a button. */
-  .dlsub .hint a{display:inline-block;padding:6px 0}
   .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
   .card h3{line-height:1.45}
   .card h3 a{display:inline-block;padding:2px 0}
@@ -1080,18 +1061,6 @@ if (dlList) dlList.addEventListener('click', e => {
   downloadText(name, ics, 'text/calendar');
 });
 
-// Copy the feed URL — the universal path for Outlook, Apple and anything that
-// isn't Google. The confirmation says what to do with it, because a bare
-// "Copied" leaves the reader holding a URL with no next step. prompt() is the
-// fallback where the clipboard API is blocked (it is denied on insecure origins).
-const dlCopy = document.getElementById('dlcopy');
-if (dlCopy) dlCopy.addEventListener('click', async () => {
-  const url = dlCopy.dataset.url, label = dlCopy.textContent;
-  try { await navigator.clipboard.writeText(url); }
-  catch (e) { prompt('Copy this feed link, then add it in your calendar:', url); return; }
-  dlCopy.textContent = 'Copied — paste in your calendar';
-  setTimeout(() => { dlCopy.textContent = label; }, 2600);
-});
 
 const filtersEl = document.getElementById('filters');
 if (filtersEl) filtersEl.addEventListener('toggle', () => { userToggledFilters = true; });
@@ -1683,16 +1652,6 @@ def main():
     coverage_html = coverage_panel(store)
     regref_html = regref_panel()
 
-    # Calendar-feed links. A bare webcal:// link was the first attempt and it is
-    # a trap: it only does anything if the device has an app registered for that
-    # scheme. Android Chrome does not, so the button silently did nothing —
-    # reported as "gets stuck", which is exactly how a dead control reads.
-    # Google's own subscribe URL takes the webcal address as ?cid= and works
-    # wherever the reader is signed in; copying the https URL covers Outlook,
-    # Apple and everything else.
-    feed_url = f"{SITE_URL}{ICS_PATH}"
-    feed_gcal = ("https://calendar.google.com/calendar/r?cid="
-                 + urllib.parse.quote("webcal://" + feed_url.split("://", 1)[1], safe=""))
 
     # Tiles are clickable when they count something — clicking filters the list to
     # exactly those items. A zero tile is left inert (nothing to show).
@@ -1851,16 +1810,11 @@ def main():
            tiles are defined BY having a deadline — so filtering to them returns
            every deadline of that type and looks like the click did nothing. -->
       <div id="dlscope" class="dlscope"></div>
-      <!-- Subscribe once and new comment periods appear in the reader's own
-           calendar automatically, with reminders. Google gets a real link that
-           always resolves; everyone else copies the https URL and pastes it into
-           their own "add calendar from web". No bare webcal:// — see feed_gcal.
-           The feed is a static file the daily build refreshes: no server. -->
-      <div class="dlsub">
-        <button id="dlcopy" type="button" data-url="{feed_url}">Copy feed link</button>
-        <span class="hint">auto-updates daily, with reminders &middot;
-          <a href="{feed_gcal}" target="_blank" rel="noopener">or add to Google Calendar</a></span>
-      </div>
+      <!-- No subscribe row. The feed still exists and still refreshes daily
+           (deadlines.ics, see ICS_PATH) — it is simply not advertised here.
+           Subscribing needed explaining, the copy-and-paste step was friction,
+           and the calendar app does the rest anyway; "+ Calendar" on the
+           deadline you actually care about is the direct action. -->
       <div id="deadlines"></div>
       <!-- Hidden in the markup and revealed by script only when something is
            actually capped, so a script failure leaves every deadline visible
