@@ -17442,5 +17442,31 @@
     "first_seen": "2026-07-22",
     "last_seen": "2026-07-23",
     "fr_checked": false
+  },
+  "888e317a23398a97": {
+    "relevant": true,
+    "fintech_specific": false,
+    "credit_union": false,
+    "update_type": "Notice",
+    "urgency": "Medium",
+    "plain_english": "OFAC updated its sanctions lists with new counter-terrorism, counter-narcotics, and Cuba designations, removed a Belarus-related designation, and issued Cuba-related general licenses. All financial institutions must screen against the updated SDN list and adjust OFAC compliance controls accordingly.",
+    "effective_or_comment_date": "2026-07-23",
+    "tags": [
+      "OFAC",
+      "sanctions",
+      "BSA/AML",
+      "Cuba",
+      "SDN list"
+    ],
+    "key": "888e317a23398a97",
+    "title": "Counter Terrorism Designations; Counter Narcotics Designations; Cuba Designations; Belarus-related Designation Removal; Issuance of Cuba-related General Licenses",
+    "date": "2026-07-23",
+    "sources": [
+      "OFAC"
+    ],
+    "url": "https://ofac.treasury.gov/recent-actions/20260723",
+    "first_seen": "2026-07-23",
+    "last_seen": "2026-07-23",
+    "fr_checked": true
   }
 }
