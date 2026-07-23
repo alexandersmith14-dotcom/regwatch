@@ -1369,27 +1369,22 @@ def coverage_panel(store):
             f'{len(d)} items, {d[0]} to {d[-1]}</div>'
         )
 
-    # State regulators are tracked selectively now, so the "not tracked" note has
-    # to name the exceptions or the panel contradicts itself the way it did over
-    # FTC/CFTC. Which states are tracked is detected from the live source list
-    # (agency names beginning with a 2-letter state code), so this stays correct
-    # as states are added or removed rather than drifting against a hard-coded list.
+    # Which states are tracked is read from the live source list (agency names
+    # beginning with a 2-letter state code) so the Tracked line stays correct as
+    # states are added or removed, rather than drifting against a hard-coded list.
+    # We no longer enumerate what is NOT tracked: naming specific non-tracked
+    # agencies caused a real error (they read as tracked) and invited "but you
+    # follow NYDFS by email" confusion, when the email route never feeds this page.
+    # The Tracked list below says what is in; one honest "not complete" line does
+    # the rest. See the "Not a complete record" note further down.
     STATE_NAMES = {"FL": "Florida", "TX": "Texas"}
     tracked_states = sorted({
         STATE_NAMES.get(a.split()[0], a.split()[0])
         for a in active if a[:2] in STATE_NAMES and a[2:3] == " "
     })
-    if tracked_states:
-        joined = (tracked_states[0] if len(tracked_states) == 1
-                  else " and ".join([", ".join(tracked_states[:-1]), tracked_states[-1]])
-                  if len(tracked_states) > 2
-                  else " and ".join(tracked_states))
-        state_note = (
-            'MOST state regulators (including NYDFS and California DFPI, which '
-            f'block automated access) — {joined} are tracked and are the exception')
-    else:
-        state_note = ('state regulators (including NYDFS and California DFPI, '
-                      'which block automated access)')
+    joined = (" and ".join([", ".join(tracked_states[:-1]), tracked_states[-1]])
+              if len(tracked_states) > 2
+              else " and ".join(tracked_states)) if tracked_states else ""
 
     tracked_intro = (
         'the US federal banking and financial-crime agencies listed below'
@@ -1409,10 +1404,16 @@ def coverage_panel(store):
         'Federal Register record could be matched, and taken from that record\'s '
         'structured fields. An item showing no deadline has no match — that does '
         'not mean no deadline exists.</p>'
-        f'<p><strong>Not tracked:</strong> {state_note}, '
-        'FFIEC, SEC, FTC and CFTC. Congressional activity and court decisions are '
-        'not covered. Anything an agency published but did not list on the pages '
-        'above will be missing.</p>'
+        # One honest scope line instead of an enumerated "not tracked" list. The
+        # enumeration named specific agencies (which read as tracked) and kept
+        # inviting the question of why NYDFS — followed only by personal email
+        # alert — wasn't here. What matters for liability is simply that a reader
+        # must not assume completeness; absence on this page is not evidence that
+        # nothing happened.
+        '<p><strong>Not a complete record.</strong> RegWatch covers the agencies '
+        'listed above, and only what they post on those listing pages. It is not a '
+        'substitute for monitoring every regulator you answer to &mdash; confirm '
+        'anything material against the source.</p>'
         '<p><strong>Relevance:</strong> items are screened against a profile of US '
         'community banks (under ~$10B assets), federally-insured credit unions, and '
         'fintechs — BaaS and sponsor-bank arrangements, prepaid and FBO accounts, '
