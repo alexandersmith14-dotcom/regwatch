@@ -427,15 +427,20 @@ header button:hover{filter:brightness(1.06)}
   background:none;border:1px solid transparent;border-radius:6px;
   padding:4px 7px;cursor:pointer;white-space:nowrap}
 .dl .cal:hover{border-color:var(--border);text-decoration:underline}
-/* Subscribe row above the deadline list. */
+/* Subscribe row above the deadline list. ONE button, because copying the link is
+   the only path that works everywhere — this audience is largely on Outlook, and
+   Outlook has no reliable one-click subscribe URL. The Google shortcut stays as a
+   plain text link rather than a second button: two equal-weight buttons read as
+   alternatives when only one of them is universal. */
 .dlsub{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
-.dlsub a,.dlsub button{font:inherit;font-size:12px;font-weight:600;cursor:pointer;
+.dlsub button{font:inherit;font-size:12px;font-weight:600;cursor:pointer;
   border:1px solid var(--border);border-radius:8px;padding:6px 11px;
-  color:var(--brand);background:var(--surface);text-decoration:none;
+  color:var(--brand);background:var(--surface);
   display:inline-flex;align-items:center;gap:5px}
-.dlsub a:hover,.dlsub button:hover{border-color:var(--brand)}
-.dlsub .hint{font-size:11px;color:var(--ink-muted);border:none;padding:0;
-  background:none;font-weight:400}
+.dlsub button:hover{border-color:var(--brand)}
+.dlsub .hint{font-size:11px;color:var(--ink-muted);font-weight:400}
+.dlsub .hint a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--border)}
+.dlsub .hint a:hover{border-bottom-color:var(--brand)}
 
 .agrow{display:grid;grid-template-columns:120px 1fr 74px;gap:7px 10px;align-items:center}
 .agrow .n{font-size:12.5px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -580,7 +585,10 @@ footer{margin-top:22px;font-size:11px;color:var(--ink-muted)}
   /* Inline on the date row, so it costs no extra line, but padded enough to be
      tappable. A full 44px here would grow every deadline row instead. */
   .dl .cal{min-height:34px;padding:0 10px;border-color:var(--border)}
-  .dlsub a,.dlsub button{min-height:38px}
+  .dlsub button{min-height:38px}
+  /* The Google shortcut is a text link, so give it its own padding to stay
+     tappable without turning it back into a button. */
+  .dlsub .hint a{display:inline-block;padding:6px 0}
   .contact a.btn{min-height:44px;display:inline-flex;align-items:center}
   .card h3{line-height:1.45}
   .card h3 a{display:inline-block;padding:2px 0}
@@ -1849,9 +1857,9 @@ def main():
            their own "add calendar from web". No bare webcal:// — see feed_gcal.
            The feed is a static file the daily build refreshes: no server. -->
       <div class="dlsub">
-        <a href="{feed_gcal}" target="_blank" rel="noopener">Add to Google Calendar</a>
         <button id="dlcopy" type="button" data-url="{feed_url}">Copy feed link</button>
-        <span class="hint">auto-updates daily, with reminders</span>
+        <span class="hint">auto-updates daily, with reminders &middot;
+          <a href="{feed_gcal}" target="_blank" rel="noopener">or add to Google Calendar</a></span>
       </div>
       <div id="deadlines"></div>
       <!-- Hidden in the markup and revealed by script only when something is
