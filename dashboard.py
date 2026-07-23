@@ -320,10 +320,14 @@ header button:hover{filter:brightness(1.06)}
    like a different typeface from everything around it. Resetting appearance
    makes it an ordinary text field that honours the font below. Size matches the
    body (14px) rather than the old 13px, so it no longer reads a notch smaller. */
+/* Radius matches the tiles/notice/filters bar (8-10px), not a full pill. It was
+   999px, which made the search box the only pill-shaped element on a page of
+   soft rectangles — it read as a different kind of control from its neighbours
+   even once the font matched. */
 .searchwrap input{width:100%;appearance:none;-webkit-appearance:none;
   font-family:var(--ui-font);font-size:14px;padding:8px 30px 8px 12px;
   color:var(--ink);background:var(--surface);border:1px solid var(--border);
-  border-radius:999px}
+  border-radius:10px}
 .searchwrap input:focus{outline:2px solid var(--brand);outline-offset:1px;
   border-color:var(--brand)}
 .searchwrap input::-webkit-search-cancel-button{display:none}
